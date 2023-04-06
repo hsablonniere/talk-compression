@@ -85,3 +85,14 @@ Cette présentation s'adresse donc à des devs frontends, backend, novice pour d
 ## Idées de titre
 
 Blagues avec le fait de "décompresser"
+
+* La compression HTTP : un mystère levé !
+  * Trop simple
+* Libérez vos fichiers avec la compression Web !
+  * Pas mal 
+* Boostez vos performances avec la compression HTTP !
+  * "boostez", ça fait trop fort pour un sujet aussi vieux
+* Compression HTTP : tout ce que vous n'avez jamais osé demander !
+  * un peu trop classique
+* Compression HTTP : comment éviter les cauchemars de performance ?
+  * "cauchemars", ça fait trop fort aussi
