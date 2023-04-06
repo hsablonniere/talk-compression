@@ -40,6 +40,7 @@ Une personne qui a suivi la présentation repart avec :
 * compression vs minification !
 * à partir de combien de KB ça sert à qqchose de compresser ?
 * ça prend combien de temps à compresser/décomprésser vs à transférer le delta ?
+* quel niveau utiliser ?
 * expliquer les petits trains dans le réseau
 
 * https://caniuse.com/sr_content-encoding-gzip
@@ -48,7 +49,15 @@ Une personne qui a suivi la présentation repart avec :
 
 ### FR
 
-...
+Toute la journée, dans la plus grande indifférence, nos réponses HTTP se font compresser par nos serveurs puis décompresser par nos navigateurs.
+Ce mécanisme est omniprésent sur le Web et pourtant, ses subtilités nous échappent encore.
+On compresse des formats qui n'en ont pas besoin, on compresse à la volée des fichiers statiques, on n'adopte pas les nouveaux algos...
+Finalement, on remplit les tuyaux d'internet plus que nécessaire, au détriment des performances et de nos utilisateurs.
+
+Au menu de cette session, nous vous proposons de (re)découvrir la compression pour le Web.
+Nous reviendrons sur gzip, brotli, ainsi que les algos de base qui se cachent en dessous.
+Nous parlerons de la négociation de contenu entre serveurs et navigateurs.
+Enfin, nous aborderons les bonnes et mauvaises pratiques avec des exemples concrets et des mesures.
 
 ### EN
 
