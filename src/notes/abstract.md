@@ -65,7 +65,20 @@ Enfin, nous aborderons les bonnes et mauvaises pratiques avec des exemples concr
 
 ### FR
 
-...
+Il s'agit d'une proposition toute neuve qui n'a jamais été présentée.
+C'est un sujet qu'on creuse tous les deux à notre manière depuis plusieurs mois et qui nous intéresse beaucoup.
+Nous voulons faire une présentation avec des slides interactifs, des démos et des exemples concrets.
+
+Une personne qui a suivi la présentation repart avec :
+
+* une connaissance des algos, des variantes etc...
+* une compréhension de TPC/HTTP
+  * TODO: préciser 
+* une vision claire de la nécessité de la compression dans le Web
+* des bonnes pratiques
+* des alertes sur les mauvaises pratiques
+
+Cette présentation s'adresse donc à des devs frontends, backend, novice pour de la découverte ou expert pour certains rappels.
 
 ### EN
 
