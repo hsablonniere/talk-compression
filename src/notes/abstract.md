@@ -96,3 +96,13 @@ Blagues avec le fait de "décompresser"
   * un peu trop classique
 * Compression HTTP : comment éviter les cauchemars de performance ?
   * "cauchemars", ça fait trop fort aussi
+* Décompresser le web : de l'art de libérer les tuyaux
+  * Pas mal, j'aime bien "libérer les tuyaux"
+* La compression HTTP, c'est pas du pipeau !
+  * pas mal du tout (mais il faut la ref à pied piper)
+* Dépoussiérez vos algorithmes de compression
+  * je pense pas que le terme "algo" nous aide
+* Compression pour les nuls : les astuces à ne pas manquer !
+  * classique
+* La compression web : comment (re)prendre le contrôle ?
+  * pas mal
