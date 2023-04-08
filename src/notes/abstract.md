@@ -50,7 +50,7 @@ Une personne qui a suivi la présentation repart avec :
 ### FR
 
 Saviez-vous que toute la journée, nos serveurs compressent nos réponses HTTP et que nos navigateurs les décompressent ?
-C'est comme si on passait notre journée à plier des T-shirts et à les déplier.
+C'est comme si on passait notre temps à plier des T-shirts et à les déplier.
 Et pourtant, cette compression est partout sur le Web, mais ses subtilités nous échappent souvent.
 On compresse des formats qui n'en ont pas besoin, on compresse à la volée des fichiers statiques, on n'adopte pas les nouveaux algorithmes...
 Bref, on remplit les tuyaux d'internet plus que nécessaire, comme si on remplissait notre valise de chaussettes en boule.
