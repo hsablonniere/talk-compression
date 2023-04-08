@@ -47,19 +47,22 @@ Une personne qui a suivi la présentation repart avec :
 
 ## Abstract
 
+### FR - 140
+
+(Re)Découvrez les techniques de compression web : gzip, brotli, négociation de contenu et bonnes pratiques pour améliorer les performances de votre site.
+
 ### FR
 
-Toute la journée, dans la plus grande indifférence, nos réponses HTTP se font compresser par nos serveurs puis décompresser par nos navigateurs.
-Ce mécanisme est omniprésent sur le Web et pourtant, ses subtilités nous échappent encore.
-On compresse des formats qui n'en ont pas besoin, on compresse à la volée des fichiers statiques, on n'adopte pas les nouveaux algos...
-Finalement, on remplit les tuyaux d'internet plus que nécessaire, au détriment des performances et de nos utilisateurs.
+Saviez-vous que toute la journée, nos serveurs compressent nos réponses HTTP et que nos navigateurs les décompressent ? C'est comme si on passait notre journée à plier des T-shirts et à les déplier. Et pourtant, cette compression est partout sur le Web, mais ses subtilités nous échappent souvent. On compresse des formats qui n'en ont pas besoin, on compresse à la volée des fichiers statiques, on n'adopte pas les nouveaux algorithmes... Bref, on remplit les tuyaux d'internet plus que nécessaire, comme si on remplissait notre valise de chaussettes en boule.
 
-Au menu de cette session, nous vous proposons de (re)découvrir la compression pour le Web.
-Nous reviendrons sur gzip, brotli, ainsi que les algos de base qui se cachent en dessous.
-Nous parlerons de la négociation de contenu entre serveurs et navigateurs.
-Enfin, nous aborderons les bonnes et mauvaises pratiques avec des exemples concrets et des mesures.
+Mais rassurez-vous, il y a de l'espoir ! Dans cette session, nous allons (re)découvrir la compression pour le Web. Nous vous présenterons les principaux algorithmes de compression comme gzip et brotli, ainsi que les techniques sous-jacentes. Nous aborderons également la négociation de contenu entre les serveurs et les navigateurs.
+
+Enfin, nous partagerons avec vous des bonnes pratiques à adopter pour éviter les mauvaises surprises : des exemples concrets, des mesures et quelques astuces pour améliorer les performances de votre site web. Car, oui, optimiser la compression de vos données, c'est un peu comme optimiser votre valise avant de partir en vacances : vous gagnez de la place, vous êtes plus efficace, et vous évitez de criser sur cette satanée fermeture éclair qui ne veut pas se fermer !
+
+### EN - 140
 
 ### EN
+
 
 ## Message pour le comité
 
@@ -72,8 +75,7 @@ Nous voulons faire une présentation avec des slides interactifs, des démos et 
 Une personne qui a suivi la présentation repart avec :
 
 * une connaissance des algos, des variantes etc...
-* une compréhension de TPC/HTTP
-  * TODO: préciser 
+* une compréhension de TCP/IP/HTTP (lié à l'usage de la compression)
 * une vision claire de la nécessité de la compression dans le Web
 * des bonnes pratiques
 * des alertes sur les mauvaises pratiques
@@ -104,5 +106,6 @@ Blagues avec le fait de "décompresser"
   * je pense pas que le terme "algo" nous aide
 * Compression pour les nuls : les astuces à ne pas manquer !
   * classique
-* La compression web : comment (re)prendre le contrôle ?
+* **La compression web : comment (re)prendre le contrôle ?**
   * pas mal
+
