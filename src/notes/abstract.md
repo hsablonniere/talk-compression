@@ -95,7 +95,9 @@ Cette présentation s'adresse donc à des devs frontend, backend, novice pour de
 
 ## Idées de titre
 
-Blagues avec le fait de "décompresser"
+=> La compression Web : comment (re)prendre le contrôle ?
+
+Autres idées :
 
 * La compression HTTP : un mystère levé !
   * Trop simple
@@ -115,6 +117,3 @@ Blagues avec le fait de "décompresser"
   * je pense pas que le terme "algo" nous aide
 * Compression pour les nuls : les astuces à ne pas manquer !
   * classique
-* **La compression web : comment (re)prendre le contrôle ?**
-  * pas mal
-
