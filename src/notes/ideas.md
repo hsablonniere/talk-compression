@@ -48,3 +48,4 @@
   * ça marche pour une métaphore par ci par là mais pas une thématique globale
 * "Chérie j'ai rétrécie les gosses" https://www.allocine.fr/video/player_gen_cmedia=19588975&cfilm=5408.html
 * Arthur et les minimoys 
+* Talk en duo TEDx sur l'orthographe https://www.ted.com/talks/arnaud_hoedt_jerome_piron_la_faute_de_l_orthographe?language=fr
