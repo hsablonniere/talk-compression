@@ -18,6 +18,7 @@
 * Hubert : storytelling du CSS plus petit avec les services
   * et antoine qui arrive en "sachant"
 * Intercaler des anecdotes et de l'historique entre les parties algo
+* Aucun algo de compression n'est meilleur dans toutes les situations (on cherche les algo qui sont moyennement bon et sui ne tombent pas dans des minimum locaux https://www.mathworks.com/help/examples/graphics/win64/ViewSetAzimuthElevationAsTwoArgsExample_01.png)
 * le truc des petits train
   * plier un short dans une valise, ça sert à rien
   * essayer de traffiquer la taille des paquets IP et jouer avec ça
@@ -45,3 +46,5 @@
 * briques de lego avec couleurs
 * train, valises, avion, tapis roulant de bagage d'aéroport
   * ça marche pour une métaphore par ci par là mais pas une thématique globale
+* "Chérie j'ai rétrécie les gosses" https://www.allocine.fr/video/player_gen_cmedia=19588975&cfilm=5408.html
+* Arthur et les minimoys 
