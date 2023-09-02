@@ -1,4 +1,11 @@
 {
   "name": "demos",
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "mocha **/*.spec.js"
+  },
+  "devDependencies": {
+    "chai": "^4.3.8",
+    "mocha": "^10.2.0"
+  }
 }
