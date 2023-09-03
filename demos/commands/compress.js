@@ -105,13 +105,9 @@ function decompressData (data) {
   let augmentedString = '';
   const bytes = [];
 
-  for (let i = 0; i < dataBs.length; i += bitLength) {
-    const symbol = dataBs.toArrayLittleEndian(bitLength, i, i + bitLength)[0];
+  for (let i = 0; i + bitLength < dataBs.length; i += bitLength) {
 
-    // Let's ignore the last padding zeros
-    if (symbol === 0) {
-      break;
-    }
+    const symbol = dataBs.toArrayLittleEndian(bitLength, i, i + bitLength)[0];
 
     const symbolString = symbolTable.hasIndex(symbol)
       ? symbolTable.getSymbol(symbol)
