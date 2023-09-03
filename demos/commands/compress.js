@@ -2,6 +2,7 @@
 
 import { BitStream } from '../lib/bit-stream.js';
 import { getParams } from '../lib/cli.js';
+import { SymbolTable } from '../lib/symbol-table.js';
 
 const MAGIC_NUMBERS = [0x1f, 0x9d];
 const DEFAULT_MODE = 0x90;
@@ -14,15 +15,15 @@ const RESET_MARKER = Symbol();
   process.stdout.write(Buffer.from(ouput));
 }
 
-function initDictionnary () {
+function initSymbolTable () {
 
-  // Init dictionnary with all chars from 0 to 255
-  const dictionnary = Array.from({ length: 256 }).map((_, i) => String.fromCharCode(i));
+  // Init symbol table with all chars from 0 to 255
+  const symbolTable = new SymbolTable(256);
 
   // Add an empty symbol for RESET
-  dictionnary.push(RESET_MARKER);
+  symbolTable.push(RESET_MARKER);
 
-  return dictionnary;
+  return symbolTable;
 }
 
 function compressData (data) {
@@ -33,7 +34,7 @@ function compressData (data) {
   bytes.push(...MAGIC_NUMBERS);
   bytes.push(DEFAULT_MODE);
 
-  const dictionnary = initDictionnary();
+  const symbolTable = initSymbolTable();
 
   const dataStream = new BitStream();
 
@@ -45,28 +46,27 @@ function compressData (data) {
   for (const byte of data) {
     const char = String.fromCharCode(byte);
     augmentedString = workingString + char;
-    const augmentedIndex = dictionnary.indexOf(augmentedString);
-    if (augmentedIndex !== -1) {
+    if (symbolTable.hasSymbol(augmentedString)) {
       workingString = augmentedString;
     }
-    else if (2 ** MAX_BITS > dictionnary.length) {
-      dictionnary.push(augmentedString);
-      const workingIndex = dictionnary.indexOf(workingString);
+    else if (2 ** MAX_BITS > symbolTable.length) {
+      symbolTable.push(augmentedString);
+      const workingIndex = symbolTable.getIndex(workingString);
       dataStream.writeLittleEndian(workingIndex, bitLength);
       workingString = char;
-      if (2 ** bitLength < dictionnary.length) {
+      if (2 ** bitLength < symbolTable.length) {
         bitLength += 1;
       }
     }
     else {
-      const workingIndex = dictionnary.indexOf(workingString);
+      const workingIndex = symbolTable.getIndex(workingString);
       dataStream.writeLittleEndian(workingIndex, bitLength);
       workingString = char;
     }
   }
 
   if (workingString.length > 0) {
-    const workingIndex = dictionnary.indexOf(workingString);
+    const workingIndex = symbolTable.getIndex(workingString);
     dataStream.writeLittleEndian(workingIndex, bitLength);
   }
 
@@ -97,7 +97,7 @@ function decompressData (data) {
   const dataBs = new BitStream();
   data.slice(3).forEach((b) => dataBs.writeLittleEndian(b, 8));
 
-  const dictionnary = initDictionnary();
+  let symbolTable = initSymbolTable();
 
   const MAX_BITS = 16;
   let bitLength = 9;
@@ -113,8 +113,8 @@ function decompressData (data) {
       break;
     }
 
-    const symbolString = (dictionnary[symbol] != null)
-      ? dictionnary[symbol]
+    const symbolString = symbolTable.hasIndex(symbol)
+      ? symbolTable.getSymbol(symbol)
       // cScSc problem
       : workingString + workingString[0];
 
@@ -127,14 +127,13 @@ function decompressData (data) {
       const byte = symbolString.charCodeAt(charIndex);
       bytes.push(byte);
       augmentedString = workingString + char;
-      const augmentedIndex = dictionnary.indexOf(augmentedString);
-      if (augmentedIndex !== -1) {
+      if (symbolTable.hasSymbol(augmentedString)) {
         workingString = augmentedString;
       }
-      else if (2 ** MAX_BITS > dictionnary.length) {
-        dictionnary.push(augmentedString);
+      else if (2 ** MAX_BITS > symbolTable.length) {
+        symbolTable.push(augmentedString);
         workingString = char;
-        if (2 ** bitLength < dictionnary.length) {
+        if (2 ** bitLength < symbolTable.length) {
           bitLength += 1;
         }
       }
