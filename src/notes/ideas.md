@@ -25,6 +25,40 @@
     * 10k 19k => 11k
 * montrer l'impact réel de gzip sur un site Web
 
+## random
+
+* Il faut faire un petit rappel sur la compression avec perte de donnée vs compression sans perte au début
+* enchainer avec la différence compression / minification
+  * exemple JS => exemple JS min => exemple JS compresser
+  * ordre de grandeur de compression et minification + combo
+* navigateur / serveur (accept encoding...)
+  * curl
+  * démo
+  * explication sans parler de streaming dans un premier temps
+  * plusieurs algo
+    * ordre de grandeur raw, gzip, brotli (react, bootstrap..., HTML)
+* temps de compression versus temps de transfert
+  * demo avec bitrate théorique
+  * ordre de grandeur sur les temps de compression et décompression
+* on parle de la bufferisation (histoire des paquets)
+  * demo streaming HTML
+* tout n'est compressible
+
+* Parler du fait que les navigateurs intègrent gzip et brotli mais n'y donne pas Accès, du coup, il est parfois nécessaire d'avoir une implem JS 
+  * => c'est en train de changer avec des propositions de Google sur les streams
+
+* Un système de compression doit avant tout preseverver l'info, et si possible la rendre plus petite
+* Ratio de compression : s/c(s)
+* Parfois la version compressée est plus grosse
+* La compression c'est un zero sum game, si tu gagnes sur certains input, tu dois perdre sur d'autres...
+* On vise une bonne compression sur des vraies donneipas sur du bruit aléatoire
+
+* parler des familles de schemes LZ*
+* parler des brevets sur LZW, LZ78 était aussi sous brevet
+* Les gif, c'est du LZW
+
+* Plein de petits fichiers compressent moins bien qu'un gros fichier
+
 ## story telling
 
 * antoine est le sachant, il explique, il pop des trivas de ouf, des métaphores
@@ -41,6 +75,13 @@
 * conclusion "quand t'as une idée à la con, essaie là, creuse là, tu vas apprendre des choses"
 * "en regardant de plus près, on a la vue macro la plus précise"
 
+* visuel en tête de antoine
+  * réseau
+  * producteur et lecteur de texte compressé
+
+* Idée pour l'intro : qui a déjà essayé de zipper un point zip ?
+* license winrar
+
 ## thématique
 
 * briques de lego avec couleurs
@@ -48,4 +89,8 @@
   * ça marche pour une métaphore par ci par là mais pas une thématique globale
 * "Chérie j'ai rétrécie les gosses" https://www.allocine.fr/video/player_gen_cmedia=19588975&cfilm=5408.html
 * Arthur et les minimoys 
+* Ant man
 * Talk en duo TEDx sur l'orthographe https://www.ted.com/talks/arnaud_hoedt_jerome_piron_la_faute_de_l_orthographe?language=fr
+
+
+* https://github.com/privatenumber/minification-benchmarks
