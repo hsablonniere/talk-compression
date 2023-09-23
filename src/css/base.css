@@ -1,0 +1,56 @@
+:root {
+  --color-a: #000000;
+  --color-b: #74BBFF;
+  --color-bb: #48A5FF;
+  --color-bbb: #0082ff;
+  --color-bbbb: #003569;
+  --color-bbbbb: #002548;
+  --color-c: #5BEEAB;
+  --color-cc: #3BD58F;
+  --color-ccc: #009452;
+  --color-cccc: #00512C;
+  --color-ccccc: #00331C;
+  --color-d: #FFA4B6;
+  --color-dd: #FF718D;
+  --color-ddd: #ff0032;
+  --color-dddd: #CB0028;
+  --color-ddddd: #9C001F;
+  --color-e: #FFED39;
+  --color-f: #FFFFFF;
+}
+
+body {
+  background-color: #000;
+}
+
+[data-position="before"]:not([data-relative-index="-1"]),
+[data-position="after"]:not([data-relative-index="1"]) {
+  display: none;
+}
+
+[data-position="before"],
+[data-position="after"] {
+  /* Make sure the slide exist so transitions are triggered */
+  position: absolute;
+  visibility: hidden;
+}
+
+[data-position="before"][fade-from] {
+  opacity: 0;
+  visibility: visible;
+  transition: opacity 1.5s ease-in-out;
+}
+
+[data-position="current"][fade-from] {
+  opacity: 1;
+}
+
+[data-position="after"][fade-to] {
+  opacity: 0;
+  visibility: visible;
+  transition: opacity 1.5s ease-in-out;
+}
+
+[data-position="current"][fade-to] {
+  opacity: 1;
+}
