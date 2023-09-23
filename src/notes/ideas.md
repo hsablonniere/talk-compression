@@ -59,6 +59,35 @@
 
 * Plein de petits fichiers compressent moins bien qu'un gros fichier
 
+* zip bomb
+
+* LZ77 vs LZSS (même si la doc de deflate parle de LZ77, deflate est plutôt basé sur LZSS)
+* deflate inventé pour les .zip via PKZIP et ensuite utilisé sur gzip
+* on peut backreference avec un peu de futur
+* expliquer les backreference dans le futur pour les répétitions
+* gz c'est un format de conteneur
+* Expliquer pour quoi on le combine avec tar
+* gzip est censé gérer plusieurs algo de compression mais en fait ça gère que deflate
+
+* Gzip a un header (10 bytes) et un footer (8 bytes) avec le deflate bitstream au milieu sous forme de blocks
+  * Le header peut être un peu plus grand
+  * RFC 1952 défini le format
+  * Il peut y avoir plusieurs membres dans un gzip mais en réalité, personne ne fait ça
+
+* Block type zero, on peut tester si zlib fait ça avec des jpeg ou des images
+* Pourquoi gzip et pas juste deflate sur le web ?
+  * deflate, c'est pas juste deflate, c'est zlib un plus petit conteneur
+    * mais un pb IIS fait que personne ne l'utilise
+
+* En fait deflate utilise du prefix coding plus qu'un vrai huffman code vu qu'il faut le limiter à 15bits
+* Gzip 32768 past characters even cross block et 258 dans le futur
+
+* On parle morse ?
+* On parle dentropie ?
+
+* Anecdote où jake et surma disent qu'ils code golf leur deps et se rendent compte que le résultat post gzip est pluq gros
+* Un histogramme pour montrer la fréquence des lettres
+
 ## story telling
 
 * antoine est le sachant, il explique, il pop des trivas de ouf, des métaphores
@@ -82,6 +111,8 @@
 * Idée pour l'intro : qui a déjà essayé de zipper un point zip ?
 * license winrar
 
+* Story telling huffman étudiant
+
 ## thématique
 
 * briques de lego avec couleurs
@@ -91,6 +122,9 @@
 * Arthur et les minimoys 
 * Ant man
 * Talk en duo TEDx sur l'orthographe https://www.ted.com/talks/arnaud_hoedt_jerome_piron_la_faute_de_l_orthographe?language=fr
-
-
-* https://github.com/privatenumber/minification-benchmarks
+* scrabble
+  * "Le mot le plus court"
+  * "Mot compte 30%" => LZ
+  * "Lettre compte 50%" => HUFFMAN
+  * El bbars (scrabble à l'envers)
+  * On montre un chevalet de 7 lettres au départ, on demande aux gens s'ils ont une idée de mot à 7 lettres, on révèle la solution à la fin
