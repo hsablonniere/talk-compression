@@ -33,15 +33,25 @@
 * on parle des petits trains
   * streamer, c'est bien, mais sur le réseau, il y a des paquets et "une valise à moitié vide, pas besoin de plier les tshirts" 
 
+* graphs alamanac http
+
 ## Les algos
 
 * maths, trivia, les algos, les dates et les inventeurs
+* réduire la quantité d'info, c'est pas nouveau => les algos
+* huffman 52'
+  * étudiant, exam ou papier
+  * limitation de huffman => autre besoin (CSS ou JS)
+* LZ77 77'
+  * exemple humain cite de la peur
 * il y a quoi dans gzip ?
-* huffman
-* LZ77
+  * visuellement
 * zopfli
-  * precompression (fichiers statiques)
 * brotli
+* expliquer precompression (fichiers statiques)
+  * ordre de grande temps compression de décompression
+
+* caniuse gzip
 
 * Ratio de compression : s/c(s)
 * tout ne se compresse pas !
