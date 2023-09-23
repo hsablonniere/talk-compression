@@ -12,9 +12,6 @@ defineSlideType('slide-text', {
     });
 
     return html`
-      ${(attrs.netflix != null) ? html`
-        <audio id="netflix" src="/src/music/netflix.mp3"></audio>
-      ` : ''}
       <div class="text">${unsafeHTML(htmlContent)}</div>
     `;
   },
