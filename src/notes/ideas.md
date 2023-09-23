@@ -83,6 +83,7 @@
 * Gzip 32768 past characters even cross block et 258 dans le futur
 
 * On parle morse ?
+  * monsieur trivia
 * On parle dentropie ?
 
 * Anecdote où jake et surma disent qu'ils code golf leur deps et se rendent compte que le résultat post gzip est pluq gros
