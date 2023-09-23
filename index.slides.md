@@ -182,27 +182,24 @@ le nom des gens
 la photo des gens
 -->
 
-## todo
-gzip
-Jean-loup Gailly and Mark Adler
-1992 (30 ans)
+## timeline year=2023 fade-from
+Aujourd'hui, 2023
 
-## todo
-deflate / pkzip v2
-Phil Katz
-(v1 1986 / v2 ?) (30 ans)
+## timeline year=2010 fade-from fade-to animated
+Bien avant bootstrap
 
-## todo
-LZ & LZ77
-Abraham Lempel and Jacob Ziv
-1977 (46 ans)
+## timeline year=2000 fade-from fade-to animated
+Bien avant les années 2000
 
-## todo
-Code de Huffman
-David A. Huffman
-1951 (72 ans)
+## timeline year=1980 fade-from fade-to animated
+PKZIP, 1986, Phil Katz, <img src="src/img/katz.png" />
+GZIP, 1992, Jean-Loup Gailly / Mark Adler, <img src="src/img/adler-gailly.png" />
 
-<!-- fin de la frise -->
+## timeline year=1970 fade-from fade-to animated
+LZ77, 1977, Abraham Lempel and Jacob Ziv, <img src="src/img/lempel-ziv.png" />
+
+## timeline year=1950 fade-from fade-to animated
+Code de Huffman, 1951, David A. Huffman, <img src="src/img/huffman.png" />
 
 ## todo
 section comment ça marche
