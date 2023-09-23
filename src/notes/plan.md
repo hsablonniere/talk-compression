@@ -37,6 +37,8 @@
 
 ## Les algos
 
+* il n'y a pas de silver bullit
+
 * maths, trivia, les algos, les dates et les inventeurs
 * réduire la quantité d'info, c'est pas nouveau => les algos
 * huffman 52'

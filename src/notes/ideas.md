@@ -88,6 +88,14 @@
 * Anecdote où jake et surma disent qu'ils code golf leur deps et se rendent compte que le résultat post gzip est pluq gros
 * Un histogramme pour montrer la fréquence des lettres
 
+* chrome a tenté bzip2 mais ça n'a pas marché à cause d'HTTP
+  * c'est pour ça que brotli ne fonctionne qu'en HTTPS
+
+* 7zip peut aussi produire du gzip plus petit que zlib
+
+* the gzip threshold
+  *  The point in which a modified version of the file fails to produce a smaller post-compressed result, when compared to a compressed version of the source file.
+
 ## story telling
 
 * antoine est le sachant, il explique, il pop des trivas de ouf, des métaphores
