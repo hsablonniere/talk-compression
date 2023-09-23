@@ -5,12 +5,6 @@ import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { markup } from '../utils.mjs';
 
 defineSlideType('slide-text', {
-  onEnter ({ netflix }) {
-    playMedia(netflix);
-  },
-  onLeave (position, { netflix }) {
-    stopMedia(netflix);
-  },
   render ({ content, attrs }) {
 
     const htmlContent = twemoji.parse(markup(content), (icon, options, variant) => {
