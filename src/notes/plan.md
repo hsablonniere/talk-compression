@@ -37,7 +37,7 @@
 
 ## Les algos
 
-* il n'y a pas de silver bullit
+* il n'y a pas de silver bullet
 
 * maths, trivia, les algos, les dates et les inventeurs
 * réduire la quantité d'info, c'est pas nouveau => les algos
