@@ -184,22 +184,46 @@ la photo des gens
 
 ## timeline year=2023 fade-from
 Aujourd'hui, 2023
+> A: Mais tout ça, ça ne date pas d'hier.
+> Il va falloir sortir la DeLorean mon cher Hubert
+> Quand on parle de Gzip, on parle pas d'un truc qui date d'hier.
 
-## timeline year=2010 fade-from fade-to animated
+## timeline year=2010 animated
 Bien avant bootstrap
+> H: On est bien avant Bootstrap, bien avant react
 
-## timeline year=2000 fade-from fade-to animated
+## timeline year=2000 animated
 Bien avant les années 2000
+> A: On est bien avant le web des années 2000 avec les compteurs de visiteurs
+> Les design métaliques qui me manquent un peu
 
-## timeline year=1980 fade-from fade-to animated
+## timeline year=1980 animated
 PKZIP, 1986, Phil Katz, <img src="src/img/katz.png" />
 GZIP, 1992, Jean-Loup Gailly / Mark Adler, <img src="src/img/adler-gailly.png" />
+> H: Il faut remonter à 1992 pour retrouver la RFC de GZIP par Jean-Loup Gailly et Mark Adler
+> RFC 1952
+> Tu faisais quoi en 1992 toi Antoine ? 
+> A: 😅
+> Ils posent les bases d'un modèle de compression basés et inspirés de traveaux de PKZIP par Phil Katz quelques années avant.
+> On parle du Web 56k de l'époque, économiser autant de bits, c'était une révolution.
+> Mais pour faire PKZIP et GZIP, ils ne sont pas partis de rien
+> Il ont été piocher d'abord dans des travaux des années 70 et même des années 50
 
-## timeline year=1970 fade-from fade-to animated
+## timeline year=1970 animated
 LZ77, 1977, Abraham Lempel and Jacob Ziv, <img src="src/img/lempel-ziv.png" />
+> A: Oulà oui on parle de travaux fait 20 ans avant. 
+> Travaux de deux scientifiques Abraham Lempel and Jacob Ziv qui proposent en 1977 un algortithme de compression de texte nommé LZ77
+> _LZ77 mais qu'est-ce que ça peut pouvoir dire ? ça reste encore un mystère_
 
-## timeline year=1950 fade-from fade-to animated
+## timeline year=1950 animated
 Code de Huffman, 1951, David A. Huffman, <img src="src/img/huffman.png" />
+> H: Oui mais PKZIP et GZIP n'ont pas été piocher que dans les travaux des années 70
+> Ils ont été reprendre de travaux publiés en 1951 par Mr Huffman.
+> Le codage de huffman, on est là bien avant les problématiques de l'interweb
+> A: Donc, ce qu'on est en train de dire, c'est que la recherche fondamentale 
+> ça peut avoir des impacts considérables sur l'évolution de la technologie des années après?
+> 40 ans séparent PKZIP du codage d'Huffman et plus de 30 ans séparent GZIP de 2023.
+> H: Oui allez Antoine, on est content mais il faut qu'on avance et qu'on leur explique comment ça marche
 
 ## todo
 section comment ça marche

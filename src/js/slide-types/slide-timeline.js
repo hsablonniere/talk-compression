@@ -1,7 +1,6 @@
 import { css, html } from 'lit';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { defineSlideType } from './base.js';
-import { getMeta, getTitle, markup, pipeline } from '../utils.mjs';
 
 defineSlideType('slide-timeline', {
   render ({ attrs, content }) {
@@ -15,11 +14,13 @@ defineSlideType('slide-timeline', {
         return html`
           <article class="container">
             ${image && unsafeHTML(image)}
-            ${date && html`<date>${date}</date>`}
-            ${event && html`<h2>${event}</h2>`}
-            ${custom && html`<aside>
+            <div class="text-wrapper">
+              ${event && html`<h2>${event}</h2>`}
+              ${date && html`<date>${date}</date>`}
+              ${custom && html`<aside>
               ${unsafeHTML(custom)}
             </aside>`}
+            </div>
           </article>
         `
       })
@@ -37,15 +38,11 @@ defineSlideType('slide-timeline', {
   },
   // language=CSS
   styles: css`
-      
     :host {
       position: relative;
       font-family: 'Yanone Kaffeesatz', sans-serif;
       background: #fff;
-    }
-    
-    .dates {
-        justify-content: space-evenly;
+      --timeline-duration: 600ms;  
     }
     
     .absolute-fill {
@@ -64,11 +61,33 @@ defineSlideType('slide-timeline', {
          --timeline-background: #337ab7;
      }
     
-
+     :host([year='2010']) h2 {
+         display: inline-block;
+         font-weight: 400;
+         text-align: center;
+         white-space: nowrap;
+         vertical-align: middle;
+         user-select: none;
+         padding: 0.375rem 0.75rem;
+         font-size: 1rem;
+         line-height: 1.5;
+         border-radius: 0.25rem;
+         color: #fff;
+         background-color: #007bff;
+         border-color: #007bff;
+     }
+     
      :host([year='2000']) {
          font-family: 'Comic Sans MS';
          --timeline-background: linear-gradient( to bottom, #bcc6cc, #eee, #bcc6cc);
      }
+
+    :host([year='2000']) .text-wrapper{
+        border: solid 1px gray;
+        border-radius: 8px;
+        padding: 0 4px;
+        background: white;
+    }
 
      :host([year='1990']) {
          font-family: 'sans-serif';
@@ -84,12 +103,14 @@ defineSlideType('slide-timeline', {
 
      :host([year='1970']) {
          font-family: 'Courier New';
-         --timeline-background: #f06a95;
+         --timeline-background: chartreuse;
+         color: chartreuse;
+         background: #1a1e21;
      }
 
      :host([year='1950']) {
          font-family: 'Courier New';
-         --timeline-background: #000;
+         --timeline-background: black;
      }
     
     .container {
@@ -98,24 +119,9 @@ defineSlideType('slide-timeline', {
         inset: 0;
         display: flex;
         flex-direction: column;
-        height: 10em;
+        height: 60%;
         align-items: center;
         justify-content: space-around;
-        opacity: 0;
-        transition: opacity 800ms ease-in;
-    }
-    
-    date::after{
-        position: absolute;
-        top: -0.5em;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%) scale(0);
-        content: '';
-        height: 1.5em;
-        width: 1.5em;
-        border-radius: 50%;
-        background: var(--timeline-background);
     }
     
     .timeline {
@@ -123,20 +129,33 @@ defineSlideType('slide-timeline', {
         width: 100%;
         background: var(--timeline-background);
         transform: translateX(100%);
-        transition: transform 600ms ease-in;
+        transition: transform var(--timeline-duration) ease-in;
     }
     
     :host([data-position="current"][animated]) .timeline {
         transform: translateX(0);
     }
 
-    :host([data-position="current"][animated]) .container {
+    :host([data-position="current"][animated]) .text-wrapper {
         opacity: 1;
     }
     
     img {
-        height: 300px;
+        max-height: 300px;
+        flex: 1 0;
         width: auto;
+    }
+
+    .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 800ms ease-in var(--timeline-duration);
+    }
+    
+    h2 {
+        margin: 0;
     }
   `,
 });
