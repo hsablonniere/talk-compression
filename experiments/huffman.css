@@ -1,0 +1,134 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.input-text-letters,
+.output-text-letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.step-list {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.step {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+  align-items: start;
+}
+
+.tile-wrapper {
+  --tile-size: 3rem;
+  --count-size: 2.25rem;
+  --count-shift: -0.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: var(--tile-size);
+}
+
+.tile-count {
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  flex: 0 0 auto;
+  font-size: calc(var(--count-size) * 0.5);
+  font-weight: bold;
+  height: var(--count-size);
+  line-height: var(--count-size);
+  text-align: center;
+  width: var(--count-size);
+  z-index: 2;
+}
+
+.tile {
+  background-color: #ffffa1;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  border-radius: 10%;
+  height: var(--tile-size);
+  width: var(--tile-size);
+  display: flex;
+  position: relative;
+}
+
+.tile-count ~ .tile {
+  margin-top: var(--count-shift);
+}
+
+.tile-letter {
+  margin: auto;
+  font-size: calc(var(--tile-size) * 0.7);
+  font-weight: bold;
+}
+
+.tile-score {
+  bottom: 5%;
+  font-size: calc(var(--tile-size) * 0.25);
+  line-height: calc(var(--tile-size) * 0.25);
+  font-weight: bold;
+  position: absolute;
+  right: 5%;
+}
+
+.tree {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  text-align: center;
+  gap: 1.5rem 1rem;
+  position: relative;
+}
+
+.tree-head {
+  grid-area: 1 / 1 / 2 / 3;
+  justify-self: center;
+}
+
+.tree:hover > .tree-head > .tile-wrapper > .tile-count,
+.tile-wrapper:hover > .tile-count {
+  background-color: blue;
+}
+
+.tree-left {
+  /*grid-column: 1 / 2;*/
+}
+
+.tree-right {
+  /*grid-column: 2 / 3;*/
+}
+
+.tree-bar {
+  border: 1px solid #000;
+  border-bottom: none;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  height: 4em;
+  /* use var from tree gap and count size */
+  top: 1.115rem;
+}
+
+.controls {
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #eee;
+  width: 100%;
+}
