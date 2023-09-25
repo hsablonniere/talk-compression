@@ -21,17 +21,27 @@ body {
 
 .step-list {
   flex: 1 1 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  padding: 2rem;
   justify-content: center;
-  align-items: top;
+  align-items: start;
 }
 
 .step {
+  grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin: 10px 0;
   align-items: start;
+}
+
+.step.hidden {
+  /*visibility: hidden;*/
+  /*opacity: 0.25;*/
+  opacity: 0;
 }
 
 .tile-wrapper {

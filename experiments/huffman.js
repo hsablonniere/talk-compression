@@ -6,9 +6,9 @@ function $$ (selector) {
   return Array.from(document.querySelectorAll(selector));
 }
 
-function getTileAsHtml ({ count = '', letter = '', score = '' }) {
+function getTileAsHtml ({ count = '', letter = '', score = '', id = '' }) {
   return `
-    <div class="tile-wrapper">
+    <div class="tile-wrapper" data-id="${id}">
       ${count !== '' ? `
         <div class="tile-count">${count}</div>
       ` : ''}
@@ -36,7 +36,7 @@ function getTree (node) {
   const count = node.left.count + node.right.count;
 
   const html = `
-    <div class="tree">
+    <div class="tree" data-id="${node.id}">
       <div class="tree-head">
         ${getTileAsHtml({ count })}
       </div>
@@ -63,8 +63,8 @@ function sortTrees (a, b) {
 
 function addStep (html) {
   const step = $('.step-list').children.length;
-  const style = (step === 0) ? '' : 'display: none';
-  $('.step-list').innerHTML += `<div class="step" data-step="${step}" style="${style}">${html}</div>`;
+  const cssClass = (step === 0) ? '' : 'hidden';
+  $('.step-list').innerHTML += `<div class="step" data-step="${step}" class="${cssClass}">${html}</div>`;
 }
 
 function addTreesAsStep (trees) {
@@ -119,9 +119,11 @@ function updateText (text) {
 
   let trees = Object.entries(lettersWithCount)
     .map(([letter, count]) => {
-      return { count, letter };
+      return { count, letter, id: Math.random().toString(36).slice(2) };
     })
     .sort(sortTrees);
+
+  console.log(trees);
 
   addTreesAsStep(trees);
 
@@ -134,6 +136,7 @@ function updateText (text) {
       ...trees.slice(0, trees.length - 2),
       {
         count: left.count + right.count,
+        id: Math.random().toString(36).slice(2),
         left,
         right,
       },
@@ -168,9 +171,9 @@ function updateText (text) {
 }
 
 function displayStep (stepIndex) {
-  $$('.step').forEach((step) => step.style = 'display: none');
+  $$('.step').forEach((step) => step.classList.add('hidden'));
   $('.step-list').dataset.currentStep = stepIndex;
-  $(`.step[data-step="${stepIndex}"]`).style = '';
+  $(`.step[data-step="${stepIndex}"]`).classList.remove('hidden');
 }
 
 $('button[data-action="previous"]').addEventListener('click', () => {
@@ -181,8 +184,30 @@ $('button[data-action="previous"]').addEventListener('click', () => {
 
 $('button[data-action="next"]').addEventListener('click', () => {
   const currentStep = Number($('.step-list').dataset.currentStep);
-  const previousStep = Math.min(currentStep + 1, $$('.step').length - 1);
-  displayStep(previousStep);
+  const nextStep = Math.min(currentStep + 1, $$('.step').length - 1);
+  $$(`.step[data-step="${currentStep}"] > [data-id]`).forEach((currentElement, i) => {
+    const id = currentElement.dataset.id;
+    const nextElement = $(`.step[data-step="${nextStep}"] [data-id="${id}"]`);
+    const currentCoords = currentElement.getBoundingClientRect();
+    const nextCoords = nextElement.getBoundingClientRect();
+    const x = nextCoords.left - currentCoords.left;
+    const y = nextCoords.top - currentCoords.top;
+    const translate = [
+      { transform: `translate3d(${x}px, ${y}px, 0)` },
+    ];
+    const timing = {
+      duration: 150,
+      iterations: 1,
+      fill: 'forwards',
+    };
+    const anim = currentElement.animate(translate, timing);
+    if (i === 0) {
+      anim.addEventListener('finish', () => {
+        console.log('nextStep')
+        displayStep(nextStep);
+      });
+    }
+  });
 });
 
 $('.input-text').addEventListener('input', () => {
