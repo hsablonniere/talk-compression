@@ -98,15 +98,19 @@ function updateText (text) {
     1,
     Math.ceil(Math.log2(lettersCount)),
   );
+  const totalInputScore = text.length * baseScore;
 
   const textAsTiles = text
     .split('')
     .map((letter) => getTileAsHtml({ letter, score: baseScore }))
     .join('');
 
-  $('.input-text-letters').innerHTML = textAsTiles + `
-  <div>=${text.length * baseScore}</div>
-`;
+  $('.input-text-letters').innerHTML = textAsTiles;
+  if (text.length > 0) {
+    $('.input-text-letters').innerHTML += `
+      <div>= ${totalInputScore} bits</div>
+    `;
+  }
 
   const lettersWithCount = {};
   for (let i = 0; i < text.length; i++) {
@@ -165,9 +169,12 @@ function updateText (text) {
     })
     .join('');
 
-  $('.output-text-letters').innerHTML = outputTextAsTiles + `
-  <div>=${totalScore}</div>
-`;
+  $('.output-text-letters').innerHTML = outputTextAsTiles;
+  if (text.length > 0) {
+    $('.output-text-letters').innerHTML += `
+    <div>= ${totalScore} bits : ${(totalScore / totalInputScore * 100).toFixed(2)}%</div>
+  `;
+  }
 }
 
 function displayStep (stepIndex) {
@@ -203,7 +210,7 @@ $('button[data-action="next"]').addEventListener('click', () => {
     const anim = currentElement.animate(translate, timing);
     if (i === 0) {
       anim.addEventListener('finish', () => {
-        console.log('nextStep')
+        console.log('nextStep');
         displayStep(nextStep);
       });
     }
