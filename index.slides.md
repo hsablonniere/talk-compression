@@ -286,9 +286,14 @@ LZ
 > on évoque la complexité de trouver la meilleure répétition dans le passé en regardant un peu dans le futur
 
 ## todo
+arbo de la famille LZ
+> mode trivia qui détend
+
+## todo
 deflate / pkzip v2
 Phil Katz
 (v1 1986 / v2 ?) (30 ans)
+> dans les années 90, tout le monde a essayé d'optimisé pour que ça marche bien pour du texte
 
 ## todo
 gzip
@@ -298,9 +303,14 @@ Jean-loup Gailly and Mark Adler
 
 ## todo
 et maintenant ?
+> à la recherche du pouillème
+> pourquoi ? 1% c'est beaucoup de moula
 
 ## todo
 zopfli
+> complexité de la recherche de motifs
+> meilleure taux mais moins bonne perf
+> MEME FORMAT OMG !!
 
 ## todo
 brotli
@@ -333,7 +343,7 @@ ouverture
 zstd
 
 ## todo
-dictionnaire
+dictionnaire brouillon WICG
 
 ## poster
 Merci beaucoup !
