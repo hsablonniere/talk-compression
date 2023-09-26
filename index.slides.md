@@ -70,6 +70,28 @@ slide post mangling
 ## code todo
 slide binaires (ne pas oublier d'afficher le poits)
 
+## barchart
+petit-example.js
+brut : 404 o
+minifié : 235 o
+compressé : 260 o
+minifié<br>& compressé : 191 o
+
+## barchart
+jquery.js
+brut : 278.7 Ko
+minifié : 90.1 Ko
+compressé : 82.0 Ko
+minifié<br>& compressé : 30.3 Ko
+
+## barchart
+no compress
+JS : 12.7%
+CSS : 14.2%
+HTML : 56.0%
+JSON : 31.8%
+SVG : 36.0%
+
 ## todo
 histogramme de poids (pur, min, gzip, minzip) avec l'exemple d'avant
 
