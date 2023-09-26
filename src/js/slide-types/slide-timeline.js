@@ -8,7 +8,6 @@ defineSlideType('slide-timeline', {
       .split('\n')
       .filter((line) => line !== '')
       .map(row => row.split(', '))
-      .map(row => console.log(row) || row)
       .map(([event, date, custom, image]) => {
 
         return html`
@@ -24,8 +23,6 @@ defineSlideType('slide-timeline', {
           </article>
         `
       })
-
-    console.log(content)
 
     return html`
       <div class="absolute-fill">
@@ -84,8 +81,8 @@ defineSlideType('slide-timeline', {
 
     :host([year='2000']) .text-wrapper{
         border: solid 1px gray;
-        border-radius: 8px;
-        padding: 0 4px;
+        border-radius: 0.5rem;
+        padding: 0 0.25rem;
         background: white;
     }
 
@@ -115,7 +112,7 @@ defineSlideType('slide-timeline', {
     
     .container {
         position: relative;
-        flex: 1 1 0px;
+        flex: 1 1 0;
         inset: 0;
         display: flex;
         flex-direction: column;
@@ -125,7 +122,7 @@ defineSlideType('slide-timeline', {
     }
     
     .timeline {
-        height: 0.5em;
+        height: 0.5rem;
         width: 100%;
         background: var(--timeline-background);
         transform: translateX(100%);
@@ -141,7 +138,7 @@ defineSlideType('slide-timeline', {
     }
     
     img {
-        max-height: 300px;
+        max-height: 14rem;
         flex: 1 0;
         width: auto;
     }

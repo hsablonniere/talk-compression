@@ -158,15 +158,15 @@ caniuse gzip
 ## todo
 c'est petit mais est-ce que ça bloque ?
 
-## demo
+## todo demo
 demo HTML streaming sans compression (au ralenti, simulé en local)
 avec doc d'hibernate
 
-## demo
+## todo demo
 demo HTML streaming sans compression (au ralenti, simulé en local)
 fake long de vrai texte avec div de 10x10px qui font 1k ou 10k
 
-## demo
+## todo demo
 demo HTML streaming avec compression (au ralenti, simulé en local)
 fake long de vrai texte avec div de 10x10px qui font 1k ou 10k
 
@@ -234,6 +234,8 @@ GZIP, 1992, Jean-Loup Gailly / Mark Adler, <img src="src/img/adler-gailly.png" /
 ## timeline year=1970 animated
 LZ77, 1977, Abraham Lempel and Jacob Ziv, <img src="src/img/lempel-ziv.png" />
 > A: Oulà oui on parle de travaux fait 20 ans avant. 
+> Tu faisais quoi en 1977 toi Hubert ? 
+> H: 😅
 > Travaux de deux scientifiques Abraham Lempel and Jacob Ziv qui proposent en 1977 un algortithme de compression de texte nommé LZ77
 > _LZ77 mais qu'est-ce que ça peut pouvoir dire ? ça reste encore un mystère_
 
