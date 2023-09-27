@@ -151,8 +151,8 @@ function updateText (text) {
     addTreesAsStep(trees);
   }
 
-  // displayStep($$('.step').length - 1);
-  displayStep(0);
+  displayStep($$('.step').length - 1);
+  // displayStep(0);
 
   const codeMap = Object.fromEntries(
     buildMap(trees[0])

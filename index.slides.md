@@ -305,6 +305,7 @@ Jean-loup Gailly and Mark Adler
 et maintenant ?
 > à la recherche du pouillème
 > pourquoi ? 1% c'est beaucoup de moula
+> cloudflare qui a un fork de zlib
 
 ## todo
 zopfli
