@@ -1126,6 +1126,59 @@ une case "LETTRE COMPTE MOINS"
 
 ## section todo
 LZ77
+
+## text
+Et 25 ans plus tard...
+
+## text
+_"On peut tromper mille personne une fois. Mais on ne peut pas tromper mille personnes, mille fois."_
+> A: Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
+> Personellement ça m'est impossible.
+> H: On se répète un peu là non ? 
+> En observant cette phrase on peut surement se dire que se limiter à optimiser caractère par caractère est limitant.
+
+## text
+Et si on jouait au _"Mot compte moins"_
+
+## text
+On peut tromper mille personne une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+
+## media
+<img src="/src/img/alice-butenko-zstWUZFj77w-unsplash.jpg">
+
+> A: L'idée de Mr Lempel et Mr Ziv c'est de trouver un moyen de réduire le nombre de bit nécessaire pour représenter un motif qui se répète.
+> Et si on remplaçait des parties du messages par des étiquettes/des pointeurs vers une autre partie du message.
+> H: Je ne sais pas si vous l'aviez remarqué mais il y a quelques motifs de répétitions dans la phrase _"On peut tromper..."_"
+
+## todo
+Slide avec etiquettage du mot Mot MILLE FEUILLE
+
+## todo
+Slide avec etiquettage avec la phrase
+> Ok on a moins de tuile à la fin qu'au début
+
+## text
+Ok... on gagne en nombre de tuile, mais est-ce qu'on gagne vraiment des bits ?
+
+## text
+0 + 8 bits: pour les lettres
+<br>
+1 + 10 bits: pour les étiquettes
+
+## text
+
+5 bits: pour la distance
+<br>
+5 bits: pour la longueur
+
+## text
+
+180/850
+
+Soit 20%
+
+## todo
+LZ
 > L'idée c'est l'étiquetage
 > exemple : la cité de la peur
 > là tel mot là... ça se répète de ouf
