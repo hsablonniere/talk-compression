@@ -11,8 +11,11 @@ export default {
       fileWatcher.add('*.slides.md');
     },
     serve (context) {
-      if (context.path.endsWith('.slides.html')) {
-        const slidesMdPath = '.' + context.path.replace(/\.slides\.html$/, '.slides.md');
+      const path = (context.path === '/')
+        ? '/index.slides.html'
+        : context.path;
+      if (path.endsWith('.slides.html')) {
+        const slidesMdPath = '.' + path.replace(/\.slides\.html$/, '.slides.md');
         const fileContent = fs.readFileSync(slidesMdPath, 'utf8');
         return {
           type: 'html',
