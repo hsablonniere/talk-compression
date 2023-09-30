@@ -9,6 +9,7 @@ html {
 @media (max-aspect-ratio: 14/9) {
   html {
     --slide-ratio: calc(4 / 3);
+    --slide-ratio: calc(16 / 9);
   }
 }
 
