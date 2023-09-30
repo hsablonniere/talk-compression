@@ -28,6 +28,9 @@ intro avec des questions
 ## todo
 Nommage et ordre de grandeur
 
+## section todo
+Nommage
+
 ## todo
 Compression : avec perte de données et sans perte de donnée
 > nous on va parler principalement sans perte
@@ -70,6 +73,9 @@ slide post mangling
 ## code todo
 slide binaires (ne pas oublier d'afficher le poits)
 
+## section todo
+Mesures
+
 ## barchart
 petit-example.js
 brut : 404 o
@@ -103,9 +109,6 @@ histogramme de poids (pur, min, gzip, minzip) jquery/react
 
 ## blank
 
-## text
-timings
-
 ## todo
 histogramme de temps de chargement (pur, min, gzip, minzip) bootstrap/tailwind
 un groupe de 4 barres pour le slow 3G
@@ -124,6 +127,9 @@ almanac ratio servi sans compression
 > expliquer ce que c'est l'almanac
 
 ## blank
+
+## section todo
+Procotole
 
 ## text
 comment ça marche sur le web ?
@@ -255,8 +261,8 @@ section comment ça marche
 ## todo
 lettre compte triple
 
-## todo
-Code de Huffman
+## section todo
+Code de  Huffman
 > le but de huffman c'est d'encoder les caractères en fonction de la fréquence
 > c'est comme le scrabble !
 > à l'époque ce n'est qu'un papier du MIT
@@ -272,8 +278,8 @@ Code de Huffman
 > HUBERT ET ANTOINE
 > 54434443444334433 = 63
 
-## todo
-LZ
+## section todo
+LZ77
 > L'idée c'est l'étiquetage
 > exemple : la cité de la peur
 > là tel mot là... ça se répète de ouf
@@ -289,11 +295,17 @@ LZ
 arbo de la famille LZ
 > mode trivia qui détend
 
+## section todo
+Deflate
+
 ## todo
 deflate / pkzip v2
 Phil Katz
 (v1 1986 / v2 ?) (30 ans)
 > dans les années 90, tout le monde a essayé d'optimisé pour que ça marche bien pour du texte
+
+## section todo
+GZIP
 
 ## todo
 gzip
@@ -339,6 +351,9 @@ almanac
 
 ## todo
 ouverture
+
+## section todo
+Futur ?
 
 ## todo
 zstd
