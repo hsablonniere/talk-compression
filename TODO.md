@@ -56,9 +56,8 @@
 
 ## Hubert
 
-* slide chart
 * huffman
-  * mettre en valeur les deux sous arbres qui font partie de l'étape
+  * (mettre en valeur les deux sous arbres qui font partie de l'étape)
   * contexte
   * A: prenons un mot au hasard !
   * H: affiche SABLONNIERE à l'écran en format texte
@@ -97,8 +96,22 @@
   * c'est l'algo le plus optimisé
   * on affiche une case "LETTRE COMPTE MOINS"
 
+* slide chart
+  * formattage des unités d'octets
+  * formattage des unités de temps
+  * meilleur affichage de celui de l'almanac avec les mime types
 * exemple binaire de gzip en mode décompression
+  * 
 
 ## ??
 
 * demo serveur ralenti avec lorem
+* slide poster
+  * un grille de scrabble en fond assez transparente
+  * un bloc rouge au milieu avec le titre en blanc
+  * une grille de score (meme design que huffman) avec
+    * DevFest Nantes (date)
+    * Une colonne Prénom, Nom, Employeur
+    * Une colonne Antoine, Caron, Scaleway
+    * Une colonne Hubert, Sablonnière, Clever Cloud
+* slide tip/rappel
