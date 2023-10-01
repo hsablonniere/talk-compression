@@ -16,6 +16,41 @@ defineSlideType('slide-code', {
 
     const codeBlocks = select(content, 'pre');
 
+    codeBlocks
+      .filter((pre) => pre.hasAttribute('highlight'))
+      .forEach((pre) => {
+        const highlight = pre.getAttribute('highlight');
+        pre.innerHTML = pre.innerHTML
+          .split('\n')
+          .map((line, i, allLines) => {
+            if (i % 2 !== 0) {
+              return;
+            }
+            const highlightLine = allLines[i + 1] ?? '';
+            return line
+              .split('')
+              .map((char, i) => {
+                const highlightChar = highlightLine[i];
+                return (highlightChar === '_')
+                  ? `<mark class="${highlight}">${char}</mark>`
+                  : char;
+              })
+              .join('');
+          })
+          .filter((a) => a != null)
+          .join('<mark>\n</mark>');
+      });
+
+    codeBlocks
+      .filter((pre) => pre.hasAttribute('size'))
+      .forEach((pre) => {
+        const size = Number(pre.getAttribute('size'));
+        const span = document.createElement('span');
+        span.classList.add('size');
+        span.textContent = size;
+        pre.appendChild(span);
+      });
+
     return html`
       ${attrs.title != null ? html`
         <div class="title">${unsafeHTML(markup(attrs.title))}</div>
@@ -112,6 +147,38 @@ defineSlideType('slide-code', {
 
     pre[data-lang="http"] .hljs-attribute {
       color: #050D9E !important;
+    }
+
+    pre mark.hide {
+      visibility: hidden;
+    }
+
+    pre mark.hide-mark {
+      color: transparent;
+    }
+
+    pre[simple-js-example] {
+      word-break: break-all;
+      width: 34rem;
+      height: 23rem;
+    }
+
+    pre[size] {
+      position: relative;
+    }
+
+    .size {
+      display: block;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      background-color: #0a8fdf;
+      color: #fff;
+      padding: 0 1rem;
+      transform: translate3d(50%, 50%, 0);
+      border-radius: 0.25rem;
+      font-weight: bold;
+      font-size: 2rem;
     }
   `,
 });

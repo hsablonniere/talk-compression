@@ -25,21 +25,24 @@ intro avec des questions
 ## poster
 > Bonjour
 
-## todo
-Nommage et ordre de grandeur
-
+<!--
+j'ai splité le nommage et ordres de grandeur en 2
+* Définitions
+* Mesures
+-->
 ## section todo
-Nommage
+Definitions
 
-## todo
-Compression : avec perte de données et sans perte de donnée
+## text todo
+🤔 *Avec* ou *Sans* perte de données ?
 > nous on va parler principalement sans perte
 
-## todo
-* Minifaction vs compression
+## text todo
+🤐 *Minifaction* vs. *Compression*
 
 <!-- Pour les codes suivants, on mettre en évidence le nombre de chars -->
 
+<!--
 ## code todo
 ```js
 const order = [];
@@ -60,31 +63,254 @@ async function fastestSortingAlgorithm (numberList) {
 
 fastestSortingAlgorithm([10000, 10, 100, 1000, 1]);
 ```
+-->
+
+## blank
 
 ## code todo
-slide d'avant mais avec les caractères inutiles mis en avant
+```js simple-js-example
+export function add (firstNumber, secondNumber) {
+
+}
+
+
+export function factorial (number) {
+
+
+
+
+}
+```
 
 ## code todo
-slide sans les caractères inutiles
+```js simple-js-example
+export function add (firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
+}
+
+
+export function factorial (number) {
+
+
+
+
+}
+```
 
 ## code todo
-slide d'avant mais avec les trucs qu'on peut mangle mis en avant
+```js simple-js-example
+export function add (firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
+}
+
+
+export function factorial (number) {
+  if (number === 0) {
+    return 1;
+  }
+  return number * factorial(number - 1);
+}
+```
 
 ## code todo
-slide post mangling
+```js simple-js-example
+export function add (firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
+}
+
+// Recursive FTW!
+export function factorial (number) {
+  if (number === 0) {
+    return 1;
+  }
+  return number * factorial(number - 1);
+}
+```
 
 ## code todo
-slide binaires (ne pas oublier d'afficher le poits)
+```js simple-js-example size=228
+export function add (firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
+}
+
+// Recursive FTW!
+export function factorial (number) {
+  if (number === 0) {
+    return 1;
+  }
+  return number * factorial(number - 1);
+}
+```
+
+## code todo
+```text simple-js-example size=228 highlight
+export function add (firstNumber, secondNumber) {
+
+  return firstNumber + secondNumber;
+                                   _
+}
+
+
+
+// Recursive FTW!
+_________________
+export function factorial (number) {
+
+  if (number === 0) {
+                    _
+    return 1;
+
+  }
+  _
+  return number * factorial(number - 1);
+                                       _
+}
+```
+
+## code todo
+```text simple-js-example size=207 highlight=hide
+export function add (firstNumber, secondNumber) {
+
+  return firstNumber + secondNumber;
+                                   _
+}
+
+
+
+// Recursive FTW!
+_________________
+export function factorial (number) {
+
+  if (number === 0) {
+                    _
+    return 1;
+
+  }
+  _
+  return number * factorial(number - 1);
+                                       _
+}
+```
+
+## code todo
+```text simple-js-example size=207 highlight
+export function add (firstNumber, secondNumber) {
+                      __________   ___________
+  return firstNumber + secondNumber
+          __________    ___________
+}
+
+
+
+
+
+export function factorial (number) {
+                            _____
+  if (number === 0)
+       _____
+    return 1;
+
+
+
+  return number * factorial(number - 1)
+          _____              _____
+}
+```
+
+## code todo
+```text simple-js-example size=142 highlight
+export function add (f, s) {
+
+  return f + s
+
+}
+
+
+
+
+
+export function factorial (n) {
+
+  if (n === 0)
+
+    return 1;
+
+
+
+  return n * factorial(n - 1)
+
+}
+```
+
+## code todo
+```text simple-js-example size=142 highlight=hide-mark
+export function add (f, s) {
+                   _   _  _
+  return f + s
+__        _ _
+}
+
+
+
+
+
+export function factorial (n) {
+                         _   _
+  if (n === 0)
+__  _  _   _
+    return 1;
+____
+
+
+  return n * factorial(n - 1)
+__        _ _           _ _
+}
+```
+
+## code todo
+```js simple-js-example size=108
+export function add(f,s){return f+s}export function factorial(n){if(n===0)return 1;return n*factorial(n-1)}
+```
+
+## code todo
+```js simple-js-example size=98
+export function add(f,s){return f+s}export function factorial(n){return 0===n?1:n*factorial(n-1)}
+```
+
+## text todo
+🤐 *Minifaction* vs. *Compression*
+
+## code todo
+```text simple-js-example size=98
+0000000 7865 6f70 7472 6620 6e75 7463 6f69 206e
+0000010 6461 2864 2c72 2974 727b 7465 7275 206e
+0000020 2b72 7d74 7865 6f70 7472 6620 6e75 7463
+0000030 6f69 206e 6166 7463 726f 6169 286c 2972
+0000040 727b 7465 7275 206e 3d30 3d3d 3f72 3a31
+0000050 2a72 6166 7463 726f 6169 286c 2d72 2931
+0000060 0a7d                                   
+0000062
+```
+
+## code todo
+```text simple-js-example size=75
+0000000 611f 4800 0a2c 76ec dd03 2f9a d235 accf
+0000010 2c34 2d48 13d7 b306 e862 215a 8cac 038d
+0000020 198e 2077 4c49 0835 590a 0f1a f8b8 cda1
+0000030 671b 4c43 0ee9 262a 37cc b083 c97e ba67
+0000040 33e8 6534 9e97 4cab 1c11 0038          
+000004b
+```
 
 ## section todo
 Mesures
 
 ## barchart
-petit-example.js
-brut : 404 o
-minifié : 235 o
-compressé : 260 o
-minifié<br>& compressé : 191 o
+math-example.js
+brut : 228 o
+minifié : 98 o
+compressé : 126 o
+minifié<br>& compressé : 75 o
 
 ## barchart
 jquery.js
