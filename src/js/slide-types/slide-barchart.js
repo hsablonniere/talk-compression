@@ -1,4 +1,5 @@
 import { css, html } from 'lit';
+import { classMap } from 'lit/directives/class-map.js';
 import { defineSlideType } from './base.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
@@ -60,10 +61,12 @@ defineSlideType('slide-barchart', {
 
     const sections = parts
       .map((line) => {
-        const [label, valueAndUnit] = line.split(' : ').map((a) => a.trim());
+        const [rawLabel, valueAndUnit] = line.split(' : ').map((a) => a.trim());
+        const isCommented = rawLabel.startsWith('// ');
+        const label = rawLabel.replace('// ', '');
         const value = valueAndUnit.replace(/[^0-9\.,]/g, '');
         const unit = valueAndUnit.replace(value, '');
-        return { label, value, unit };
+        return { label, value, unit, isCommented };
       })
       .map((section, i, all) => {
         const max = Math.max(...all.map((s) => s.value));
@@ -80,8 +83,8 @@ defineSlideType('slide-barchart', {
       </div>
 
       <div class="container">
-        ${sections.map(({ label, value, unit, percent }) => html`
-          <div class="section">
+        ${sections.map(({ label, value, unit, isCommented, percent }) => html`
+          <div class="section ${classMap({ comment: isCommented })}">
             <div class="bar">
               <div class="bar-value" style="--bar-percent: ${percent}">
                 <div class="bar-label">${value} ${unit}</div>
@@ -108,6 +111,7 @@ defineSlideType('slide-barchart', {
       font-size: 2rem;
       font-weight: bold;
       padding: 1rem 0;
+      font-family: "Interstate", sans-serif;
     }
 
     .container {
@@ -130,6 +134,11 @@ defineSlideType('slide-barchart', {
       height: 18rem;
       position: relative;
       width: 3rem;
+      width: 2rem;
+    }
+
+    .section.comment .bar {
+      visibility: hidden;
     }
 
     .bar-label {
@@ -152,27 +161,33 @@ defineSlideType('slide-barchart', {
       width: 100%;
       height: calc(var(--bar-percent) * 1%);
       background-size: 100% auto;
+      background-image: url(/src/img/drawn-rectangle-3.svg);
     }
 
     .section:nth-child(1n) .bar .bar-value {
-      background-image: url(/src/img/drawn-rectangle-1.svg);
+      /*background-image: url(/src/img/drawn-rectangle-1.svg);*/
     }
 
     .section:nth-child(2n) .bar .bar-value {
-      background-image: url(/src/img/drawn-rectangle-2.svg);
+      /*background-image: url(/src/img/drawn-rectangle-2.svg);*/
     }
 
     .section:nth-child(3n) .bar .bar-value {
-      background-image: url(/src/img/drawn-rectangle-3.svg);
+      /*background-image: url(/src/img/drawn-rectangle-3.svg);*/
     }
 
     .legend {
       border-top: 0.15rem solid #000;
       padding: 0.25rem 1rem;
+      padding: 0.25rem 0.75rem;
       text-align: center;
       font-size: 1.25rem;
       width: 100%;
       font-family: "Operator Mono Medium", monospace;
+    }
+
+    .section.comment .legend {
+      color: transparent;
     }
   `,
 });
