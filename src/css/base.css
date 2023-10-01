@@ -54,3 +54,11 @@ body {
 [data-position="current"][fade-to] {
   opacity: 1;
 }
+
+[data-relative-index="-1"][frozen] {
+  visibility: visible;
+}
+
+[data-relative-index="-1"][frozen] ~ [data-position="current"] {
+  visibility: hidden;
+}

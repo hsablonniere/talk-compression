@@ -112,7 +112,7 @@ export function defineSlideType (slideType, options) {
       const content = (this.innerHTML !== '') ? this.innerHTML : null;
 
       return options.render
-        ? options.render({ attrs, content })
+        ? options.render({ attrs, content, slide: this })
         : '';
     }
 
@@ -139,7 +139,7 @@ export function defineSlideType (slideType, options) {
         }
         if (this.position !== 'current') {
           if (options.onLeave != null) {
-            options.onLeave(this.position, elements);
+            options.onLeave(this.position, elements, this);
           }
           $$(this, 'audio, video').forEach((media) => stopMedia(media));
         }
