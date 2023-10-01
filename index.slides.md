@@ -744,7 +744,7 @@ COMPRESSION
 ## huffman todo step=17
 COMPRESSION
 
-## huffman todo step=17 score-sheet
+## huffman todo step=18 score-sheet
 COMPRESSION
 > on indique que il n'y a pas de conflit "on sait quand s'arrêter"
 <!-- est-ce qu'on montre la logique de décompression pour expliquer qu'on sait voir les caractères et les lire ? -->

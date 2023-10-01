@@ -16,7 +16,7 @@ function getTree (node) {
 
   const left = getTree(node.left);
   const right = getTree(node.right);
-  const count = node.left.count + node.right.count;
+  const count = node.count;
 
   const htmlContent = html`
     <div class="tree" data-id="${node.id}" style="transform: translate3d(0, 0, 0)">
@@ -202,14 +202,20 @@ defineSlideType('slide-huffman', {
         {
           count: left.count + right.count,
           id: Math.random().toString(36).slice(2),
-          left,
-          right,
+          left: { ...left, count: '' },
+          right: { ...right, count: '' },
         },
       ];
 
       addTreesAsStep(trees);
-      trees.sort(sortTrees);
-      addTreesAsStep(trees);
+      if (trees.length === 1) {
+        trees[0].count = '';
+        addTreesAsStep(trees);
+      }
+      else {
+        trees.sort(sortTrees);
+        addTreesAsStep(trees);
+      }
     }
 
     const codeMap = Object.fromEntries(
@@ -268,7 +274,7 @@ defineSlideType('slide-huffman', {
             </tr>
             ${Object.entries(codeMap).map(([letter, code], i) => html`
               <tr>
-                <td>${letter}</td>
+                <th>${letter}</th>
                 <td class="hidden" data-letter=${letter}>${code}</td>
               </tr>
             `)}
@@ -345,36 +351,28 @@ defineSlideType('slide-huffman', {
 
     .score-sheet table {
       border-collapse: collapse;
-    }
-
-    .score-sheet table {
       border: 3px solid #000;
+      font-weight: bold;
     }
 
-    .score-sheet table th,
-    .score-sheet table td {
+    .score-sheet th,
+    .score-sheet td {
       border: 1px solid #000;
     }
 
-    .score-sheet table th {
-      border-bottom: 2px solid black;
+    .score-sheet th {
+      font-family: 'Interstate';
+      padding: 0 0.5rem;
+      line-height: 1.25;
+      font-size: 2rem;
     }
 
-    .score-sheet table th,
-    .score-sheet table td {
+    .score-sheet td {
       color: #0082ff;
       font-family: "Just Another Hand";
-      font-size: 2rem;
+      font-size: 2.25rem;
       line-height: 1;
-      padding: 0.65rem 0.75rem 0 0.75rem;
-    }
-
-    .score-sheet table th {
-      font-weight: normal;
-    }
-
-    .score-sheet table td {
-      font-weight: bold;
+      padding: 0.7rem 0.75rem 0 0.75rem;
     }
 
     .hidden {

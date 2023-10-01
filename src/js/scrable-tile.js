@@ -99,23 +99,26 @@ export class ScrabbleTile extends LitElement {
           width: var(--tile-size);
         }
 
-        :host([]) {
-          
+        :host([letter][count=""]) .count {
         }
 
         .count {
-          --count-size: 1.85em;
+          --count-size: 1.5em;
           background-color: #000;
           border-radius: 50%;
           color: #fff;
           flex: 0 0 auto;
-          font-size: 0.8em;
+          font-size: 0.7em;
           font-weight: bold;
           height: var(--count-size);
           line-height: var(--count-size);
           text-align: center;
           width: var(--count-size);
           z-index: 2;
+          /**/
+          background-color: #fff;
+          color: #000;
+          border: 2px solid #000;
         }
 
         .tile {
