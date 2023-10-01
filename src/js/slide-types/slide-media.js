@@ -1,4 +1,5 @@
 import { css, html } from 'lit';
+import { styleMap } from 'lit/directives/style-map.js';
 import { defineSlideType } from './base.js';
 import { entriesToObject, toCamelCase } from '../utils.mjs';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
@@ -14,7 +15,7 @@ function getAttributes (elementHtml) {
 }
 
 defineSlideType('slide-media', {
-  render ({ content }) {
+  render ({ attrs, content }) {
 
     const media = content
       .split('\n')
@@ -26,6 +27,12 @@ defineSlideType('slide-media', {
       ?? mediaAttrs.browserUrl
       ?? null;
 
+    const terminal = (attrs.terminal != null);
+
+    const thugLife = (attrs.thugLife != null)
+      ? attrs.thugLife.split(',')
+      : null;
+
     return html`
       ${browserUrl != null ? html`
         <div class="browser">
@@ -35,12 +42,23 @@ defineSlideType('slide-media', {
           ${unsafeHTML(media)}
         </div>
       ` : ''}
-      ${browserUrl == null ? html`
+      ${terminal ? html`
+        <div class="terminal">
+          <div class="terminal-bar"></div>
+          ${unsafeHTML(media)}
+        </div>
+      ` : ''}
+      ${browserUrl == null && !terminal ? html`
         ${unsafeHTML(media)}
+      ` : ''}
+      ${thugLife != null ? html`
+        <img id="thug-life" src="src/img/thug-life.svg" alt="" style="${styleMap({
+          transform: `scale(${thugLife[2]}) translate3d(${thugLife[0]}rem, ${thugLife[1]}rem, 0) rotate(${thugLife[3]}deg)`,
+        })}">
       ` : ''}
     `;
   },
-  // language=CSS
+  // language=CSS format=false
   styles: css`
     :host {
       background-color: #000;
@@ -48,6 +66,7 @@ defineSlideType('slide-media', {
     }
 
     :host([white]),
+    /*:host([terminal]),*/
     :host([logo]:not([black])) {
       background-color: #fff;
     }
@@ -90,12 +109,42 @@ defineSlideType('slide-media', {
       background-repeat: no-repeat;
       background-size: auto 1.5rem;
       border-radius: 0.3rem 0.3rem 0 0;
-      border: 2px solid #aaa;
+      border: 5px solid #aaa;
       border-bottom-width: 0;
       display: flex;
       flex-direction: column;
       margin: 0.5rem 0.5rem 0 0.5rem;
       overflow: hidden;
+    }
+
+    .terminal {
+      background-color: #000;
+      background-position: top 0.8rem left 0.4rem;
+      background-repeat: no-repeat;
+      background-size: auto 1.5rem;
+      border-radius: 0.3rem 0.3rem 0 0;
+      border: 5px solid #aaa;
+      border-bottom-width: 0;
+      display: flex;
+      flex-direction: column;
+      margin: 0.5rem 0.5rem 0 0.5rem;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .terminal-bar {
+      background-color: #ccc;
+      height: 2rem;
+    }
+
+
+    .terminal img {
+      height: 100%;
+      object-fit: contain;
+      object-position: top center;
+      width: 100%;
+      padding: 1rem 1rem 0 1rem;
+      box-sizing: border-box;
     }
 
     .url {
@@ -126,6 +175,19 @@ defineSlideType('slide-media', {
       border-top: 1px solid #ccc;
       object-fit: cover;
       object-position: center top;
+    }
+    
+    #thug-life {
+      position: absolute !important;
+      width: 1rem !important;
+      left: 50%;
+      transform-origin: center center;
+      top: -100%;
+      transition: 1s linear top;
+    }
+    
+    :host([data-position="current"]) #thug-life {
+      top: 0;
     }
   `,
 });
