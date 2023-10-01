@@ -140,12 +140,127 @@ comment ça marche sur le web ?
 ## code
 ```http type="request"
 GET /index.html HTTP/1.1
+ 
+```
+```http type="request" hide-height
+GET /index.html HTTP/1.1
 accept-encoding: gzip, deflate, br
 ```
+```http type="response" hide
+HTTP/1.1 200 OK
+ 
+```
 
+## code
+```http type="request"
+GET /index.html HTTP/1.1
+ 
+```
+```http type="request" hide-height
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="response"
+HTTP/1.1 200 OK
+ 
+```
+
+## code
+```http type="request"
+GET /index.html HTTP/1.1
+accept-encoding: 
+```
+```http type="request" hide-height
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="response"
+HTTP/1.1 200 OK
+ 
+```
+
+## code
+```http type="request"
+GET /index.html HTTP/1.1
+accept-encoding: gzip
+```
+```http type="request" hide-height
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="response"
+HTTP/1.1 200 OK
+ 
+```
+
+## code
+```http type="request"
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate
+```
+```http type="request" hide-height
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="response"
+HTTP/1.1 200 OK
+ 
+```
+
+## code
+```http type="request"
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="request" hide-height
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="response"
+HTTP/1.1 200 OK
+ 
+```
+
+## code
+```http type="request"
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="request" hide-height
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="response"
+HTTP/1.1 200 OK
+content-encoding: 
+```
+
+## code
+```http type="request"
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="request" hide-height
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
 ```http type="response"
 HTTP/1.1 200 OK
 content-encoding: gzip
+```
+
+## code
+```http type="request"
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="request" hide-height
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="response"
+HTTP/1.1 200 OK
+content-encoding: br
 ```
 
 > c'est un peu magique
