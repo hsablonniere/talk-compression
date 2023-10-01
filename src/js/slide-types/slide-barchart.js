@@ -143,6 +143,8 @@ defineSlideType('slide-barchart', {
 
     .bar-label {
       bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
       box-sizing: border-box;
       font-family: "Operator Mono Medium", monospace;
       font-size: 1.25rem;
