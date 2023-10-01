@@ -29,7 +29,7 @@ defineSlideType('slide-section', {
       display: flex;
       flex-direction: column;
       background-color: #2f6646;
-      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-family: "Interstate", "Helvetica Neue", Helvetica, Arial, sans-serif;
       justify-content: center;
       align-items: center;
     }
@@ -44,7 +44,7 @@ defineSlideType('slide-section', {
     }
 
     .letter {
-      --size: 5rem;
+      --size: 4.5rem;
       height: var(--size);
       line-height: var(--size);
       width: 1rem;
@@ -53,7 +53,7 @@ defineSlideType('slide-section', {
     .letter:not([data-letter=" "]) {
       background-color: #f4eaa3;
       border-radius: 0.25rem;
-      font-size: calc(var(--size) * 0.8);
+      font-size: calc(var(--size) * 0.85);
       font-weight: bold;
       text-align: center;
       width: var(--size);
