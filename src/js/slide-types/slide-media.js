@@ -182,7 +182,7 @@ defineSlideType('slide-media', {
       width: 1rem !important;
       left: 50%;
       transform-origin: center center;
-      top: -100%;
+      top: -70%;
       transition: 1s linear top;
     }
     
