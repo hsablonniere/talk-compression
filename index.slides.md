@@ -23,30 +23,24 @@ intro avec des questions
 ## blank black
 
 ## poster
-
 > Bonjour
 
 ## todo
-
 Nommage et ordre de grandeur
 
 ## section todo
-
 Nommage
 
 ## todo
-
 Compression : avec perte de données et sans perte de donnée
 > nous on va parler principalement sans perte
 
 ## todo
-
 * Minifaction vs compression
 
 <!-- Pour les codes suivants, on mettre en évidence le nombre de chars -->
 
 ## code todo
-
 ```js
 const order = [];
 
@@ -68,31 +62,24 @@ fastestSortingAlgorithm([10000, 10, 100, 1000, 1]);
 ```
 
 ## code todo
-
 slide d'avant mais avec les caractères inutiles mis en avant
 
 ## code todo
-
 slide sans les caractères inutiles
 
 ## code todo
-
 slide d'avant mais avec les trucs qu'on peut mangle mis en avant
 
 ## code todo
-
 slide post mangling
 
 ## code todo
-
 slide binaires (ne pas oublier d'afficher le poits)
 
 ## section todo
-
 Mesures
 
 ## barchart
-
 petit-example.js
 brut : 404 o
 minifié : 235 o
@@ -100,7 +87,6 @@ compressé : 260 o
 minifié<br>& compressé : 191 o
 
 ## barchart
-
 jquery.js
 brut : 278.7 Ko
 minifié : 90.1 Ko
@@ -108,7 +94,6 @@ compressé : 82.0 Ko
 minifié<br>& compressé : 30.3 Ko
 
 ## barchart
-
 no compress
 JS : 12.7%
 CSS : 14.2%
@@ -117,52 +102,42 @@ JSON : 31.8%
 SVG : 36.0%
 
 ## todo
-
 histogramme de poids (pur, min, gzip, minzip) avec l'exemple d'avant
 
 ## todo
-
 histogramme de poids (pur, min, gzip, minzip) bootstrap/tailwind
 
 ## todo
-
 histogramme de poids (pur, min, gzip, minzip) jquery/react
 
 ## blank
 
 ## todo
-
 histogramme de temps de chargement (pur, min, gzip, minzip) bootstrap/tailwind
 un groupe de 4 barres pour le slow 3G
 un groupe de 4 barres pour le fast 4G
 
 ## todo
-
 histogramme de temps de chargement (pur, min, gzip, minzip) jquery/react
 un groupe de 4 barres pour le slow 3G
 un groupe de 4 barres pour le fast 4G
 
 ## todo
-
 TIP/RECAP #? La minification va de pair avec la compression
 
 ## todo
-
 almanac ratio servi sans compression
 > expliquer ce que c'est l'almanac
 
 ## blank
 
 ## section todo
-
 Procotole
 
 ## text
-
 comment ça marche sur le web ?
 
 ## code
-
 ```http type="request"
 GET /index.html HTTP/1.1
 accept-encoding: gzip, deflate, br
@@ -178,64 +153,52 @@ content-encoding: gzip
 > ça marche aussi automatiquement quand on fait un `fetch`
 
 ## todo
-
 demo firefox
 > montrer transfer size
 > resource size (entre parenthèses)
 > post-compression dans l'en-tête content-length
 
 ## text
-
 ça existe depuis quand ça ?
 
 ## media todo
-
 caniuse gzip
 
 ## blank
 
 ## todo
-
 c'est petit mais est-ce que ça bloque ?
 
 ## todo demo
-
 demo HTML streaming sans compression (au ralenti, simulé en local)
 avec doc d'hibernate
 
 ## todo demo
-
 demo HTML streaming sans compression (au ralenti, simulé en local)
 fake long de vrai texte avec div de 10x10px qui font 1k ou 10k
 
 ## todo demo
-
 demo HTML streaming avec compression (au ralenti, simulé en local)
 fake long de vrai texte avec div de 10x10px qui font 1k ou 10k
 
 ## todo
-
 TIP/RECAP #? le HTML ça se stream et la compression aussi
 
 ## blank
 
 ## text
-
 plus petit sur le papier niveau octets
 
 ## text
-
 plus rapide pour l'utilisateur niveau temps ?
 
 ## todo
-
 on parle des valises et tshirt en boule ou pliés
 (demander à Geoffroy comment mettre en place une démo)
 > streamer, c'est bien, mais sur le réseau, il y a des paquets et "une valise à moitié vide, pas besoin de plier les
 > tshirts"
 
 ## todo
-
 transition
 on vient de comprendre que compresser c'est indispensable
 ça l'est toujours dans un monde de fibre, de 5G, de CPU M2
@@ -254,25 +217,21 @@ la photo des gens
 -->
 
 ## timeline year=2023 fade-from
-
 Aujourd'hui, 2023
 > #AC# Mais tout ça, ça ne date pas d'hier.
 > Il va falloir sortir la DeLorean mon cher Hubert
 > Quand on parle de Gzip, on parle pas d'un truc qui date d'hier.
 
 ## timeline year=2010 animated
-
 Bien avant bootstrap
 > #HS# On est bien avant Bootstrap, bien avant react
 
 ## timeline year=2000 animated
-
 Bien avant les années 2000
 > #AC# On est bien avant le web des années 2000 avec les compteurs de visiteurs
 > Les design métaliques qui me manquent un peu
 
 ## timeline year=1980 animated
-
 PKZIP, 1986, Phil Katz, <img src="src/img/katz.png" />
 GZIP, 1992, Jean-Loup Gailly / Mark Adler, <img src="src/img/adler-gailly.png" />
 > #HS# Il faut remonter à 1992 pour retrouver la RFC de GZIP par Jean-Loup Gailly et Mark Adler
@@ -286,7 +245,6 @@ GZIP, 1992, Jean-Loup Gailly / Mark Adler, <img src="src/img/adler-gailly.png" /
 > Il ont été piocher d'abord dans des travaux des années 70 et même des années 50
 
 ## timeline year=1970 animated
-
 LZ77, 1977, Abraham Lempel and Jacob Ziv, <img src="src/img/lempel-ziv.png" />
 > #AC# Oulà oui on parle de travaux fait 20 ans avant.
 > Tu faisais quoi en 1977 toi Hubert ?
@@ -296,7 +254,6 @@ LZ77, 1977, Abraham Lempel and Jacob Ziv, <img src="src/img/lempel-ziv.png" />
 > _LZ77 mais qu'est-ce que ça peut pouvoir dire ? ça reste encore un mystère_
 
 ## timeline year=1950 animated
-
 Code de Huffman, 1951, David A. Huffman, <img src="src/img/huffman.png" />
 > #HS# Oui mais PKZIP et GZIP n'ont pas été piocher que dans les travaux des années 70
 > Ils ont été reprendre de travaux publiés en 1951 par Mr Huffman.
@@ -307,7 +264,6 @@ Code de Huffman, 1951, David A. Huffman, <img src="src/img/huffman.png" />
 > #HS# Oui allez Antoine, on est content mais il faut qu'on avance et qu'on leur explique comment ça marche
 
 ## todo
-
 section comment ça marche
 
 ## todo
@@ -780,48 +736,40 @@ LZ77
 > on évoque la complexité de trouver la meilleure répétition dans le passé en regardant un peu dans le futur
 
 ## todo
-
 arbo de la famille LZ
 > mode trivia qui détend
 
 ## section todo
-
 Deflate
 
 ## todo
-
 deflate / pkzip v2
 Phil Katz
 (v1 1986 / v2 ?) (30 ans)
 > dans les années 90, tout le monde a essayé d'optimisé pour que ça marche bien pour du texte
 
 ## section todo
-
 GZIP
 
 ## todo
-
 gzip
 Jean-loup Gailly and Mark Adler
 1992 (30 ans)
 > exemple binaire de gzip en mode décompression
 
 ## todo
-
 et maintenant ?
 > à la recherche du pouillème
 > pourquoi ? 1% c'est beaucoup de moula
 > cloudflare qui a un fork de zlib
 
 ## todo
-
 zopfli
 > complexité de la recherche de motifs
 > meilleure taux mais moins bonne perf
 > MEME FORMAT OMG !!
 
 ## todo
-
 brotli
 > stats et ordre de grandeur
 > huffman de l'espace (context modeling)
@@ -830,47 +778,37 @@ brotli
 > transformations de dico (montrer)
 
 ## todo
-
 plus on est vieux => plus on est abstrait
 plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les derniers %)
 
 ## todo
-
 compression statique et ordre de grandeur
 si c'est pas temps réel, sur le web, c'est compliqué
 
 ## todo
-
 maintenant que vous voyez comment ça compresse
 quel sort on réserve au gens qui compresse du JPEG ?
 explications
 
 ## todo
-
 almanac
 
 ## todo
-
 ouverture
 
 ## section todo
-
 Futur ?
 
 ## todo
-
 zstd
 
 ## todo
-
 dictionnaire brouillon WICG
 
 ## poster
-
 Merci beaucoup !
 
 ## credits
-
 Section 1 :
 
 * text : https://example.com
