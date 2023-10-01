@@ -59,12 +59,19 @@ async function takeScreenshot (url, filename, customViewport, force = false) {
     });
   }
 
-  // if (url.includes('github.com')) {
-  //   console.log('inject');
-  //   await page.addStyleTag({
-  //     content: `.commit-tease, .file-wrap, .signup-prompt-bg { display: none }`,
-  //   });
-  // }
+  if (url.includes('github.com')) {
+    console.log('inject');
+    await page.addStyleTag({
+      content: `.Layout-main > *:not(#readme):not(readme-toc) { display: none }`,
+    });
+  }
+
+  if (url.includes('https://www.rfc-editor.org/rfc/')) {
+    console.log('inject');
+    await page.addStyleTag({
+      content: `body { max-width: 1200px } #toc { display: none } #title { font-size: 2em }`,
+    });
+  }
 
 //   if (url.includes('caniuse.com')) {
 //

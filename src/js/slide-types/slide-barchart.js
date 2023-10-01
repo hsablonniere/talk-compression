@@ -2,54 +2,7 @@ import { css, html } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 import { defineSlideType } from './base.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
-
-// <div className="chart bytes ${classMap({ dim: this._dimBytes })}">
-//   <div className="chart-bars">
-//     ${this._bytesData.map(({ value, percent }) => html`
-//             <div class="bar">
-//               <div class="bar-value" style="--bar-percent: ${percent}">
-//                 <div class="bar-label">${formatBytes(value)}</div>
-//               </div>
-//             </div>
-//           `)}
-//   </div>
-//   <div className="chart-title">Taille (Ko)</div>
-// </div>
-//
-// <div className="chart requests ${classMap({ dim: this._dimRequests })}">
-//   <div className="chart-bars">
-//     ${this._requestsData.map(({ value, percent }) => html`
-//             <div class="bar">
-//               <div class="bar-value" style="--bar-percent: ${percent}">
-//                 <div class="bar-label">${value}</div>
-//               </div>
-//             </div>
-//           `)}
-//   </div>
-//   <div className="chart-title">Requêtes</div>
-// </div>
-//
-// <div className="chart time ${classMap({ dim: this._dimTime })}">
-//   <div className="chart-bars">
-//     ${this._timeData.map(({ value, percent }) => html`
-//             <div class="bar">
-//               <div class="bar-value" style="--bar-percent: ${percent}">
-//                 <div class="bar-label">${formatSeconds(value)}</div>
-//               </div>
-//             </div>
-//           `)}
-//   </div>
-//   <div className="chart-title">Temps (secs)</div>
-// </div>
-//
-// <div className="legend">
-//   ${this._legend.map((legend) => html`
-//           <div class="legend-entry">
-//             <div class="legend-color"></div>
-//             <div class="legend-text">${legend}</div>
-//           </div>
-//         `)}
-// </div>
+import { markup } from '../utils.mjs';
 
 defineSlideType('slide-barchart', {
   render ({ content }) {
@@ -79,7 +32,7 @@ defineSlideType('slide-barchart', {
     return html`
 
       <div class="title">
-        ${title}
+        ${unsafeHTML(markup(title))}
       </div>
 
       <div class="container">
@@ -112,6 +65,10 @@ defineSlideType('slide-barchart', {
       font-weight: bold;
       padding: 1rem 0;
       font-family: "Interstate", sans-serif;
+    }
+
+    .title strong {
+      color: #0a8fdf;
     }
 
     .container {

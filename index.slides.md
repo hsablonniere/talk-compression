@@ -306,35 +306,52 @@ export function add(f,s){return f+s}export function factorial(n){return 0===n?1:
 Mesures
 
 ## barchart
-math-example.js
+math-example.*js*
 brut : 228 o
 minifié : 98 o
 compressé : 126 o
 minifié<br>& compressé : 75 o
+<!-- avec brotli 11 -->
 
 ## barchart
-jquery.js
+jquery.*js*
 brut : 278.7 Ko
 minifié : 90.1 Ko
 compressé : 82.0 Ko
 minifié<br>& compressé : 30.3 Ko
+<!-- avec brotli 11 -->
 
 ## barchart
-no compress
-JS : 12.7%
-CSS : 14.2%
-HTML : 56.0%
-JSON : 31.8%
-SVG : 36.0%
+bootstrap.*css*
+brut : 200.7 Ko
+minifié : 157.8 Ko
+compressé : 18.7 Ko
+minifié<br>& compressé : 17.2 Ko
+<!-- avec brotli 11 -->
 
-## todo
-histogramme de poids (pur, min, gzip, minzip) avec l'exemple d'avant
+## barchart
+hibernate-user-guide.*html*
+brut : 2421852 o
+minifié : 2334777 o
+compressé : 372419 o
+minifié<br>& compressé : 366546 o
+<!-- avec gzip -->
 
-## todo
-histogramme de poids (pur, min, gzip, minzip) bootstrap/tailwind
+## barchart
+firefox-logo.*svg*
+brut : 15858 o
+minifié : 12163 o
+compressé : 3020 o
+minifié<br>& compressé : 2609 o
+<!-- avec brotli 11 -->
 
-## todo
-histogramme de poids (pur, min, gzip, minzip) jquery/react
+## barchart
+departements-region.*json*
+brut : 10082 o
+minifié : 7153 o
+compressé : 1328 o
+minifié<br>& compressé : 1246 o
+<!-- avec gzip -->
 
 ## blank
 
@@ -350,6 +367,15 @@ un groupe de 4 barres pour le fast 4G
 
 ## todo
 TIP/RECAP #? La minification va de pair avec la compression
+
+## barchart
+no compress
+JS : 12.7%
+CSS : 14.2%
+HTML : 56.0%
+JSON : 31.8%
+SVG : 36.0%
+<!-- à retravailler -->
 
 ## todo
 almanac ratio servi sans compression
@@ -1098,20 +1124,31 @@ Jean-loup Gailly and Mark Adler
 1992 (30 ans)
 > exemple binaire de gzip en mode décompression
 
+## media
+<img src="src/img/rfc-1950-zlib.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1950">
+
+## media
+<img src="src/img/rfc-1951-deflate.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1951">
+
+## media
+<img src="src/img/rfc-1952-gzip.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1952">
+
 ## todo
 et maintenant ?
 > à la recherche du pouillème
 > pourquoi ? 1% c'est beaucoup de moula
 > cloudflare qui a un fork de zlib
 
-## todo
-zopfli
+## media
+<img src="src/img/github-zopfli.png" screenshot-url="https://github.com/google/zopfli">
+> zopfli
 > complexité de la recherche de motifs
 > meilleure taux mais moins bonne perf
 > MEME FORMAT OMG !!
 
-## todo
-brotli
+## media
+<img src="src/img/rfc-7932-brotli.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc7932">
+> brotli
 > stats et ordre de grandeur
 > huffman de l'espace (context modeling)
 > taille des fenetres LZ
@@ -1131,8 +1168,8 @@ maintenant que vous voyez comment ça compresse
 quel sort on réserve au gens qui compresse du JPEG ?
 explications
 
-## todo
-almanac
+## media
+<img src="src/img/almanac-http-2021-compression.png" screenshot-url="https://almanac.httparchive.org/en/2021/compression">
 
 ## todo
 ouverture
@@ -1140,11 +1177,13 @@ ouverture
 ## section todo
 Futur ?
 
-## todo
-zstd
+## media
+<img src="src/img/rfc-8878-zstd.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc8878.html">
+> zstd
 
-## todo
-dictionnaire brouillon WICG
+## media
+<img src="src/img/github-wicg-compression-dictionary-transport.png" screenshot-url="https://github.com/WICG/compression-dictionary-transport">
+> dictionnaire brouillon WICG
 
 ## poster
 Merci beaucoup !
