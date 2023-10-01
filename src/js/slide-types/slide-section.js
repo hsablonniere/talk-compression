@@ -44,7 +44,7 @@ defineSlideType('slide-section', {
     }
 
     .letter {
-      --size: 4.5rem;
+      --size: 4rem;
       height: var(--size);
       line-height: var(--size);
       width: 1rem;
