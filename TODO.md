@@ -105,7 +105,17 @@
 
 ## ??
 
+https://sherlock-holm.es/stories/html/cano.html
+
 * demo serveur ralenti avec lorem
+  * on montre une démo qui génère 1 MB de data (via des blocs en tout petit HTML)
+  * idem mais on ralenti artificiellement le serveur pour envoyer 1K par Xms
+  * on constate que même sans avoir la fin du HTML, le navigateur se débrouille
+  * on ajoute le support de gzip
+  * on montre la même démo au ralenti
+  * on explique qu'on pourrait s'attendre à devoir attendre la fin pour décomprésser
+  * et en fait non, même avant d'avoir la fin, le navigateur peut décomprésser le début et même parser l'HTML
+  * c'est dingue non ?
 * slide poster
   * un grille de scrabble en fond assez transparente
   * un bloc rouge au milieu avec le titre en blanc
