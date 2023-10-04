@@ -159,7 +159,7 @@ export function factorial (number) {
   if (number === 0) {
                     _
     return 1;
-
+            _
   }
   _
   return number * factorial(number - 1);
@@ -168,27 +168,57 @@ export function factorial (number) {
 ```
 
 ## code todo
-```text simple-js-example size=207 highlight=hide
+```js simple-js-example size=207
+export function add (firstNumber, secondNumber) {
+  return firstNumber + secondNumber
+}
+
+
+export function factorial (number) {
+  if (number === 0)
+    return 1
+
+  return number * factorial(number - 1)
+}
+```
+
+## code todo
+```text simple-js-example size=207 highlight
 export function add (firstNumber, secondNumber) {
 
-  return firstNumber + secondNumber;
-                                   _
+  return firstNumber + secondNumber
+
 }
 
 
 
-// Recursive FTW!
-_________________
+
+
 export function factorial (number) {
 
-  if (number === 0) {
-                    _
-    return 1;
+  if (number === 0)
+  __ _            _
+    return 1
+    ______
 
-  }
-  _
-  return number * factorial(number - 1);
-                                       _
+
+  return number * factorial(number - 1)
+  ______
+}
+```
+
+## code todo
+```js simple-js-example size=207
+export function add (firstNumber, secondNumber) {
+  return firstNumber + secondNumber
+}
+
+
+export function factorial (number) {
+  return number === 0
+    ? 1
+    : number * factorial(number - 1)
+
 }
 ```
 
@@ -206,48 +236,38 @@ export function add (firstNumber, secondNumber) {
 
 export function factorial (number) {
                             _____
-  if (number === 0)
-       _____
-    return 1;
+  return number === 0
+          _____
+    ? 1
+
+    : number * factorial(number - 1)
+       _____              _____
 
 
+}
+```
 
-  return number * factorial(number - 1)
-          _____              _____
+## code todo
+```js simple-js-example size=142
+export function add (f, s) {
+  return f + s
+}
+
+
+export function factorial (n) {
+  return n === 0
+    ? 1
+    : n * factorial(n - 1)
+
 }
 ```
 
 ## code todo
 ```text simple-js-example size=142 highlight
 export function add (f, s) {
-
-  return f + s
-
-}
-
-
-
-
-
-export function factorial (n) {
-
-  if (n === 0)
-
-    return 1;
-
-
-
-  return n * factorial(n - 1)
-
-}
-```
-
-## code todo
-```text simple-js-example size=142 highlight=hide-mark
-export function add (f, s) {
                    _   _  _
   return f + s
-__        _ _
+__      _ _ _
 }
 
 
@@ -256,20 +276,15 @@ __        _ _
 
 export function factorial (n) {
                          _   _
-  if (n === 0)
-__  _  _   _
-    return 1;
-____
+  return n === 0
+__      _ _   _
+    ? 1
+____ _
+    : n * factorial(n - 1)
+____ _ _ _           _ _
 
 
-  return n * factorial(n - 1)
-__        _ _           _ _
 }
-```
-
-## code todo
-```js simple-js-example size=108
-export function add(f,s){return f+s}export function factorial(n){if(n===0)return 1;return n*factorial(n-1)}
 ```
 
 ## code todo
@@ -303,7 +318,7 @@ export function add(f,s){return f+s}export function factorial(n){return 0===n?1:
 ```
 
 ## section todo
-Mesures
+Ordres de  grandeur
 
 ## barchart
 math-example.*js*
@@ -384,10 +399,9 @@ almanac ratio servi sans compression
 ## blank
 
 ## section todo
-Procotole
+Dans les  tuyaux
 
-## text
-comment ça marche sur le web ?
+## blank
 
 ## code
 ```http type="request"
@@ -548,6 +562,23 @@ fake long de vrai texte avec div de 10x10px qui font 1k ou 10k
 demo HTML streaming avec compression (au ralenti, simulé en local)
 fake long de vrai texte avec div de 10x10px qui font 1k ou 10k
 
+## todo demo
+exemple simple avec explication et mise en contexte
+
+## todo demo
+exemple ralenti
+onglet network (big rows)
+
+## todo
+slides diagram de gantt DL/PARSE/AFFICHAGE
+
+## todo demo
+exemple ralenti + compression
+onglet DOM
+
+## todo
+slides diagram de gantt DL/DECOMRPESSION/PARSE/AFFICHAGE
+
 ## todo
 TIP/RECAP #? le HTML ça se stream et la compression aussi
 
@@ -582,6 +613,9 @@ le nom de l'algo / outil
 le nom des gens
 la photo des gens
 -->
+
+## section
+Retour  aux sources
 
 ## timeline year=2023 fade-from
 Aujourd'hui, 2023
@@ -1107,7 +1141,7 @@ arbo de la famille LZ
 > mode trivia qui détend
 
 ## section todo
-Deflate
+ET  CONCRETEMENT ?
 
 ## todo
 deflate / pkzip v2
@@ -1138,6 +1172,9 @@ et maintenant ?
 > à la recherche du pouillème
 > pourquoi ? 1% c'est beaucoup de moula
 > cloudflare qui a un fork de zlib
+
+## section todo
+A la recherche  du pouilleme
 
 ## media
 <img src="src/img/github-zopfli.png" screenshot-url="https://github.com/google/zopfli">
@@ -1175,7 +1212,7 @@ explications
 ouverture
 
 ## section todo
-Futur ?
+Au dela du  pouilleme
 
 ## media
 <img src="src/img/rfc-8878-zstd.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc8878.html">
@@ -1184,6 +1221,9 @@ Futur ?
 ## media
 <img src="src/img/github-wicg-compression-dictionary-transport.png" screenshot-url="https://github.com/WICG/compression-dictionary-transport">
 > dictionnaire brouillon WICG
+
+## section todo
+Recap
 
 ## poster
 Merci beaucoup !

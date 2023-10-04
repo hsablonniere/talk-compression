@@ -38,16 +38,16 @@ defineSlideType('slide-section', {
       justify-content: center;
       flex-grow: 0;
       display: flex;
-      gap: 1.5rem 0.5rem;
+      gap: 3rem 0.5rem;
       flex-wrap: wrap;
       margin: 1rem;
     }
 
     .letter {
-      --size: 4rem;
+      --size: 3.5rem;
       height: var(--size);
       line-height: var(--size);
-      width: 1rem;
+      width: 2rem;
     }
 
     .letter:not([data-letter=" "]) {

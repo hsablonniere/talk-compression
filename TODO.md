@@ -53,6 +53,7 @@
   * on remontre le slide précédent
     * avec l'input avec score à 8 et total à 140 * 8
     * avec l'ouput avec score à 9 et total à ???
+* slide poster
 
 ## Hubert
 
@@ -116,6 +117,9 @@ https://sherlock-holm.es/stories/html/cano.html
   * on explique qu'on pourrait s'attendre à devoir attendre la fin pour décomprésser
   * et en fait non, même avant d'avoir la fin, le navigateur peut décomprésser le début et même parser l'HTML
   * c'est dingue non ?
+  * faire une grosse pause au milieu
+  * ça stream
+  * il manque un diagram (rectangle gantt)
 * slide poster
   * un grille de scrabble en fond assez transparente
   * un bloc rouge au milieu avec le titre en blanc
@@ -125,3 +129,19 @@ https://sherlock-holm.es/stories/html/cano.html
     * Une colonne Antoine, Caron, Scaleway
     * Une colonne Hubert, Sablonnière, Clever Cloud
 * slide tip/rappel
+* slide minification
+  * pourcentage de gain à côté du poids
+* LEXIQUE au lieu de DEFINIITON
+* afficher le barchart de l'almanac en progressif
+* PROTOCOLE => ??
+* HTTP/1.1 sur le requête ?
+  * on garde ?
+* slide tip
+  * etoile scrabble plus phrase
+  * cumulatif ? jusqu'à la fin ?
+
+## besoin composant tuile
+
+* tuile rectangulaire avec texte en petit en haut et en dessous une distance longueur <-d,l>
+* souligné (ça c'est une répete)
+* shadow/darken (pas encore affiché)
