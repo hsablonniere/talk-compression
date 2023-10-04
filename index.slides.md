@@ -38,7 +38,7 @@ Definitions
 > nous on va parler principalement sans perte
 
 ## text todo
-🤐 *Minifaction* vs. *Compression*
+🗑️ Minification
 
 <!-- Pour les codes suivants, on mettre en évidence le nombre de chars -->
 
@@ -128,7 +128,7 @@ export function factorial (number) {
 ```
 
 ## code todo
-```js simple-js-example size=228
+```js simple-js-example size
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber;
 }
@@ -143,7 +143,7 @@ export function factorial (number) {
 ```
 
 ## code todo
-```text simple-js-example size=228 highlight
+```text simple-js-example size highlight
 export function add (firstNumber, secondNumber) {
 
   return firstNumber + secondNumber;
@@ -168,7 +168,7 @@ export function factorial (number) {
 ```
 
 ## code todo
-```js simple-js-example size=207
+```js simple-js-example size
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber
 }
@@ -183,7 +183,7 @@ export function factorial (number) {
 ```
 
 ## code todo
-```text simple-js-example size=207 highlight
+```text simple-js-example size highlight
 export function add (firstNumber, secondNumber) {
 
   return firstNumber + secondNumber
@@ -208,7 +208,7 @@ export function factorial (number) {
 ```
 
 ## code todo
-```js simple-js-example size=207
+```js simple-js-example size
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber
 }
@@ -223,7 +223,7 @@ export function factorial (number) {
 ```
 
 ## code todo
-```text simple-js-example size=207 highlight
+```text simple-js-example size highlight
 export function add (firstNumber, secondNumber) {
                       __________   ___________
   return firstNumber + secondNumber
@@ -248,7 +248,7 @@ export function factorial (number) {
 ```
 
 ## code todo
-```js simple-js-example size=142
+```js simple-js-example size
 export function add (f, s) {
   return f + s
 }
@@ -263,7 +263,7 @@ export function factorial (n) {
 ```
 
 ## code todo
-```text simple-js-example size=142 highlight
+```text simple-js-example size highlight
 export function add (f, s) {
                    _   _  _
   return f + s
@@ -277,7 +277,7 @@ __      _ _ _
 export function factorial (n) {
                          _   _
   return n === 0
-__      _ _   _
+__        _   _
     ? 1
 ____ _
     : n * factorial(n - 1)
@@ -288,12 +288,12 @@ ____ _ _ _           _ _
 ```
 
 ## code todo
-```js simple-js-example size=98
-export function add(f,s){return f+s}export function factorial(n){return 0===n?1:n*factorial(n-1)}
+```js simple-js-example size
+export function add(f,s){return f+s}export function factorial(n){return n===0?1:n*factorial(n-1)}
 ```
 
 ## text todo
-🤐 *Minifaction* vs. *Compression*
+🤐 Compression
 
 ## code todo
 ```text simple-js-example size=98
@@ -308,7 +308,7 @@ export function add(f,s){return f+s}export function factorial(n){return 0===n?1:
 ```
 
 ## code todo
-```text simple-js-example size=75
+```text simple-js-example size=77
 0000000 611f 4800 0a2c 76ec dd03 2f9a d235 accf
 0000010 2c34 2d48 13d7 b306 e862 215a 8cac 038d
 0000020 198e 2077 4c49 0835 590a 0f1a f8b8 cda1
@@ -325,7 +325,7 @@ math-example.*js*
 brut : 228 o
 minifié : 98 o
 compressé : 126 o
-minifié<br>& compressé : 75 o
+minifié<br>& compressé : 77 o
 <!-- avec brotli 11 -->
 
 ## barchart

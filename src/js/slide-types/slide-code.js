@@ -17,6 +17,25 @@ defineSlideType('slide-code', {
     const codeBlocks = select(content, 'pre');
 
     codeBlocks
+      .filter((pre) => pre.hasAttribute('size'))
+      .forEach((pre) => {
+
+        const span = document.createElement('span');
+        span.classList.add('size');
+        pre.appendChild(span);
+
+        if (pre.getAttribute('size') !== '') {
+          span.textContent = pre.getAttribute('size');
+        }
+        else if (pre.hasAttribute('highlight')) {
+          span.textContent = pre.textContent.split('\n').filter((l, i) => i % 2 == 0).join('\n').length + 1;
+        }
+        else {
+          span.textContent = pre.textContent.length + 1;
+        }
+      });
+
+    codeBlocks
       .filter((pre) => pre.hasAttribute('highlight'))
       .forEach((pre) => {
         const highlight = pre.getAttribute('highlight');
@@ -39,16 +58,6 @@ defineSlideType('slide-code', {
           })
           .filter((a) => a != null)
           .join('<mark>\n</mark>');
-      });
-
-    codeBlocks
-      .filter((pre) => pre.hasAttribute('size'))
-      .forEach((pre) => {
-        const size = Number(pre.getAttribute('size'));
-        const span = document.createElement('span');
-        span.classList.add('size');
-        span.textContent = size;
-        pre.appendChild(span);
       });
 
     return html`
