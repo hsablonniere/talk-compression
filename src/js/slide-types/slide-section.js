@@ -38,7 +38,7 @@ defineSlideType('slide-section', {
       justify-content: center;
       flex-grow: 0;
       display: flex;
-      gap: 3rem 0.5rem;
+      gap: 3rem 0.25rem;
       flex-wrap: wrap;
       margin: 1rem;
     }

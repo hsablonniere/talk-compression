@@ -740,6 +740,10 @@ COMPRESSION
 > #AC# J'crois qu'on les a perdus.
 > #HS# Mais non, en fait,
 
+## huffman todo step=0 score=4 total-score bits=inc
+COMPRESSION
+> TODO intégrer les notes
+
 <!--
 ## barchart
 Score des lettres au Scrabble
@@ -1115,9 +1119,6 @@ COMPRESSION
 > c'est l'algo le plus optimisé
 
 ## huffman todo step=19 total-score
-COMPRESSION
-
-## huffman todo step=0 score=4 total-score bits=inc
 COMPRESSION
 
 ## text todo
