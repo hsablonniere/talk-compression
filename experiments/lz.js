@@ -7,13 +7,35 @@ function $$ (selector) {
 }
 
 
+/*
 const simpleExample = 'mille feuille'.toUpperCase();
-
 const tags = [{
   startIndex: 9,
   length: 4,
   ref: -8
 }];
+*/
+
+
+const simpleExample = 'On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois'.toUpperCase();
+const tags = [
+  {
+    startIndex: 61,
+    length: 23,
+    ref: -53
+  },
+  {
+    startIndex: 86,
+    length: 7,
+    ref: -40
+  },
+  {
+    startIndex: 93,
+    length: 4,
+    ref: -10
+  }
+];
+
 
 const getTile = ({ letter, shadow, double = false, reference = false}) => {
   const classes = `tile ${double ? 'tile--double':''} ${shadow ? 'tile--shadow':''} ${reference ? 'underline': ''}`
@@ -22,16 +44,53 @@ const getTile = ({ letter, shadow, double = false, reference = false}) => {
   </div>`
 }
 
-const steps = []
-
-for(let i = 0; i<=simpleExample.length ; i++ ) {
+const getTag = ({ content, ref, length})=> {
+  return `<div class='tag'>
+    <h2>${content}</h2>
+    <h3><${ref},${length}></h3>
+  </div>`
+}
+const clone = (object) => JSON.parse(JSON.stringify(object))
+const steps = [];
+let currentLetter = 0;
+let cursorIndex = 0;
+while(currentLetter < simpleExample.length) {
   const step = []
-  for(let j = 0; j<i; j++) {
-    step.push(getTile({ letter: simpleExample[j], shadow: false}))
+  // write previous letter
+  for(let j = 0; j<cursorIndex; j++) {
+    if(cursorIndex > 0) {
+      console.log({steps, currentLetter, j})
+      step.push(clone(steps[cursorIndex-1][j]))
+    }
   }
-  for(let k = i; k < simpleExample.length; k++) {
-    step.push(getTile({ letter: simpleExample[k], shadow: true}))
+  // Apply marker on previous letter
+  const visibleTags = tags.filter(tag => cursorIndex>=tag.startIndex);
+
+  visibleTags.forEach(tag => {
+    const from = tag.startIndex + tag.ref;
+    const to = from + tag.length;
+
+    for(let k = from; k< to; k++) {
+      step[k] = getTile({ letter: simpleExample[k], reference: true, shadow: false})
+    }
+  })
+
+  const currentLetterIsTag = tags.find(tag => tag.startIndex === currentLetter)
+  if(currentLetterIsTag) {
+    step.push(getTag({
+      content: 'yolo',
+      ref: currentLetterIsTag.ref,
+      length: currentLetterIsTag.length,
+    }))
+    currentLetter+=currentLetterIsTag.length
+  } else {
+    step.push(getTile({ letter: simpleExample[currentLetter], shadow: false}))
+    currentLetter++;
   }
+  for(let k = currentLetter; k<simpleExample.length;k++) {
+    step.push(getTile({ letter: simpleExample[k], shadow: true }))
+  }
+  cursorIndex++;
   steps.push(step)
 }
 

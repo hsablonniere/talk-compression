@@ -1131,7 +1131,7 @@ LZ77
 Et 25 ans plus tard...
 
 ## text
-_"On peut tromper mille personne une fois. Mais on ne peut pas tromper mille personnes, mille fois."_
+_"On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois."_
 > A: Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
 > Personellement ça m'est impossible.
 > H: On se répète un peu là non ? 
