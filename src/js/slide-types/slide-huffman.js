@@ -77,15 +77,19 @@ function getValue (valuesComma, index) {
 defineSlideType('slide-huffman', {
   onLeave (position, elements, slide) {
 
+    if (slide.attributes.animation == null) {
+      return;
+    }
+
     const stepCount = elements.stepList.children.length;
     const currentStep = Number(slide.getAttribute('step'));
-    const shouldAnimate = (0 < currentStep) && (currentStep < (stepCount - 3));
+    const shouldAnimate = (0 <= currentStep) && (currentStep < (stepCount - 3));
 
     if (position === 'after' || !shouldAnimate) {
       return;
     }
 
-    const duration = 300;
+    const duration = 400;
 
     slide.setAttribute('frozen', '');
     setTimeout(() => {
@@ -104,7 +108,7 @@ defineSlideType('slide-huffman', {
       const currentCoords = currentElement.getBoundingClientRect();
       const nextCoords = nextElement.getBoundingClientRect();
       const x = nextCoords.left - currentCoords.left;
-      const y = nextCoords.top - currentCoords.top;
+      const y = nextCoords.bottom - currentCoords.bottom;
       const translate = [
         { transform: `translate3d(${x}px, ${y}px, 0)` },
       ];
@@ -132,7 +136,7 @@ defineSlideType('slide-huffman', {
 
     const steps = [];
 
-    function addTreesAsStep (trees) {
+    function addTreesAsStep (trees, tree = false) {
 
       const htmlContent = trees.map((tree) => getTree(tree).htmlContent);
 
@@ -148,7 +152,7 @@ defineSlideType('slide-huffman', {
         ? 'current'
         : 'hidden';
       steps.push(html`
-        <div id=${ifDefined(id)} class="step ${cssClass}" data-step="${newStep}">${htmlContent}</div>
+        <div id=${ifDefined(id)} class="step ${cssClass}" data-tree=${tree} data-step="${newStep}">${htmlContent}</div>
       `);
     }
 
@@ -168,7 +172,7 @@ defineSlideType('slide-huffman', {
       const bits = (rawBits === 'inc')
         ? i.toString(2).padStart(score, '0')
         : rawBits;
-      return { letter, score, bits };
+      return { letter, score, bits, id: `letter-${letter}` };
     });
     const totalScoreInput = (attrs.totalScore != null)
       ? tiles.map((t) => t.score).reduce((a, b) => Number(a) + Number(b), 0)
@@ -188,9 +192,9 @@ defineSlideType('slide-huffman', {
       .map(([letter, count]) => {
         return { count, letter, id: 'letter-' + letter };
       });
-    addTreesAsStep(trees);
+    addTreesAsStep(trees, true);
     trees.sort(sortTrees);
-    addTreesAsStep(trees);
+    addTreesAsStep(trees, true);
 
     while (trees.length >= 2) {
 
@@ -207,14 +211,14 @@ defineSlideType('slide-huffman', {
         },
       ];
 
-      addTreesAsStep(trees);
+      addTreesAsStep(trees, true);
       if (trees.length === 1) {
         trees[0].count = '';
         addTreesAsStep(trees);
       }
       else {
         trees.sort(sortTrees);
-        addTreesAsStep(trees);
+        addTreesAsStep(trees, true);
       }
     }
 
@@ -307,10 +311,14 @@ defineSlideType('slide-huffman', {
       grid-area: 1 / 1 / 2 / 2;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5em;
+      gap: 0.25em;
       margin: 10px 0;
       align-items: start;
       justify-content: center;
+    }
+
+    .step[data-tree="true"] {
+      gap: 0.75em;
     }
 
     scrabble-tile {
@@ -319,7 +327,7 @@ defineSlideType('slide-huffman', {
 
     .tree {
       display: grid;
-      gap: 1.5rem 0.5em;
+      gap: 1.5rem 0.75em;
       grid-template-columns: auto auto;
       position: relative;
       text-align: center;

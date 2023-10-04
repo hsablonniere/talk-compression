@@ -66,13 +66,15 @@ export class ScrabbleTile extends LitElement {
 
     const score = this.getScore();
     const bits = this.getBits();
+    const version = (this.letter ?? '').charCodeAt(0) % 4;
 
     return html`
       ${this.count != null ? html`
         <div class="count">${this.count}</div>
       ` : ''}
       ${this.letter != null ? html`
-        <div class="tile">
+        <div class="tile" data-version=${version}>
+          <div class="bg"></div>
           <div class="letter">${this.letter}</div>
           ${score != null ? html`
             <div class="score">${score}</div>
@@ -91,7 +93,7 @@ export class ScrabbleTile extends LitElement {
       css`
         :host {
           --tile-size: 2em;
-          --count-shift: -0.25em;
+          --count-shift: -0.3em;
           align-items: center;
           display: flex;
           flex-direction: column;
@@ -99,12 +101,9 @@ export class ScrabbleTile extends LitElement {
           width: var(--tile-size);
         }
 
-        :host([letter][count=""]) .count {
-        }
-
         .count {
-          --count-size: 1.5em;
-          background-color: #000;
+          --count-size: 1.6em;
+          /*background-color: #000;*/
           border-radius: 50%;
           color: #fff;
           flex: 0 0 auto;
@@ -116,15 +115,19 @@ export class ScrabbleTile extends LitElement {
           width: var(--count-size);
           z-index: 2;
           /**/
-          background-color: #fff;
+          /*background-color: #fff;*/
           color: #000;
-          border: 2px solid #000;
+          /*border: 2px solid #000;*/
+
+          background-image: url(src/img/tile-count.svg);
+          background-size: cover;
+          background-position: center center;
         }
 
         .tile {
-          background-color: #ffffa1;
+          /*background-color: #ffffa1;*/
           border-radius: 0.2em;
-          border: 0.05em solid #000;
+          /*border: 0.05em solid #000;*/
           box-sizing: border-box;
           cursor: pointer;
           display: flex;
@@ -134,28 +137,77 @@ export class ScrabbleTile extends LitElement {
           width: var(--tile-size);
         }
 
+        .tile[data-version="0"] {
+          transform: translate3d(0, 0, 0) rotate(0.33deg);
+        }
+
+        .tile[data-version="1"] {
+          transform: translate3d(0, 0, 0) rotate(-0.33deg);
+        }
+
+        .tile[data-version="2"] {
+          transform: translate3d(0, 0, 0) rotate(0.66deg);
+        }
+
+        .tile[data-version="3"] {
+          transform: translate3d(0, 0, 0) rotate(-0.66deg);
+        }
+
+        .bg {
+          background-image: url(src/img/tile.svg);
+          background-size: cover;
+          background-position: center center;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+
+        .tile[data-version="0"] .bg {
+          transform: translate3d(0, 0, 0) rotate(0deg);
+          filter: drop-shadow(#ccc 0.1em 0.1em 0.1em);
+        }
+
+        .tile[data-version="1"] .bg {
+          transform: translate3d(0, 0, 0) rotate(90deg);
+          filter: drop-shadow(#ccc 0.1em -0.1em 0.1em);
+        }
+
+        .tile[data-version="2"] .bg {
+          transform: translate3d(0, 0, 0) rotate(180deg);
+          filter: drop-shadow(#ccc -0.1em -0.1em 0.1em);
+        }
+
+        .tile[data-version="3"] .bg {
+          transform: translate3d(0, 0, 0) rotate(270deg);
+          filter: drop-shadow(#ccc -0.1em 0.1em 0.1em);
+        }
+
         .count ~ .tile {
           margin-top: var(--count-shift);
         }
 
         .letter {
-          font-size: 1.5em;
+          font-size: calc(var(--tile-size) * 0.7);
           line-height: 1em;
           font-weight: bold;
           margin: auto;
+          position: relative;
+          z-index: 2;
         }
 
         .score {
           --score-size: 1.2em;
-          bottom: 0;
+          bottom: 0.35em;
           font-size: 0.4em;
           font-weight: bold;
           height: var(--score-size);
           line-height: var(--score-size);
           position: absolute;
-          right: 0;
+          right: 0.3em;
           text-align: center;
           width: var(--score-size);
+          z-index: 2;
         }
 
         .bits {

@@ -47,7 +47,7 @@ defineSlideType('slide-section', {
       --size: 3.5rem;
       height: var(--size);
       line-height: var(--size);
-      width: 2rem;
+      width: 1rem;
     }
 
     .letter:not([data-letter=" "]) {

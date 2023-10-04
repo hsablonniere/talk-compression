@@ -1041,11 +1041,11 @@ COMPRESSION
 ## media contain black thug-life="0.1,-0.05,14,5"
 <img src="src/img/huffman2_upscayl_crop.jpg">
 
-## huffman todo
+## huffman todo animation
 COMPRESSION
 > Pour la première étape de l'algo du codage de Huffman,
 
-## huffman todo step=1
+## huffman todo step=1 animation
 COMPRESSION
 <!--
 <br> (huffman tree 1/16)
@@ -1053,52 +1053,52 @@ COMPRESSION
 -->
 > on va compter la fréquence de chaque caractère dans la séquence qu'on essaye de coder
 
-## huffman todo step=2
+## huffman todo step=2 animation
 COMPRESSION
 
-## huffman todo step=3
+## huffman todo step=3 animation
 COMPRESSION
 
-## huffman todo step=4
+## huffman todo step=4 animation
 COMPRESSION
 
-## huffman todo step=5
+## huffman todo step=5 animation
 COMPRESSION
 
-## huffman todo step=6
+## huffman todo step=6 animation
 COMPRESSION
 
-## huffman todo step=7
+## huffman todo step=7 animation
 COMPRESSION
 
-## huffman todo step=8
+## huffman todo step=8 animation
 COMPRESSION
 
-## huffman todo step=9
+## huffman todo step=9 animation
 COMPRESSION
 
-## huffman todo step=10
+## huffman todo step=10 animation
 COMPRESSION
 
-## huffman todo step=11
+## huffman todo step=11 animation
 COMPRESSION
 
-## huffman todo step=12
+## huffman todo step=12 animation
 COMPRESSION
 
-## huffman todo step=13
+## huffman todo step=13 animation
 COMPRESSION
 
-## huffman todo step=14
+## huffman todo step=14 animation
 COMPRESSION
 
-## huffman todo step=15
+## huffman todo step=15 animation
 COMPRESSION
 
-## huffman todo step=16
+## huffman todo step=16 animation
 COMPRESSION
 
-## huffman todo step=17
+## huffman todo step=17 animation
 COMPRESSION
 
 ## huffman todo step=18 score-sheet
