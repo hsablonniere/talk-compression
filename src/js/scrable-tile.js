@@ -100,6 +100,11 @@ export class ScrabbleTile extends LitElement {
           font-family: "Interstate", sans-serif;
           width: var(--tile-size);
         }
+        
+        :host([ghost='true']) {
+            opacity: 0.3;
+            filter: brightness(50%);
+        }
 
         .count {
           --count-size: 1.6em;

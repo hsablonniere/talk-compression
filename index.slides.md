@@ -23,6 +23,8 @@ intro avec des questions
 ## blank black
 
 ## poster
+La compression web
+Devfest Nantes 18/10/23
 > Bonjour
 
 <!--
@@ -1131,7 +1133,7 @@ LZ77
 Et 25 ans plus tard...
 
 ## text
-_"On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois."_
+_"On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois."_
 > A: Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
 > Personellement ça m'est impossible.
 > H: On se répète un peu là non ? 
@@ -1141,7 +1143,7 @@ _"On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille pe
 Et si on jouait au _"Mot compte moins"_
 
 ## text
-On peut tromper mille personne une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
 
 ## media
 <img src="/src/img/alice-butenko-zstWUZFj77w-unsplash.jpg">
@@ -1150,8 +1152,57 @@ On peut tromper mille personne une fois. Mais on ne peut pas tromper mille perso
 > Et si on remplaçait des parties du messages par des étiquettes/des pointeurs vers une autre partie du message.
 > H: Je ne sais pas si vous l'aviez remarqué mais il y a quelques motifs de répétitions dans la phrase _"On peut tromper..."_"
 
-## todo
-Slide avec etiquettage du mot Mot MILLE FEUILLE
+## lz step=0
+mille feuille
+9,4,8,ille
+
+## lz step=1
+mille feuille
+9,4,8,ille
+
+## lz step=2
+mille feuille
+9,4,8,ille
+
+## lz step=3
+mille feuille
+9,4,8,ille
+
+## lz step=4
+mille feuille
+9,4,8,ille
+
+## lz step=5
+mille feuille
+9,4,8,ille
+
+## lz step=6
+mille feuille
+9,4,8,ille
+
+## lz step=7
+mille feuille
+9,4,8,ille
+
+## lz step=8
+mille feuille
+9,4,8,ille
+
+## lz step=9
+mille feuille
+9,4,8,ille
+
+## lz step=41
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,ouille
+
+## lz step=42
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+
+## lz step=43
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
 
 ## todo
 Slide avec etiquettage avec la phrase
