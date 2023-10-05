@@ -23,6 +23,8 @@ intro avec des questions
 ## blank black
 
 ## poster
+La compression web
+Devfest Nantes 18/10/23
 > Bonjour
 
 <!--
@@ -1126,6 +1128,162 @@ une case "LETTRE COMPTE MOINS"
 
 ## section todo
 LZ77
+
+## text
+Et 25 ans plus tard...
+
+## text
+_"On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois."_
+> A: Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
+> Personellement ça m'est impossible.
+> H: On se répète un peu là non ? 
+> En observant cette phrase on peut surement se dire que se limiter à optimiser caractère par caractère est limitant.
+
+## text
+Et si on jouait au _"Mot compte moins"_
+
+## text
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+
+## media
+<img src="/src/img/alice-butenko-zstWUZFj77w-unsplash.jpg">
+
+> A: L'idée de Mr Lempel et Mr Ziv c'est de trouver un moyen de réduire le nombre de bit nécessaire pour représenter un motif qui se répète.
+> Et si on remplaçait des parties du messages par des étiquettes/des pointeurs vers une autre partie du message.
+> H: Je ne sais pas si vous l'aviez remarqué mais il y a quelques motifs de répétitions dans la phrase _"On peut tromper..."_"
+
+## lz step=0
+mille feuille
+10,4,8,ille
+
+## lz step=1
+mille feuille
+10,4,8,ille
+
+## lz step=2
+mille feuille
+10,4,8,ille
+
+## lz step=3
+mille feuille
+10,4,8,ille
+
+## lz step=4
+mille feuille
+10,4,8,ille
+
+## lz step=5
+mille feuille
+10,4,8,ille
+
+## lz step=6
+mille feuille
+10,4,8,ille
+
+## lz step=7
+mille feuille
+10,4,8,ille
+
+## lz step=8
+mille feuille
+10,4,8,ille
+
+## lz step=9
+mille feuille
+10,4,8,ille
+
+## lz step=10
+mille feuille
+10,4,8,ille
+
+## lz step=41
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,ouille
+58,5,25,mille
+
+## lz step=42
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+
+## lz step=43
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+
+## lz step=44
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+
+## lz step=45
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+64,8,30,personne
+
+## lz step=46
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+63,8,30,personne
+77,4,30,fois
+
+## lz step=47
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+63,8,30,personne
+77,4,30,fois
+
+## lz step=51
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+63,8,30,personne
+77,4,30,fois
+
+## lz step=52
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+63,8,30,personne
+77,4,30,fois
+
+## lz step=70
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+63,8,30,personne
+77,4,30,fois
+94,4,30,peut
+
+## todo
+Slide avec etiquettage avec la phrase
+> Ok on a moins de tuile à la fin qu'au début
+
+## text
+Ok... on gagne en nombre de tuile, mais est-ce qu'on gagne vraiment des bits ?
+
+## text
+0 + 8 bits: pour les lettres
+<br>
+1 + 10 bits: pour les étiquettes
+
+## text
+
+5 bits: pour la distance
+<br>
+5 bits: pour la longueur
+
+## text
+
+180/850
+
+Soit 20%
+
+## todo
+LZ
 > L'idée c'est l'étiquetage
 > exemple : la cité de la peur
 > là tel mot là... ça se répète de ouf
