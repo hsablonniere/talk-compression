@@ -1154,55 +1154,109 @@ On peut tromper une personne mille fois. On peut tromper mille personnes une foi
 
 ## lz step=0
 mille feuille
-9,4,8,ille
+10,4,8,ille
 
 ## lz step=1
 mille feuille
-9,4,8,ille
+10,4,8,ille
 
 ## lz step=2
 mille feuille
-9,4,8,ille
+10,4,8,ille
 
 ## lz step=3
 mille feuille
-9,4,8,ille
+10,4,8,ille
 
 ## lz step=4
 mille feuille
-9,4,8,ille
+10,4,8,ille
 
 ## lz step=5
 mille feuille
-9,4,8,ille
+10,4,8,ille
 
 ## lz step=6
 mille feuille
-9,4,8,ille
+10,4,8,ille
 
 ## lz step=7
 mille feuille
-9,4,8,ille
+10,4,8,ille
 
 ## lz step=8
 mille feuille
-9,4,8,ille
+10,4,8,ille
 
 ## lz step=9
 mille feuille
-9,4,8,ille
+10,4,8,ille
+
+## lz step=10
+mille feuille
+10,4,8,ille
 
 ## lz step=41
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
 42,16,53,ouille
+58,5,25,mille
 
 ## lz step=42
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
 42,16,53,on peut tromper
+58,5,25,mille
 
 ## lz step=43
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
 42,16,53,on peut tromper
+58,5,25,mille
+
+## lz step=44
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+
+## lz step=45
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+64,8,30,personne
+
+## lz step=46
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+63,8,30,personne
+77,4,30,fois
+
+## lz step=47
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+63,8,30,personne
+77,4,30,fois
+
+## lz step=51
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+63,8,30,personne
+77,4,30,fois
+
+## lz step=52
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+63,8,30,personne
+77,4,30,fois
+
+## lz step=70
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+42,16,53,on peut tromper
+58,5,25,mille
+63,8,30,personne
+77,4,30,fois
+94,4,30,peut
 
 ## todo
 Slide avec etiquettage avec la phrase

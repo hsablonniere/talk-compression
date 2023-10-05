@@ -2,6 +2,8 @@ import { css, html } from 'lit';
 import '../scrable-tile.js';
 import { defineSlideType } from './base.js';
 
+const clone = (object) => JSON.parse(JSON.stringify(object))
+
 defineSlideType('slide-lz', {
   render ({ attrs, content }) {
    const stepToShow = parseInt(attrs.step, 10);
@@ -24,49 +26,44 @@ defineSlideType('slide-lz', {
     const read = [];
     const write = [];
 
-    while(currentLetter <= stepToShow) {
+    while(cursorIndex <= stepToShow) {
       const stepRead = []
-      const stepWrite = []
+      const stepWrite = currentLetter > 0 ? clone(write[cursorIndex - 1]) : []
       const currentTag = tags.find(tag => tag.startIndex === currentLetter)
 
       for(let i = 0; i < phraseArray.length; i++){
-        stepRead.push(html`
-          <scrabble-tile .letter=${phraseArray[i]} ghost=${i > currentLetter - 1}></scrabble-tile>
-        `)
-      }
-
-      for(let i = 0; i < currentLetter; i++){
-        stepWrite.push(html`
-          <scrabble-tile .letter=${phraseArray[i - 1]}></scrabble-tile>
-        `)
+        stepRead.push({
+          letter: phraseArray[i],
+          ghost: i > currentLetter - 1
+        })
       }
 
       if (currentTag) {
-        stepWrite.push(html`
-          <div class='tag'>
-            <h2>${currentTag.content}</h2>
-            <h1>< ${currentTag.ref} , ${currentTag.length} ></c></h1>
-          </div>
-        `)
+        stepWrite.push({
+          letter: `${currentTag.content} < ${currentTag.ref} , ${currentTag.length} >`
+        })
         currentLetter+=currentTag.length
       } else {
-        stepWrite.push(html`
-          <scrabble-tile .letter=${phraseArray[currentLetter - 1]}></scrabble-tile>
-        `)
+        stepWrite.push({
+          letter: phraseArray[currentLetter - 1]
+        })
         currentLetter++;
       }
       read.push(stepRead)
       write.push(stepWrite)
+      cursorIndex++;
     }
 
     return html`
-        <h2>Avant</h2>
         <div class="read">
-          ${read[stepToShow]}
+          ${read[stepToShow].map(({letter, ghost}, index) => html`
+            <scrabble-tile data-index=${index} .letter=${letter} ghost=${ghost}></scrabble-tile>
+          `)}
         </div>
-        <h2>Après</h2>
         <div class="write">
-          ${write[stepToShow]}
+          ${write[stepToShow].map(({letter, ghost}) => html`
+            <scrabble-tile .letter=${letter} ghost=${ghost}></scrabble-tile>
+          `)}
         </div>
     `;
   },
@@ -76,7 +73,7 @@ defineSlideType('slide-lz', {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 2em;
+        gap: 3em;
     } 
     
     h1, h2 {
