@@ -24,7 +24,6 @@ intro avec des questions
 
 ## poster
 La compression web
-Devfest Nantes 18/10/23
 > Bonjour
 
 <!--

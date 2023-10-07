@@ -11,44 +11,140 @@ defineSlideType('slide-poster', {
       content ?? getTitle(),
       (text) => text.replace(', ', ' '),
       markup,
-    );
+    ).toUpperCase();
 
     return html`
-      <img src="/src/img/plan-metro.svg" alt="">
-      <div class="details details--top">
-        <div class="date">${meta.date}</div>
-        <div class="event">${meta.event}</div>
-      </div>
+      <img src="/src/img/scrabble-empty.svg" alt="" />
       <div class="title">
         ${unsafeHTML(title)}
       </div>
       <div class="details details--bottom">
-        <div class="author">${meta.author}</div>
-        <div class="author-twitter">${meta.authorTwitter}</div>
-        <div class="author-company">${meta.authorCompany}</div>
+        <h2 class='event-title'>${meta.event} / <span class="date">${meta.date}</span></h2>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Rézosocios</th>
+              <th>Entreprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sablonnière</td>
+              <td>Hubert</td>
+              <td>@hsablonniere</td>
+              <td>Clever Cloud</td>
+            </tr>
+            <tr>
+              <td>Caron</td>
+              <td>Antoine</td>
+              <td>@Slashgear_</td>
+              <td>Scaleway</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     `;
   },
   // language=CSS
   styles: css`
+    @keyframes slide-out {
+        0% {
+            transform: scale(1.8) translateX(-5%) rotate(30deg) translateY(0%);
+        }
+        100% {
+            transform: scale(1.8) translateX(-5%) rotate(30deg) translateY(-10%);
+        }
+    }
+    
     :host {
-      display: grid;
-      background-color: #fff;
-      grid-template-columns: 1fr;
-      grid-template-rows: min-content 1fr min-content;
-      grid-template-areas: "header" "title" "footer";
+      position: relative;  
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
     }
-
-    .details {
+    
+    .date {
+        font-family: 'Just Another Hand';
+        color: blue;
     }
-
-    .details--top {
-    }
-
+    
     .details--bottom {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: -5%;
+        bottom: -55%;
+        width: 40%;
+        height: 30em;
+        padding: 1em 3em;
+        background-color: white;
+        color: black;
+        transform: rotate(-10deg);
+    }
+    
+    .details--bottom .event-title {
+        text-align: center;
     }
 
     .title {
+        background: red;
+        font-size: 3.5em;
+        z-index: 1;
+        padding: 0 0.75ch;
+        margin-bottom: 2em;
+        transform: scale(1, 1.2);
+        font-family: "VFC Sufler";
+    }
+    
+    img {
+        position: absolute;
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        animation: slide-out linear infinite alternate 30s;
+    }
+    
+    h2 {
+        margin: 0.25em 0;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    
+    td {
+        height: 1.5em;
+    }
+    
+    td {
+        font-family: "Just Another Hand";
+        color: #0a58ca;
     }
   `,
 });
