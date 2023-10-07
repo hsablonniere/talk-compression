@@ -6,6 +6,17 @@ export default {
   hostname: '0.0.0.0',
   nodeResolve: true,
   watch: true,
+  middleware: {
+    middleware: [
+      function rewriteIndex(context, next) {
+        if (context.url === '/' || context.url === '/index.html') {
+          context.url = '/index.slides.html';
+        }
+
+        return next();
+      },
+    ],
+  },
   plugins: [{
     serverStart ({ fileWatcher }) {
       fileWatcher.add('*.slides.md');
