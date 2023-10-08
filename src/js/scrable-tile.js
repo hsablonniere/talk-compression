@@ -106,6 +106,17 @@ export class ScrabbleTile extends LitElement {
             filter: brightness(50%);
         }
 
+        :host([marked='true']) .bg::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -10%;
+            bottom: -10%;
+            left: -10%;
+            right: -10%;
+            background-color: chartreuse;
+        }
+
         .count {
           --count-size: 1.6em;
           /*background-color: #000;*/

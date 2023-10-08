@@ -1143,6 +1143,7 @@ Et si on jouait au _"Mot compte moins"_
 
 ## text
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+> A: On va chasser les motifs répétitifs.
 
 ## media
 <img src="/src/img/alice-butenko-zstWUZFj77w-unsplash.jpg">
@@ -1150,153 +1151,198 @@ On peut tromper une personne mille fois. On peut tromper mille personnes une foi
 > A: L'idée de Mr Lempel et Mr Ziv c'est de trouver un moyen de réduire le nombre de bit nécessaire pour représenter un motif qui se répète.
 > Et si on remplaçait des parties du messages par des étiquettes/des pointeurs vers une autre partie du message.
 > H: Je ne sais pas si vous l'aviez remarqué mais il y a quelques motifs de répétitions dans la phrase _"On peut tromper..."_"
-
-## lz step=0
-mille feuille
-10,4,8,ille
-
-## lz step=1
-mille feuille
-10,4,8,ille
-
-## lz step=2
-mille feuille
-10,4,8,ille
-
-## lz step=3
-mille feuille
-10,4,8,ille
+> A: Je vais vous montrer sur un exemple simple
 
 ## lz step=4
 mille feuille
-10,4,8,ille
+9,4,4,ille
 
 ## lz step=5
 mille feuille
-10,4,8,ille
+9,4,4,ille
+> A: On va lire char par char le texte qu'on souhaite compresser.
 
 ## lz step=6
 mille feuille
-10,4,8,ille
+9,4,4,ille
 
 ## lz step=7
 mille feuille
-10,4,8,ille
+9,4,4,ille
 
 ## lz step=8
 mille feuille
-10,4,8,ille
+9,4,4,ille
 
 ## lz step=9
 mille feuille
-10,4,8,ille
+9,4,4,ille
+> A: Dès qu'on trouve un motif qui se répète par rapport à ce qu'on a déjà vu, on le remplacer par une "etiquette"
+> L'étiquette possède une info de la distance, ici 4 et de la longueur 4.
+> On va essayer sur notre citation de la cité de la peur.
+
+## lz step=0
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
 
 ## lz step=10
-mille feuille
-10,4,8,ille
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+
+## lz step=20
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+
+## lz step=30
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+
+## lz step=40
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
 
 ## lz step=41
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-42,16,53,ouille
-58,5,25,mille
+41,15,26,on peut tromper
 
 ## lz step=42
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-42,16,53,on peut tromper
-58,5,25,mille
+41,15,26,on peut tromper
+56,6,22, mille
 
 ## lz step=43
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-42,16,53,on peut tromper
-58,5,25,mille
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
 
 ## lz step=44
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-42,16,53,on peut tromper
-58,5,25,mille
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
 
-## lz step=45
+## lz step=48
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-42,16,53,on peut tromper
-58,5,25,mille
-64,8,30,personne
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
 
-## lz step=46
+## lz step=49
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-42,16,53,on peut tromper
-58,5,25,mille
-63,8,30,personne
-77,4,30,fois
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
+76,6,36, fois.
 
-## lz step=47
+## lz step=50
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-42,16,53,on peut tromper
-58,5,25,mille
-63,8,30,personne
-77,4,30,fois
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
+76,6,36, fois.
 
-## lz step=51
+## lz step=60
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-42,16,53,on peut tromper
-58,5,25,mille
-63,8,30,personne
-77,4,30,fois
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
+76,6,36, fois.
 
-## lz step=52
+## lz step=61
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-42,16,53,on peut tromper
-58,5,25,mille
-63,8,30,personne
-77,4,30,fois
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
+76,6,36, fois.
+93,6,44, peut 
 
-## lz step=70
+## lz step=62
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-42,16,53,on peut tromper
-58,5,25,mille
-63,8,30,personne
-77,4,30,fois
-94,4,30,peut
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
+76,6,36, fois.
+93,6,44, peut
 
-## todo
-Slide avec etiquettage avec la phrase
-> Ok on a moins de tuile à la fin qu'au début
+## lz step=64
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
+76,6,36, fois.
+93,6,44, peut
+
+## lz step=65
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
+76,6,36, fois.
+93,6,44, peut
+102,24,30, tromper mille personnes
+
+
+## lz step=66
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
+76,6,36, fois.
+93,6,44, peut
+102,24,30, tromper mille personnes
+
+## lz step=67
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
+76,6,36, fois.
+93,6,44, peut
+102,24,30, tromper mille personnes
+127,12,87, mille fois.
+> A: On a clairement moins de tuiles en bas qu'en haut non ? 
+> H: Pourtant si on reçoit le texte du bas on peut facilement regénérer le texte du haut.
+> Même si on le reçoit progressivement.
 
 ## text
-Ok... on gagne en nombre de tuile, mais est-ce qu'on gagne vraiment des bits ?
+😅 C'est plus petit ça ? 
+> A: Vous allez me dire, "Mais Antoine, ton étiquette on peut pas l'écrire sur 8 bits" 
+> ou bien "Comment on fait pour reconnaitre une etiquette d'une lettre classique."
 
 ## text
-0 + 8 bits: pour les lettres
+🪄 Lettre: *0* | 8 bits
 <br>
-1 + 10 bits: pour les étiquettes
+Tag: *1* | 7 bits *distance* | 5 bits *longueur*
+> H: Imaginons qu'on dise qu'on rajoute un bit en début pour indiquer si c'est une étiquette ou une lettre.
+> Et pour les tags on utilise 7 et 5 bits pour coder respectivement la distance et la longueur.
+
+## barchart
+Comparaison du nombre de bits utilisés
+Raw : 1112
+LZ : 640
+> A: Et on obtiens ce résultat là, soit près de la moitié des bits gagné
+> H: En vrai c'est cool, mais on est pas sûr que ce soit le meilleur étiquettage possible
+> A: Et plus on se répète plus c'est efficace.
+> ça explique pourquoi ça marche tellement bien avec les attributs CSS par exemple.
 
 ## text
+*LZ77*, *LZ78*, *LZSS*, *LZW*, *LZH*, *LZMA*... 
+> A: Justement Hubert, c'est à ce moment là qu'on leur explique qu'il existe une tripatouillée de variantes de cette algorithme.
 
-5 bits: pour la distance
-<br>
-5 bits: pour la longueur
-
-## text
-
-180/850
-
-Soit 20%
-
-## todo
-LZ
-> L'idée c'est l'étiquetage
-> exemple : la cité de la peur
-> là tel mot là... ça se répète de ouf
-> les étiquettes il y a plein de manière de faire
-> LZ78 via des dictionnaire dynamiques
-> LZ77 via des marqueurs relatifs
-> arbre des familles avec le nom de plusieurs outils
-> c'est LZ77 qui a gagné
-> et on montre étage par étage l'exemple avec la cité de la peur
-> on évoque la complexité de trouver la meilleure répétition dans le passé en regardant un peu dans le futur
+## lz step=67
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+41,15,26,on peut tromper
+56,6,22, mille
+62,9,34,personne
+76,6,36, fois.
+93,6,44, peut
+102,24,30, tromper mille personnes
+127,12,87, mille fois.
+> A: Prenons cette étape là, la dernière étiquette est-elle réellement la meilleur à trouver.
+> Est-ce qu'on devrait pas aller chercher MILLE et FOIS séparément?
+> Ou bien, encore plus simplement, quelle est la plus petite taille de motif qu'on étiquette.
 
 ## todo
 arbo de la famille LZ
-> mode trivia qui détend
+> H: Vous avez des super contenus sur internet qui vous expliquent celà.
+> Et beaucoup de variantes de cet algorithme ont fait outils que vous connaissez probablement tous.
+> A: Ah oui tiens, même _Winrar_, vous aviez payé votre license vous ? 
 
 ## section todo
 ET  CONCRETEMENT ?
