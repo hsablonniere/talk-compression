@@ -398,14 +398,14 @@ minifié<br>& compressé : 27450
 <!-- 3.7.1, avec brotli 11 -->
 
 ## barchart percent
-jquery.*js*
+jquery.*js* (285*ko*)
 brut : 285314
 minifié : 87029
 compressé : 69545
 minifié<br>& compressé : 27450
 <!-- 3.7.1, avec brotli 11 -->
 
-## barchart
+## barchart percent
 bootstrap.*css*
 brut : 205484
 minifié : 161487
@@ -413,7 +413,7 @@ compressé : 19073
 minifié<br>& compressé : 17589
 <!-- avec brotli 11 -->
 
-## barchart
+## barchart percent
 hibernate-user-guide.*html*
 brut : 2421852
 minifié : 2334777
@@ -421,7 +421,7 @@ compressé : 372419
 minifié<br>& compressé : 366546
 <!-- avec gzip -->
 
-## barchart
+## barchart percent
 firefox-logo.*svg*
 brut : 15858
 minifié : 12163
@@ -429,7 +429,7 @@ compressé : 3020
 minifié<br>& compressé : 2609
 <!-- avec brotli 11 -->
 
-## barchart
+## barchart percent
 departements-region.*json*
 brut : 9576
 minifié : 7152
@@ -1353,8 +1353,8 @@ Tag: *1* | 7 bits *distance* | 5 bits *longueur*
 
 ## barchart
 Comparaison du nombre de bits utilisés
-Raw : 1112
-LZ : 640
+Brut : 1112
+LZ (custom) : 640
 > A: Et on obtiens ce résultat là, soit près de la moitié des bits gagné
 > H: En vrai c'est cool, mais on est pas sûr que ce soit le meilleur étiquettage possible
 > A: Et plus on se répète plus c'est efficace.
@@ -1383,17 +1383,17 @@ On peut tromper une personne mille fois. On peut tromper mille personnes une foi
 ET  CONCRETEMENT ?
 <!--DANS LA  PRATIQUE-->
 
-## media
-<img src="src/img/youtube-compressor-head-lz-family.png" screenshot-url="https://www.youtube.com/watch?v=Jqc418tQDkg">
-> H: Vous avez des super contenus sur internet qui vous expliquent celà.
-> Et beaucoup de variantes de cet algorithme ont fait outils que vous connaissez probablement tous.
-> A: Ah oui tiens, même _Winrar_, vous aviez payé votre license vous ?
-
 ## media white
 <img src="src/img/lz-family.svg">
 
 ## media white
 <img src="src/img/lz-family-tools.svg">
+
+## media
+<img src="src/img/youtube-compressor-head-lz-family.png" screenshot-url="https://www.youtube.com/watch?v=Jqc418tQDkg">
+> H: Vous avez des super contenus sur internet qui vous expliquent celà.
+> Et beaucoup de variantes de cet algorithme ont fait outils que vous connaissez probablement tous.
+> A: Ah oui tiens, même _Winrar_, vous aviez payé votre license vous ?
 
 ## todo
 deflate / pkzip v2
@@ -1433,7 +1433,7 @@ cloudflare qui a un fork de zlib
 ordre de grandeur taille niveau gzip
 
 ## barchart compact todo
-Niveaux de compression gzip (jquery.*js*)
+Niveaux de compression gzip (jquery.min.*js*)
 min : 87029
 1 : 35238
 2 : 33957
@@ -1506,37 +1506,51 @@ plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les d
 7) La compression brotli, ça marche
 <!--La compression, c'est mieux avec brotli-->
 
+## barchart small unit="" todo
+Temps de compression brotli (jquery.*js*)
+1 : 1.3
+2 : 1.8
+3 : 2.0
+4 : 2.4
+5 : 3.3
+6 : 3.9
+7 : 5.1
+8 : 6.3
+9 : 8.8
+10 : 37.3
+11 : 97.2
+
 ## barchart unit="ms" todo
 Temps de compression zopfli (jquery.*js*)
 zopfli : 142.2
 
-## barchart small unit="ms" todo
-Temps de compression zopfli (jquery.*js*)
-gz*1* : 1.8
-gz*2* : 1.9
-gz*3* : 2.1
-gz*4* : 2.3
-gz*5* : 2.9
-gz*6* : 3.4
-gz*7* : 3.6
-gz*8* : 3.7
-gz*9* : 3.7
-zopfli : 142.2
-
 ## barchart small unit="" todo
-Temps de compression brotli (jquery.*js*)
-br*1* : 1.3
-br*2* : 1.8
-br*3* : 2.0
-br*4* : 2.4
-br*5* : 3.3
-br*6* : 3.9
-br*7* : 5.1
-br*8* : 6.3
-br*9* : 8.8
-br*10* : 37.3
-br*11* : 97.2
+Temps de compression gzip (jquery.*js*) en ms
+1 : 1.8
+2 : 1.9
+3 : 2.1
+4 : 2.3
+5 : 2.9
+6 : 3.4
+7 : 3.6
+8 : 3.7
+9 : 3.7
 
+## barchart small unit="ms" todo
+Temps de compression (jquery.*js*)
+gzip *9* : 3.7
+zopfli : 142.2
+brotli *11* : 97.2
+
+## blank white
+
+## barchart small unit="ms" todo
+Temps de décompression (jquery.*js*)
+gzip *9* : 1.1
+zopfli : 1.1
+brotli *11* : 1.1
+
+<!--
 ## barchart small unit="" todo
 Temps de décompression gzip (jquery.*js*)
 gz*1* : 1.0
@@ -1563,6 +1577,7 @@ br*8* : 0.9
 br*9* : 0.9
 br*10* : 1.1
 br*11* : 1.1
+-->
 
 ## tip
 8) La compression des fichiers statiques se fait une seule fois au moment du build

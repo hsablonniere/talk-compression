@@ -149,3 +149,27 @@ https://sherlock-holm.es/stories/html/cano.html
   * ou alors pour l'exemple math
   * réutiliser son dump binaire à la fin
 * ajouter la vidéo de bill bird à la fin de l'explication deflate
+
+## New TODO
+
+* Fusionner le poster avec vert à droite 30/70
+* Ajouter les tailles sur les barchart du début en %
+* Mettre en valeur (couleur) la barre du minifié & compressé
+* Passer tous les exemples "ordre de grandeur" en gzip (meme niveau)
+  * Utiliser la couleur gzip pour le "minifié & compressé"
+* Couleur du brut sur no compress
+* Logo des langages sur les barchart du début
+* Logo de jquery sur la fin
+* Pour le gantt :
+  * Compression et décompresion de la couleur gzip
+  * Les autres : nuances de gris
+* Couleurs des barcharts
+  * Tailles
+  * Temps
+  * Algos
+    * 1 couleur brut
+    * 1 couleur min
+    * 1 couleur compressé (sans min)
+    * 1 couleur gzip
+    * 1 couleur zopfli
+    * 1 couleur brotli
