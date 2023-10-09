@@ -248,13 +248,21 @@ defineSlideType('slide-huffman', {
       : totalScoreOutput;
 
     function onClick (e) {
-      if (e.target.matches('scrabble-tile')) {
-        const letter = e.target.letter;
+      const $tile = e.target;
+      if ($tile.matches('scrabble-tile')) {
+        const letter = $tile.letter;
         if (letter != null) {
-          slide.shadowRoot
-            .querySelector(`.score-sheet td[data-letter="${letter}"]`)
+          const $score = slide.shadowRoot
+            .querySelector(`.score-sheet td[data-letter="${letter}"]`);
+          $score
             .classList
             .toggle('hidden');
+          if ($tile.score == null) {
+            $tile.score = $score.textContent.length;
+          }
+          else {
+            $tile.score = null;
+          }
         }
       }
     }

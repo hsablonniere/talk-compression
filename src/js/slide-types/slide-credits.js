@@ -73,7 +73,7 @@ defineSlideType('slide-credits', {
     }
 
     .group-title {
-      font-family: Parisine, sans-serif;
+      font-family: Interstate, sans-serif;
       font-size: 3.5rem;
       justify-self: center;
       grid-column: 1 / -1;

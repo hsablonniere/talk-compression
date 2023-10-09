@@ -44,22 +44,22 @@ defineSlideType('slide-poster', {
               <td>Scaleway</td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
             </tr>
           </tbody>
         </table>
@@ -69,82 +69,90 @@ defineSlideType('slide-poster', {
   // language=CSS
   styles: css`
     @keyframes slide-out {
-        0% {
-            transform: scale(1.8) translateX(-5%) rotate(30deg) translateY(0%);
-        }
-        100% {
-            transform: scale(1.8) translateX(-5%) rotate(30deg) translateY(-10%);
-        }
+      0% {
+        transform: scale(1.8) translateX(-5%) rotate(30deg) translateY(0%);
+      }
+      100% {
+        transform: scale(1.8) translateX(-5%) rotate(30deg) translateY(-10%);
+      }
     }
-    
+
     :host {
-      position: relative;  
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       color: white;
     }
-    
+
     .date {
-        font-family: 'Just Another Hand';
-        color: blue;
+      font-family: 'Just Another Hand';
+      color: blue;
+      color: #0082ff;
+      color: #0050a2;
     }
-    
+
     .details--bottom {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        right: -5%;
-        bottom: -55%;
-        width: 40%;
-        height: 30em;
-        padding: 1em 3em;
-        background-color: white;
-        color: black;
-        transform: rotate(-10deg);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      right: -1%;
+      bottom: -54%;
+      width: 40%;
+      height: 30em;
+      padding: 1em 3em;
+      background-color: white;
+      color: black;
+      transform: rotate(-10deg);
     }
-    
+
     .details--bottom .event-title {
-        text-align: center;
+      text-align: center;
+      font-family: Interstate;
     }
 
     .title {
-        background: red;
-        font-size: 3.5em;
-        z-index: 1;
-        padding: 0 0.75ch;
-        margin-bottom: 2em;
-        transform: scale(1, 1.2);
-        font-family: "VFC Sufler";
+      background: red;
+      font-size: 3.5em;
+      z-index: 1;
+      padding: 0 0.75ch;
+      margin-bottom: 2em;
+      transform: scale(1, 1.2);
+      font-family: "VFC Sufler";
     }
-    
+
     img {
-        position: absolute;
-        object-fit: contain;
-        width: 100%;
-        height: 100%;
-        opacity: 0.6;
-        animation: slide-out linear infinite alternate 30s;
+      position: absolute;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+      animation: slide-out linear infinite alternate 30s;
     }
-    
+
     h2 {
-        margin: 0.25em 0;
+      margin: 0.25em 0;
     }
 
     table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        text-align: center;
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
     }
-    
-    td {
-        height: 1.5em;
+
+    th {
+      font-family: Interstate;
     }
-    
+
     td {
-        font-family: "Just Another Hand";
-        color: #0a58ca;
+      font-family: "Just Another Hand";
+      color: #0050a2;
+      font-size: 2.25em;
+      padding: 0.5rem 0.6rem 0 0.6rem;
+      line-height: 1.75rem;
+      white-space: nowrap;
+      min-height: 2rem;
     }
   `,
 });

@@ -11,64 +11,35 @@ date: 19 octobre 2023
 ## blank
 > @00:00:00@
 
-## todo
-chevalet avec 7 lettres
-
-## todo fade-from
-intro avec des questions
+## huffman score=auto fade-from todo
+DEIOXYZ
+<!-- animation shuffle -->
+> intro avec des questions
 > Qui a déjà essayé de zipper un point zip ?
 > Qui a acheté sa license winrar ?
 > Qui connait par coeur les flags de la commande tar ?
 
 ## blank black
 
-## poster
+## poster fade-from
 La compression web
 > Bonjour
 
-<!--
-j'ai splité le nommage et ordres de grandeur en 2
-* Définitions
-* Mesures
--->
-## section todo
-Definitions
+## blank black fade-to
 
-## text todo
+## section
+Lexique
+
+## text
 🤔 *Avec* ou *Sans* perte de données ?
 > nous on va parler principalement sans perte
 
-## text todo
+## text
 🗑️ Minification
-
-<!-- Pour les codes suivants, on mettre en évidence le nombre de chars -->
-
-<!--
-## code todo
-```js
-const order = [];
-
-function asyncTimeout (duration) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      order.push(duration)
-      resolve()
-    }, duration)
-  })
-};
-
-async function fastestSortingAlgorithm (numberList) {
-  await Promise.all(numberList.map(number => asyncTimeout(number)))
-  console.log(order)
-};
-
-fastestSortingAlgorithm([10000, 10, 100, 1000, 1]);
-```
--->
 
 ## blank
 
-## code todo
+## code
 ```js simple-js-example
 export function add (firstNumber, secondNumber) {
 
@@ -83,7 +54,7 @@ export function factorial (number) {
 }
 ```
 
-## code todo
+## code
 ```js simple-js-example
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber;
@@ -98,7 +69,7 @@ export function factorial (number) {
 }
 ```
 
-## code todo
+## code
 ```js simple-js-example
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber;
@@ -113,7 +84,7 @@ export function factorial (number) {
 }
 ```
 
-## code todo
+## code
 ```js simple-js-example
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber;
@@ -128,7 +99,7 @@ export function factorial (number) {
 }
 ```
 
-## code todo
+## code
 ```js simple-js-example size
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber;
@@ -143,7 +114,7 @@ export function factorial (number) {
 }
 ```
 
-## code todo
+## code
 ```text simple-js-example size highlight
 export function add (firstNumber, secondNumber) {
 
@@ -168,7 +139,7 @@ export function factorial (number) {
 }
 ```
 
-## code todo
+## code
 ```js simple-js-example size
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber
@@ -183,7 +154,7 @@ export function factorial (number) {
 }
 ```
 
-## code todo
+## code
 ```text simple-js-example size highlight
 export function add (firstNumber, secondNumber) {
 
@@ -208,7 +179,7 @@ export function factorial (number) {
 }
 ```
 
-## code todo
+## code
 ```js simple-js-example size
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber
@@ -223,7 +194,7 @@ export function factorial (number) {
 }
 ```
 
-## code todo
+## code
 ```text simple-js-example size highlight
 export function add (firstNumber, secondNumber) {
                       __________   ___________
@@ -248,7 +219,7 @@ export function factorial (number) {
 }
 ```
 
-## code todo
+## code
 ```js simple-js-example size
 export function add (f, s) {
   return f + s
@@ -263,7 +234,7 @@ export function factorial (n) {
 }
 ```
 
-## code todo
+## code
 ```text simple-js-example size highlight
 export function add (f, s) {
                    _   _  _
@@ -288,118 +259,232 @@ ____ _ _ _           _ _
 }
 ```
 
-## code todo
+## code
 ```js simple-js-example size
 export function add(f,s){return f+s}export function factorial(n){return n===0?1:n*factorial(n-1)}
 ```
 
-## text todo
+## text
 🤐 Compression
 
-## code todo
+## code
 ```text simple-js-example size=98
-0000000 7865 6f70 7472 6620 6e75 7463 6f69 206e
-0000010 6461 2864 2c72 2974 727b 7465 7275 206e
-0000020 2b72 7d74 7865 6f70 7472 6620 6e75 7463
-0000030 6f69 206e 6166 7463 726f 6169 286c 2972
-0000040 727b 7465 7275 206e 3d30 3d3d 3f72 3a31
-0000050 2a72 6166 7463 726f 6169 286c 2d72 2931
-0000060 0a7d                                   
-0000062
+6578 706f 7274 2066 756e
+6374 696f 6e20 6164 6428
+662c 7329 7b72 6574 7572
+6e20 662b 737d 6578 706f
+7274 2066 756e 6374 696f
+6e20 6661 6374 6f72 6961
+6c28 6e29 7b72 6574 7572
+6e20 6e3d 3d3d 303f 313a
+6e2a 6661 6374 6f72 6961
+6c28 6e2d 3129 7d0a
 ```
 
-## code todo
+## code
+```text simple-js-example size=98
+6578 706f 7274 2066 756e  export fun
+6374 696f 6e20 6164 6428  ction add(
+662c 7329 7b72 6574 7572  f,s){retur
+6e20 662b 737d 6578 706f  n f+s}expo
+7274 2066 756e 6374 696f  rt functio
+6e20 6661 6374 6f72 6961  n factoria
+6c28 6e29 7b72 6574 7572  l(n){retur
+6e20 6e3d 3d3d 303f 313a  n n===0?1:
+6e2a 6661 6374 6f72 6961  n*factoria
+6c28 6e2d 3129 7d0a       l(n-1)}.
+```
+
+## code
+```text simple-js-example highlight size=98
+6578 706f 7274 2066 756e  export fun
+______________            ______
+6374 696f 6e20 6164 6428  ction add(
+
+662c 7329 7b72 6574 7572  f,s){retur
+
+6e20 662b 737d 6578 706f  n f+s}expo
+               _________        ____
+7274 2066 756e 6374 696f  rt functio
+____                      __
+6e20 6661 6374 6f72 6961  n factoria
+
+6c28 6e29 7b72 6574 7572  l(n){retur
+
+6e20 6e3d 3d3d 303f 313a  n n===0?1:
+
+6e2a 6661 6374 6f72 6961  n*factoria
+
+6c28 6e2d 3129 7d0a       l(n-1)}.
+```
+
+## code
+```text simple-js-example highlight size=98
+6578 706f 7274 2066 756e  export fun
+                 _______         ___
+6374 696f 6e20 6164 6428  ction add(
+____________              _____
+662c 7329 7b72 6574 7572  f,s){retur
+
+6e20 662b 737d 6578 706f  n f+s}expo
+
+7274 2066 756e 6374 696f  rt functio
+       _________________     _______
+6e20 6661 6374 6f72 6961  n factoria
+__                        _
+6c28 6e29 7b72 6574 7572  l(n){retur
+
+6e20 6e3d 3d3d 303f 313a  n n===0?1:
+
+6e2a 6661 6374 6f72 6961  n*factoria
+
+6c28 6e2d 3129 7d0a       l(n-1)}.
+```
+
+## code
+```text simple-js-example highlight size=98
+6578 706f 7274 2066 756e  export fun
+
+6374 696f 6e20 6164 6428  ction add(
+
+662c 7329 7b72 6574 7572  f,s){retur
+            ____________       _____
+6e20 662b 737d 6578 706f  n f+s}expo
+__                        _
+7274 2066 756e 6374 696f  rt functio
+
+6e20 6661 6374 6f72 6961  n factoria
+
+6c28 6e29 7b72 6574 7572  l(n){retur
+            ____________       _____
+6e20 6e3d 3d3d 303f 313a  n n===0?1:
+__                        _
+6e2a 6661 6374 6f72 6961  n*factoria
+
+6c28 6e2d 3129 7d0a       l(n-1)}.
+```
+
+## code fade-from
 ```text simple-js-example size=77
-0000000 611f 4800 0a2c 76ec dd03 2f9a d235 accf
-0000010 2c34 2d48 13d7 b306 e862 215a 8cac 038d
-0000020 198e 2077 4c49 0835 590a 0f1a f8b8 cda1
-0000030 671b 4c43 0ee9 262a 37cc b083 c97e ba67
-0000040 33e8 6534 9e97 4cab 1c11 0038          
-000004b
+1f61 0048 2c8b 7784 cb16  .a.H,.w...
+8dd4 944e cb27 3d6d 1fad  ...N.'=m..
+c3cc d8dc 54cc 5c29 94b5  ....T.\)..
+0a4b 4b9f ec81 59c9 149d  .KK...Y...
+9f06 4121 4be3 0117 3fb4  ..A!K...?.
+79e3 6c88 29dd 41c5 84f9  y.l.).A...
+6610 d694 7aa6 cbde d094  f...z.....
+c9f5 1caf 01c7 00         .......
 ```
 
-## section todo
+## blank black fade-to
+
+## section
 Ordres de  grandeur
 
 ## barchart
 math-example.*js*
-brut : 228 o
-minifié : 98 o
-compressé : 126 o
-minifié<br>& compressé : 77 o
+brut : 228
+minifié : 98
+compressé : 126
+minifié<br>& compressé : 77
 <!-- avec brotli 11 -->
 
 ## barchart
 jquery.*js*
-brut : 278.7 Ko
-minifié : 90.1 Ko
-compressé : 82.0 Ko
-minifié<br>& compressé : 30.3 Ko
-<!-- avec brotli 11 -->
+brut : 285314
+minifié : 87029
+compressé : 69545
+minifié<br>& compressé : 27450
+<!-- 3.7.1, avec brotli 11 -->
+
+## barchart percent
+jquery.*js*
+brut : 285314
+minifié : 87029
+compressé : 69545
+minifié<br>& compressé : 27450
+<!-- 3.7.1, avec brotli 11 -->
 
 ## barchart
 bootstrap.*css*
-brut : 200.7 Ko
-minifié : 157.8 Ko
-compressé : 18.7 Ko
-minifié<br>& compressé : 17.2 Ko
+brut : 205484
+minifié : 161487
+compressé : 19073
+minifié<br>& compressé : 17589
 <!-- avec brotli 11 -->
 
 ## barchart
 hibernate-user-guide.*html*
-brut : 2421852 o
-minifié : 2334777 o
-compressé : 372419 o
-minifié<br>& compressé : 366546 o
+brut : 2421852
+minifié : 2334777
+compressé : 372419
+minifié<br>& compressé : 366546
 <!-- avec gzip -->
 
 ## barchart
 firefox-logo.*svg*
-brut : 15858 o
-minifié : 12163 o
-compressé : 3020 o
-minifié<br>& compressé : 2609 o
+brut : 15858
+minifié : 12163
+compressé : 3020
+minifié<br>& compressé : 2609
 <!-- avec brotli 11 -->
 
 ## barchart
 departements-region.*json*
-brut : 10082 o
-minifié : 7153 o
-compressé : 1328 o
-minifié<br>& compressé : 1246 o
+brut : 9576
+minifié : 7152
+compressé : 1315
+minifié<br>& compressé : 1244
 <!-- avec gzip -->
 
+## tip
+1) La minification va de pair avec la compression
+<!--Règle foobar
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+
 ## blank
 
 ## todo
-histogramme de temps de chargement (pur, min, gzip, minzip) bootstrap/tailwind
+histogramme de temps de chargement (pur, min, gzip, minzip) jquery
+un groupe de 4 barres pour le edge
 un groupe de 4 barres pour le slow 3G
-un groupe de 4 barres pour le fast 4G
-
-## todo
-histogramme de temps de chargement (pur, min, gzip, minzip) jquery/react
-un groupe de 4 barres pour le slow 3G
-un groupe de 4 barres pour le fast 4G
-
-## todo
-TIP/RECAP #? La minification va de pair avec la compression
+un groupe de 4 barres pour fibre
+> projection en temps de chargement (pour 2 types de connexion)
 
 ## barchart
-no compress
-JS : 12.7%
-CSS : 14.2%
-HTML : 56.0%
-JSON : 31.8%
-SVG : 36.0%
-<!-- à retravailler -->
+jquery.*js*
+brut : 285314
+minifié : 87029
+compressé : 69545
+minifié<br>& compressé : 27450
 
 ## todo
-almanac ratio servi sans compression
-> expliquer ce que c'est l'almanac
+waterfall WPT de wikipedia
 
-## blank
+## todo
+vidéo WPT no compression / compression (fibre)
 
-## section todo
+## todo
+vidéo WPT no compression / compression (3G)
+
+## tip
+2) La compression c'est nécessaire
+
+## media
+<img src="src/img/almanac-http-2021-compression.png" screenshot-url="https://almanac.httparchive.org/en/2021/compression">
+
+## barchart unit="%" todo fade-from
+no compress
+JS : 12.7
+CSS : 14.2
+JSON : 31.8
+SVG : 36.0
+HTML : 56.0
+<!-- à retravailler -->
+
+## blank black fade-to
+
+## section
 Dans les  tuyaux
 
 ## blank
@@ -536,84 +621,78 @@ content-encoding: br
 
 ## todo
 demo firefox
+juste pour montrer les en-tête
+et les sizes dans les devtools
 > montrer transfer size
 > resource size (entre parenthèses)
 > post-compression dans l'en-tête content-length
 
-## text
-ça existe depuis quand ça ?
+## tip
+3) La compression, c'est natif au fonctionnement du Web
 
-## media todo
-caniuse gzip
+## media
+<img src="src/img/caniuse-gzip.png" screenshot-url="https://caniuse.com/sr_content-encoding-gzip">
 
 ## blank
 
 ## todo
 c'est petit mais est-ce que ça bloque ?
 
-## todo demo
-demo HTML streaming sans compression (au ralenti, simulé en local)
-avec doc d'hibernate
+## gantt title="The title" todo
+Compression : 0
+Transfert : 100
+Décompression : 100
+Parsing : 100
+Affichage : 100
+> slides diagram de gantt DL/DECOMPRESSION/PARSE/AFFICHAGE
+> pas cheveauché
+> On pourrait penser que la compression introduit une phase ça bloque
+
+## gantt title="The title 2" todo
+Compression : 0
+Transfert : 80
+Décompression : 80
+Parsing : 80
+Affichage : 80
 
 ## todo demo
-demo HTML streaming sans compression (au ralenti, simulé en local)
-fake long de vrai texte avec div de 10x10px qui font 1k ou 10k
+demo sherlock HTML streaming sans compression
+> BIEN EXPLIQUER
 
 ## todo demo
-demo HTML streaming avec compression (au ralenti, simulé en local)
-fake long de vrai texte avec div de 10x10px qui font 1k ou 10k
-
-## todo demo
-exemple simple avec explication et mise en contexte
-
-## todo demo
-exemple ralenti
-onglet network (big rows)
+demo sherlock HTML streaming sans compression ralenti
 
 ## todo
 slides diagram de gantt DL/PARSE/AFFICHAGE
+cheveauché => constat du streaming (temps réel) d'un navigateur 
 
 ## todo demo
-exemple ralenti + compression
-onglet DOM
+demo sherlock HTML streaming avec compression ralenti
 
 ## todo
-slides diagram de gantt DL/DECOMRPESSION/PARSE/AFFICHAGE
+slides diagram de gantt DL/DECOMPRESSION/PARSE/AFFICHAGE
+cheveauché
 
-## todo
-TIP/RECAP #? le HTML ça se stream et la compression aussi
+## tip
+4) La compression n'interrompt pas le flux
 
 ## blank
 
-## text
-plus petit sur le papier niveau octets
-
-## text
-plus rapide pour l'utilisateur niveau temps ?
-
-## todo
+## todo fade-from
 on parle des valises et tshirt en boule ou pliés
 (demander à Geoffroy comment mettre en place une démo)
 > streamer, c'est bien, mais sur le réseau, il y a des paquets et "une valise à moitié vide, pas besoin de plier les
 > tshirts"
 
-## todo
-transition
-on vient de comprendre que compresser c'est indispensable
-ça l'est toujours dans un monde de fibre, de 5G, de CPU M2
-ça a encore un impact sur nos utilisateurs et sur l'environnement
-mais ça date pas d'hier
-ça fait combien de temps qu'on se pose cette question ?
-56K
 
-<!--
-Remonter le temps avec un seul slide à chaque fois
-un thème daté (police, fond, couleur...)
-la date
-le nom de l'algo / outil
-le nom des gens
-la photo des gens
--->
+## blank black fade-to
+> transition
+> on vient de comprendre que compresser c'est indispensable
+> ça l'est toujours dans un monde de fibre, de 5G, de CPU M2
+> ça a encore un impact sur nos utilisateurs et sur l'environnement
+> mais ça date pas d'hier
+> ça fait combien de temps qu'on se pose cette question ?
+> 56K
 
 ## section
 Retour  aux sources
@@ -665,13 +744,9 @@ Code de Huffman, 1951, David A. Huffman, <img src="src/img/huffman.png" />
 > 40 ans séparent PKZIP du codage d'Huffman et plus de 30 ans séparent GZIP de 2023.
 > #HS# Oui allez Antoine, on est content mais il faut qu'on avance et qu'on leur explique comment ça marche
 
-## todo
-section comment ça marche
+## blank black fade-to
 
-## todo
-lettre compte triple
-
-## section todo
+## section
 Code de  Huffman
 > le but de huffman c'est d'encoder les caractères en fonction de la fréquence
 > c'est comme le scrabble !
@@ -696,7 +771,7 @@ sablonnière
 > _Hubert affiche le mot "sablonnière" à l'écran._
 > #AC# Hubert ?
 
-## huffman todo score=auto
+## huffman score=auto
 SABLONNIERE
 > #HS# Non, mais c'est un vrai mot, on peut le jouer au Scrabble.
 > #AC# Hubert !
@@ -704,12 +779,12 @@ SABLONNIERE
 ## blank
 > #HS# Bon, d'accord, de toute façon, j'ai jamais réussi à le placer.
 
-## huffman todo
+## huffman
 COMPRESSION
 > #HS# Prenons un mot au hasard !
 > Quand on stocke le mot "COMPRESSION" dans un fichier texte, on obtient un fichier de 9 octets, un octet par caractère.
 
-## huffman todo score=8
+## huffman score=8
 COMPRESSION
 > Chaque octet contient les 8 bits nécessaires pour représenter le code ASCII en binaire.
 
@@ -725,12 +800,12 @@ table ASCII ou alors avec la commande `ascii`
 ## media terminal
 <img src="src/img/terminal-ascii-b-annotate.png">
 
-## huffman todo score=8 bits=auto
+## huffman score=8 bits=auto
 COMPRESSION
 > En 1952, Huffman, constate que cette représentation binaire est linéaire.
 > Le nombre total de bits est...
 
-## huffman todo  score=8 bits=auto total-score
+## huffman score=8 bits=auto total-score
 COMPRESSION
 > ...directement proportionnel au nombre de caractères,
 > et lui, il veut limiter ce nombre de bits.
@@ -741,51 +816,11 @@ COMPRESSION
 > #AC# J'crois qu'on les a perdus.
 > #HS# Mais non, en fait,
 
-## huffman todo step=0 score=4 total-score bits=inc
+## huffman step=0 score=4 total-score bits=inc
 COMPRESSION
 > TODO intégrer les notes
 
-<!--
-## barchart
-Score des lettres au Scrabble
-A : 1
-E : 1
-I : 1
-L : 1
-N : 1
-O : 1
-R : 1
-S : 1
-T : 1
-U : 1
-D : 2
-G : 2
-M : 2
-B : 3
-C : 3
-P : 3
-F : 4
-H : 4
-V : 4
-J : 8
-Q : 8
-K : 10
-W : 10
-X : 10
-Y : 10
-Z : 10
-> c'est comme au Scrabble.
-> Les lettres qui apparaissent le plus souvent ont un petit score
-> et les lettres qui apparaissent le moins souvent ont un plus gros score.
--->
-
-<!--
-IDEE :
-on mets les lettres dans l'ordre alpha
-mais on fait apparaitre les scores 1 d'abord, puis 2, puis 3, 4, 8 et 10
--->
-
-## barchart
+## barchart unit=""
 Score des lettres au Scrabble (français)
 // A : 1
 // B : 3
@@ -814,7 +849,7 @@ Score des lettres au Scrabble (français)
 // Y : 10
 // Z : 10
 
-## barchart
+## barchart unit=""
 Score des lettres au Scrabble (français)
 A : 1
 // B : 3
@@ -843,7 +878,7 @@ U : 1
 // Y : 10
 // Z : 10
 
-## barchart
+## barchart unit=""
 Score des lettres au Scrabble (français)
 A : 1
 // B : 3
@@ -872,7 +907,7 @@ U : 1
 // Y : 10
 // Z : 10
 
-## barchart
+## barchart unit=""
 Score des lettres au Scrabble (français)
 A : 1
 B : 3
@@ -901,7 +936,7 @@ U : 1
 // Y : 10
 // Z : 10
 
-## barchart
+## barchart unit=""
 Score des lettres au Scrabble (français)
 A : 1
 B : 3
@@ -930,7 +965,7 @@ V : 4
 // Y : 10
 // Z : 10
 
-## barchart
+## barchart unit=""
 Score des lettres au Scrabble (français)
 A : 1
 B : 3
@@ -959,7 +994,7 @@ V : 4
 // Y : 10
 // Z : 10
 
-## barchart
+## barchart unit=""
 Score des lettres au Scrabble (français)
 A : 1
 B : 3
@@ -988,42 +1023,11 @@ X : 10
 Y : 10
 Z : 10
 
-<!--
-## barchart
-Score des lettres au Scrabble (anglais)
-A : 1
-B : 3
-C : 3
-D : 2
-E : 1
-F : 4
-G : 2
-H : 4
-I : 1
-J : 8
-K : 5
-L : 1
-M : 3
-N : 1
-O : 1
-P : 3
-Q : 10
-R : 1
-S : 1
-T : 1
-U : 1
-V : 4
-W : 4
-X : 8
-Y : 4
-Z : 10
--->
-
-## huffman todo score=auto
+## huffman score=auto
 COMPRESSION
 > Si on représentait chaque lettre en utilisant le score au Scrabble pour le nombre de bits,
 
-## huffman todo total-score score=auto
+## huffman total-score score=auto
 COMPRESSION
 > on obtiendrait un nombre total de bits plus petit.
 > En gros, l'idée de Huffman c'est ça.
@@ -1046,11 +1050,11 @@ COMPRESSION
 ## media contain black thug-life="0.1,-0.05,14,5"
 <img src="src/img/huffman2_upscayl_crop.jpg">
 
-## huffman todo animation
+## huffman animation
 COMPRESSION
 > Pour la première étape de l'algo du codage de Huffman,
 
-## huffman todo step=1 animation
+## huffman step=1 animation
 COMPRESSION
 <!--
 <br> (huffman tree 1/16)
@@ -1111,7 +1115,7 @@ COMPRESSION
 > on indique que il n'y a pas de conflit "on sait quand s'arrêter"
 <!-- est-ce qu'on montre la logique de décompression pour expliquer qu'on sait voir les caractères et les lire ? -->
 
-## huffman todo step=19
+## huffman step=19
 COMPRESSION
 > <br> mode scrabble
 > <br> score base  / score de huffman
@@ -1121,11 +1125,14 @@ COMPRESSION
 
 ## huffman todo step=19 total-score
 COMPRESSION
+<!-- il manque l'affichage du gain de compression -->
 
-## text todo
-une case "LETTRE COMPTE MOINS"
+## media todo contain white fade-from
+<img src="src/img/tile-lettre-compte-moins.svg">
 
-## section todo
+## blank black fade-to
+
+## section
 LZ77
 
 ## text
@@ -1138,8 +1145,8 @@ _"On peut tromper une personne mille fois. On peut tromper mille personnes une f
 > H: On se répète un peu là non ? 
 > En observant cette phrase on peut surement se dire que se limiter à optimiser caractère par caractère est limitant.
 
-## text
-Et si on jouait au _"Mot compte moins"_
+## media todo contain white
+<img src="src/img/tile-mot-compte-moins.svg">
 
 ## text
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
@@ -1321,7 +1328,7 @@ LZ : 640
 > A: Et plus on se répète plus c'est efficace.
 > ça explique pourquoi ça marche tellement bien avec les attributs CSS par exemple.
 
-## text
+## text fade-from
 *LZ77*, *LZ78*, *LZSS*, *LZW*, *LZH*, *LZMA*... 
 > A: Justement Hubert, c'est à ce moment là qu'on leur explique qu'il existe une tripatouillée de variantes de cette algorithme.
 
@@ -1344,8 +1351,20 @@ arbo de la famille LZ
 > Et beaucoup de variantes de cet algorithme ont fait outils que vous connaissez probablement tous.
 > A: Ah oui tiens, même _Winrar_, vous aviez payé votre license vous ? 
 
+## blank black fade-to
+
 ## section todo
 ET  CONCRETEMENT ?
+<!--DANS LA  PRATIQUE-->
+
+## media
+<img src="src/img/youtube-compressor-head-lz-family.png" screenshot-url="https://www.youtube.com/watch?v=Jqc418tQDkg">
+
+## media white
+<img src="src/img/lz-family.svg">
+
+## media white
+<img src="src/img/lz-family-tools.svg">
 
 ## todo
 deflate / pkzip v2
@@ -1353,14 +1372,10 @@ Phil Katz
 (v1 1986 / v2 ?) (30 ans)
 > dans les années 90, tout le monde a essayé d'optimisé pour que ça marche bien pour du texte
 
-## section todo
-GZIP
-
 ## todo
 gzip
 Jean-loup Gailly and Mark Adler
 1992 (30 ans)
-> exemple binaire de gzip en mode décompression
 
 ## media
 <img src="src/img/rfc-1950-zlib.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1950">
@@ -1368,17 +1383,38 @@ Jean-loup Gailly and Mark Adler
 ## media
 <img src="src/img/rfc-1951-deflate.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1951">
 
-## media
+## media fade-from
 <img src="src/img/rfc-1952-gzip.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1952">
 
 ## todo
-et maintenant ?
+exemple binaire de gzip en mode décompression
+
+## blank black fade-to
+
+## section
+A la recherche  du pouilleme
 > à la recherche du pouillème
 > pourquoi ? 1% c'est beaucoup de moula
 > cloudflare qui a un fork de zlib
 
-## section todo
-A la recherche  du pouilleme
+## todo
+cloudflare qui a un fork de zlib
+
+## todo
+ordre de grandeur taille niveau gzip
+
+## barchart compact todo
+Niveaux de compression gzip (jquery.*js*)
+min : 87029
+1 : 35238
+2 : 33957
+3 : 33003
+4 : 31336
+5 : 30406
+6 : 30190
+7 : 30143
+8 : 30129
+9 : 30129
 
 ## media
 <img src="src/img/github-zopfli.png" screenshot-url="https://github.com/google/zopfli">
@@ -1386,6 +1422,12 @@ A la recherche  du pouilleme
 > complexité de la recherche de motifs
 > meilleure taux mais moins bonne perf
 > MEME FORMAT OMG !!
+
+## barchart todo
+gzip vs. zopfli (jquery.*js*)
+min : 87029
+gzip *9* : 30129
+zopfli : 29227
 
 ## media
 <img src="src/img/rfc-7932-brotli.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc7932">
@@ -1397,37 +1439,159 @@ A la recherche  du pouilleme
 > transformations de dico (montrer)
 
 ## todo
+ordre de grandeur taille
+
+## barchart compact todo
+Niveaux de compression brotli (jquery.*js*)
+min : 87029
+1 : 34909
+2 : 32234
+3 : 31956
+4 : 31290
+5 : 29734
+6 : 29543
+7 : 29478
+8 : 29416
+9 : 29400
+10 : 27853
+11 : 27450
+
+## barchart todo
+gzip vs. zopfli vs. brotli (jquery.*js*)
+min : 87029
+gzip *9* : 30129
+zopfli : 29227
+brotli *11* : 27450
+
+## todo
+exemple dictionnaire
+
+## todo
 plus on est vieux => plus on est abstrait
 plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les derniers %)
 
+## media
+<img src="src/img/caniuse-brotli.png" screenshot-url="https://caniuse.com/brotli">
+
+## tip
+7) La compression brotli, ça marche
+<!--La compression, c'est mieux avec brotli-->
+
+## barchart unit="ms" todo
+Temps de compression zopfli (jquery.*js*)
+zopfli : 142.2
+
+## barchart small unit="ms" todo
+Temps de compression zopfli (jquery.*js*)
+gz*1* : 1.8
+gz*2* : 1.9
+gz*3* : 2.1
+gz*4* : 2.3
+gz*5* : 2.9
+gz*6* : 3.4
+gz*7* : 3.6
+gz*8* : 3.7
+gz*9* : 3.7
+zopfli : 142.2
+
+## barchart small unit="" todo
+Temps de compression brotli (jquery.*js*)
+br*1* : 1.3
+br*2* : 1.8
+br*3* : 2.0
+br*4* : 2.4
+br*5* : 3.3
+br*6* : 3.9
+br*7* : 5.1
+br*8* : 6.3
+br*9* : 8.8
+br*10* : 37.3
+br*11* : 97.2
+
+## barchart small unit="" todo
+Temps de décompression gzip (jquery.*js*)
+gz*1* : 1.0
+gz*2* : 1.1
+gz*3* : 1.1
+gz*4* : 1.1
+gz*5* : 1.1
+gz*6* : 1.1
+gz*7* : 1.0
+gz*8* : 1.1
+gz*9* : 1.1
+zopfli : 1.1
+
+## barchart small unit="" todo
+Temps de décompression brotli (jquery.*js*)
+br*1* : 1.0
+br*2* : 1.0
+br*3* : 1.0
+br*4* : 0.9
+br*5* : 1.0
+br*6* : 1.0
+br*7* : 1.0
+br*8* : 0.9
+br*9* : 0.9
+br*10* : 1.1
+br*11* : 1.1
+
+## tip
+8) La compression des fichiers statiques se fait une seule fois au moment du build
+
 ## todo
-compression statique et ordre de grandeur
-si c'est pas temps réel, sur le web, c'est compliqué
+almanac
+Precompressed 	11 	9 or Zopfli
+Dynamically compressed 	5 	6
 
 ## todo
 maintenant que vous voyez comment ça compresse
 quel sort on réserve au gens qui compresse du JPEG ?
 explications
 
-## media
-<img src="src/img/almanac-http-2021-compression.png" screenshot-url="https://almanac.httparchive.org/en/2021/compression">
+## tip
+9) La compression, n'a pas d'effet sur les fichiers déjà compressés
+> anecdote zipper un .zip
+> On peut compresser une fois mille fichiers,
+> mais peut pas compresser mille fois un fichier.
 
-## todo
-ouverture
+## todo fade-from
+almanac
+JPG
+PNG
+MP4
+fonts
 
-## section todo
+## blank black fade-to
+
+## section
 Au dela du  pouilleme
 
 ## media
 <img src="src/img/rfc-8878-zstd.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc8878.html">
 > zstd
 
-## media
+## media fade-from
 <img src="src/img/github-wicg-compression-dictionary-transport.png" screenshot-url="https://github.com/WICG/compression-dictionary-transport">
 > dictionnaire brouillon WICG
 
-## section todo
+## blank black fade-to
+
+## section
 Recap
+
+## tip
+1) Ça va de pair avec la minification
+2) C'est nécessaire
+3) C'est natif au fonctionnement du Web
+4) Ça n'interrompt pas le flux
+5) C'est lettre compte moins
+6) C'est mot compte moins
+7) Brotli, ça marche
+8) Les fichiers statiques, c'est une seule fois au build
+9) Ça n'a pas d'effet sur les fichiers déjà compressés
+
+## huffman score=auto fade-from todo
+OXYDIEZ
 
 ## poster
 Merci beaucoup !

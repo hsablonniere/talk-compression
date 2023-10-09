@@ -98,7 +98,6 @@
   * on affiche une case "LETTRE COMPTE MOINS"
 
 * slide chart
-  * formattage des unités d'octets
   * formattage des unités de temps
   * meilleur affichage de celui de l'almanac avec les mime types
 * exemple binaire de gzip en mode décompression
@@ -131,9 +130,7 @@ https://sherlock-holm.es/stories/html/cano.html
 * slide tip/rappel
 * slide minification
   * pourcentage de gain à côté du poids
-* LEXIQUE au lieu de DEFINIITON
 * afficher le barchart de l'almanac en progressif
-* PROTOCOLE => ??
 * HTTP/1.1 sur le requête ?
   * on garde ?
 * slide tip
@@ -145,3 +142,10 @@ https://sherlock-holm.es/stories/html/cano.html
 * tuile rectangulaire avec texte en petit en haut et en dessous une distance longueur <-d,l>
 * souligné (ça c'est une répete)
 * shadow/darken (pas encore affiché)
+
+## idées
+
+* faire que du gzip sur les ordres de grandeur
+  * ou alors pour l'exemple math
+  * réutiliser son dump binaire à la fin
+* ajouter la vidéo de bill bird à la fin de l'explication deflate

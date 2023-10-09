@@ -4,8 +4,40 @@ import { defineSlideType } from './base.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { markup } from '../utils.mjs';
 
+const NNBSP = '\u202f';
+const SI_PREFIXES = ['', 'k', 'M', 'G', 'T', 'P'];
+
+const nf = new Intl.NumberFormat('fr', { minimumFractionDigits: 0, maximumFractionDigits: 1 });
+
+export function formatBytes (rawValue) {
+  const symbol = 'o';
+  const separator = NNBSP;
+  // Figure out the "magnitude" of the rawValue: 1000 => 1 / 1000000 => 2 / 1000000000 => 3 ...
+  const prefixIndex = (rawValue > 1)
+    ? Math.floor(Math.log10(rawValue) / 3)
+    : 0;
+  // Use the prefixIndex to "rebase" the rawValue into the new base, 1250 => 1.25 / 1444000 => 1.444...
+  const rebasedValue = rawValue / 1000 ** prefixIndex;
+  // Use Intl/i18n aware number formatter
+  const formattedValue = nf.format(rebasedValue);
+  const prefix = SI_PREFIXES[prefixIndex];
+  return html`${formattedValue}<strong class="unit">${prefix + symbol}</strong>`;
+}
+
+function format (value, unit) {
+  if (unit == null) {
+    return formatBytes(value);
+  }
+  if (unit === '') {
+    return html`${nf.format(value)}`;
+  }
+  return html`${nf.format(value)}<strong class="unit">${unit}</strong>`;
+}
+
 defineSlideType('slide-barchart', {
-  render ({ content }) {
+  render ({ attrs, content }) {
+
+    const unit = attrs.unit;
 
     const [title, ...parts] = content
       .trim()
@@ -14,12 +46,11 @@ defineSlideType('slide-barchart', {
 
     const sections = parts
       .map((line) => {
-        const [rawLabel, valueAndUnit] = line.split(' : ').map((a) => a.trim());
+        const [rawLabel, rawValue] = line.split(' : ').map((a) => a.trim());
         const isCommented = rawLabel.startsWith('// ');
         const label = rawLabel.replace('// ', '');
-        const value = valueAndUnit.replace(/[^0-9\.,]/g, '');
-        const unit = valueAndUnit.replace(value, '');
-        return { label, value, unit, isCommented };
+        const value = Number(rawValue);
+        return { label, value, isCommented };
       })
       .map((section, i, all) => {
         const max = Math.max(...all.map((s) => s.value));
@@ -36,14 +67,19 @@ defineSlideType('slide-barchart', {
       </div>
 
       <div class="container">
-        ${sections.map(({ label, value, unit, isCommented, percent }) => html`
+        ${sections.map(({ label, value, isCommented, percent }) => html`
           <div class="section ${classMap({ comment: isCommented })}">
             <div class="bar">
               <div class="bar-value" style="--bar-percent: ${percent}">
-                <div class="bar-label">${value} ${unit}</div>
+                ${attrs.percent == null ? html`
+                  <div class="bar-label">${format(value, unit)}</div>
+                ` : ''}
+                ${attrs.percent != null ? html`
+                  <div class="bar-label">${format(percent, '%')}</div>
+                ` : ''}
               </div>
             </div>
-            <div class="legend">${unsafeHTML(label)}</div>
+            <div class="legend">${unsafeHTML(markup(label))}</div>
           </div>
         `)}
       </div>
@@ -61,14 +97,14 @@ defineSlideType('slide-barchart', {
     .title {
       align-self: center;
       justify-self: center;
-      font-size: 2rem;
+      font-size: 3rem;
       font-weight: bold;
       padding: 1rem 0;
-      font-family: "Interstate", sans-serif;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
     }
 
-    .title strong {
-      color: #0a8fdf;
+    strong {
+      color: #0082ff;
     }
 
     .container {
@@ -104,12 +140,27 @@ defineSlideType('slide-barchart', {
       transform: translateX(-50%);
       box-sizing: border-box;
       font-family: "Operator Mono Medium", monospace;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       font-weight: bold;
       padding-bottom: 0.5rem;
       position: absolute;
       text-align: center;
       white-space: nowrap;
+    }
+
+    :host([compact]) .bar-label,
+    :host([small]) .bar-label {
+      font-size: 1.25rem;
+    }
+
+    :host([compact]) .bar-label {
+      transform: translateX(-20%) rotate(-30deg);
+      transform-origin: left center;
+    }
+
+    .unit {
+      padding-left: 0.5rem;
+      color: #666;
     }
 
     .bar-value {
