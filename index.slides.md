@@ -1464,7 +1464,7 @@ min : 87029 min
 > MEME FORMAT OMG !!
 
 ## barchart compact todo
-*gzip* vs. *zopfli*
+Niveaux de compression
 min : 87029 min
 gzip *9* : 30129 gzip
 zopfli : 29227 zopfli

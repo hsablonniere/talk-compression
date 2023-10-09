@@ -18,6 +18,7 @@ defineSlideType('slide-poster', {
       <div class="title">
         ${unsafeHTML(title)}
       </div>
+      <div class="background"></div>
       <div class="details details--bottom">
         <h2 class='event-title'>${meta.event} / <span class="date">${meta.date}</span></h2>
         
@@ -32,16 +33,16 @@ defineSlideType('slide-poster', {
           </thead>
           <tbody>
             <tr>
-              <td>Sablonnière</td>
-              <td>Hubert</td>
-              <td>@hsablonniere</td>
-              <td>Clever Cloud</td>
-            </tr>
-            <tr>
               <td>Caron</td>
               <td>Antoine</td>
               <td>@Slashgear_</td>
               <td>Scaleway</td>
+            </tr>
+            <tr>
+              <td>Sablonnière</td>
+              <td>Hubert</td>
+              <td>@hsablonniere</td>
+              <td>Clever Cloud</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -88,23 +89,23 @@ defineSlideType('slide-poster', {
 
     .date {
       font-family: 'Just Another Hand';
-      color: blue;
-      color: #0082ff;
-      color: #0050a2;
+      color: #0019a4;
+      font-size: 1.25em;
+      font-weight: normal;
     }
 
     .details--bottom {
       position: absolute;
       display: flex;
       flex-direction: column;
-      right: -1%;
-      bottom: -54%;
-      width: 40%;
+      right: -0%;
+      bottom: -50%;
+      width: 45%;
       height: 30em;
       padding: 1em 3em;
       background-color: white;
       color: black;
-      transform: rotate(-10deg);
+      transform: rotate(-10deg) scale(1);
     }
 
     .details--bottom .event-title {
@@ -117,7 +118,7 @@ defineSlideType('slide-poster', {
       font-size: 3.5em;
       z-index: 1;
       padding: 0 0.75ch;
-      margin-bottom: 2em;
+      margin-bottom: 12rem;
       transform: scale(1, 1.2);
       font-family: "VFC Sufler";
     }
@@ -138,7 +139,10 @@ defineSlideType('slide-poster', {
     table, th, td {
       border: 1px solid black;
       border-collapse: collapse;
-      text-align: center;
+    }
+
+    td {
+      text-align: left;
     }
 
     th {
@@ -147,12 +151,21 @@ defineSlideType('slide-poster', {
 
     td {
       font-family: "Just Another Hand";
-      color: #0050a2;
+      color: #0019a4;
       font-size: 2.25em;
       padding: 0.5rem 0.6rem 0 0.6rem;
       line-height: 1.75rem;
       white-space: nowrap;
       min-height: 2rem;
+    }
+
+    .background {
+      background-color: #2f6646;
+      position: absolute;
+      left: 33%;
+      top: 0;
+      bottom: 0;
+      right: 0;
     }
   `,
 });
