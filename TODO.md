@@ -173,3 +173,5 @@ https://sherlock-holm.es/stories/html/cano.html
     * 1 couleur gzip
     * 1 couleur zopfli
     * 1 couleur brotli
+* Antoine : enchaine sur tips + scrabble grid
+* Hubert : reprend LZ pour le coté interactif
