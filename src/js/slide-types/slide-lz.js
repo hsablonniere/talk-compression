@@ -58,7 +58,7 @@ defineSlideType('slide-lz', {
           stepRead[i].marked = true;
         }
 
-        for(let i = shiftIndex - length; i < shiftIndex ; i++) {
+        for(let i = shiftIndex; i < shiftIndex + length ; i++) {
           stepRead[i].marked = true;
         }
 

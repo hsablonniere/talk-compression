@@ -1162,28 +1162,28 @@ On peut tromper une personne mille fois. On peut tromper mille personnes une foi
 
 ## lz step=4
 mille feuille
-9,4,4,ille
+9,8,4,ille
 
 ## lz step=5
 mille feuille
-9,4,4,ille
+9,4,8,ille
 > A: On va lire char par char le texte qu'on souhaite compresser.
 
 ## lz step=6
 mille feuille
-9,4,4,ille
+9,4,8,ille
 
 ## lz step=7
 mille feuille
-9,4,4,ille
+9,4,8,ille
 
 ## lz step=8
 mille feuille
-9,4,4,ille
+9,4,8,ille
 
 ## lz step=9
 mille feuille
-9,4,4,ille
+9,4,8,ille
 > A: Dès qu'on trouve un motif qui se répète par rapport à ce qu'on a déjà vu, on le remplacer par une "etiquette"
 > L'étiquette possède une info de la distance, ici 4 et de la longueur 4.
 > On va essayer sur notre citation de la cité de la peur.
@@ -1205,104 +1205,136 @@ On peut tromper une personne mille fois. On peut tromper mille personnes une foi
 
 ## lz step=41
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
+41,15,41,on peut tromper
 
 ## lz step=42
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
+41,15,41,on peut tromper
+57,5,28,mille
 
 ## lz step=43
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
 
-## lz step=44
+## lz step=45
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
 
 ## lz step=48
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
 
 ## lz step=49
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
-76,6,36, fois.
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
 
 ## lz step=50
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
-76,6,36, fois.
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
+
+## lz step=52
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
 
 ## lz step=60
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
-76,6,36, fois.
-
-## lz step=61
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
-76,6,36, fois.
-93,6,44, peut 
-
-## lz step=62
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
-76,6,36, fois.
-93,6,44, peut
-
-## lz step=64
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
-76,6,36, fois.
-93,6,44, peut
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
 
 ## lz step=65
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
-76,6,36, fois.
-93,6,44, peut
-102,24,30, tromper mille personnes
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
+94,4,50,peut
 
-
-## lz step=66
+## lz step=70
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
-76,6,36, fois.
-93,6,44, peut
-102,24,30, tromper mille personnes
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
+94,4,50,peut
+103,23,54,tromper mille personnes
 
-## lz step=67
+
+## lz step=71
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
-76,6,36, fois.
-93,6,44, peut
-102,24,30, tromper mille personnes
-127,12,87, mille fois.
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
+94,4,50,peut
+103,23,54,tromper mille personnes
+
+## lz step=72
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
+94,4,50,peut
+103,23,54,tromper mille personnes
+128,10,87,mille fois.
+
+## lz step=73
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
+94,4,50,peut
+103,23,54,tromper mille personnes
+128,10,98,mille fois.
+
+
+## lz step=74
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
+94,4,50,peut
+103,23,54,tromper mille personnes
+128,10,98,mille fois.
+
+## lz step=75
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
+94,4,50,peut
+103,23,54,tromper mille personnes
+128,10,98,mille fois
+
+## lz step=76
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
+94,4,50,peut
+103,23,54,tromper mille personnes
+128,10,98,mille fois
 > A: On a clairement moins de tuiles en bas qu'en haut non ? 
 > H: Pourtant si on reçoit le texte du bas on peut facilement regénérer le texte du haut.
 > Même si on le reçoit progressivement.
@@ -1328,28 +1360,22 @@ LZ : 640
 > A: Et plus on se répète plus c'est efficace.
 > ça explique pourquoi ça marche tellement bien avec les attributs CSS par exemple.
 
-## text fade-from
+## text
 *LZ77*, *LZ78*, *LZSS*, *LZW*, *LZH*, *LZMA*... 
 > A: Justement Hubert, c'est à ce moment là qu'on leur explique qu'il existe une tripatouillée de variantes de cette algorithme.
 
-## lz step=67
+## lz step=75
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,26,on peut tromper
-56,6,22, mille
-62,9,34,personne
-76,6,36, fois.
-93,6,44, peut
-102,24,30, tromper mille personnes
-127,12,87, mille fois.
+41,15,41,on peut tromper
+57,5,28,mille
+63,8,43,personne
+77,4,42,fois
+94,4,50,peut
+103,23,54,tromper mille personnes
+128,10,98,mille fois
 > A: Prenons cette étape là, la dernière étiquette est-elle réellement la meilleur à trouver.
 > Est-ce qu'on devrait pas aller chercher MILLE et FOIS séparément?
 > Ou bien, encore plus simplement, quelle est la plus petite taille de motif qu'on étiquette.
-
-## todo
-arbo de la famille LZ
-> H: Vous avez des super contenus sur internet qui vous expliquent celà.
-> Et beaucoup de variantes de cet algorithme ont fait outils que vous connaissez probablement tous.
-> A: Ah oui tiens, même _Winrar_, vous aviez payé votre license vous ? 
 
 ## blank black fade-to
 
@@ -1359,6 +1385,9 @@ ET  CONCRETEMENT ?
 
 ## media
 <img src="src/img/youtube-compressor-head-lz-family.png" screenshot-url="https://www.youtube.com/watch?v=Jqc418tQDkg">
+> H: Vous avez des super contenus sur internet qui vous expliquent celà.
+> Et beaucoup de variantes de cet algorithme ont fait outils que vous connaissez probablement tous.
+> A: Ah oui tiens, même _Winrar_, vous aviez payé votre license vous ?
 
 ## media white
 <img src="src/img/lz-family.svg">
