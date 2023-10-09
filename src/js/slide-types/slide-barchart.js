@@ -46,11 +46,12 @@ defineSlideType('slide-barchart', {
 
     const sections = parts
       .map((line) => {
-        const [rawLabel, rawValue] = line.split(' : ').map((a) => a.trim());
+        const [rawLabel, rawDetails] = line.split(' : ').map((a) => a.trim());
+        const [rawValue, color = '#888'] = rawDetails.split(' ');
         const isCommented = rawLabel.startsWith('// ');
         const label = rawLabel.replace('// ', '');
         const value = Number(rawValue);
-        return { label, value, isCommented };
+        return { label, value, isCommented, color };
       })
       .map((section, i, all) => {
         const max = Math.max(...all.map((s) => s.value));
@@ -67,10 +68,10 @@ defineSlideType('slide-barchart', {
       </div>
 
       <div class="container">
-        ${sections.map(({ label, value, isCommented, percent }) => html`
+        ${sections.map(({ label, value, isCommented, color, percent }) => html`
           <div class="section ${classMap({ comment: isCommented })}">
             <div class="bar">
-              <div class="bar-value" style="--bar-percent: ${percent}">
+              <div class="bar-value" style="--bar-percent: ${percent}" data-color="${color}">
                 ${attrs.percent == null ? html`
                   <div class="bar-label">${format(value, unit)}</div>
                 ` : ''}
@@ -105,6 +106,15 @@ defineSlideType('slide-barchart', {
 
     strong {
       color: #0082ff;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+
+    em {
+      font-style: normal;
+      color: #666;
     }
 
     .container {
@@ -170,20 +180,35 @@ defineSlideType('slide-barchart', {
       left: 0;
       width: 100%;
       height: calc(var(--bar-percent) * 1%);
-      background-size: 100% auto;
-      background-image: url(/src/img/drawn-rectangle-3.svg);
-    }
-
-    .section:nth-child(1n) .bar .bar-value {
-      /*background-image: url(/src/img/drawn-rectangle-1.svg);*/
-    }
-
-    .section:nth-child(2n) .bar .bar-value {
-      /*background-image: url(/src/img/drawn-rectangle-2.svg);*/
-    }
-
-    .section:nth-child(3n) .bar .bar-value {
+      /*background-size: 100% auto;*/
       /*background-image: url(/src/img/drawn-rectangle-3.svg);*/
+      background-color: #aaa;
+      border: 0.15rem solid #000;
+      border-bottom: none;
+    }
+
+    .bar-value[data-color="brut"] {
+      background-color: #888;
+    }
+
+    .bar-value[data-color="min"] {
+      background-color: green;
+    }
+
+    .bar-value[data-color="compressed"] {
+      background-color: pink;
+    }
+
+    .bar-value[data-color="gzip"] {
+      background-color: blue;
+    }
+
+    .bar-value[data-color="zopfli"] {
+      background-color: orange;
+    }
+
+    .bar-value[data-color="brotli"] {
+      background-color: red;
     }
 
     .legend {

@@ -383,58 +383,58 @@ Ordres de  grandeur
 
 ## barchart
 math-example.*js*
-brut : 228
-minifié : 98
-compressé : 126
-minifié<br>& compressé : 77
+brut : 228 brut
+minifié : 98 min
+compressé : 126 compressed
+minifié<br>& compressé : 77 gzip
 <!-- avec brotli 11 -->
 
 ## barchart
 jquery.*js*
-brut : 285314
-minifié : 87029
-compressé : 69545
-minifié<br>& compressé : 27450
+brut : 285314 brut
+minifié : 87029 min
+compressé : 69545 compressed
+minifié<br>& compressé : 27450 gzip
 <!-- 3.7.1, avec brotli 11 -->
 
 ## barchart percent
 jquery.*js* (285*ko*)
-brut : 285314
-minifié : 87029
-compressé : 69545
-minifié<br>& compressé : 27450
+brut : 285314 brut
+minifié : 87029 min
+compressé : 69545 compressed
+minifié<br>& compressé : 27450 gzip
 <!-- 3.7.1, avec brotli 11 -->
 
 ## barchart percent
 bootstrap.*css*
-brut : 205484
-minifié : 161487
-compressé : 19073
-minifié<br>& compressé : 17589
+brut : 205484 brut
+minifié : 161487 min
+compressé : 19073 compressed
+minifié<br>& compressé : 17589 gzip
 <!-- avec brotli 11 -->
 
 ## barchart percent
 hibernate-user-guide.*html*
-brut : 2421852
-minifié : 2334777
-compressé : 372419
-minifié<br>& compressé : 366546
+brut : 2421852 brut
+minifié : 2334777 min
+compressé : 372419 compressed
+minifié<br>& compressé : 366546 gzip
 <!-- avec gzip -->
 
 ## barchart percent
 firefox-logo.*svg*
-brut : 15858
-minifié : 12163
-compressé : 3020
-minifié<br>& compressé : 2609
+brut : 15858 brut
+minifié : 12163 min
+compressé : 3020 compressed
+minifié<br>& compressé : 2609 gzip
 <!-- avec brotli 11 -->
 
 ## barchart percent
 departements-region.*json*
-brut : 9576
-minifié : 7152
-compressé : 1315
-minifié<br>& compressé : 1244
+brut : 9576 brut
+minifié : 7152 min
+compressé : 1315 compressed
+minifié<br>& compressé : 1244 gzip
 <!-- avec gzip -->
 
 ## tip
@@ -450,13 +450,6 @@ un groupe de 4 barres pour le edge
 un groupe de 4 barres pour le slow 3G
 un groupe de 4 barres pour fibre
 > projection en temps de chargement (pour 2 types de connexion)
-
-## barchart
-jquery.*js*
-brut : 285314
-minifié : 87029
-compressé : 69545
-minifié<br>& compressé : 27450
 
 ## todo
 waterfall WPT de wikipedia
@@ -1353,8 +1346,8 @@ Tag: *1* | 7 bits *distance* | 5 bits *longueur*
 
 ## barchart
 Comparaison du nombre de bits utilisés
-Brut : 1112
-LZ (custom) : 640
+brut : 1112 brut
+LZ (custom) : 640 gzip
 > A: Et on obtiens ce résultat là, soit près de la moitié des bits gagné
 > H: En vrai c'est cool, mais on est pas sûr que ce soit le meilleur étiquettage possible
 > A: Et plus on se répète plus c'est efficace.
@@ -1384,10 +1377,31 @@ ET  CONCRETEMENT ?
 <!--DANS LA  PRATIQUE-->
 
 ## media white
-<img src="src/img/lz-family.svg">
+<img src="src/img/lz-family-01.svg">
 
 ## media white
-<img src="src/img/lz-family-tools.svg">
+<img src="src/img/lz-family-02.svg">
+
+## media white
+<img src="src/img/lz-family-03.svg">
+
+## media white
+<img src="src/img/lz-family-04.svg">
+
+## media white
+<img src="src/img/lz-family-05.svg">
+
+## media white
+<img src="src/img/lz-family-06.svg">
+
+## media white
+<img src="src/img/lz-family-07.svg">
+
+## media white
+<img src="src/img/lz-family-08.svg">
+
+## media white
+<img src="src/img/lz-family-09.svg">
 
 ## media
 <img src="src/img/youtube-compressor-head-lz-family.png" screenshot-url="https://www.youtube.com/watch?v=Jqc418tQDkg">
@@ -1426,24 +1440,21 @@ A la recherche  du pouilleme
 > pourquoi ? 1% c'est beaucoup de moula
 > cloudflare qui a un fork de zlib
 
-## todo
-cloudflare qui a un fork de zlib
-
-## todo
-ordre de grandeur taille niveau gzip
+## media
+<img src="src/img/github-cloudflare-zlib.png" screenshot-url="https://github.com/cloudflare/zlib">
 
 ## barchart compact todo
-Niveaux de compression gzip (jquery.min.*js*)
-min : 87029
-1 : 35238
-2 : 33957
-3 : 33003
-4 : 31336
-5 : 30406
-6 : 30190
-7 : 30143
-8 : 30129
-9 : 30129
+Niveaux de compression *gzip*
+min : 87029 min
+1 : 35238 gzip
+2 : 33957 gzip
+3 : 33003 gzip
+4 : 31336 gzip
+5 : 30406 gzip
+6 : 30190 gzip
+7 : 30143 gzip
+8 : 30129 gzip
+9 : 30129 gzip
 
 ## media
 <img src="src/img/github-zopfli.png" screenshot-url="https://github.com/google/zopfli">
@@ -1452,11 +1463,11 @@ min : 87029
 > meilleure taux mais moins bonne perf
 > MEME FORMAT OMG !!
 
-## barchart todo
-gzip vs. zopfli (jquery.*js*)
-min : 87029
-gzip *9* : 30129
-zopfli : 29227
+## barchart compact todo
+*gzip* vs. *zopfli*
+min : 87029 min
+gzip *9* : 30129 gzip
+zopfli : 29227 zopfli
 
 ## media
 <img src="src/img/rfc-7932-brotli.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc7932">
@@ -1467,30 +1478,27 @@ zopfli : 29227
 > dictionnaire statique qui reflète le Web ou plus ou moins (montrer)
 > transformations de dico (montrer)
 
-## todo
-ordre de grandeur taille
-
 ## barchart compact todo
-Niveaux de compression brotli (jquery.*js*)
-min : 87029
-1 : 34909
-2 : 32234
-3 : 31956
-4 : 31290
-5 : 29734
-6 : 29543
-7 : 29478
-8 : 29416
-9 : 29400
-10 : 27853
-11 : 27450
+Niveaux de compression *brotli*
+min : 87029 min
+1 : 34909 brotli
+2 : 32234 brotli
+3 : 31956 brotli
+4 : 31290 brotli
+5 : 29734 brotli
+6 : 29543 brotli
+7 : 29478 brotli
+8 : 29416 brotli
+9 : 29400 brotli
+10 : 27853 brotli
+11 : 27450 brotli
 
 ## barchart todo
-gzip vs. zopfli vs. brotli (jquery.*js*)
-min : 87029
-gzip *9* : 30129
-zopfli : 29227
-brotli *11* : 27450
+Niveaux de compression
+min : 87029 min
+gzip *9* : 30129 gzip
+zopfli : 29227 zopfli
+brotli *11* : 27450 brotli
 
 ## todo
 exemple dictionnaire
@@ -1507,48 +1515,48 @@ plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les d
 <!--La compression, c'est mieux avec brotli-->
 
 ## barchart small unit="" todo
-Temps de compression brotli (jquery.*js*)
-1 : 1.3
-2 : 1.8
-3 : 2.0
-4 : 2.4
-5 : 3.3
-6 : 3.9
-7 : 5.1
-8 : 6.3
-9 : 8.8
-10 : 37.3
-11 : 97.2
+Temps de compression *brotli*
+1 : 1.3 brotli
+2 : 1.8 brotli
+3 : 2.0 brotli
+4 : 2.4 brotli
+5 : 3.3 brotli
+6 : 3.9 brotli
+7 : 5.1 brotli
+8 : 6.3 brotli
+9 : 8.8 brotli
+10 : 37.3 brotli
+11 : 97.2 brotli
 
 ## barchart unit="ms" todo
-Temps de compression zopfli (jquery.*js*)
-zopfli : 142.2
+Temps de compression *zopfli*
+zopfli : 142.2 zopfli
 
 ## barchart small unit="" todo
-Temps de compression gzip (jquery.*js*) en ms
-1 : 1.8
-2 : 1.9
-3 : 2.1
-4 : 2.3
-5 : 2.9
-6 : 3.4
-7 : 3.6
-8 : 3.7
-9 : 3.7
+Temps de compression *gzip*
+1 : 1.8 gzip
+2 : 1.9 gzip
+3 : 2.1 gzip
+4 : 2.3 gzip
+5 : 2.9 gzip
+6 : 3.4 gzip
+7 : 3.6 gzip
+8 : 3.7 gzip
+9 : 3.7 gzip
 
 ## barchart small unit="ms" todo
-Temps de compression (jquery.*js*)
-gzip *9* : 3.7
-zopfli : 142.2
-brotli *11* : 97.2
+Temps de compression
+gzip *9* : 3.7 gzip
+zopfli : 142.2 zopfli
+brotli *11* : 97.2 brotli
 
 ## blank white
 
 ## barchart small unit="ms" todo
-Temps de décompression (jquery.*js*)
-gzip *9* : 1.1
-zopfli : 1.1
-brotli *11* : 1.1
+Temps de *dé*compression
+gzip *9* : 1.1 gzip
+zopfli : 1.1 zopfli
+brotli *11* : 1.1 brotli
 
 <!--
 ## barchart small unit="" todo

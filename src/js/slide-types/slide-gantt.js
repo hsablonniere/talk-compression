@@ -62,27 +62,27 @@ defineSlideType('slide-gantt', {
     }
 
     .phase:nth-child(1) {
-      background-color: var(--color-bbbb);
+      background-color: blue;
       color: #fff;
     }
 
     .phase:nth-child(2) {
-      background-color: var(--color-ccc);
+      background-color: #555;
       color: #fff;
     }
 
     .phase:nth-child(3) {
-      background-color: var(--color-bb);
+      background-color: blue;
       color: #fff;
     }
 
     .phase:nth-child(4) {
-      background-color: var(--color-cccc);
+      background-color: #777;
       color: #fff;
     }
 
     .phase:nth-child(5) {
-      background-color: var(--color-ddd);
+      background-color: #888;
       color: #fff;
     }
   `,
