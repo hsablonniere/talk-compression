@@ -62,22 +62,23 @@ defineSlideType('slide-gantt', {
     }
 
     .phase:nth-child(1) {
-      background-color: blue;
+      background-color: #4285f4;
       color: #fff;
     }
 
     .phase:nth-child(2) {
-      background-color: #555;
+      background-color: #ea4335;
+      background-color: #333;
       color: #fff;
     }
 
     .phase:nth-child(3) {
-      background-color: blue;
+      background-color: #4285f4;
       color: #fff;
     }
 
     .phase:nth-child(4) {
-      background-color: #777;
+      background-color: #666;
       color: #fff;
     }
 

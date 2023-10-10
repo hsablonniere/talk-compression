@@ -163,12 +163,18 @@ defineSlideType('slide-code', {
     }
 
     pre mark.hide-mark {
-      color: transparent;
+      background-color: transparent;
     }
 
     pre[simple-js-example] {
       word-break: break-all;
       width: 34rem;
+      height: 23rem;
+    }
+
+    pre[bin-js-example] {
+      word-break: break-all;
+      width: 25rem;
       height: 23rem;
     }
 

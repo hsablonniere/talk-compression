@@ -113,6 +113,7 @@ defineSlideType('slide-barchart', {
     }
 
     em {
+      margin-left: 1rem;
       font-style: normal;
       color: #666;
     }
@@ -121,7 +122,6 @@ defineSlideType('slide-barchart', {
       display: grid;
       grid-auto-columns: 1fr;
       grid-auto-flow: column;
-      justify-items: stretch;
       align-content: center;
       justify-content: center;
     }
@@ -130,14 +130,16 @@ defineSlideType('slide-barchart', {
       display: flex;
       flex-direction: column;
       align-items: center;
-      flex-grow: 1;
     }
 
     .bar {
       height: 18rem;
       position: relative;
-      width: 3rem;
-      width: 2rem;
+      width: 2.5rem;
+    }
+
+    :host([narrow]) .bar {
+      width: 1.75rem;
     }
 
     .section.comment .bar {
@@ -146,31 +148,27 @@ defineSlideType('slide-barchart', {
 
     .bar-label {
       bottom: 100%;
-      left: 50%;
-      transform: translateX(-50%);
       box-sizing: border-box;
       font-family: "Operator Mono Medium", monospace;
       font-size: 1.5rem;
-      font-weight: bold;
+      left: 50%;
       padding-bottom: 0.5rem;
       position: absolute;
       text-align: center;
+      transform-origin: center center;
+      transform: translateX(-50%) scale(1, 1);
       white-space: nowrap;
     }
 
-    :host([compact]) .bar-label,
     :host([small]) .bar-label {
       font-size: 1.25rem;
     }
 
-    :host([compact]) .bar-label {
-      transform: translateX(-20%) rotate(-30deg);
-      transform-origin: left center;
-    }
-
     .unit {
-      padding-left: 0.5rem;
-      color: #666;
+      padding-left: 0.25rem;
+      font-size: 0.8em;
+      vertical-align: baseline;
+      color: #777;
     }
 
     .bar-value {
@@ -182,43 +180,54 @@ defineSlideType('slide-barchart', {
       height: calc(var(--bar-percent) * 1%);
       /*background-size: 100% auto;*/
       /*background-image: url(/src/img/drawn-rectangle-3.svg);*/
-      background-color: #aaa;
+      background-color: #4285f4;
       border: 0.15rem solid #000;
       border-bottom: none;
     }
 
     .bar-value[data-color="brut"] {
-      background-color: #888;
+      background-color: #ea4335;
     }
 
     .bar-value[data-color="min"] {
-      background-color: green;
+      background-color: #fbbc04;
     }
 
     .bar-value[data-color="compressed"] {
-      background-color: pink;
+      background-color: #ff1493;
     }
 
     .bar-value[data-color="gzip"] {
-      background-color: blue;
+      background-color: #4285f4;
     }
 
     .bar-value[data-color="zopfli"] {
-      background-color: orange;
+      background-color: #46bdc6;
     }
 
     .bar-value[data-color="brotli"] {
-      background-color: red;
+      background-color: #34a853;
     }
 
     .legend {
       border-top: 0.15rem solid #000;
-      padding: 0.25rem 1rem;
-      padding: 0.25rem 0.75rem;
-      text-align: center;
-      font-size: 1.25rem;
-      width: 100%;
+      box-sizing: border-box;
       font-family: "Operator Mono Medium", monospace;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      width: 100%;
+    }
+
+
+    :host([small]) .legend {
+      min-width: 5rem;
+    }
+
+
+    :host([narrow]) .legend {
+      padding: 0.5rem 0.75rem;
     }
 
     .section.comment .legend {

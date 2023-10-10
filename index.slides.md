@@ -268,7 +268,7 @@ export function add(f,s){return f+s}export function factorial(n){return n===0?1:
 🤐 Compression
 
 ## code
-```text simple-js-example size=98
+```text bin-js-example size=98
 6578 706f 7274 2066 756e
 6374 696f 6e20 6164 6428
 662c 7329 7b72 6574 7572
@@ -282,7 +282,7 @@ export function add(f,s){return f+s}export function factorial(n){return n===0?1:
 ```
 
 ## code
-```text simple-js-example size=98
+```text bin-js-example size=98
 6578 706f 7274 2066 756e  export fun
 6374 696f 6e20 6164 6428  ction add(
 662c 7329 7b72 6574 7572  f,s){retur
@@ -296,7 +296,7 @@ export function add(f,s){return f+s}export function factorial(n){return n===0?1:
 ```
 
 ## code
-```text simple-js-example highlight size=98
+```text bin-js-example highlight size=98
 6578 706f 7274 2066 756e  export fun
 ______________            ______
 6374 696f 6e20 6164 6428  ction add(
@@ -319,7 +319,7 @@ ____                      __
 ```
 
 ## code
-```text simple-js-example highlight size=98
+```text bin-js-example highlight size=98
 6578 706f 7274 2066 756e  export fun
                  _______         ___
 6374 696f 6e20 6164 6428  ction add(
@@ -342,7 +342,7 @@ __                        _
 ```
 
 ## code
-```text simple-js-example highlight size=98
+```text bin-js-example highlight size=98
 6578 706f 7274 2066 756e  export fun
 
 6374 696f 6e20 6164 6428  ction add(
@@ -365,15 +365,16 @@ __                        _
 ```
 
 ## code fade-from
-```text simple-js-example size=77
-1f61 0048 2c8b 7784 cb16  .a.H,.w...
-8dd4 944e cb27 3d6d 1fad  ...N.'=m..
-c3cc d8dc 54cc 5c29 94b5  ....T.\)..
-0a4b 4b9f ec81 59c9 149d  .KK...Y...
-9f06 4121 4be3 0117 3fb4  ..A!K...?.
-79e3 6c88 29dd 41c5 84f9  y.l.).A...
-6610 d694 7aa6 cbde d094  f...z.....
-c9f5 1caf 01c7 00         .......
+```text bin-js-example size=89
+1f8b 0800 0000 0000 0003  ..........
+4bad 28c8 2f2a 5148 2bcd  K.(./*QH+.
+4b2e c9cc cf53 484c 49d1  K....SHLI.
+48d3 29d6 ac2e 4a2d 292d  H.)...J-)-
+ca53 48d3 2eae 4d45 5393  .SH...MES.
+9698 5c92 5f94 9998 a391  ..\._.....
+0757 9767 6b6b 6b60 6f68  .W.gkkk`oh
+95a7 8524 ab6b a859 cb05  ...$.k.Y..
+000d c88f 1162 0000 00    .....b...
 ```
 
 ## blank black fade-to
@@ -382,60 +383,60 @@ c9f5 1caf 01c7 00         .......
 Ordres de  grandeur
 
 ## barchart
-math-example.*js*
+math-example.*js* _228o_
 brut : 228 brut
 minifié : 98 min
-compressé : 126 compressed
-minifié<br>& compressé : 77 gzip
-<!-- avec brotli 11 -->
+compressé : 153 compressed
+minifié<br>& compressé : 89 gzip
 
 ## barchart
-jquery.*js*
+jquery.*js* _285,3ko_
 brut : 285314 brut
 minifié : 87029 min
-compressé : 69545 compressed
-minifié<br>& compressé : 27450 gzip
-<!-- 3.7.1, avec brotli 11 -->
+compressé : 83915 compressed
+minifié<br>& compressé : 30190 gzip
 
 ## barchart percent
-jquery.*js* (285*ko*)
+jquery.*js* _285,3ko_
 brut : 285314 brut
 minifié : 87029 min
-compressé : 69545 compressed
-minifié<br>& compressé : 27450 gzip
-<!-- 3.7.1, avec brotli 11 -->
+compressé : 83915 compressed
+minifié<br>& compressé : 30190 gzip
 
 ## barchart percent
-bootstrap.*css*
+lodash.*js* _544,1ko_
+brut : 544098 brut
+minifié : 73650 min
+compressé : 97170 compressed
+minifié<br>& compressé : 25684 gzip
+
+## barchart percent
+bootstrap.*css* _205,5ko_
 brut : 205484 brut
 minifié : 161487 min
-compressé : 19073 compressed
-minifié<br>& compressé : 17589 gzip
-<!-- avec brotli 11 -->
+compressé : 26408 compressed
+minifié<br>& compressé : 23906 gzip
 
 ## barchart percent
-hibernate-user-guide.*html*
+hibernate-user-guide.*html* _2,4Mo_
 brut : 2421852 brut
 minifié : 2334777 min
 compressé : 372419 compressed
 minifié<br>& compressé : 366546 gzip
-<!-- avec gzip -->
 
 ## barchart percent
-firefox-logo.*svg*
+firefox-logo.*svg* _15,9ko_
 brut : 15858 brut
 minifié : 12163 min
-compressé : 3020 compressed
-minifié<br>& compressé : 2609 gzip
-<!-- avec brotli 11 -->
+compressé : 3726 compressed
+minifié<br>& compressé : 3169 gzip
 
 ## barchart percent
-departements-region.*json*
+departements-region.*json* _9,6ko_
 brut : 9576 brut
 minifié : 7152 min
 compressé : 1315 compressed
 minifié<br>& compressé : 1244 gzip
-<!-- avec gzip -->
 
 ## tip
 1) La minification va de pair avec la compression
@@ -467,12 +468,44 @@ vidéo WPT no compression / compression (3G)
 <img src="src/img/almanac-http-2021-compression.png" screenshot-url="https://almanac.httparchive.org/en/2021/compression">
 
 ## barchart unit="%" todo fade-from
-no compress
-JS : 12.7
-CSS : 14.2
-JSON : 31.8
-SVG : 36.0
-HTML : 56.0
+*%* de fichiers servis *sans* compression
+JS : 12.7 brut
+// CSS : 14.2 brut
+// JSON : 31.8 brut
+// SVG : 36.0 brut
+// HTML : 56.0 brut
+
+## barchart unit="%" todo fade-from
+*%* de fichiers servis *sans* compression
+JS : 12.7 brut
+CSS : 14.2 brut
+// JSON : 31.8 brut
+// SVG : 36.0 brut
+// HTML : 56.0 brut
+
+## barchart unit="%" todo fade-from
+*%* de fichiers servis *sans* compression
+JS : 12.7 brut
+CSS : 14.2 brut
+JSON : 31.8 brut
+// SVG : 36.0 brut
+// HTML : 56.0 brut
+
+## barchart unit="%" todo fade-from
+*%* de fichiers servis *sans* compression
+JS : 12.7 brut
+CSS : 14.2 brut
+JSON : 31.8 brut
+SVG : 36.0 brut
+// HTML : 56.0 brut
+
+## barchart unit="%" todo fade-from
+*%* de fichiers servis *sans* compression
+JS : 12.7 brut
+CSS : 14.2 brut
+JSON : 31.8 brut
+SVG : 36.0 brut
+HTML : 56.0 brut
 <!-- à retravailler -->
 
 ## blank black fade-to
@@ -781,17 +814,110 @@ COMPRESSION
 COMPRESSION
 > Chaque octet contient les 8 bits nécessaires pour représenter le code ASCII en binaire.
 
+<!--
 ## media terminal
 <img src="src/img/terminal-ascii.png">
 table ASCII ou alors avec la commande `ascii`
+-->
+
+## code
+```text highlight
+$ ascii
+  _____
+Usage: ascii [-adxohv] [-t] [char-alias...]
+
+   -t = one-line output  -a = vertical format
+
+   -d = Decimal table  -o = octal table  -x = hex table  -b binary table
+
+   -h = This help screen -v = version information
+```
 > Si vous êtes nul en code ASCII comme moi,
 > vous pouvez utiliser la commande `ascii -b` sous Linux pour avoir la table de correspondance.
 
+<!--
 ## media terminal
 <img src="src/img/terminal-ascii-b.png">
 
 ## media terminal
 <img src="src/img/terminal-ascii-b-annotate.png">
+-->
+
+## code
+```text style="font-size: 0.9rem" highlight="hide-mark"
+$ ascii -b
+
+0000000 NUL    0010000 DLE    0100000      0110000 0    1000000 @    1010000 P    1100000 `    1110000 p 
+                                                                     _________
+0000001 SOH    0010001 DC1    0100001 !    0110001 1    1000001 A    1010001 Q    1100001 a    1110001 q 
+
+0000010 STX    0010010 DC2    0100010 "    0110010 2    1000010 B    1010010 R    1100010 b    1110010 r 
+                                                                     _________
+0000011 ETX    0010011 DC3    0100011 #    0110011 3    1000011 C    1010011 S    1100011 c    1110011 s 
+                                                        _________    _________
+0000100 EOT    0010100 DC4    0100100 $    0110100 4    1000100 D    1010100 T    1100100 d    1110100 t 
+
+0000101 ENQ    0010101 NAK    0100101 %    0110101 5    1000101 E    1010101 U    1100101 e    1110101 u 
+                                                        _________
+0000110 ACK    0010110 SYN    0100110 &    0110110 6    1000110 F    1010110 V    1100110 f    1110110 v 
+
+0000111 BEL    0010111 ETB    0100111 '    0110111 7    1000111 G    1010111 W    1100111 g    1110111 w 
+
+0001000 BS     0011000 CAN    0101000 (    0111000 8    1001000 H    1011000 X    1101000 h    1111000 x 
+
+0001001 HT     0011001 EM     0101001 )    0111001 9    1001001 I    1011001 Y    1101001 i    1111001 y 
+                                                        _________
+0001010 LF     0011010 SUB    0101010 *    0111010 :    1001010 J    1011010 Z    1101010 j    1111010 z 
+
+0001011 VT     0011011 ESC    0101011 +    0111011 ;    1001011 K    1011011 [    1101011 k    1111011 { 
+
+0001100 FF     0011100 FS     0101100 ,    0111100 <    1001100 L    1011100 \    1101100 l    1111100 | 
+
+0001101 CR     0011101 GS     0101101 -    0111101 =    1001101 M    1011101 ]    1101101 m    1111101 } 
+                                                        _________
+0001110 SO     0011110 RS     0101110 .    0111110 >    1001110 N    1011110 ^    1101110 n    1111110 ~ 
+                                                           _________
+0001111 SI     0011111 US     0101111 /    0111111 ?    1001111 O    1011111 _    1101111 o    1111111 DEL
+                                                        _________ 
+```
+
+## code
+```text style="font-size: 0.9rem" highlight
+$ ascii -b
+
+0000000 NUL    0010000 DLE    0100000      0110000 0    1000000 @    1010000 P    1100000 `    1110000 p 
+                                                                     _________
+0000001 SOH    0010001 DC1    0100001 !    0110001 1    1000001 A    1010001 Q    1100001 a    1110001 q 
+
+0000010 STX    0010010 DC2    0100010 "    0110010 2    1000010 B    1010010 R    1100010 b    1110010 r 
+                                                                     _________
+0000011 ETX    0010011 DC3    0100011 #    0110011 3    1000011 C    1010011 S    1100011 c    1110011 s 
+                                                        _________    _________
+0000100 EOT    0010100 DC4    0100100 $    0110100 4    1000100 D    1010100 T    1100100 d    1110100 t 
+
+0000101 ENQ    0010101 NAK    0100101 %    0110101 5    1000101 E    1010101 U    1100101 e    1110101 u 
+                                                        _________
+0000110 ACK    0010110 SYN    0100110 &    0110110 6    1000110 F    1010110 V    1100110 f    1110110 v 
+
+0000111 BEL    0010111 ETB    0100111 '    0110111 7    1000111 G    1010111 W    1100111 g    1110111 w 
+
+0001000 BS     0011000 CAN    0101000 (    0111000 8    1001000 H    1011000 X    1101000 h    1111000 x 
+
+0001001 HT     0011001 EM     0101001 )    0111001 9    1001001 I    1011001 Y    1101001 i    1111001 y 
+                                                        _________
+0001010 LF     0011010 SUB    0101010 *    0111010 :    1001010 J    1011010 Z    1101010 j    1111010 z 
+
+0001011 VT     0011011 ESC    0101011 +    0111011 ;    1001011 K    1011011 [    1101011 k    1111011 { 
+
+0001100 FF     0011100 FS     0101100 ,    0111100 <    1001100 L    1011100 \    1101100 l    1111100 | 
+
+0001101 CR     0011101 GS     0101101 -    0111101 =    1001101 M    1011101 ]    1101101 m    1111101 } 
+                                                        _________
+0001110 SO     0011110 RS     0101110 .    0111110 >    1001110 N    1011110 ^    1101110 n    1111110 ~ 
+                                                           _________
+0001111 SI     0011111 US     0101111 /    0111111 ?    1001111 O    1011111 _    1101111 o    1111111 DEL
+                                                        _________ 
+```
 
 ## huffman score=8 bits=auto
 COMPRESSION
@@ -813,7 +939,7 @@ COMPRESSION
 COMPRESSION
 > TODO intégrer les notes
 
-## barchart unit=""
+## barchart narrow unit=""
 Score des lettres au Scrabble (français)
 // A : 1
 // B : 3
@@ -842,7 +968,7 @@ Score des lettres au Scrabble (français)
 // Y : 10
 // Z : 10
 
-## barchart unit=""
+## barchart narrow unit=""
 Score des lettres au Scrabble (français)
 A : 1
 // B : 3
@@ -871,7 +997,7 @@ U : 1
 // Y : 10
 // Z : 10
 
-## barchart unit=""
+## barchart narrow unit=""
 Score des lettres au Scrabble (français)
 A : 1
 // B : 3
@@ -900,7 +1026,7 @@ U : 1
 // Y : 10
 // Z : 10
 
-## barchart unit=""
+## barchart narrow unit=""
 Score des lettres au Scrabble (français)
 A : 1
 B : 3
@@ -929,7 +1055,7 @@ U : 1
 // Y : 10
 // Z : 10
 
-## barchart unit=""
+## barchart narrow unit=""
 Score des lettres au Scrabble (français)
 A : 1
 B : 3
@@ -958,7 +1084,7 @@ V : 4
 // Y : 10
 // Z : 10
 
-## barchart unit=""
+## barchart narrow unit=""
 Score des lettres au Scrabble (français)
 A : 1
 B : 3
@@ -987,7 +1113,7 @@ V : 4
 // Y : 10
 // Z : 10
 
-## barchart unit=""
+## barchart narrow unit=""
 Score des lettres au Scrabble (français)
 A : 1
 B : 3
@@ -1443,7 +1569,7 @@ A la recherche  du pouilleme
 ## media
 <img src="src/img/github-cloudflare-zlib.png" screenshot-url="https://github.com/cloudflare/zlib">
 
-## barchart compact todo
+## barchart small todo
 Niveaux de compression *gzip*
 min : 87029 min
 1 : 35238 gzip
@@ -1463,7 +1589,7 @@ min : 87029 min
 > meilleure taux mais moins bonne perf
 > MEME FORMAT OMG !!
 
-## barchart compact todo
+## barchart todo
 Niveaux de compression
 min : 87029 min
 gzip *9* : 30129 gzip
@@ -1478,7 +1604,7 @@ zopfli : 29227 zopfli
 > dictionnaire statique qui reflète le Web ou plus ou moins (montrer)
 > transformations de dico (montrer)
 
-## barchart compact todo
+## barchart small todo
 Niveaux de compression *brotli*
 min : 87029 min
 1 : 34909 brotli
@@ -1514,7 +1640,7 @@ plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les d
 7) La compression brotli, ça marche
 <!--La compression, c'est mieux avec brotli-->
 
-## barchart small unit="" todo
+## barchart small unit="ms" todo
 Temps de compression *brotli*
 1 : 1.3 brotli
 2 : 1.8 brotli
@@ -1532,7 +1658,7 @@ Temps de compression *brotli*
 Temps de compression *zopfli*
 zopfli : 142.2 zopfli
 
-## barchart small unit="" todo
+## barchart small unit="ms" todo
 Temps de compression *gzip*
 1 : 1.8 gzip
 2 : 1.9 gzip
@@ -1544,7 +1670,7 @@ Temps de compression *gzip*
 8 : 3.7 gzip
 9 : 3.7 gzip
 
-## barchart small unit="ms" todo
+## barchart unit="ms" todo
 Temps de compression
 gzip *9* : 3.7 gzip
 zopfli : 142.2 zopfli
@@ -1552,7 +1678,7 @@ brotli *11* : 97.2 brotli
 
 ## blank white
 
-## barchart small unit="ms" todo
+## barchart unit="ms" todo
 Temps de *dé*compression
 gzip *9* : 1.1 gzip
 zopfli : 1.1 zopfli
