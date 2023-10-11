@@ -1526,10 +1526,10 @@ ET  CONCRETEMENT ?
 ## media white
 <img src="src/img/lz-family-08.svg">
 
-## media white
+## media white fade-from
 <img src="src/img/lz-family-09.svg">
 
-## media
+## media fade-into
 <img src="src/img/youtube-compressor-head-lz-family.png" screenshot-url="https://www.youtube.com/watch?v=Jqc418tQDkg">
 > H: Vous avez des super contenus sur internet qui vous expliquent celà.
 > Et beaucoup de variantes de cet algorithme ont fait outils que vous connaissez probablement tous.
@@ -1570,7 +1570,7 @@ A la recherche  du pouilleme
 <img src="src/img/github-cloudflare-zlib.png" screenshot-url="https://github.com/cloudflare/zlib">
 
 ## barchart small todo
-Niveaux de compression *gzip*
+Niveaux de compression *gzip* _(jquery.min.js)_
 min : 87029 min
 1 : 35238 gzip
 2 : 33957 gzip
@@ -1590,7 +1590,7 @@ min : 87029 min
 > MEME FORMAT OMG !!
 
 ## barchart todo
-Niveaux de compression
+Niveaux de compression _(jquery.min.js)_
 min : 87029 min
 gzip *9* : 30129 gzip
 zopfli : 29227 zopfli
@@ -1605,7 +1605,7 @@ zopfli : 29227 zopfli
 > transformations de dico (montrer)
 
 ## barchart small todo
-Niveaux de compression *brotli*
+Niveaux de compression *brotli* _(jquery.min.js)_
 min : 87029 min
 1 : 34909 brotli
 2 : 32234 brotli
@@ -1620,7 +1620,7 @@ min : 87029 min
 11 : 27450 brotli
 
 ## barchart todo
-Niveaux de compression
+Niveaux de compression _(jquery.min.js)_
 min : 87029 min
 gzip *9* : 30129 gzip
 zopfli : 29227 zopfli
@@ -1641,7 +1641,7 @@ plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les d
 <!--La compression, c'est mieux avec brotli-->
 
 ## barchart small unit="ms" todo
-Temps de compression *brotli*
+Temps de compression *brotli* _(jquery.min.js)_
 1 : 1.3 brotli
 2 : 1.8 brotli
 3 : 2.0 brotli
@@ -1655,11 +1655,11 @@ Temps de compression *brotli*
 11 : 97.2 brotli
 
 ## barchart unit="ms" todo
-Temps de compression *zopfli*
+Temps de compression *zopfli* _(jquery.min.js)_
 zopfli : 142.2 zopfli
 
 ## barchart small unit="ms" todo
-Temps de compression *gzip*
+Temps de compression *gzip* _(jquery.min.js)_
 1 : 1.8 gzip
 2 : 1.9 gzip
 3 : 2.1 gzip
@@ -1671,7 +1671,7 @@ Temps de compression *gzip*
 9 : 3.7 gzip
 
 ## barchart unit="ms" todo
-Temps de compression
+Temps de compression _(jquery.min.js)_
 gzip *9* : 3.7 gzip
 zopfli : 142.2 zopfli
 brotli *11* : 97.2 brotli
@@ -1679,14 +1679,14 @@ brotli *11* : 97.2 brotli
 ## blank white
 
 ## barchart unit="ms" todo
-Temps de *dé*compression
+Temps de *dé*compression _(jquery.min.js)_
 gzip *9* : 1.1 gzip
 zopfli : 1.1 zopfli
 brotli *11* : 1.1 brotli
 
 <!--
 ## barchart small unit="" todo
-Temps de décompression gzip (jquery.*js*)
+Temps de décompression gzip _(jquery.min.js)_
 gz*1* : 1.0
 gz*2* : 1.1
 gz*3* : 1.1
@@ -1699,7 +1699,7 @@ gz*9* : 1.1
 zopfli : 1.1
 
 ## barchart small unit="" todo
-Temps de décompression brotli (jquery.*js*)
+Temps de décompression brotli _(jquery.min.js)_
 br*1* : 1.0
 br*2* : 1.0
 br*3* : 1.0

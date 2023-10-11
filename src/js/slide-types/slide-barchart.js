@@ -122,6 +122,7 @@ defineSlideType('slide-barchart', {
       margin-left: 1rem;
       font-style: normal;
       color: #666;
+      font-size: 2rem;
     }
     
     .title-logo {

@@ -55,6 +55,16 @@ body {
   opacity: 1;
 }
 
+[data-position="after"][fade-into] {
+  opacity: 0;
+  visibility: visible;
+}
+
+[data-position="current"][fade-into] {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
 [data-relative-index="-1"][frozen] {
   visibility: visible;
 }
