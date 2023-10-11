@@ -1,65 +1,70 @@
 import { css, html } from 'lit';
 import { defineSlideType } from './base.js';
+import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
 defineSlideType('slide-tip', {
-  render ({ content, attrs }) {
-
-    const items = content
+  render ({ content }) {
+    const [image, rawTxt] = content
       .trim()
-      .split('\n')
-      .map((rawTxt, i) => {
-        const [number, tip] = rawTxt.trim().split(') ');
-        return html`
-          <div class="tip">
-            <div class="star">${number}</div>
-            <div class="text">${tip}</div>
-          </div>
-        `;
-      });
+      .split('\n');
+    const [number, tip] = rawTxt.trim().split(') ');
 
-    return items;
+    return html`
+      <div class="board">
+        ${unsafeHTML(image)}
+      </div>
+      <div class="tip">
+        <div class="star">${number}</div>
+        <div class="text">${tip}</div>
+      </div>
+    `;
   },
   // language=CSS
   styles: css`
     :host {
       display: grid;
-      grid-template-columns: auto 40rem;
-      grid-template-columns: auto auto;
-      justify-content: center;
-      align-content: center;
-      gap: 0.25rem 1rem;
+      font-family: Interstate, sans-serif;
+      grid-template-columns: 3fr 4fr;
+      grid-template-rows: 1fr;  
     }
-
+    
+    img {
+        display: block;
+        width: 90%;
+    }
+    
+    .board {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: solid 0.25em black;
+        background-color: #2f6646;
+    }
+    
     .tip {
-      display: contents;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 3em;
+        gap: 1em;
     }
-
-    /*.tip > * {*/
-    /*  opacity: 0.25;*/
-    /*}*/
-
-    .tip:last-child > * {
-      opacity: 1;
-    }
-
+    
     .star {
       background-image: url(src/img/tile-center.svg);
       background-size: contain;
       background-repeat: no-repeat;
-      height: 2rem;
-      line-height: 2rem;
+      height: 4rem;
+      line-height: 4rem;
       text-align: center;
       color: #ffffff;
-      font-family: Interstate;
-      font-size: 0.75rem;
-      width: 2rem;
+      font-size: 1.75rem;
+      width: 4rem;
     }
 
     .text {
-      font-family: Interstate;
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       line-height: 1.4;
-      /*margin-top: 1rem;*/
     }
   `,
 });
