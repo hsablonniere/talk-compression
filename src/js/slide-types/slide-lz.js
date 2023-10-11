@@ -78,7 +78,7 @@ defineSlideType('slide-lz', {
         <h2>Avant</h2>
         <div class="read">
           ${read[stepToShow].map(({letter, ghost, marked}, index) => html`
-            <scrabble-tile data-index=${index} .letter=${letter} ghost=${ghost} marked=${marked} ></scrabble-tile>
+            <scrabble-tile data-index=${index} .letter=${letter} ?ghost=${ghost} ?marked=${marked} ></scrabble-tile>
           `)}
         </div>
       </div>
@@ -88,13 +88,11 @@ defineSlideType('slide-lz', {
           ${write[stepToShow].map(({letter, ghost, tag}) => {
             if(tag) {
               return html`
-                <div class='tag'>
-                    <div>< ${tag.ref}, ${tag.length} ></div>
-                </div>
+                <scrabble-tile distance=${tag.ref} length=${tag.length}></scrabble-tile>
               `
             } else {
               return html`
-                <scrabble-tile .letter=${letter} ghost=${ghost}></scrabble-tile>
+                <scrabble-tile .letter=${letter} ?ghost=${ghost}></scrabble-tile>
               `
             }
           })}
@@ -121,8 +119,8 @@ defineSlideType('slide-lz', {
         display: grid;
         grid-template-columns: repeat(20, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        justify-content: left;
         padding: 0 10%;
+      justify-items: start;
         gap: 0.5em;
     }
     

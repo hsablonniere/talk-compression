@@ -41,6 +41,10 @@ export class ScrabbleTile extends LitElement {
       letter: { type: String, reflect: true },
       score: { type: String, reflect: true },
       bits: { type: String, reflect: true },
+      marked: { type: Boolean, reflect: true },
+      ghost: { type: Boolean, reflect: true },
+      distance: { type: String, reflect: true },
+      length: { type: String, reflect: true },
     };
   }
 
@@ -81,8 +85,12 @@ export class ScrabbleTile extends LitElement {
           ` : ''}
         </div>
       ` : ''}
-      ${bits != null ? html`
-        <div class="bits">${bits}</div>
+      ${this.distance != null || this.length != null ? html`
+        <div class="tile-large">
+          <div class="bg-large"></div>
+          <div class="length">&lt;${this.length},</div>
+          <div class="distance">${this.distance}&gt;</div>
+        </div>
       ` : ''}
     `;
   }
@@ -100,21 +108,16 @@ export class ScrabbleTile extends LitElement {
           font-family: "Interstate", sans-serif;
           width: var(--tile-size);
         }
-        
-        :host([ghost='true']) {
-            opacity: 0.3;
-            filter: brightness(50%);
+
+        :host([distance]),
+        :host([length]) {
+          grid-column-end: span 2;
+          width: calc(var(--tile-size) * 2);
         }
 
-        :host([marked='true']) .bg::before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: -10%;
-            bottom: -10%;
-            left: -10%;
-            right: -10%;
-            background-color: chartreuse;
+        :host([ghost]) {
+          opacity: 0.3;
+          filter: brightness(50%);
         }
 
         .count {
@@ -153,6 +156,21 @@ export class ScrabbleTile extends LitElement {
           width: var(--tile-size);
         }
 
+        .tile-large {
+          /*background-color: #ffffa1;*/
+          border-radius: 0.2em;
+          /*border: 0.05em solid #000;*/
+          box-sizing: border-box;
+          cursor: pointer;
+          display: flex;
+          height: var(--tile-size);
+          position: relative;
+          user-select: none;
+          width: calc(var(--tile-size) * 2);
+          align-items: center;
+          justify-content: center;
+        }
+
         .tile[data-version="0"] {
           transform: translate3d(0, 0, 0) rotate(0.33deg);
         }
@@ -173,10 +191,26 @@ export class ScrabbleTile extends LitElement {
           background-image: url(src/img/tile.svg);
           background-size: cover;
           background-position: center center;
+          background-repeat: no-repeat;
           position: absolute;
           width: 100%;
           height: 100%;
           z-index: 1;
+        }
+
+        .bg-large {
+          background-image: url(src/img/tile-large.svg);
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+
+        :host([marked]) .bg {
+          background-image: url(src/img/tile-marked.svg);
         }
 
         .tile[data-version="0"] .bg {
@@ -210,6 +244,19 @@ export class ScrabbleTile extends LitElement {
           margin: auto;
           position: relative;
           z-index: 2;
+        }
+
+        .length,
+        .distance {
+          font-size: calc(var(--tile-size) * 0.4);
+          line-height: 1em;
+          font-weight: bold;
+          position: relative;
+          z-index: 2;
+        }
+
+        :host([marked]) .letter {
+          color: #fff;
         }
 
         .score {
