@@ -844,7 +844,7 @@ Usage: ascii [-adxohv] [-t] [char-alias...]
 -->
 
 ## code
-```text style="font-size: 0.9rem" highlight="hide-mark"
+```text style="font-size: 0.95rem" highlight="hide-mark"
 $ ascii -b
 
 0000000 NUL    0010000 DLE    0100000      0110000 0    1000000 @    1010000 P    1100000 `    1110000 p 
@@ -882,7 +882,7 @@ $ ascii -b
 ```
 
 ## code
-```text style="font-size: 0.9rem" highlight
+```text style="font-size: 0.95rem" highlight
 $ ascii -b
 
 0000000 NUL    0010000 DLE    0100000      0110000 0    1000000 @    1010000 P    1100000 `    1110000 p 
