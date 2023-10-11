@@ -382,56 +382,56 @@ ca53 48d3 2eae 4d45 5393  .SH...MES.
 ## section
 Ordres de  grandeur
 
-## barchart
+## barchart logo=js
 math-example.*js* _228o_
 brut : 228 brut
 minifié : 98 min
 compressé : 153 compressed
 minifié<br>& compressé : 89 gzip
 
-## barchart
+## barchart logo=js
 jquery.*js* _285,3ko_
 brut : 285314 brut
 minifié : 87029 min
 compressé : 83915 compressed
 minifié<br>& compressé : 30190 gzip
 
-## barchart percent
+## barchart logo=js percent
 jquery.*js* _285,3ko_
 brut : 285314 brut
 minifié : 87029 min
 compressé : 83915 compressed
 minifié<br>& compressé : 30190 gzip
 
-## barchart percent
+## barchart logo=js percent
 lodash.*js* _544,1ko_
 brut : 544098 brut
 minifié : 73650 min
 compressé : 97170 compressed
 minifié<br>& compressé : 25684 gzip
 
-## barchart percent
+## barchart logo=css percent
 bootstrap.*css* _205,5ko_
 brut : 205484 brut
 minifié : 161487 min
 compressé : 26408 compressed
 minifié<br>& compressé : 23906 gzip
 
-## barchart percent
+## barchart logo=html percent
 hibernate-user-guide.*html* _2,4Mo_
 brut : 2421852 brut
 minifié : 2334777 min
 compressé : 372419 compressed
 minifié<br>& compressé : 366546 gzip
 
-## barchart percent
+## barchart logo=svg percent
 firefox-logo.*svg* _15,9ko_
 brut : 15858 brut
 minifié : 12163 min
 compressé : 3726 compressed
 minifié<br>& compressé : 3169 gzip
 
-## barchart percent
+## barchart logo=json percent
 departements-region.*json* _9,6ko_
 brut : 9576 brut
 minifié : 7152 min

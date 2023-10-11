@@ -64,7 +64,10 @@ defineSlideType('slide-barchart', {
     return html`
 
       <div class="title">
-        ${unsafeHTML(markup(title))}
+        <div>${unsafeHTML(markup(title))}</div>
+        ${attrs.logo != null ? html`
+          <img class="title-logo" src="src/img/logo-${attrs.logo}.svg" alt="">
+        ` : ''}
       </div>
 
       <div class="container">
@@ -102,6 +105,9 @@ defineSlideType('slide-barchart', {
       font-weight: bold;
       padding: 1rem 0;
       font-family: 'Yanone Kaffeesatz', sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
 
     strong {
@@ -116,6 +122,11 @@ defineSlideType('slide-barchart', {
       margin-left: 1rem;
       font-style: normal;
       color: #666;
+    }
+    
+    .title-logo {
+      display: none;
+      height: 3rem;
     }
 
     .container {
