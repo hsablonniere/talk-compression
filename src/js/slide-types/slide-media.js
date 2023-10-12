@@ -34,6 +34,9 @@ defineSlideType('slide-media', {
       : null;
 
     return html`
+      ${attrs.title != null ? html`
+        <div class="title">${attrs.title}</div>
+      ` : ''}
       ${browserUrl != null ? html`
         <div class="browser">
           <figcaption class="url">
@@ -100,6 +103,15 @@ defineSlideType('slide-media', {
     :host([top]) img,
     :host([top]) video {
       object-position: top center;
+    }
+    
+    .title {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center;
+      color: #000;
     }
 
     .browser {

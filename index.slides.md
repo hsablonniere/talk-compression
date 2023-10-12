@@ -39,7 +39,7 @@ Lexique
 
 ## blank
 
-## code
+## code title="math-example.js"
 ```js simple-js-example
 export function add (firstNumber, secondNumber) {
 
@@ -54,7 +54,7 @@ export function factorial (number) {
 }
 ```
 
-## code
+## code title="math-example.js"
 ```js simple-js-example
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber;
@@ -69,7 +69,7 @@ export function factorial (number) {
 }
 ```
 
-## code
+## code title="math-example.js"
 ```js simple-js-example
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber;
@@ -84,7 +84,7 @@ export function factorial (number) {
 }
 ```
 
-## code
+## code title="math-example.js"
 ```js simple-js-example
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber;
@@ -99,7 +99,7 @@ export function factorial (number) {
 }
 ```
 
-## code
+## code title="math-example.js"
 ```js simple-js-example size
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber;
@@ -114,7 +114,7 @@ export function factorial (number) {
 }
 ```
 
-## code
+## code title="math-example.js"
 ```text simple-js-example size highlight
 export function add (firstNumber, secondNumber) {
 
@@ -139,7 +139,7 @@ export function factorial (number) {
 }
 ```
 
-## code
+## code title="math-example.*min*.js"
 ```js simple-js-example size
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber
@@ -154,7 +154,7 @@ export function factorial (number) {
 }
 ```
 
-## code
+## code title="math-example.*min*.js"
 ```text simple-js-example size highlight
 export function add (firstNumber, secondNumber) {
 
@@ -179,7 +179,7 @@ export function factorial (number) {
 }
 ```
 
-## code
+## code title="math-example.*min*.js"
 ```js simple-js-example size
 export function add (firstNumber, secondNumber) {
   return firstNumber + secondNumber
@@ -194,7 +194,7 @@ export function factorial (number) {
 }
 ```
 
-## code
+## code title="math-example.*min*.js"
 ```text simple-js-example size highlight
 export function add (firstNumber, secondNumber) {
                       __________   ___________
@@ -219,7 +219,7 @@ export function factorial (number) {
 }
 ```
 
-## code
+## code title="math-example.*min*.js"
 ```js simple-js-example size
 export function add (f, s) {
   return f + s
@@ -234,7 +234,7 @@ export function factorial (n) {
 }
 ```
 
-## code
+## code title="math-example.*min*.js"
 ```text simple-js-example size highlight
 export function add (f, s) {
                    _   _  _
@@ -259,7 +259,7 @@ ____ _ _ _           _ _
 }
 ```
 
-## code
+## code title="math-example.*min*.js"
 ```js simple-js-example size
 export function add(f,s){return f+s}export function factorial(n){return n===0?1:n*factorial(n-1)}
 ```
@@ -267,7 +267,7 @@ export function add(f,s){return f+s}export function factorial(n){return n===0?1:
 ## text
 🤐 Compression
 
-## code
+## code title="math-example.min.js"
 ```text bin-js-example size=98
 6578 706f 7274 2066 756e
 6374 696f 6e20 6164 6428
@@ -281,7 +281,7 @@ export function add(f,s){return f+s}export function factorial(n){return n===0?1:
 6c28 6e2d 3129 7d0a
 ```
 
-## code
+## code title="math-example.min.js"
 ```text bin-js-example size=98
 6578 706f 7274 2066 756e  export fun
 6374 696f 6e20 6164 6428  ction add(
@@ -295,7 +295,7 @@ export function add(f,s){return f+s}export function factorial(n){return n===0?1:
 6c28 6e2d 3129 7d0a       l(n-1)}.
 ```
 
-## code
+## code title="math-example.min.js"
 ```text bin-js-example highlight size=98
 6578 706f 7274 2066 756e  export fun
 ______________            ______
@@ -318,7 +318,7 @@ ____                      __
 6c28 6e2d 3129 7d0a       l(n-1)}.
 ```
 
-## code
+## code title="math-example.min.js"
 ```text bin-js-example highlight size=98
 6578 706f 7274 2066 756e  export fun
                  _______         ___
@@ -341,7 +341,7 @@ __                        _
 6c28 6e2d 3129 7d0a       l(n-1)}.
 ```
 
-## code
+## code title="math-example.min.js"
 ```text bin-js-example highlight size=98
 6578 706f 7274 2066 756e  export fun
 
@@ -364,7 +364,7 @@ __                        _
 6c28 6e2d 3129 7d0a       l(n-1)}.
 ```
 
-## code fade-from
+## code title="math-example.min.js.*gz*" fade-from
 ```text bin-js-example size=89
 1f8b 0800 0000 0000 0003  ..........
 4bad 28c8 2f2a 5148 2bcd  K.(./*QH+.
@@ -446,30 +446,70 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
 
 ## blank
 
-## todo
-histogramme de temps de chargement (pur, min, gzip, minzip) jquery
-un groupe de 4 barres pour le edge
-un groupe de 4 barres pour le slow 3G
-un groupe de 4 barres pour fibre
-> projection en temps de chargement (pour 2 types de connexion)
+## text
+🎓 En théorie
 
-## todo
-waterfall WPT de wikipedia
+## barchart logo=js unit="time" speed="50"
+jquery.js _285,3ko_ _*3G lente à 50ko/s*_
+brut : 285314 brut
+minifié : 87029 min
+compressé : 83915 compressed
+minifié<br>& compressé : 30190 gzip
 
-## todo
-vidéo WPT no compression / compression (fibre)
+## barchart logo=js unit="time" speed="1125"
+jquery.js _285,3ko_ _*4G à 1,1Mo/s*_
+brut : 285314 brut
+minifié : 87029 min
+compressé : 83915 compressed
+minifié<br>& compressé : 30190 gzip
 
-## todo
-vidéo WPT no compression / compression (3G)
+## media
+<img src="src/img/bundlephobia-jquery.png" screenshot-url="https://bundlephobia.com/package/jquery@3.7.1">
+
+## text
+⏱️ En pratique
+
+## media
+<img src="src/img/wikipedia-scrabble.png" screenshot-url="https://en.wikipedia.org/wiki/Scrabble">
+
+## media contain
+<img src="src/img/wpt-scrabble-waterfall.png">
+
+## wpt title="en.wikipedia.org/wiki/Scrabble _*3G slow à 50ko/s*_"
+<video src="src/videos/wpt-scrabble-3gslow.mp4" controls></video>
+<!-- https://www.webpagetest.org/video/view.php?tests=231012_BiDcBM_BC9-l:sans%20compression-e:17.1,231012_AiDc6X_BGC-l:avec%20compression-e:7.4&bg=ffffff&text=000000 -->
+
+## blank white
+
+## wpt title="en.wikipedia.org/wiki/Scrabble _*4G à 1,1Mo/s*_"
+<video src="src/videos/wpt-scrabble-4g.mp4" controls></video>
+<!-- https://www.webpagetest.org/video/view.php?tests=231012_BiDcVA_BH1-l:sans%20compression-e:2.4,231012_BiDcF8_BHG-l:avec%20compression-e:2.1&bg=ffffff&text=000000 -->
+
+## blank white
+
+## wpt title="en.wikipedia.org/wiki/Scrabble _*sans limite*_"
+<video src="src/videos/wpt-scrabble-nolimit.mp4" controls></video>
+<!-- https://www.webpagetest.org/video/view.php?tests=231012_BiDcKV_BJ8-l:sans%20compression-e:1.2,231012_BiDcAV_BJA-l:avec%20compression-e:1.2&bg=ffffff&text=000000&slow=1 -->
 
 ## tip
 <img src='src/img/scrabble.svg' alt=''/>
 2) La compression c'est nécessaire
 
 ## media
+<img src="src/img/almanac-2022-home.png" screenshot-url="https://almanac.httparchive.org/en/2022/">
+
+## media
 <img src="src/img/almanac-http-2021-compression.png" screenshot-url="https://almanac.httparchive.org/en/2021/compression">
 
-## barchart unit="%" todo fade-from
+## barchart unit="%" fade-from
+*%* de fichiers servis *sans* compression
+// JS : 12.7 brut
+// CSS : 14.2 brut
+// JSON : 31.8 brut
+// SVG : 36.0 brut
+// HTML : 56.0 brut
+
+## barchart unit="%" fade-from
 *%* de fichiers servis *sans* compression
 JS : 12.7 brut
 // CSS : 14.2 brut
@@ -477,7 +517,7 @@ JS : 12.7 brut
 // SVG : 36.0 brut
 // HTML : 56.0 brut
 
-## barchart unit="%" todo fade-from
+## barchart unit="%" fade-from
 *%* de fichiers servis *sans* compression
 JS : 12.7 brut
 CSS : 14.2 brut
@@ -485,7 +525,7 @@ CSS : 14.2 brut
 // SVG : 36.0 brut
 // HTML : 56.0 brut
 
-## barchart unit="%" todo fade-from
+## barchart unit="%" fade-from
 *%* de fichiers servis *sans* compression
 JS : 12.7 brut
 CSS : 14.2 brut
@@ -493,7 +533,7 @@ JSON : 31.8 brut
 // SVG : 36.0 brut
 // HTML : 56.0 brut
 
-## barchart unit="%" todo fade-from
+## barchart unit="%" fade-from
 *%* de fichiers servis *sans* compression
 JS : 12.7 brut
 CSS : 14.2 brut
@@ -501,7 +541,7 @@ JSON : 31.8 brut
 SVG : 36.0 brut
 // HTML : 56.0 brut
 
-## barchart unit="%" todo fade-from
+## barchart unit="%" fade-from
 *%* de fichiers servis *sans* compression
 JS : 12.7 brut
 CSS : 14.2 brut
@@ -667,22 +707,19 @@ et les sizes dans les devtools
 ## todo
 c'est petit mais est-ce que ça bloque ?
 
-## gantt title="The title" todo
-Compression : 0
-Transfert : 100
+## gantt title="" todo
+Réception : 0
+Parsing HTML : 100
+Affichage : 100
+
+## gantt title="" todo
+Réception : 0
 Décompression : 100
-Parsing : 100
+Parsing HTML : 100
 Affichage : 100
 > slides diagram de gantt DL/DECOMPRESSION/PARSE/AFFICHAGE
 > pas cheveauché
 > On pourrait penser que la compression introduit une phase ça bloque
-
-## gantt title="The title 2" todo
-Compression : 0
-Transfert : 80
-Décompression : 80
-Parsing : 80
-Affichage : 80
 
 ## todo demo
 demo sherlock HTML streaming sans compression
@@ -691,16 +728,27 @@ demo sherlock HTML streaming sans compression
 ## todo demo
 demo sherlock HTML streaming sans compression ralenti
 
-## todo
-slides diagram de gantt DL/PARSE/AFFICHAGE
-cheveauché => constat du streaming (temps réel) d'un navigateur 
+## gantt title="" todo
+Réception : 0
+Parsing HTML : 33
+Affichage : 33
 
 ## todo demo
 demo sherlock HTML streaming avec compression ralenti
 
-## todo
-slides diagram de gantt DL/DECOMPRESSION/PARSE/AFFICHAGE
-cheveauché
+## gantt title="" todo
+Réception : 0
+Décompression : 20
+Parsing HTML : 20
+Affichage : 20
+
+## gantt title="" todo
+Compression : 0
+Envoi : 20
+Réception : 20
+Décompression : 20
+Parsing HTML : 20
+Affichage : 20
 
 ## tip
 <img src='src/img/scrabble.svg' alt=''/>
@@ -708,12 +756,13 @@ cheveauché
 
 ## blank
 
+<!--
 ## todo fade-from
 on parle des valises et tshirt en boule ou pliés
 (demander à Geoffroy comment mettre en place une démo)
 > streamer, c'est bien, mais sur le réseau, il y a des paquets et "une valise à moitié vide, pas besoin de plier les
 > tshirts"
-
+-->
 
 ## blank black fade-to
 > transition
@@ -1506,6 +1555,8 @@ On peut tromper une personne mille fois. On peut tromper mille personnes une foi
 ET  CONCRETEMENT ?
 <!--DANS LA  PRATIQUE-->
 
+## blank white
+
 ## media white
 <img src="src/img/lz-family-01.svg">
 
@@ -1574,7 +1625,7 @@ A la recherche  du pouilleme
 <img src="src/img/github-cloudflare-zlib.png" screenshot-url="https://github.com/cloudflare/zlib">
 
 ## barchart small todo
-Niveaux de compression *gzip* _(jquery.min.js)_
+Niveaux de compression *gzip* _jquery.min.js_
 min : 87029 min
 1 : 35238 gzip
 2 : 33957 gzip
@@ -1594,7 +1645,7 @@ min : 87029 min
 > MEME FORMAT OMG !!
 
 ## barchart todo
-Niveaux de compression _(jquery.min.js)_
+Niveaux de compression _jquery.min.js_
 min : 87029 min
 gzip *9* : 30129 gzip
 zopfli : 29227 zopfli
@@ -1609,7 +1660,7 @@ zopfli : 29227 zopfli
 > transformations de dico (montrer)
 
 ## barchart small todo
-Niveaux de compression *brotli* _(jquery.min.js)_
+Niveaux de compression *brotli* _jquery.min.js_
 min : 87029 min
 1 : 34909 brotli
 2 : 32234 brotli
@@ -1624,7 +1675,7 @@ min : 87029 min
 11 : 27450 brotli
 
 ## barchart todo
-Niveaux de compression _(jquery.min.js)_
+Niveaux de compression _jquery.min.js_
 min : 87029 min
 gzip *9* : 30129 gzip
 zopfli : 29227 zopfli
@@ -1646,7 +1697,7 @@ plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les d
 <!--La compression, c'est mieux avec brotli-->
 
 ## barchart small unit="ms" todo
-Temps de compression *brotli* _(jquery.min.js)_
+Temps de compression *brotli* _jquery.min.js_
 1 : 1.3 brotli
 2 : 1.8 brotli
 3 : 2.0 brotli
@@ -1660,11 +1711,11 @@ Temps de compression *brotli* _(jquery.min.js)_
 11 : 97.2 brotli
 
 ## barchart unit="ms" todo
-Temps de compression *zopfli* _(jquery.min.js)_
+Temps de compression *zopfli* _jquery.min.js_
 zopfli : 142.2 zopfli
 
 ## barchart small unit="ms" todo
-Temps de compression *gzip* _(jquery.min.js)_
+Temps de compression *gzip* _jquery.min.js_
 1 : 1.8 gzip
 2 : 1.9 gzip
 3 : 2.1 gzip
@@ -1676,7 +1727,7 @@ Temps de compression *gzip* _(jquery.min.js)_
 9 : 3.7 gzip
 
 ## barchart unit="ms" todo
-Temps de compression _(jquery.min.js)_
+Temps de compression _jquery.min.js_
 gzip *9* : 3.7 gzip
 zopfli : 142.2 zopfli
 brotli *11* : 97.2 brotli
@@ -1684,14 +1735,14 @@ brotli *11* : 97.2 brotli
 ## blank white
 
 ## barchart unit="ms" todo
-Temps de *dé*compression _(jquery.min.js)_
+Temps de *dé*compression _jquery.min.js_
 gzip *9* : 1.1 gzip
 zopfli : 1.1 zopfli
 brotli *11* : 1.1 brotli
 
 <!--
 ## barchart small unit="" todo
-Temps de décompression gzip _(jquery.min.js)_
+Temps de décompression gzip _jquery.min.js_
 gz*1* : 1.0
 gz*2* : 1.1
 gz*3* : 1.1
@@ -1704,7 +1755,7 @@ gz*9* : 1.1
 zopfli : 1.1
 
 ## barchart small unit="" todo
-Temps de décompression brotli _(jquery.min.js)_
+Temps de décompression brotli _jquery.min.js_
 br*1* : 1.0
 br*2* : 1.0
 br*3* : 1.0

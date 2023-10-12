@@ -81,7 +81,7 @@ defineSlideType('slide-code', {
 
     .title {
       font-family: 'Yanone Kaffeesatz', sans-serif;
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: bold;
       line-height: 1.2;
       text-align: center;

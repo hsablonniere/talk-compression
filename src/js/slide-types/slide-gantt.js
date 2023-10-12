@@ -18,7 +18,7 @@ defineSlideType('slide-gantt', {
           .map((a) => a.shift)
           .reduce((a, b) => a + b, 0) + shift;
         return html`
-          <div class="phase" style="margin-left: calc(var(--w) * ${totalShift})">${text}</div>
+          <div class="phase" data-phase=${text} style="margin-left: calc(var(--w) * ${totalShift})">${text}</div>
         `;
       });
 
@@ -33,7 +33,7 @@ defineSlideType('slide-gantt', {
       display: grid;
       grid-template-rows: min-content 1fr;
     }
-    
+
     .title {
       font-family: 'Yanone Kaffeesatz', sans-serif;
       font-size: 3rem;
@@ -56,33 +56,35 @@ defineSlideType('slide-gantt', {
       padding: 0.7rem 0 0.5rem 0;
       font-size: 2rem;
       text-align: center;
-      --w: 10rem;
+      --w: 11rem;
       box-sizing: border-box;
       width: var(--w);
     }
 
-    .phase:nth-child(1) {
+    .phase[data-phase="Compression"],
+    .phase[data-phase="Décompression"] {
       background-color: #4285f4;
       color: #fff;
     }
 
-    .phase:nth-child(2) {
-      background-color: #ea4335;
+    .phase[data-phase="Envoi"],
+    .phase[data-phase="Transfert"] {
       background-color: #333;
       color: #fff;
     }
 
-    .phase:nth-child(3) {
-      background-color: #4285f4;
+    .phase[data-phase="Réception"] {
+      background-color: #555;
       color: #fff;
     }
 
-    .phase:nth-child(4) {
-      background-color: #666;
+
+    .phase[data-phase="Parsing HTML"] {
+      background-color: #777;
       color: #fff;
     }
 
-    .phase:nth-child(5) {
+    .phase[data-phase="Afichage"] {
       background-color: #888;
       color: #fff;
     }

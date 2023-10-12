@@ -24,12 +24,25 @@ export function formatBytes (rawValue) {
   return html`${formattedValue}<strong class="unit">${prefix + symbol}</strong>`;
 }
 
-function format (value, unit) {
+export function formatTime (rawValue, speed) {
+  const value = rawValue / speed;
+  if (value > 1000) {
+    const formattedValue = nf.format(value / 1000);
+    return html`${formattedValue}<strong class="unit">s</strong>`;
+  }
+  const formattedValue = parseInt(value);
+  return html`${formattedValue}<strong class="unit">ms</strong>`;
+}
+
+function format (value, unit, speed) {
   if (unit == null) {
     return formatBytes(value);
   }
   if (unit === '') {
     return html`${nf.format(value)}`;
+  }
+  if (unit === 'time') {
+    return formatTime(value, speed);
   }
   return html`${nf.format(value)}<strong class="unit">${unit}</strong>`;
 }
@@ -76,7 +89,7 @@ defineSlideType('slide-barchart', {
             <div class="bar">
               <div class="bar-value" style="--bar-percent: ${percent}" data-color="${color}">
                 ${attrs.percent == null ? html`
-                  <div class="bar-label">${format(value, unit)}</div>
+                  <div class="bar-label">${format(value, unit, attrs.speed)}</div>
                 ` : ''}
                 ${attrs.percent != null ? html`
                   <div class="bar-label">${format(percent, '%')}</div>
@@ -124,7 +137,7 @@ defineSlideType('slide-barchart', {
       color: #666;
       font-size: 2rem;
     }
-    
+
     .title-logo {
       display: none;
       height: 3rem;
