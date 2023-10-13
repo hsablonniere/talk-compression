@@ -1681,8 +1681,40 @@ gzip *9* : 30129 gzip
 zopfli : 29227 zopfli
 brotli *11* : 27450 brotli
 
-## todo
-exemple dictionnaire
+## blank white
+
+## text
+📖 13 504 *"mots"*
+
+## barchart tiny unit="raw"
+Nombre de "mots" de N "lettres" dans le dictionnaire brotli
+4 : 1024 brotli
+5 : 1024 brotli
+6 : 2048 brotli
+7 : 2048 brotli
+8 : 1024 brotli
+9 : 1024 brotli
+10 : 1024 brotli
+11 : 1024 brotli
+12 : 1024 brotli
+13 : 512 brotli
+14 : 512 brotli
+15 : 256 brotli
+16 : 128 brotli
+17 : 128 brotli
+18 : 256 brotli
+19 : 128 brotli
+20 : 128 brotli
+21 : 64 brotli
+22 : 64 brotli
+23 : 32 brotli
+24 : 32 brotli
+
+## barchart
+Niveaux de compression _dictionnaire-brotli.txt_
+brut : 122824 brut
+gzip *9* : 58915 gzip
+brotli *11* : 26960 brotli
 
 ## todo
 plus on est vieux => plus on est abstrait

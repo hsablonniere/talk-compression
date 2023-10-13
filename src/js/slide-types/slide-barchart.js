@@ -41,6 +41,9 @@ function format (value, unit, speed) {
   if (unit === '') {
     return html`${nf.format(value)}`;
   }
+  if (unit === 'raw') {
+    return html`${value}`;
+  }
   if (unit === 'time') {
     return formatTime(value, speed);
   }
@@ -167,6 +170,10 @@ defineSlideType('slide-barchart', {
       width: 1.75rem;
     }
 
+    :host([tiny]) .bar {
+      width: 1.5rem;
+    }
+
     .section.comment .bar {
       visibility: hidden;
     }
@@ -187,6 +194,10 @@ defineSlideType('slide-barchart', {
 
     :host([small]) .bar-label {
       font-size: 1.25rem;
+    }
+
+    :host([tiny]) .bar-label {
+      font-size: 0.9rem;
     }
 
     .unit {
@@ -250,9 +261,12 @@ defineSlideType('slide-barchart', {
       min-width: 5rem;
     }
 
-
     :host([narrow]) .legend {
       padding: 0.5rem 0.75rem;
+    }
+
+    :host([tiny]) .legend {
+      padding: 0.5rem 0.6rem;
     }
 
     .section.comment .legend {
