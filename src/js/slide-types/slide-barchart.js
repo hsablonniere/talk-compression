@@ -70,7 +70,9 @@ defineSlideType('slide-barchart', {
         return { label, value, isCommented, color };
       })
       .map((section, i, all) => {
-        const max = Math.max(...all.map((s) => s.value));
+        const max = (attrs.max != null)
+          ? Number(attrs.max)
+          : Math.max(...all.map((s) => s.value));
         const percent = (section.value * 100) / max;
         return { ...section, percent };
       });

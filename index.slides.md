@@ -501,48 +501,48 @@ minifié<br>& compressé : 30190 gzip
 ## media
 <img src="src/img/almanac-http-2021-compression.png" screenshot-url="https://almanac.httparchive.org/en/2021/compression">
 
-## barchart unit="%" fade-from
-*%* de fichiers servis *sans* compression
+## barchart unit="%" max="100"
+*%* de fichiers servis *sans* compression _Almanac 2021_
 // JS : 12.7 brut
 // CSS : 14.2 brut
 // JSON : 31.8 brut
 // SVG : 36.0 brut
 // HTML : 56.0 brut
 
-## barchart unit="%" fade-from
-*%* de fichiers servis *sans* compression
+## barchart unit="%" max="100"
+*%* de fichiers servis *sans* compression _Almanac 2021_
 JS : 12.7 brut
 // CSS : 14.2 brut
 // JSON : 31.8 brut
 // SVG : 36.0 brut
 // HTML : 56.0 brut
 
-## barchart unit="%" fade-from
-*%* de fichiers servis *sans* compression
+## barchart unit="%" max="100"
+*%* de fichiers servis *sans* compression _Almanac 2021_
 JS : 12.7 brut
 CSS : 14.2 brut
 // JSON : 31.8 brut
 // SVG : 36.0 brut
 // HTML : 56.0 brut
 
-## barchart unit="%" fade-from
-*%* de fichiers servis *sans* compression
+## barchart unit="%" max="100"
+*%* de fichiers servis *sans* compression _Almanac 2021_
 JS : 12.7 brut
 CSS : 14.2 brut
 JSON : 31.8 brut
 // SVG : 36.0 brut
 // HTML : 56.0 brut
 
-## barchart unit="%" fade-from
-*%* de fichiers servis *sans* compression
+## barchart unit="%" max="100"
+*%* de fichiers servis *sans* compression _Almanac 2021_
 JS : 12.7 brut
 CSS : 14.2 brut
 JSON : 31.8 brut
 SVG : 36.0 brut
 // HTML : 56.0 brut
 
-## barchart unit="%" fade-from
-*%* de fichiers servis *sans* compression
+## barchart unit="%" max="100"
+*%* de fichiers servis *sans* compression _Almanac 2021_
 JS : 12.7 brut
 CSS : 14.2 brut
 JSON : 31.8 brut
@@ -550,7 +550,7 @@ SVG : 36.0 brut
 HTML : 56.0 brut
 <!-- à retravailler -->
 
-## blank black fade-to
+## blank black
 
 ## section
 Dans les  tuyaux
@@ -1684,7 +1684,65 @@ brotli *11* : 27450 brotli
 ## blank white
 
 ## text
-📖 13 504 *"mots"*
+📖 *Dictionnaire* brotli
+
+## text
+🤯 13 504 *"mots"*
+
+## text
+🗺️ Anglais, Espagnol, Chinois,
+<br> Hindi, Russe, Arabe
+
+## text
+📄 HTML, CSS, JavaScript
+
+## code
+```text style="font-size: 0.95rem"
+ time down life left back code data show only site city open just like free work text year over body
+ love form book play live line help home side more word long them view find page days full head term
+ each area from true mark able upon high date land news even next case both post used made hand here
+ what name Link blog size base held make main user ') + hold ends with News read were sign take have
+ game seen call path well plus menu film part join this list good need ways west jobs mind also logo
+ rich uses last team army food king will east ward best fire Page know away .png move than load give
+ self note much feed many rock icon once look hide died Home rule host ajax info club laws less half
+ some such zone 100% ones care Time race blue four week face hope gave hard lost when park kept pass
+ ship room HTML plan Type done save keep flag link sold five took rate town jump thus dark card file
+ fear stay kill that fall auto ever .com talk shop vote deep mode rest turn born band fell rose url(
+ skin role come acts ages meet gold .jpg item vary felt then send drop View copy 1.0" </a> stop else
+ lies tour pack .gif past css? gray mean &gt; ride shot late said road var  feel john rick port fast
+ 'UA- dead </b> poor bill type U.S. wood must 2px; Info rank wide want wall lead [0]; paul wave sure
+ $('# wait mass arms goes gain lang paid !--  lock unit root walk firm wife xml" song test 20px kind
+ rows tool font mail safe star maps core rain flow baby span says 4px; 6px; arts foot real wiki heat
+ step trip org/ lake weak told Form cast fans bank very runs july task 1px; goal grew slow edge id="
+ sets 5px; .js? 40px if ( soon seat none tube zero sent reed fact into gift harm 18px came hill bold
+ zoom void easy ring fill peak init cost 3px; jack tags bits roll edit knew near <!-- grow JSON duty
+ Name sale you  lots pain jazz cold eyes fish www. risk tabs prev 10px rise 25px Blue ding 300, ball
+ ford earn wild box. fair lack vers pair june tech if(! pick evil $("# warm lord does pull ,000 idea
+```
+
+## code
+```text style="font-size: 0.95rem"
+</a><a href="http://  </a></li><li class="  form action="http://  <div style="display:
+type="text" name="q"  <table width="100%"   background-position:  " border="0" width="
+rel="shortcut icon"   h6><ul><li><a href="    <meta http-equiv="  css" media="screen"
+responsible for the   " type="application/  " style="background-  html; charset=utf-8"
+ allowtransparency="  stylesheet" type="te  **<meta http-equiv="  ></span><span class=
+"0" cellspacing="0">  ;*</script>*<script   sometimes called the  does not necessarily
+For more information  at the beginning of   <!DOCTYPE html><html  particularly in the
+type="hidden" name="  javascript:void(0);"  effectiveness of the   autocomplete="off"
+generally considered  ><input type="text"   "></script>**<script  throughout the world
+common misconception  association with the  </div>*</div>*<div c  during his lifetime,
+corresponding to the  type="image/x-icon"   an increasing number  diplomatic relations
+are often considered  meta charset="utf-8"   <input type="text"   examples include the
+"><img src="http://i  participation in the  the establishment of  *</div>*<div class="
+&amp;nbsp;&amp;nbsp;  to determine whether  quite different from  marked the beginning
+distance between the  contributions to the  conflict between the  widely considered to
+was one of the first  with varying degrees  have speculated that  (document.getElement
+participating in the  originally developed  eta charset="utf-8">   type="text/css" />*
+interchangeably with  more closely related  social and political  that would otherwise
+perpendicular to the  style type="text/css  type="submit" name="  families residing in
+developing countries  computer programming  economic development  determination of the
+```
 
 ## barchart tiny unit="raw"
 Nombre de "mots" de N "lettres" dans le dictionnaire brotli
@@ -1728,7 +1786,7 @@ plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les d
 7) La compression brotli, ça marche
 <!--La compression, c'est mieux avec brotli-->
 
-## barchart small unit="ms" todo
+## barchart small unit="ms" todo max="142.2"
 Temps de compression *brotli* _jquery.min.js_
 1 : 1.3 brotli
 2 : 1.8 brotli
@@ -1746,7 +1804,7 @@ Temps de compression *brotli* _jquery.min.js_
 Temps de compression *zopfli* _jquery.min.js_
 zopfli : 142.2 zopfli
 
-## barchart small unit="ms" todo
+## barchart small unit="ms" todo max="142.2"
 Temps de compression *gzip* _jquery.min.js_
 1 : 1.8 gzip
 2 : 1.9 gzip
@@ -1766,7 +1824,7 @@ brotli *11* : 97.2 brotli
 
 ## blank white
 
-## barchart unit="ms" todo
+## barchart unit="ms" todo max="142.2"
 Temps de *dé*compression _jquery.min.js_
 gzip *9* : 1.1 gzip
 zopfli : 1.1 zopfli
@@ -1805,15 +1863,32 @@ br*11* : 1.1
 <img src='src/img/scrabble.svg' alt=''/>
 8) La compression des fichiers statiques se fait une seule fois au moment du build
 
-## todo
-almanac
-Precompressed 	11 	9 or Zopfli
-Dynamically compressed 	5 	6
+## media
+<img src="src/img/almanac-http-2021-compression-fig10-zoom.png" screenshot-url="https://almanac.httparchive.org/en/2021/compression#fig-10">
 
-## todo
-maintenant que vous voyez comment ça compresse
-quel sort on réserve au gens qui compresse du JPEG ?
-explications
+## blank
+> maintenant que vous voyez comment ça compresse
+> quel sort on réserve au gens qui compresse du JPEG ?
+> explications
+
+## barchart
+cats.*jpeg* _591,8ko_
+brut : 591794 brut
+gzip *9* : 584070 gzip
+brotli *11* : 579413 brotli
+
+## barchart percent
+cats.*jpeg* _591,8ko_
+brut : 591794 brut
+gzip *9* : 584070 gzip
+brotli *11* : 579413 brotli
+
+## barchart unit="%" max="100"
+*%* de fichiers servis *avec* compression _Almanac 2020_
+JPEG : 3.27 brut
+GIF : 3.42 brut
+PNG : 3.70 brut
+<!-- https://almanac.httparchive.org/en/2020/compression -->
 
 ## tip
 <img src='src/img/scrabble.svg' alt=''/>
@@ -1822,12 +1897,30 @@ explications
 > On peut compresser une fois mille fichiers,
 > mais peut pas compresser mille fois un fichier.
 
-## todo fade-from
-almanac
-JPG
-PNG
-MP4
-fonts
+## code title="Formats binaires *compressibles* :"
+```text
+application/wasm
+font/otf
+font/ttf
+image/bmp
+image/x-icon
+```
+<!--application/tar-->
+
+<!--
+## barchart percent
+cats.*bmp* _5,1Mo_
+brut : 5062638 brut
+gzip *9* : 1745586 gzip
+brotli *11* : 1430160 brotli
+-->
+
+## barchart percent
+sql.*wasm* _613,4ko_
+brut : 613426 brut
+gzip *9* : 302566 gzip
+brotli *11* : 262591 brotli
+<!-- https://github.com/sql-js/sql.js -->
 
 ## blank black fade-to
 
