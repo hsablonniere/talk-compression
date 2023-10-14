@@ -730,11 +730,22 @@ demo sherlock HTML streaming sans compression ralenti
 
 ## gantt title="" todo
 Réception : 0
+Parsing HTML : 100
+Affichage : 100
+
+## gantt title="" todo
+Réception : 0
 Parsing HTML : 33
 Affichage : 33
 
 ## todo demo
 demo sherlock HTML streaming avec compression ralenti
+
+## gantt title="" todo
+Réception : 0
+Décompression : 100
+Parsing HTML : 100
+Affichage : 20
 
 ## gantt title="" todo
 Réception : 0
@@ -1606,12 +1617,13 @@ Jean-loup Gailly and Mark Adler
 
 ## media
 <img src="src/img/rfc-1951-deflate.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1951">
-
-## media fade-from
 <img src="src/img/rfc-1952-gzip.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1952">
 
 ## todo
 exemple binaire de gzip en mode décompression
+
+## media fade-from
+<img src="src/img/youtube-bill-bird-deflate.png" screenshot-url="https://www.youtube.com/watch?v=SJPvNi4HrWQ">
 
 ## blank black fade-to
 
