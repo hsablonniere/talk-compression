@@ -103,34 +103,32 @@ defineSlideType('slide-lz', {
   // language=CSS
   styles: css`
     :host {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    } 
-    
-    h1, h2 {
-        margin: 0;
-        padding: 0 10%;
-        font-family: 'Yanone Kaffeesatz';
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-    
-    
-    .read, .write {
-        display: grid;
-        grid-template-columns: repeat(20, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        padding: 0 10%;
+
+    h1,
+    h2 {
+      margin: 0;
+      padding: 0 10%;
+      font-family: 'Yanone Kaffeesatz';
+    }
+
+
+    .read,
+    .write {
+      display: grid;
+      grid-template-columns: repeat(20, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      padding: 0 10%;
       justify-items: start;
-        gap: 0.5em;
+      gap: 0.5em;
     }
-    
-    .tag {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: solid 1px;
-        background: chartreuse;
-        grid-column: span 2;
+
+    scrabble-tile[distance][length] {
+      grid-column-end: span 2;
+      width: 100%;
     }
   `,
 });

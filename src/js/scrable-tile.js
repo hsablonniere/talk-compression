@@ -85,11 +85,14 @@ export class ScrabbleTile extends LitElement {
           ` : ''}
         </div>
       ` : ''}
+      ${bits != null ? html`
+        <div class="bits">${bits}</div>
+      ` : ''}
       ${this.distance != null || this.length != null ? html`
         <div class="tile-large">
           <div class="bg-large"></div>
-          <div class="length">&lt;${this.length},</div>
-          <div class="distance">${this.distance}&gt;</div>
+          <div class="length">${this.length}:</div>
+          <div class="distance">${this.distance}</div>
         </div>
       ` : ''}
     `;
@@ -109,12 +112,6 @@ export class ScrabbleTile extends LitElement {
           width: var(--tile-size);
         }
 
-        :host([distance]),
-        :host([length]) {
-          grid-column-end: span 2;
-          width: calc(var(--tile-size) * 2);
-        }
-
         :host([ghost]) {
           opacity: 0.3;
           filter: brightness(50%);
@@ -122,9 +119,11 @@ export class ScrabbleTile extends LitElement {
 
         .count {
           --count-size: 1.6em;
-          /*background-color: #000;*/
+          background-image: url(src/img/tile-count.svg);
+          background-position: center center;
+          background-size: cover;
           border-radius: 50%;
-          color: #fff;
+          color: #000;
           flex: 0 0 auto;
           font-size: 0.7em;
           font-weight: bold;
@@ -133,20 +132,10 @@ export class ScrabbleTile extends LitElement {
           text-align: center;
           width: var(--count-size);
           z-index: 2;
-          /**/
-          /*background-color: #fff;*/
-          color: #000;
-          /*border: 2px solid #000;*/
-
-          background-image: url(src/img/tile-count.svg);
-          background-size: cover;
-          background-position: center center;
         }
 
         .tile {
-          /*background-color: #ffffa1;*/
           border-radius: 0.2em;
-          /*border: 0.05em solid #000;*/
           box-sizing: border-box;
           cursor: pointer;
           display: flex;
@@ -156,19 +145,8 @@ export class ScrabbleTile extends LitElement {
           width: var(--tile-size);
         }
 
-        .tile-large {
-          /*background-color: #ffffa1;*/
-          border-radius: 0.2em;
-          /*border: 0.05em solid #000;*/
-          box-sizing: border-box;
-          cursor: pointer;
-          display: flex;
-          height: var(--tile-size);
-          position: relative;
-          user-select: none;
-          width: calc(var(--tile-size) * 2);
-          align-items: center;
-          justify-content: center;
+        .count ~ .tile {
+          margin-top: var(--count-shift);
         }
 
         .tile[data-version="0"] {
@@ -189,18 +167,7 @@ export class ScrabbleTile extends LitElement {
 
         .bg {
           background-image: url(src/img/tile.svg);
-          background-size: cover;
-          background-position: center center;
-          background-repeat: no-repeat;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-        }
-
-        .bg-large {
-          background-image: url(src/img/tile-large.svg);
-          background-size: cover;
+          background-size: contain;
           background-position: center center;
           background-repeat: no-repeat;
           position: absolute;
@@ -215,48 +182,69 @@ export class ScrabbleTile extends LitElement {
 
         .tile[data-version="0"] .bg {
           transform: translate3d(0, 0, 0) rotate(0deg);
-          filter: drop-shadow(#ccc 0.1em 0.1em 0.1em);
+          filter: drop-shadow(0.1em 0.1em 0.1em #ccc);
         }
 
         .tile[data-version="1"] .bg {
           transform: translate3d(0, 0, 0) rotate(90deg);
-          filter: drop-shadow(#ccc 0.1em -0.1em 0.1em);
+          filter: drop-shadow(0.1em -0.1em 0.1em #ccc);
         }
 
         .tile[data-version="2"] .bg {
           transform: translate3d(0, 0, 0) rotate(180deg);
-          filter: drop-shadow(#ccc -0.1em -0.1em 0.1em);
+          filter: drop-shadow(-0.1em -0.1em 0.1em #ccc);
         }
 
         .tile[data-version="3"] .bg {
           transform: translate3d(0, 0, 0) rotate(270deg);
-          filter: drop-shadow(#ccc -0.1em 0.1em 0.1em);
-        }
-
-        .count ~ .tile {
-          margin-top: var(--count-shift);
+          filter: drop-shadow(-0.1em 0.1em 0.1em #ccc);
         }
 
         .letter {
           font-size: calc(var(--tile-size) * 0.7);
-          line-height: 1em;
           font-weight: bold;
+          line-height: 1em;
           margin: auto;
-          position: relative;
-          z-index: 2;
-        }
-
-        .length,
-        .distance {
-          font-size: calc(var(--tile-size) * 0.4);
-          line-height: 1em;
-          font-weight: bold;
           position: relative;
           z-index: 2;
         }
 
         :host([marked]) .letter {
           color: #fff;
+        }
+
+        .tile-large {
+          align-items: center;
+          box-sizing: border-box;
+          cursor: pointer;
+          display: flex;
+          height: var(--tile-size);
+          justify-content: center;
+          position: relative;
+          user-select: none;
+          width: 100%;
+        }
+
+        .bg-large {
+          background-image: url(src/img/tile-middle.svg), url(src/img/tile.svg), url(src/img/tile.svg);
+          background-position: center center, left center, right center;
+          background-repeat: no-repeat;
+          background-size: auto 100%, auto 100%, auto 100%;
+          box-sizing: border-box;
+          filter: drop-shadow(0.1em 0.1em 0.1em #ccc);
+          height: 100%;
+          position: absolute;
+          width: 100%;
+          z-index: 1;
+        }
+
+        .length,
+        .distance {
+          font-size: calc(var(--tile-size) * 0.5);
+          line-height: 1em;
+          font-weight: bold;
+          position: relative;
+          z-index: 2;
         }
 
         .score {
