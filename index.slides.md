@@ -1321,8 +1321,10 @@ LZ77
 ## text
 Et 25 ans plus tard...
 
-## text
-_"On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois."_
+## text small
+_*"*On peut tromper une personne mille fois._<br>
+_On peut tromper mille personnes une fois._<br>
+_Mais on ne peut pas tromper mille personnes, mille fois.*"*_
 > A: Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
 > Personellement ça m'est impossible.
 > H: On se répète un peu là non ? 
@@ -1331,8 +1333,10 @@ _"On peut tromper une personne mille fois. On peut tromper mille personnes une f
 ## media todo contain white
 <img src="src/img/tile-mot-compte-moins.svg">
 
-## text
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+## text small
+_*"*On peut tromper une personne mille fois._<br>
+_On peut tromper mille personnes une fois._<br>
+_Mais on ne peut pas tromper mille personnes, mille fois.*"*_
 > A: On va chasser les motifs répétitifs.
 
 ## media

@@ -36,6 +36,11 @@ defineSlideType('slide-text', {
       font-weight: bold;
     }
 
+    :host([small]) .text {
+      text-align: left;
+      font-size: 3rem;
+    }
+
     strong {
       color: #0082ff;
     }
