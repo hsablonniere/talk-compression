@@ -30,6 +30,9 @@
   * anim de Antoine à gauche
   * texte blanc
   * numéro en gros (sans étoile)
+* huffman
+  * ligne arbre
+  * afficher les 0 et 1
 * LZ interactif
   * gzip (pas zofpli) mais avec le o 
 * exemple binaire de gzip en mode décompression
