@@ -2,16 +2,27 @@ import { css, html } from 'lit';
 import { defineSlideType } from './base.js';
 
 defineSlideType('slide-tip', {
-  render ({ content }) {
+  render ({ attrs, content }) {
 
-    const [number, tip] = content.trim().split(') ');
+    const tips = content
+      .trim()
+      .split('\n')
+      .map((line) => {
+        const [number, tip] = line.split(') ');
+        return (attrs.recap != null)
+          ? html`<span class="number">${number}</span> <span class="tip">${tip}</span>`
+          : tip;
+      });
 
     return html`
-      <div class="scrabble-board">
-        <img src="/src/img/scrabble-empty.svg" alt="">
+      <div>
+        <img class="scrabble-board" src="/src/img/scrabble-empty.svg" alt="">
       </div>
       <div class="background">
-        <div class="tip-text">${tip}</div>
+        <img class="qrcode" src="/src/img/qrcode.svg" alt="">
+        ${tips.map((tip) => html`
+          <div class="tip-text">${tip}</div>
+        `)}
       </div>
     `;
   },
@@ -34,9 +45,6 @@ defineSlideType('slide-tip', {
     }
 
     .scrabble-board {
-    }
-
-    img {
       position: absolute;
       object-fit: contain;
       width: 100%;
@@ -48,9 +56,26 @@ defineSlideType('slide-tip', {
     .background {
       background-color: #2f6646;
       z-index: 2;
-      display: flex;
       margin: 6rem;
       padding: 3rem;
+    }
+    
+    :host([recap]) .background {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      gap: 0 1rem;
+      position: relative;
+    }
+
+    .qrcode {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 7rem;
+    }
+
+    :host(:not([recap])) .qrcode {
+      display: none;
     }
 
     .tip-text {
@@ -61,6 +86,16 @@ defineSlideType('slide-tip', {
       font-size: 2.5rem;
       line-height: 1.4;
       z-index: 3;
+    }
+
+    :host([recap]) .tip-text {
+      font-size: 1.7rem;
+      display: contents;
+    }
+    
+    .number {
+      text-align: right;
+      text-align: center;
     }
   `,
 });

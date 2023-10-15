@@ -1848,7 +1848,7 @@ Au dela du  pouilleme
 ## section
 Recap
 
-## tip
+## tip recap
 1) Ça va de pair avec la minification
 2) C'est nécessaire
 3) C'est natif au fonctionnement du Web
