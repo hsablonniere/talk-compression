@@ -238,6 +238,10 @@ export class ScrabbleTile extends LitElement {
           z-index: 1;
         }
 
+        :host([marked]) .bg-large {
+          background-image: url(src/img/tile-middle-marked.svg), url(src/img/tile-marked.svg), url(src/img/tile-marked.svg);
+        }
+
         .length,
         .distance {
           font-size: calc(var(--tile-size) * 0.5);
@@ -245,6 +249,11 @@ export class ScrabbleTile extends LitElement {
           font-weight: bold;
           position: relative;
           z-index: 2;
+        }
+
+        :host([marked]) .length,
+        :host([marked]) .distance {
+          color: #fff;
         }
 
         .score {

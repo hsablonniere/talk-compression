@@ -1343,181 +1343,93 @@ On peut tromper une personne mille fois. On peut tromper mille personnes une foi
 > H: Je ne sais pas si vous l'aviez remarqué mais il y a quelques motifs de répétitions dans la phrase _"On peut tromper..."_"
 > A: Je vais vous montrer sur un exemple simple
 
-## lz step=4
+## lzd init style="font-size: 1.5rem"
 mille feuille
-9,8,4,ille
-
-## lz step=5
-mille feuille
-9,4,8,ille
+-[--]----(--)
 > A: On va lire char par char le texte qu'on souhaite compresser.
-
-## lz step=6
-mille feuille
-9,4,8,ille
-
-## lz step=7
-mille feuille
-9,4,8,ille
-
-## lz step=8
-mille feuille
-9,4,8,ille
-
-## lz step=9
-mille feuille
-9,4,8,ille
 > A: Dès qu'on trouve un motif qui se répète par rapport à ce qu'on a déjà vu, on le remplacer par une "etiquette"
 > L'étiquette possède une info de la distance, ici 4 et de la longueur 4.
 > On va essayer sur notre citation de la cité de la peur.
 
-## lz step=0
+## lzd step=0 style="font-size: 1.5rem"
+
+## lzd finish style="font-size: 1.5rem"
+
+## blank white
+
+## lzd init
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+--[-]--------------(-)---------------------------------------------------------------------------------------------------------------------
+-----------------[-]------(-)--------------------------------------------------------------------------------------------------------------
+-[-------------]--------------------------(-------------)----------------------------------------------------------------------------------
+-----------------------------[----]----------------------(----)----------------------------------------------------------------------------
+--------------------[------]-----------------------------------(------)--------------------------------------------------------------------
+---------------[---]----------------------------------------------------(---)--------------------------------------------------------------
+-----------------------------------[----]------------------------------------(----)--------------------------------------------------------
+-----------------[---]---------------------------------------------------------------------(---)-------------------------------------------
+----------------------------------------------[-]-----------------------------------------------(-)----------------------------------------
+------------------------------------------------[----------------------]------------------------------(----------------------)-------------
+----------------------------[----------]---------------------------------------------------------------------------------------(----------)
 
-## lz step=10
+## lzd step=0
+
+## lzd replacement=0
+
+## lzd replacement=1
+
+## lzd replacement=2
+
+## lzd replacement=3
+
+## lzd replacement=4
+
+## lzd replacement=5
+
+## lzd replacement=6
+
+## lzd replacement=7
+
+## lzd replacement=8
+
+## lzd replacement=9
+
+## lzd replacement=10
+
+## lzd finish
+
+## lzd finish
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+------------[-]-----(-)--------------------------------------------------------------------------------------------------------------------
+-----------------[-]------(-)--------------------------------------------------------------------------------------------------------------
+[-------------]--------------------------(-------------)-----------------------------------------------------------------------------------
+----------------------------[---]-----------------------(---)------------------------------------------------------------------------------
+------------------[--------]---------------------------------(--------)--------------------------------------------------------------------
+---------------[-]------------------------------------------------------(-)----------------------------------------------------------------
+---------------------------------[------]----------------------------------(------)--------------------------------------------------------
+--------------------------------------------------------------------------[-]--------------(-)---------------------------------------------
+--------------------------------------------[---]---------------------------------------------(---)----------------------------------------
+------------------------------------------------[----------------------]------------------------------(----------------------)-------------
+----------------------------[----------]---------------------------------------------------------------------------------------(----------)
 
-## lz step=20
+## lzd finish
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+[-------------]--------------------------(-------------)-----------------------------------------------------------------------------------
+-----------------------------[---]-----------------------(---)-----------------------------------------------------------------------------
+--------------------[------]-----------------------------------(------)--------------------------------------------------------------------
+-----------------------------------[--]--------------------------------------(--)----------------------------------------------------------
+--------------------------------------------[--]----------------------------------------------(--)-----------------------------------------
+-------------------------------------------------[---------------------]-------------------------------(---------------------)-------------
+-----------------------------[--------]-----------------------------------------------------------------------------------------(--------)-
 
-## lz step=30
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+## blank white
 
-## lz step=40
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+## lzd init
+Na, na, na, na, na, na, na, na, na, na, na, na, hey, Jude.
+[---(---------------------------------------]--)---------
 
-## lz step=41
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
+## lzd step=0
 
-## lz step=42
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-
-## lz step=43
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-
-## lz step=45
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-
-## lz step=48
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-
-## lz step=49
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-
-## lz step=50
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-
-## lz step=52
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-
-## lz step=60
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-
-## lz step=65
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-94,4,50,peut
-
-## lz step=70
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-94,4,50,peut
-103,23,54,tromper mille personnes
-
-
-## lz step=71
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-94,4,50,peut
-103,23,54,tromper mille personnes
-
-## lz step=72
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-94,4,50,peut
-103,23,54,tromper mille personnes
-128,10,87,mille fois.
-
-## lz step=73
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-94,4,50,peut
-103,23,54,tromper mille personnes
-128,10,98,mille fois.
-
-
-## lz step=74
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-94,4,50,peut
-103,23,54,tromper mille personnes
-128,10,98,mille fois.
-
-## lz step=75
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-94,4,50,peut
-103,23,54,tromper mille personnes
-128,10,98,mille fois
-
-## lz step=76
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-94,4,50,peut
-103,23,54,tromper mille personnes
-128,10,98,mille fois
+## lzd finish
 > A: On a clairement moins de tuiles en bas qu'en haut non ? 
 > H: Pourtant si on reçoit le texte du bas on peut facilement regénérer le texte du haut.
 > Même si on le reçoit progressivement.
@@ -1547,15 +1459,15 @@ LZ (custom) : 640 gzip
 *LZ77*, *LZ78*, *LZSS*, *LZW*, *LZH*, *LZMA*... 
 > A: Justement Hubert, c'est à ce moment là qu'on leur explique qu'il existe une tripatouillée de variantes de cette algorithme.
 
-## lz step=75
+## lzd finish
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-41,15,41,on peut tromper
-57,5,28,mille
-63,8,43,personne
-77,4,42,fois
-94,4,50,peut
-103,23,54,tromper mille personnes
-128,10,98,mille fois
+[-------------]--------------------------(-------------)-----------------------------------------------------------------------------------
+-----------------------------[---]-----------------------(---)-----------------------------------------------------------------------------
+--------------------[------]-----------------------------------(------)--------------------------------------------------------------------
+-----------------------------------[--]--------------------------------------(--)----------------------------------------------------------
+--------------------------------------------[--]----------------------------------------------(--)-----------------------------------------
+-------------------------------------------------[---------------------]-------------------------------(---------------------)-------------
+-----------------------------[--------]-----------------------------------------------------------------------------------------(--------)-
 > A: Prenons cette étape là, la dernière étiquette est-elle réellement la meilleur à trouver.
 > Est-ce qu'on devrait pas aller chercher MILLE et FOIS séparément?
 > Ou bien, encore plus simplement, quelle est la plus petite taille de motif qu'on étiquette.
