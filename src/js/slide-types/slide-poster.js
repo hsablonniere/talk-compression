@@ -14,7 +14,7 @@ defineSlideType('slide-poster', {
     ).toUpperCase();
 
     return html`
-      <img src="/src/img/scrabble-empty.svg" alt="" />
+      <img src="/src/img/scrabble-empty.svg" alt="">
       <div class="title">
         ${unsafeHTML(title)}
       </div>
@@ -114,7 +114,7 @@ defineSlideType('slide-poster', {
     }
 
     .title {
-      background: red;
+      background: #ee2325;
       font-size: 3.5em;
       z-index: 1;
       padding: 0 0.75ch;

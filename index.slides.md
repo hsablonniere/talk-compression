@@ -441,7 +441,6 @@ compressé : 1315 compressed
 minifié<br>& compressé : 1244 gzip
 
 ## tip
-<img src='src/img/scrabble-1.svg' alt=''/>
 1) La minification va de pair avec la compression
 <!--Règle foobar
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
@@ -494,7 +493,6 @@ minifié<br>& compressé : 30190 gzip
 <!-- https://www.webpagetest.org/video/view.php?tests=231012_BiDcKV_BJ8-l:sans%20compression-e:1.2,231012_BiDcAV_BJA-l:avec%20compression-e:1.2&bg=ffffff&text=000000&slow=1 -->
 
 ## tip
-<img src='src/img/scrabble.svg' alt=''/>
 2) La compression c'est nécessaire
 
 ## media
@@ -698,7 +696,6 @@ et les sizes dans les devtools
 > post-compression dans l'en-tête content-length
 
 ## tip
-<img src='src/img/scrabble.svg' alt=''/>
 3) La compression, c'est natif au fonctionnement du Web
 
 ## media
@@ -764,7 +761,6 @@ Parsing HTML : 20
 Affichage : 20
 
 ## tip
-<img src='src/img/scrabble.svg' alt=''/>
 4) La compression n'interrompt pas le flux
 
 ## blank
@@ -1697,7 +1693,6 @@ plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les d
 <img src="src/img/caniuse-brotli.png" screenshot-url="https://caniuse.com/brotli">
 
 ## tip
-<img src='src/img/scrabble.svg' alt=''/>
 7) La compression brotli, ça marche
 <!--La compression, c'est mieux avec brotli-->
 
@@ -1775,7 +1770,6 @@ br*11* : 1.1
 -->
 
 ## tip
-<img src='src/img/scrabble.svg' alt=''/>
 8) La compression des fichiers statiques se fait une seule fois au moment du build
 
 ## media
@@ -1806,7 +1800,6 @@ PNG : 3.70 brut
 <!-- https://almanac.httparchive.org/en/2020/compression -->
 
 ## tip
-<img src='src/img/scrabble.svg' alt=''/>
 9) La compression, n'a pas d'effet sur les fichiers déjà compressés
 > anecdote zipper un .zip
 > On peut compresser une fois mille fichiers,
@@ -1855,8 +1848,7 @@ Au dela du  pouilleme
 ## section
 Recap
 
-## todo
-<img src='src/img/scrabble.svg' alt=''/>
+## tip
 1) Ça va de pair avec la minification
 2) C'est nécessaire
 3) C'est natif au fonctionnement du Web

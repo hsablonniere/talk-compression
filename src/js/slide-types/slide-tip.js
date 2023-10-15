@@ -1,70 +1,84 @@
 import { css, html } from 'lit';
 import { defineSlideType } from './base.js';
-import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
 defineSlideType('slide-tip', {
   render ({ content }) {
-    const [image, rawTxt] = content
-      .trim()
-      .split('\n');
-    const [number, tip] = rawTxt.trim().split(') ');
+
+    const [number, tip] = content.trim().split(') ');
 
     return html`
-      <div class="board">
-        ${unsafeHTML(image)}
+      <div class="scrabble-board">
+        <img src="/src/img/scrabble-empty.svg" alt="">
       </div>
-      <div class="tip">
-        <div class="star">${number}</div>
-        <div class="text">${tip}</div>
-      </div>
+      <div class="background"></div>
+      <div class="tip-number">${number}</div>
+      <div class="tip-text">${tip}</div>
     `;
   },
   // language=CSS
   styles: css`
-    :host {
-      display: grid;
-      font-family: Interstate, sans-serif;
-      grid-template-columns: 3fr 4fr;
-      grid-template-rows: 1fr;  
-    }
-    
-    img {
-        display: block;
-        width: 90%;
-    }
-    
-    .board {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-right: solid 0.25em black;
-        background-color: #2f6646;
-    }
-    
-    .tip {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0 3em;
-        gap: 1em;
-    }
-    
-    .star {
-      background-image: url(src/img/tile-center.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 4rem;
-      line-height: 4rem;
-      text-align: center;
-      color: #ffffff;
-      font-size: 1.75rem;
-      width: 4rem;
+    @keyframes slide-out {
+      0% {
+        transform: scale(1.8) translateX(-5%) rotate(30deg) translateY(0%);
+      }
+      100% {
+        transform: scale(1.8) translateX(-5%) rotate(30deg) translateY(-10%);
+      }
     }
 
-    .text {
-      font-size: 1.5rem;
+    :host {
+      --nb-half-size: 3rem;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr var(--nb-half-size) var(--nb-half-size) 2fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .scrabble-board {
+      grid-area: 1 / 1 / 3 / 3;
+    }
+
+    img {
+      position: absolute;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+      animation: slide-out linear infinite alternate 30s;
+    }
+
+    .background {
+      background-color: #2f6646;
+      grid-area: 1 / 3 / 3 / 5;
+      z-index: 2;
+    }
+
+    .tip-number,
+    .tip-text {
+      color: #fff;
+      font-family: 'Interstate', sans-serif;
+    }
+
+    .tip-number {
+      grid-area: 1 / 2 / 2 / 4;
+      font-size: 3.5rem;
+      background-color: #ee2325;
+      text-align: center;
+      font-family: 'Sufler', sans-serif;
+      z-index: 3;
+      align-self: end;
+      height: calc(var(--nb-half-size) * 2);
+      line-height: calc(var(--nb-half-size) * 2);
+    }
+
+    .tip-text {
+      align-self: start;
+      padding: 3rem;
+      box-sizing: border-box;
+      grid-area: 2 / 3 / 3 / 5;
+      font-size: 2.5rem;
       line-height: 1.4;
+      z-index: 3;
     }
   `,
 });
