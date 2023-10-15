@@ -14,16 +14,18 @@ date: 19 octobre 2023
 ## huffman score=auto fade-from todo
 DEIOXYZ
 <!-- animation shuffle -->
-> intro avec des questions
-> Qui a déjà essayé de zipper un point zip ?
-> Qui a acheté sa license winrar ?
-> Qui connait par coeur les flags de la commande tar ?
+> #HS# (en train de chercher un mot)
+> #AC# Tu fais quoi Hubert ?
+> #HS# Bah je cherche un mot avec ce tirage de fou.
+> #AC# Euh mais on est pas là pour ça,
 
 ## blank black
 
 ## poster fade-from
 La compression web
-> Bonjour
+> #AC# Bonjour à toutes et à tous, j'm'appelle Antoine Caron, 
+> je suis développeur Web chez Scaleway et mon acolyte joueur de Scrabble :
+> #HS# j'm'appelle Hubert Sablonnière et je suis développeur Web chez Clever Cloud.
 
 ## blank black fade-to
 
@@ -1348,7 +1350,7 @@ _Mais on ne peut pas tromper mille personnes, mille fois.*"*_
 > A: Je vais vous montrer sur un exemple simple
 
 ## lzd init style="font-size: 1.5rem"
-mille feuille
+mille-feuille
 -[--]----(--)
 > A: On va lire char par char le texte qu'on souhaite compresser.
 > A: Dès qu'on trouve un motif qui se répète par rapport à ce qu'on a déjà vu, on le remplacer par une "etiquette"
@@ -1361,6 +1363,24 @@ mille feuille
 
 ## blank white
 
+<!-- zopfli -->
+## lzd init
+> ------------[-]-----(-)--------------------------------------------------------------------------------------------------------------------
+On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
+--[-]--------------(-)---------------------------------------------------------------------------------------------------------------------
+-----------------[-]------(-)--------------------------------------------------------------------------------------------------------------
+[-------------]--------------------------(-------------)-----------------------------------------------------------------------------------
+----------------------------[---]-----------------------(---)------------------------------------------------------------------------------
+------------------[--------]---------------------------------(--------)--------------------------------------------------------------------
+---------------[-]------------------------------------------------------(-)----------------------------------------------------------------
+---------------------------------[------]----------------------------------(------)--------------------------------------------------------
+--------------------------------------------------------------------------[-]--------------(-)---------------------------------------------
+--------------------------------------------[---]---------------------------------------------(---)----------------------------------------
+------------------------------------------------[----------------------]------------------------------(----------------------)-------------
+----------------------------[----------]---------------------------------------------------------------------------------------(----------)
+
+<!-- gzip -->
+<!--
 ## lzd init
 On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
 --[-]--------------(-)---------------------------------------------------------------------------------------------------------------------
@@ -1374,6 +1394,7 @@ On peut tromper une personne mille fois. On peut tromper mille personnes une foi
 ----------------------------------------------[-]-----------------------------------------------(-)----------------------------------------
 ------------------------------------------------[----------------------]------------------------------(----------------------)-------------
 ----------------------------[----------]---------------------------------------------------------------------------------------(----------)
+-->
 
 ## lzd step=0
 
@@ -1401,30 +1422,6 @@ On peut tromper une personne mille fois. On peut tromper mille personnes une foi
 
 ## lzd finish
 
-## lzd finish
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-------------[-]-----(-)--------------------------------------------------------------------------------------------------------------------
------------------[-]------(-)--------------------------------------------------------------------------------------------------------------
-[-------------]--------------------------(-------------)-----------------------------------------------------------------------------------
-----------------------------[---]-----------------------(---)------------------------------------------------------------------------------
-------------------[--------]---------------------------------(--------)--------------------------------------------------------------------
----------------[-]------------------------------------------------------(-)----------------------------------------------------------------
----------------------------------[------]----------------------------------(------)--------------------------------------------------------
---------------------------------------------------------------------------[-]--------------(-)---------------------------------------------
---------------------------------------------[---]---------------------------------------------(---)----------------------------------------
-------------------------------------------------[----------------------]------------------------------(----------------------)-------------
-----------------------------[----------]---------------------------------------------------------------------------------------(----------)
-
-## lzd finish
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-[-------------]--------------------------(-------------)-----------------------------------------------------------------------------------
------------------------------[---]-----------------------(---)-----------------------------------------------------------------------------
---------------------[------]-----------------------------------(------)--------------------------------------------------------------------
------------------------------------[--]--------------------------------------(--)----------------------------------------------------------
---------------------------------------------[--]----------------------------------------------(--)-----------------------------------------
--------------------------------------------------[---------------------]-------------------------------(---------------------)-------------
------------------------------[--------]-----------------------------------------------------------------------------------------(--------)-
-
 ## blank white
 
 ## lzd init
@@ -1437,44 +1434,6 @@ Na, na, na, na, na, na, na, na, na, na, na, na, hey, Jude.
 > A: On a clairement moins de tuiles en bas qu'en haut non ? 
 > H: Pourtant si on reçoit le texte du bas on peut facilement regénérer le texte du haut.
 > Même si on le reçoit progressivement.
-
-## text
-😅 C'est plus petit ça ? 
-> A: Vous allez me dire, "Mais Antoine, ton étiquette on peut pas l'écrire sur 8 bits" 
-> ou bien "Comment on fait pour reconnaitre une etiquette d'une lettre classique."
-
-## text
-🪄 Lettre: *0* | 8 bits
-<br>
-Tag: *1* | 7 bits *distance* | 5 bits *longueur*
-> H: Imaginons qu'on dise qu'on rajoute un bit en début pour indiquer si c'est une étiquette ou une lettre.
-> Et pour les tags on utilise 7 et 5 bits pour coder respectivement la distance et la longueur.
-
-## barchart
-Comparaison du nombre de bits utilisés
-brut : 1112 brut
-LZ (custom) : 640 gzip
-> A: Et on obtiens ce résultat là, soit près de la moitié des bits gagné
-> H: En vrai c'est cool, mais on est pas sûr que ce soit le meilleur étiquettage possible
-> A: Et plus on se répète plus c'est efficace.
-> ça explique pourquoi ça marche tellement bien avec les attributs CSS par exemple.
-
-## text
-*LZ77*, *LZ78*, *LZSS*, *LZW*, *LZH*, *LZMA*... 
-> A: Justement Hubert, c'est à ce moment là qu'on leur explique qu'il existe une tripatouillée de variantes de cette algorithme.
-
-## lzd finish
-On peut tromper une personne mille fois. On peut tromper mille personnes une fois. Mais on ne peut pas tromper mille personnes, mille fois.
-[-------------]--------------------------(-------------)-----------------------------------------------------------------------------------
------------------------------[---]-----------------------(---)-----------------------------------------------------------------------------
---------------------[------]-----------------------------------(------)--------------------------------------------------------------------
------------------------------------[--]--------------------------------------(--)----------------------------------------------------------
---------------------------------------------[--]----------------------------------------------(--)-----------------------------------------
--------------------------------------------------[---------------------]-------------------------------(---------------------)-------------
------------------------------[--------]-----------------------------------------------------------------------------------------(--------)-
-> A: Prenons cette étape là, la dernière étiquette est-elle réellement la meilleur à trouver.
-> Est-ce qu'on devrait pas aller chercher MILLE et FOIS séparément?
-> Ou bien, encore plus simplement, quelle est la plus petite taille de motif qu'on étiquette.
 
 ## blank black fade-to
 
@@ -1744,11 +1703,13 @@ Nombre de "mots" de N "lettres" dans le dictionnaire brotli
 23 : 32 brotli
 24 : 32 brotli
 
+<!--
 ## barchart
 Niveaux de compression _dictionnaire-brotli.txt_
 brut : 122824 brut
 gzip *9* : 58915 gzip
 brotli *11* : 26960 brotli
+-->
 
 ## todo
 plus on est vieux => plus on est abstrait
