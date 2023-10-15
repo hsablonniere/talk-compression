@@ -18,13 +18,6 @@
 
 ## Hubert
 
-* Passer en web font
-  * operator mono
-  * interstate
-  * just another hand
-  * VFC sufler
-  * boogaloo
-  * ??
 * slide tip + recap
   * fond vert 2/3
   * anim de Antoine à gauche
