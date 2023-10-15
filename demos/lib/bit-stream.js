@@ -83,6 +83,53 @@ export class BitStream {
 
     return array;
   }
+
+  readFromTree (start, tree) {
+
+    let index = start;
+    let node = tree;
+
+    while (typeof node !== 'number' && node != null) {
+      node = node[this._bits[index]];
+      index += 1;
+    }
+
+    return [node, index - start];
+  }
+
+  fill (bitLength = 8) {
+    // Add padding to fit bytes
+    if (this.length % bitLength !== 0 && this.length % bitLength !== bitLength) {
+      this.writeBigEndian(0, bitLength - this.length % bitLength);
+    }
+  }
+}
+
+// Accepts an array of [length, nb, code]
+// the arrayindex is the symbol
+// the code is a string of 0s and 1s
+export function createPrefixTree (lengthsTable) {
+
+  const tree = {};
+
+  for (let symbol = 0; symbol < lengthsTable.length; symbol += 1) {
+    const [length, nb, code] = lengthsTable[symbol];
+    let node = tree;
+    for (let i = 0; i < length; i += 1) {
+      const bit = code[i];
+      if (i === code.length - 1) {
+        node[bit] = symbol;
+      }
+      else {
+        if (node[bit] == null) {
+          node[bit] = {};
+        }
+        node = node[bit];
+      }
+    }
+  }
+
+  return tree;
 }
 
 function toBinaryString (number, bitLength, littleEndian) {

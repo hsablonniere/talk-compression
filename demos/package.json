@@ -4,6 +4,10 @@
   "scripts": {
     "test": "mocha **/*.spec.js"
   },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "crc-32": "^1.2.2"
+  },
   "devDependencies": {
     "chai": "^4.3.8",
     "mocha": "^10.2.0",

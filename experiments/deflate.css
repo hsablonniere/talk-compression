@@ -1,0 +1,18 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: flex;
+  cursor: pointer;
+  cursor: url('../src/img/pointer.svg') 24 15, auto;
+}
+
+gzip-explain {
+  font-size: 3.2rem;
+  width: 64ch;
+  margin: auto;
+}
