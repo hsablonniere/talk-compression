@@ -19,17 +19,18 @@ defineSlideType('slide-tip', {
   styles: css`
     @keyframes slide-out {
       0% {
-        transform: scale(1.8) translateX(-5%) rotate(30deg) translateY(0%);
+        transform: scale(2.1) translateX(-7%) rotate(30deg) translateY(-20%);
       }
       100% {
-        transform: scale(1.8) translateX(-5%) rotate(30deg) translateY(-10%);
+        transform: scale(2.1) translateX(-7%) rotate(30deg) translateY(-30%);
       }
     }
 
     :host {
-      --nb-half-size: 3rem;
-      display: grid;
-      grid-template-columns: 1fr 2fr;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .scrabble-board {
@@ -48,16 +49,14 @@ defineSlideType('slide-tip', {
       background-color: #2f6646;
       z-index: 2;
       display: flex;
+      margin: 6rem;
+      padding: 3rem;
     }
 
     .tip-text {
       color: #fff;
       font-family: 'Interstate', sans-serif;
-    }
-
-    .tip-text {
       margin: auto;
-      padding: 0 3rem;
       box-sizing: border-box;
       font-size: 2.5rem;
       line-height: 1.4;
