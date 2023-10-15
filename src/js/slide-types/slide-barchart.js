@@ -183,7 +183,7 @@ defineSlideType('slide-barchart', {
     .bar-label {
       bottom: 100%;
       box-sizing: border-box;
-      font-family: "Operator Mono Medium", monospace;
+      font-family: 'OperatorMono-Medium', monospace;
       font-size: 1.5rem;
       left: 50%;
       padding-bottom: 0.5rem;
@@ -250,7 +250,7 @@ defineSlideType('slide-barchart', {
     .legend {
       border-top: 0.15rem solid #000;
       box-sizing: border-box;
-      font-family: "Operator Mono Medium", monospace;
+      font-family: 'OperatorMono-Medium', monospace;
       font-size: 1.4rem;
       line-height: 1.5;
       padding: 0.5rem 1rem;

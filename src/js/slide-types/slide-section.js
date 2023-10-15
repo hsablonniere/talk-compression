@@ -29,7 +29,7 @@ defineSlideType('slide-section', {
       display: flex;
       flex-direction: column;
       background-color: #2f6646;
-      font-family: "Interstate", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Interstate", sans-serif;
       justify-content: center;
       align-items: center;
     }

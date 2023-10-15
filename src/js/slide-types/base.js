@@ -59,9 +59,8 @@ export const codeBlocksStyles = css`
     margin: 0 2rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    font-family: "Operator Mono Book", monospace;
+    font-family: 'OperatorMono-Medium', monospace;
     font-size: 1.25rem;
-    font-weight: bold;
   }
 
   pre[big] {

@@ -273,8 +273,7 @@ export class ScrabbleTile extends LitElement {
         .bits {
           color: #0082ff;
           font-size: 0.8em;
-          font-family: "Operator Mono Medium", monospace;
-          font-family: "Just Another Hand";
+          font-family: "Just Another Hand", sans-serif;
           font-weight: bold;
         }
       `,

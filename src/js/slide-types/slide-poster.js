@@ -88,7 +88,7 @@ defineSlideType('slide-poster', {
     }
 
     .date {
-      font-family: 'Just Another Hand';
+      font-family: 'Just Another Hand', sans-serif;
       color: #0019a4;
       font-size: 1.25em;
       font-weight: normal;
@@ -110,7 +110,7 @@ defineSlideType('slide-poster', {
 
     .details--bottom .event-title {
       text-align: center;
-      font-family: Interstate;
+      font-family: 'Interstate', sans-serif;
     }
 
     .title {
@@ -120,7 +120,7 @@ defineSlideType('slide-poster', {
       padding: 0 0.75ch;
       margin-bottom: 12rem;
       transform: scale(1, 1.2);
-      font-family: "VFC Sufler";
+      font-family: 'Sufler', sans-serif;
     }
 
     img {
@@ -146,11 +146,11 @@ defineSlideType('slide-poster', {
     }
 
     th {
-      font-family: Interstate;
+      font-family: 'Interstate', sans-serif;
     }
 
     td {
-      font-family: "Just Another Hand";
+      font-family: 'Just Another Hand', sans-serif;
       color: #0019a4;
       font-size: 2.25em;
       padding: 0.5rem 0.6rem 0 0.6rem;
