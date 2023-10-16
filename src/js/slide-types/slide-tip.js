@@ -31,10 +31,10 @@ defineSlideType('slide-tip', {
   styles: css`
     @keyframes slide-out {
       0% {
-        transform: scale(2.1) rotate(30deg) translateY(-7%);
+        transform: scale(2.1) rotate(30deg) translateY(7%);
       }
       100% {
-        transform: scale(2.1) rotate(30deg) translateY(7%);
+        transform: scale(2.1) rotate(30deg) translateY(-7%);
       }
     }
 

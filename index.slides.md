@@ -1415,9 +1415,8 @@ Na, na, na, na, na, na, na, na, na, na, na, na, hey, Jude.
 
 ## blank black fade-to
 
-## section todo
+## section
 ET  CONCRETEMENT ?
-<!--DANS LA  PRATIQUE-->
 
 ## blank white
 
@@ -1515,7 +1514,7 @@ A la recherche  du pouilleme
 ## media
 <img src="src/img/github-cloudflare-zlib.png" screenshot-url="https://github.com/cloudflare/zlib">
 
-## barchart small todo
+## barchart small
 Niveaux de compression *gzip* _jquery.min.js_
 min : 87029 min
 1 : 35238 gzip
@@ -1535,7 +1534,7 @@ min : 87029 min
 > meilleure taux mais moins bonne perf
 > MEME FORMAT OMG !!
 
-## barchart todo
+## barchart
 Niveaux de compression _jquery.min.js_
 min : 87029 min
 gzip *9* : 30129 gzip
@@ -1550,7 +1549,7 @@ zopfli : 29227 zopfli
 > dictionnaire statique qui reflète le Web ou plus ou moins (montrer)
 > transformations de dico (montrer)
 
-## barchart small todo
+## barchart small
 Niveaux de compression *brotli* _jquery.min.js_
 min : 87029 min
 1 : 34909 brotli
@@ -1565,7 +1564,7 @@ min : 87029 min
 10 : 27853 brotli
 11 : 27450 brotli
 
-## barchart todo
+## barchart
 Niveaux de compression _jquery.min.js_
 min : 87029 min
 gzip *9* : 30129 gzip
@@ -1578,7 +1577,7 @@ brotli *11* : 27450 brotli
 📖 *Dictionnaire* brotli
 
 ## text
-🤯 13 504 *"mots"*
+😯 13 504 *"mots"*
 
 ## text
 🗺️ Anglais, Espagnol, Chinois,
@@ -1659,6 +1658,9 @@ Nombre de "mots" de N "lettres" dans le dictionnaire brotli
 23 : 32 brotli
 24 : 32 brotli
 
+## text
+✂️ *×* 121 *transformations*
+
 ## code
 ```text style="font-size: 0.9rem"
 n                 f                 fo                fou               ion               tion            
@@ -1683,6 +1685,11 @@ foundation⎵and⎵   foundation⎵for⎵   ⎵the⎵foundation   .com/foundatio
 foundation⎵that⎵  foundation⎵with⎵  foundation⎵from⎵  foundation.⎵The⎵  foundation.⎵This⎵
 ```
 
+## text
+🤯 *=* 1 633 984 *possibilités*
+> plus on est vieux => plus on est abstrait
+> plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les derniers %)
+
 <!--
 ## barchart
 Niveaux de compression _dictionnaire-brotli.txt_
@@ -1691,16 +1698,11 @@ gzip *9* : 58915 gzip
 brotli *11* : 26960 brotli
 -->
 
-## todo
-plus on est vieux => plus on est abstrait
-plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les derniers %)
-
 ## media
 <img src="src/img/caniuse-brotli.png" screenshot-url="https://caniuse.com/brotli">
 
 ## tip
 7) La compression, ça marche mieux avec brotli.
-<!--La compression, c'est mieux avec brotli-->
 
 ## barchart small unit="ms" todo max="142.2"
 Temps de compression *brotli* _jquery.min.js_
