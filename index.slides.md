@@ -1677,6 +1677,30 @@ Nombre de "mots" de N "lettres" dans le dictionnaire brotli
 23 : 32 brotli
 24 : 32 brotli
 
+## code
+```text style="font-size: 0.9rem"
+n                 f                 fo                fou               ion               tion            
+foun              ation             found             dation            founda            foundat         
+ndation           undation          foundati          oundation         foundatio         foundation      
+Foundation        FOUNDATION        foundation⎵       Foundation⎵       ⎵foundation       foundation"     
+foundation.       foundation]       ⎵Foundation       .foundation       foundation'       foundation:     
+foundation(       Foundation"       FOUNDATION⎵       Foundation'       foundation,       Foundation(     
+Foundation.       ⎵FOUNDATION       FOUNDATION"       FOUNDATION'       Foundation,       FOUNDATION.     
+FOUNDATION,       FOUNDATION(       ⎵foundation⎵      foundation,⎵      ⎵Foundation⎵      foundation">    
+foundation\n      foundation.⎵      Foundation,⎵      .foundation(      Foundation">      foundation="    
+⎵foundation.      .foundation⎵      ⎵FOUNDATION⎵      foundation='      Foundation.⎵      ⎵foundation(    
+⎵Foundation.      FOUNDATION">      Â foundation      ⎵foundation,      Foundation="      FOUNDATION="    
+FOUNDATION,⎵      Foundation='      ⎵Foundation,      FOUNDATION.⎵      ⎵FOUNDATION.      FOUNDATION='    
+s⎵foundation⎵     ,⎵foundation⎵     e⎵foundation⎵     foundation⎵a⎵     ⎵foundation,⎵     foundatioing⎵   
+⎵foundation.⎵     foundationed⎵     foundationly⎵     ⎵Foundation,⎵     ⎵foundation="     foundationer⎵   
+foundational⎵     ⎵Foundation.⎵     ⎵foundation='     ⎵FOUNDATION="     ⎵FOUNDATION,⎵     ⎵FOUNDATION.⎵   
+⎵Foundation="     ⎵FOUNDATION='     ⎵Foundation='     foundation⎵of⎵    foundation⎵in⎵    foundation⎵to⎵  
+foundation⎵by⎵    foundation⎵on⎵    foundation⎵as⎵    foundation⎵is⎵    foundation\n\t    foundation⎵at⎵  
+foundationful⎵    foundationive⎵    foundationest⎵    foundationize⎵    foundationous⎵    foundation⎵the⎵ 
+foundation⎵and⎵   foundation⎵for⎵   ⎵the⎵foundation   .com/foundation   foundation⎵not⎵   foundationless⎵ 
+foundation⎵that⎵  foundation⎵with⎵  foundation⎵from⎵  foundation.⎵The⎵  foundation.⎵This⎵
+```
+
 <!--
 ## barchart
 Niveaux de compression _dictionnaire-brotli.txt_
