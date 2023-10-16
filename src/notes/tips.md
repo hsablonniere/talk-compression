@@ -3,23 +3,23 @@
 Grille de scrable avec le mot important + le texte
 Grille de mot croisés à distribuer en papier
 
-* (AC) La compression va de pair avec la minification
+* (AC) La compression, ça va de pair avec la minification.
   * MINIFICATION
-* (AC) La compression, c'est nécessaire
+* (AC) La compression, c'est nécessaire (même en 2023).
   * NECESSAIRE
-* (HS) La compression, c'est natif au fonctionnement du Web
+* (HS) La compression, c'est natif au <br> fonctionnement du Web.
   * NATIF
-* (HS) La compression n'interrompt pas le flux
+* (HS) La compression, ça interrompt pas le flux.
   * FLUX
-* (HS) Lettre compte moins
+* (HS) C'est lettre compte moins.
   * HUFFMAN
-* (AC) Mot compte moins
+* (AC) C'est mot compte moins.
   * LZ
-* (AC) La compression brotli, ça marche
+* (AC) La compression, ça marche mieux avec brotli.
   * BROTLI
-* (AC) La compression des fichiers statiques se fait une seule fois au build
+* (AC) La compression <br> des fichiers statiques <br>se fait une seule fois au build.
   * STATIQUE
-* (HS) La compression, n'a pas d'effet sur les fichiers déjà compressés
+* (HS) La compression, ça n'a pas d'effet sur <br>les fichiers déjà compressés.
   * JPEG
 
 NEFXNZIEG

@@ -1,5 +1,7 @@
 import { css, html } from 'lit';
 import { defineSlideType } from './base.js';
+import { markup } from '../utils.mjs';
+import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
 defineSlideType('slide-tip', {
   render ({ attrs, content }) {
@@ -9,9 +11,10 @@ defineSlideType('slide-tip', {
       .split('\n')
       .map((line) => {
         const [number, tip] = line.split(') ');
+        const formattedTip = tip.replace('La compression, ', 'La compression, <br>');
         return (attrs.recap != null)
-          ? html`<span class="number">${number}</span> <span class="tip">${tip}</span>`
-          : tip;
+          ? html`<span class="number">${number}</span> <span class="tip">${unsafeHTML(markup(formattedTip))}</span>`
+          : unsafeHTML(markup(formattedTip));
       });
 
     return html`
@@ -59,11 +62,11 @@ defineSlideType('slide-tip', {
       margin: 6rem;
       padding: 3rem;
     }
-    
+
     :host([recap]) .background {
       display: grid;
       grid-template-columns: min-content 1fr;
-      gap: 0 1rem;
+      gap: 0 1.5rem;
       position: relative;
     }
 
@@ -92,7 +95,7 @@ defineSlideType('slide-tip', {
       font-size: 1.7rem;
       display: contents;
     }
-    
+
     .number {
       text-align: right;
       text-align: center;

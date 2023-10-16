@@ -441,7 +441,7 @@ compressé : 1315 compressed
 minifié<br>& compressé : 1244 gzip
 
 ## tip
-1) La minification va de pair avec la compression
+1) La compression, ça va de pair avec la minification.
 <!--Règle foobar
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
 
@@ -493,7 +493,7 @@ minifié<br>& compressé : 30190 gzip
 <!-- https://www.webpagetest.org/video/view.php?tests=231012_BiDcKV_BJ8-l:sans%20compression-e:1.2,231012_BiDcAV_BJA-l:avec%20compression-e:1.2&bg=ffffff&text=000000&slow=1 -->
 
 ## tip
-2) La compression c'est nécessaire
+2) La compression, c'est nécessaire (même en 2023).
 
 ## media
 <img src="src/img/almanac-2022-home.png" screenshot-url="https://almanac.httparchive.org/en/2022/">
@@ -696,7 +696,7 @@ et les sizes dans les devtools
 > post-compression dans l'en-tête content-length
 
 ## tip
-3) La compression, c'est natif au fonctionnement du Web
+3) La compression, c'est natif au <br> fonctionnement du Web.
 
 ## media
 <img src="src/img/caniuse-gzip.png" screenshot-url="https://caniuse.com/sr_content-encoding-gzip">
@@ -761,7 +761,7 @@ Parsing HTML : 20
 Affichage : 20
 
 ## tip
-4) La compression n'interrompt pas le flux
+4) La compression, ça interrompt pas le flux.
 
 ## blank
 
@@ -1693,7 +1693,7 @@ plus on est récent => plus on connait ce qu'on compresse (pour gagner sur les d
 <img src="src/img/caniuse-brotli.png" screenshot-url="https://caniuse.com/brotli">
 
 ## tip
-7) La compression brotli, ça marche
+7) La compression, ça marche mieux avec brotli.
 <!--La compression, c'est mieux avec brotli-->
 
 ## barchart small unit="ms" todo max="142.2"
@@ -1770,7 +1770,7 @@ br*11* : 1.1
 -->
 
 ## tip
-8) La compression des fichiers statiques se fait une seule fois au moment du build
+8) La compression <br> des fichiers statiques <br>se fait une seule fois au build.
 
 ## media
 <img src="src/img/almanac-http-2021-compression-fig10-zoom.png" screenshot-url="https://almanac.httparchive.org/en/2021/compression#fig-10">
@@ -1800,7 +1800,7 @@ PNG : 3.70 brut
 <!-- https://almanac.httparchive.org/en/2020/compression -->
 
 ## tip
-9) La compression, n'a pas d'effet sur les fichiers déjà compressés
+9) La compression, ça n'a pas d'effet sur <br>les fichiers déjà compressés.
 > anecdote zipper un .zip
 > On peut compresser une fois mille fichiers,
 > mais peut pas compresser mille fois un fichier.
@@ -1849,15 +1849,15 @@ Au dela du  pouilleme
 Recap
 
 ## tip recap
-1) Ça va de pair avec la minification
-2) C'est nécessaire
-3) C'est natif au fonctionnement du Web
-4) Ça n'interrompt pas le flux
-5) C'est lettre compte moins
-6) C'est mot compte moins
-7) Brotli, ça marche
-8) Les fichiers statiques, c'est une seule fois au build
-9) Ça n'a pas d'effet sur les fichiers déjà compressés
+1) Ça va de pair avec la minification.
+2) C'est nécessaire (même en 2023).
+3) C'est natif au fonctionnement du Web.
+4) Ça n'interrompt pas le flux.
+5) C'est _lettre compte moins_.
+6) C'est _mot compte moins_.
+7) Ça marche mieux avec brotli.
+8) Le statique se compresse une seule fois au build.
+9) Ça n'a pas d'effet sur les fichiers déjà compressés.
 
 ## huffman score=auto fade-from todo
 OXYDIEZ
