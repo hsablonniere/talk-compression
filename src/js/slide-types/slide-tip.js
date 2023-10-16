@@ -18,9 +18,7 @@ defineSlideType('slide-tip', {
       });
 
     return html`
-      <div>
-        <img class="scrabble-board" src="/src/img/scrabble-empty.svg" alt="">
-      </div>
+      <img class="scrabble-board" src="/src/img/scrabble-empty.svg" alt="">
       <div class="background">
         <img class="qrcode" src="/src/img/qrcode.svg" alt="">
         ${tips.map((tip) => html`
@@ -33,10 +31,10 @@ defineSlideType('slide-tip', {
   styles: css`
     @keyframes slide-out {
       0% {
-        transform: scale(2.1) translateX(-7%) rotate(30deg) translateY(-20%);
+        transform: scale(2.1) rotate(30deg) translateY(-7%);
       }
       100% {
-        transform: scale(2.1) translateX(-7%) rotate(30deg) translateY(-30%);
+        transform: scale(2.1) rotate(30deg) translateY(7%);
       }
     }
 
