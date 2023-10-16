@@ -1,6 +1,6 @@
 #  Le Jeu pour compléter "La compression Web : comment (re)prendre le contrôle ?"
 
-Compléter cette grille de mot croisés et découvrer le mot code qui vous permet d'obternir des cadeaux par nos partenaires et employeurs [Clever Cloud](https://www.clever-cloud.com/fr/home/) et [Scaleway](https://www.scaleway.com/en/).
+Complétez cette grille de mot croisés et découvrez le mot code qui vous permettra d'obternir des cadeaux par nos partenaires et employeurs [Clever Cloud](https://www.clever-cloud.com/fr/home/) et [Scaleway](https://www.scaleway.com/en/).
 Faire ce petit jeu, cela vous permettra aussi de reprendre les notions importantes que nous avons voulu transmettre lors du talk.
 Pensez également à nous donner un feedback pour le talk ! 
 
