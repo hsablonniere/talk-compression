@@ -5,6 +5,7 @@ import { defineSlideType } from './base.js';
 let lastContent = null;
 
 const ANIMATION_DURATION = 400;
+const MAX_COLS = 22;
 
 function moveTo ($startElement, $endElement, duration) {
   const startBox = $startElement.getBoundingClientRect();
@@ -242,7 +243,7 @@ defineSlideType('slide-lzd', {
     return html`
       <div class="step">
         <div class="input title">Avant :</div>
-        <div class="input tiles" style="--cols: ${Math.min(inputTiles.length, 22)}">
+        <div class="input tiles" style="--cols: ${Math.min(inputTiles.length, MAX_COLS)}">
           ${inputTiles.map((tile) => html`
             <scrabble-tile
                 data-id=${tile.id}
@@ -254,7 +255,7 @@ defineSlideType('slide-lzd', {
           `)}
         </div>
         <div class="output title">Après :</div>
-        <div class="output tiles" style="--cols: ${Math.min(inputTiles.length, 22)}">
+        <div class="output tiles" style="--cols: ${Math.min(inputTiles.length, MAX_COLS)}">
           ${outputTiles.map((tile) => html`
             <scrabble-tile
                 data-id=${tile.id}

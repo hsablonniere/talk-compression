@@ -9,7 +9,7 @@ Grille de mot croisés à distribuer en papier
   * NECESSAIRE
 * (HS) La compression, c'est natif au <br> fonctionnement du Web.
   * NATIF
-* (HS) La compression, ça interrompt pas le flux.
+* (HS) La compression, ça n'interrompt pas le flux.
   * FLUX
 * (HS) C'est lettre compte moins.
   * HUFFMAN
