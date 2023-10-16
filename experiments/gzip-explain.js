@@ -61,578 +61,578 @@ const COMPRESSED_DETAILS = [
     details: 'Block #0',
     children: [
       {
-        "start": 80,
-        "end": 81,
-        "details": "Is last: yes"
+        'start': 80,
+        'end': 81,
+        'details': 'Is last: yes',
       },
       {
-        "start": 81,
-        "end": 83,
-        "details": "Type: 1"
+        'start': 81,
+        'end': 83,
+        'details': 'Type: 1',
       },
       {
-        "start": 83,
-        "end": 91,
-        "data": "O",
-        "details": "Symbol #79"
+        'start': 83,
+        'end': 91,
+        'data': 'O',
+        'details': 'Symbol #79',
       },
       {
-        "start": 91,
-        "end": 99,
-        "data": "N",
-        "details": "Symbol #78"
+        'start': 91,
+        'end': 99,
+        'data': 'N',
+        'details': 'Symbol #78',
       },
       {
-        "start": 99,
-        "end": 107,
-        "data": " ",
-        "details": "Symbol #32"
+        'start': 99,
+        'end': 107,
+        'data': ' ',
+        'details': 'Symbol #32',
       },
       {
-        "start": 107,
-        "end": 115,
-        "data": "P",
-        "details": "Symbol #80"
+        'start': 107,
+        'end': 115,
+        'data': 'P',
+        'details': 'Symbol #80',
       },
       {
-        "start": 115,
-        "end": 123,
-        "data": "E",
-        "details": "Symbol #69"
+        'start': 115,
+        'end': 123,
+        'data': 'E',
+        'details': 'Symbol #69',
       },
       {
-        "start": 123,
-        "end": 131,
-        "data": "U",
-        "details": "Symbol #85"
+        'start': 123,
+        'end': 131,
+        'data': 'U',
+        'details': 'Symbol #85',
       },
       {
-        "start": 131,
-        "end": 139,
-        "data": "T",
-        "details": "Symbol #84"
+        'start': 131,
+        'end': 139,
+        'data': 'T',
+        'details': 'Symbol #84',
       },
       {
-        "start": 139,
-        "end": 147,
-        "data": " ",
-        "details": "Symbol #32"
+        'start': 139,
+        'end': 147,
+        'data': ' ',
+        'details': 'Symbol #32',
       },
       {
-        "start": 147,
-        "end": 155,
-        "data": "T",
-        "details": "Symbol #84"
+        'start': 147,
+        'end': 155,
+        'data': 'T',
+        'details': 'Symbol #84',
       },
       {
-        "start": 155,
-        "end": 163,
-        "data": "R",
-        "details": "Symbol #82"
+        'start': 155,
+        'end': 163,
+        'data': 'R',
+        'details': 'Symbol #82',
       },
       {
-        "start": 163,
-        "end": 171,
-        "data": "O",
-        "details": "Symbol #79"
+        'start': 163,
+        'end': 171,
+        'data': 'O',
+        'details': 'Symbol #79',
       },
       {
-        "start": 171,
-        "end": 179,
-        "data": "M",
-        "details": "Symbol #77"
+        'start': 171,
+        'end': 179,
+        'data': 'M',
+        'details': 'Symbol #77',
       },
       {
-        "start": 179,
-        "end": 187,
-        "data": "P",
-        "details": "Symbol #80"
+        'start': 179,
+        'end': 187,
+        'data': 'P',
+        'details': 'Symbol #80',
       },
       {
-        "start": 187,
-        "end": 195,
-        "data": "E",
-        "details": "Symbol #69"
+        'start': 187,
+        'end': 195,
+        'data': 'E',
+        'details': 'Symbol #69',
       },
       {
-        "start": 195,
-        "end": 203,
-        "data": "R",
-        "details": "Symbol #82"
+        'start': 195,
+        'end': 203,
+        'data': 'R',
+        'details': 'Symbol #82',
       },
       {
-        "start": 203,
-        "end": 211,
-        "data": " ",
-        "details": "Symbol #32"
+        'start': 203,
+        'end': 211,
+        'data': ' ',
+        'details': 'Symbol #32',
       },
       {
-        "start": 211,
-        "end": 219,
-        "data": "U",
-        "details": "Symbol #85"
+        'start': 211,
+        'end': 219,
+        'data': 'U',
+        'details': 'Symbol #85',
       },
       {
-        "start": 219,
-        "end": 227,
-        "data": "N",
-        "details": "Symbol #78"
+        'start': 219,
+        'end': 227,
+        'data': 'N',
+        'details': 'Symbol #78',
       },
       {
-        "start": 227,
-        "end": 235,
-        "data": "E",
-        "details": "Symbol #69"
+        'start': 227,
+        'end': 235,
+        'data': 'E',
+        'details': 'Symbol #69',
       },
       {
-        "start": 235,
-        "end": 242,
-        "data": "L:3",
-        "details": "Symbol #257 (length: 3)",
-        "type": "length"
+        'start': 235,
+        'end': 242,
+        'data': 'L:3',
+        'details': 'Symbol #257 (length: 3)',
+        'type': 'length',
       },
       {
-        "start": 242,
-        "end": 247,
-        "data": "D:17",
-        "details": "Distance #8 (17)",
-        "type": "distance"
+        'start': 242,
+        'end': 247,
+        'data': 'D:17',
+        'details': 'Distance #8 (17)',
+        'type': 'distance',
       },
       {
-        "start": 247,
-        "end": 250,
-        "data": "0",
-        "details": "Extra distance (0)",
-        "type": "distance-extra"
+        'start': 247,
+        'end': 250,
+        'data': '0',
+        'details': 'Extra distance (0)',
+        'type': 'distance-extra',
       },
       {
-        "start": 250,
-        "end": 258,
-        "data": "R",
-        "details": "Symbol #82"
+        'start': 250,
+        'end': 258,
+        'data': 'R',
+        'details': 'Symbol #82',
       },
       {
-        "start": 258,
-        "end": 266,
-        "data": "S",
-        "details": "Symbol #83"
+        'start': 258,
+        'end': 266,
+        'data': 'S',
+        'details': 'Symbol #83',
       },
       {
-        "start": 266,
-        "end": 274,
-        "data": "O",
-        "details": "Symbol #79"
+        'start': 266,
+        'end': 274,
+        'data': 'O',
+        'details': 'Symbol #79',
       },
       {
-        "start": 274,
-        "end": 282,
-        "data": "N",
-        "details": "Symbol #78"
+        'start': 274,
+        'end': 282,
+        'data': 'N',
+        'details': 'Symbol #78',
       },
       {
-        "start": 282,
-        "end": 289,
-        "data": "L:3",
-        "details": "Symbol #257 (length: 3)",
-        "type": "length"
+        'start': 282,
+        'end': 289,
+        'data': 'L:3',
+        'details': 'Symbol #257 (length: 3)',
+        'type': 'length',
       },
       {
-        "start": 289,
-        "end": 294,
-        "data": "D:9",
-        "details": "Distance #6 (9)",
-        "type": "distance"
+        'start': 289,
+        'end': 294,
+        'data': 'D:9',
+        'details': 'Distance #6 (9)',
+        'type': 'distance',
       },
       {
-        "start": 294,
-        "end": 296,
-        "data": "0",
-        "details": "Extra distance (0)",
-        "type": "distance-extra"
+        'start': 294,
+        'end': 296,
+        'data': '0',
+        'details': 'Extra distance (0)',
+        'type': 'distance-extra',
       },
       {
-        "start": 296,
-        "end": 304,
-        "data": "M",
-        "details": "Symbol #77"
+        'start': 296,
+        'end': 304,
+        'data': 'M',
+        'details': 'Symbol #77',
       },
       {
-        "start": 304,
-        "end": 312,
-        "data": "I",
-        "details": "Symbol #73"
+        'start': 304,
+        'end': 312,
+        'data': 'I',
+        'details': 'Symbol #73',
       },
       {
-        "start": 312,
-        "end": 320,
-        "data": "L",
-        "details": "Symbol #76"
+        'start': 312,
+        'end': 320,
+        'data': 'L',
+        'details': 'Symbol #76',
       },
       {
-        "start": 320,
-        "end": 328,
-        "data": "L",
-        "details": "Symbol #76"
+        'start': 320,
+        'end': 328,
+        'data': 'L',
+        'details': 'Symbol #76',
       },
       {
-        "start": 328,
-        "end": 336,
-        "data": "E",
-        "details": "Symbol #69"
+        'start': 328,
+        'end': 336,
+        'data': 'E',
+        'details': 'Symbol #69',
       },
       {
-        "start": 336,
-        "end": 344,
-        "data": " ",
-        "details": "Symbol #32"
+        'start': 336,
+        'end': 344,
+        'data': ' ',
+        'details': 'Symbol #32',
       },
       {
-        "start": 344,
-        "end": 352,
-        "data": "F",
-        "details": "Symbol #70"
+        'start': 344,
+        'end': 352,
+        'data': 'F',
+        'details': 'Symbol #70',
       },
       {
-        "start": 352,
-        "end": 360,
-        "data": "O",
-        "details": "Symbol #79"
+        'start': 352,
+        'end': 360,
+        'data': 'O',
+        'details': 'Symbol #79',
       },
       {
-        "start": 360,
-        "end": 368,
-        "data": "I",
-        "details": "Symbol #73"
+        'start': 360,
+        'end': 368,
+        'data': 'I',
+        'details': 'Symbol #73',
       },
       {
-        "start": 368,
-        "end": 376,
-        "data": "S",
-        "details": "Symbol #83"
+        'start': 368,
+        'end': 376,
+        'data': 'S',
+        'details': 'Symbol #83',
       },
       {
-        "start": 376,
-        "end": 384,
-        "data": ".",
-        "details": "Symbol #46"
+        'start': 376,
+        'end': 384,
+        'data': '.',
+        'details': 'Symbol #46',
       },
       {
-        "start": 384,
-        "end": 392,
-        "data": " ",
-        "details": "Symbol #32"
+        'start': 384,
+        'end': 392,
+        'data': ' ',
+        'details': 'Symbol #32',
       },
       {
-        "start": 392,
-        "end": 400,
-        "data": "O",
-        "details": "Symbol #79"
+        'start': 392,
+        'end': 400,
+        'data': 'O',
+        'details': 'Symbol #79',
       },
       {
-        "start": 400,
-        "end": 407,
-        "data": "L:15",
-        "details": "Symbol #267 (length: 15)",
-        "type": "length"
+        'start': 400,
+        'end': 407,
+        'data': 'L:15',
+        'details': 'Symbol #267 (length: 15)',
+        'type': 'length',
       },
       {
-        "start": 407,
-        "end": 408,
-        "data": "0",
-        "details": "Extra length (0)",
-        "type": "length-extra"
+        'start': 407,
+        'end': 408,
+        'data': '0',
+        'details': 'Extra length (0)',
+        'type': 'length-extra',
       },
       {
-        "start": 408,
-        "end": 413,
-        "data": "D:33",
-        "details": "Distance #10 (33)",
-        "type": "distance"
+        'start': 408,
+        'end': 413,
+        'data': 'D:33',
+        'details': 'Distance #10 (33)',
+        'type': 'distance',
       },
       {
-        "start": 413,
-        "end": 417,
-        "data": "8",
-        "details": "Extra distance (8)",
-        "type": "distance-extra"
+        'start': 413,
+        'end': 417,
+        'data': '8',
+        'details': 'Extra distance (8)',
+        'type': 'distance-extra',
       },
       {
-        "start": 417,
-        "end": 424,
-        "data": "L:6",
-        "details": "Symbol #260 (length: 6)",
-        "type": "length"
+        'start': 417,
+        'end': 424,
+        'data': 'L:6',
+        'details': 'Symbol #260 (length: 6)',
+        'type': 'length',
       },
       {
-        "start": 424,
-        "end": 429,
-        "data": "D:25",
-        "details": "Distance #9 (25)",
-        "type": "distance"
+        'start': 424,
+        'end': 429,
+        'data': 'D:25',
+        'details': 'Distance #9 (25)',
+        'type': 'distance',
       },
       {
-        "start": 429,
-        "end": 432,
-        "data": "3",
-        "details": "Extra distance (3)",
-        "type": "distance-extra"
+        'start': 429,
+        'end': 432,
+        'data': '3',
+        'details': 'Extra distance (3)',
+        'type': 'distance-extra',
       },
       {
-        "start": 432,
-        "end": 439,
-        "data": "L:8",
-        "details": "Symbol #262 (length: 8)",
-        "type": "length"
+        'start': 432,
+        'end': 439,
+        'data': 'L:8',
+        'details': 'Symbol #262 (length: 8)',
+        'type': 'length',
       },
       {
-        "start": 439,
-        "end": 444,
-        "data": "D:33",
-        "details": "Distance #10 (33)",
-        "type": "distance"
+        'start': 439,
+        'end': 444,
+        'data': 'D:33',
+        'details': 'Distance #10 (33)',
+        'type': 'distance',
       },
       {
-        "start": 444,
-        "end": 448,
-        "data": "10",
-        "details": "Extra distance (10)",
-        "type": "distance-extra"
+        'start': 444,
+        'end': 448,
+        'data': '10',
+        'details': 'Extra distance (10)',
+        'type': 'distance-extra',
       },
       {
-        "start": 448,
-        "end": 456,
-        "data": "S",
-        "details": "Symbol #83"
+        'start': 448,
+        'end': 456,
+        'data': 'S',
+        'details': 'Symbol #83',
       },
       {
-        "start": 456,
-        "end": 463,
-        "data": "L:5",
-        "details": "Symbol #259 (length: 5)",
-        "type": "length"
+        'start': 456,
+        'end': 463,
+        'data': 'L:5',
+        'details': 'Symbol #259 (length: 5)',
+        'type': 'length',
       },
       {
-        "start": 463,
-        "end": 468,
-        "data": "D:49",
-        "details": "Distance #11 (49)",
-        "type": "distance"
+        'start': 463,
+        'end': 468,
+        'data': 'D:49',
+        'details': 'Distance #11 (49)',
+        'type': 'distance',
       },
       {
-        "start": 468,
-        "end": 472,
-        "data": "8",
-        "details": "Extra distance (8)",
-        "type": "distance-extra"
+        'start': 468,
+        'end': 472,
+        'data': '8',
+        'details': 'Extra distance (8)',
+        'type': 'distance-extra',
       },
       {
-        "start": 472,
-        "end": 479,
-        "data": "L:6",
-        "details": "Symbol #260 (length: 6)",
-        "type": "length"
+        'start': 472,
+        'end': 479,
+        'data': 'L:6',
+        'details': 'Symbol #260 (length: 6)',
+        'type': 'length',
       },
       {
-        "start": 479,
-        "end": 484,
-        "data": "D:33",
-        "details": "Distance #10 (33)",
-        "type": "distance"
+        'start': 479,
+        'end': 484,
+        'data': 'D:33',
+        'details': 'Distance #10 (33)',
+        'type': 'distance',
       },
       {
-        "start": 484,
-        "end": 488,
-        "data": "9",
-        "details": "Extra distance (9)",
-        "type": "distance-extra"
+        'start': 484,
+        'end': 488,
+        'data': '9',
+        'details': 'Extra distance (9)',
+        'type': 'distance-extra',
       },
       {
-        "start": 488,
-        "end": 496,
-        "data": "M",
-        "details": "Symbol #77"
+        'start': 488,
+        'end': 496,
+        'data': 'M',
+        'details': 'Symbol #77',
       },
       {
-        "start": 496,
-        "end": 504,
-        "data": "A",
-        "details": "Symbol #65"
+        'start': 496,
+        'end': 504,
+        'data': 'A',
+        'details': 'Symbol #65',
       },
       {
-        "start": 504,
-        "end": 512,
-        "data": "I",
-        "details": "Symbol #73"
+        'start': 504,
+        'end': 512,
+        'data': 'I',
+        'details': 'Symbol #73',
       },
       {
-        "start": 512,
-        "end": 520,
-        "data": "S",
-        "details": "Symbol #83"
+        'start': 512,
+        'end': 520,
+        'data': 'S',
+        'details': 'Symbol #83',
       },
       {
-        "start": 520,
-        "end": 527,
-        "data": "L:4",
-        "details": "Symbol #258 (length: 4)",
-        "type": "length"
+        'start': 520,
+        'end': 527,
+        'data': 'L:4',
+        'details': 'Symbol #258 (length: 4)',
+        'type': 'length',
       },
       {
-        "start": 527,
-        "end": 532,
-        "data": "D:33",
-        "details": "Distance #10 (33)",
-        "type": "distance"
+        'start': 527,
+        'end': 532,
+        'data': 'D:33',
+        'details': 'Distance #10 (33)',
+        'type': 'distance',
       },
       {
-        "start": 532,
-        "end": 536,
-        "data": "14",
-        "details": "Extra distance (14)",
-        "type": "distance-extra"
+        'start': 532,
+        'end': 536,
+        'data': '14',
+        'details': 'Extra distance (14)',
+        'type': 'distance-extra',
       },
       {
-        "start": 536,
-        "end": 543,
-        "data": "L:5",
-        "details": "Symbol #259 (length: 5)",
-        "type": "length"
+        'start': 536,
+        'end': 543,
+        'data': 'L:5',
+        'details': 'Symbol #259 (length: 5)',
+        'type': 'length',
       },
       {
-        "start": 543,
-        "end": 548,
-        "data": "D:65",
-        "details": "Distance #12 (65)",
-        "type": "distance"
+        'start': 543,
+        'end': 548,
+        'data': 'D:65',
+        'details': 'Distance #12 (65)',
+        'type': 'distance',
       },
       {
-        "start": 548,
-        "end": 553,
-        "data": "9",
-        "details": "Extra distance (9)",
-        "type": "distance-extra"
+        'start': 548,
+        'end': 553,
+        'data': '9',
+        'details': 'Extra distance (9)',
+        'type': 'distance-extra',
       },
       {
-        "start": 553,
-        "end": 560,
-        "data": "L:3",
-        "details": "Symbol #257 (length: 3)",
-        "type": "length"
+        'start': 553,
+        'end': 560,
+        'data': 'L:3',
+        'details': 'Symbol #257 (length: 3)',
+        'type': 'length',
       },
       {
-        "start": 560,
-        "end": 565,
-        "data": "D:49",
-        "details": "Distance #11 (49)",
-        "type": "distance"
+        'start': 560,
+        'end': 565,
+        'data': 'D:49',
+        'details': 'Distance #11 (49)',
+        'type': 'distance',
       },
       {
-        "start": 565,
-        "end": 569,
-        "data": "1",
-        "details": "Extra distance (1)",
-        "type": "distance-extra"
+        'start': 565,
+        'end': 569,
+        'data': '1',
+        'details': 'Extra distance (1)',
+        'type': 'distance-extra',
       },
       {
-        "start": 569,
-        "end": 577,
-        "data": "P",
-        "details": "Symbol #80"
+        'start': 569,
+        'end': 577,
+        'data': 'P',
+        'details': 'Symbol #80',
       },
       {
-        "start": 577,
-        "end": 585,
-        "data": "A",
-        "details": "Symbol #65"
+        'start': 577,
+        'end': 585,
+        'data': 'A',
+        'details': 'Symbol #65',
       },
       {
-        "start": 585,
-        "end": 593,
-        "data": "S",
-        "details": "Symbol #83"
+        'start': 585,
+        'end': 593,
+        'data': 'S',
+        'details': 'Symbol #83',
       },
       {
-        "start": 593,
-        "end": 600,
-        "data": "L:23",
-        "details": "Symbol #270 (length: 23)",
-        "type": "length"
+        'start': 593,
+        'end': 600,
+        'data': 'L:23',
+        'details': 'Symbol #270 (length: 23)',
+        'type': 'length',
       },
       {
-        "start": 600,
-        "end": 602,
-        "data": "1",
-        "details": "Extra length (1)",
-        "type": "length-extra"
+        'start': 600,
+        'end': 602,
+        'data': '1',
+        'details': 'Extra length (1)',
+        'type': 'length-extra',
       },
       {
-        "start": 602,
-        "end": 607,
-        "data": "D:49",
-        "details": "Distance #11 (49)",
-        "type": "distance"
+        'start': 602,
+        'end': 607,
+        'data': 'D:49',
+        'details': 'Distance #11 (49)',
+        'type': 'distance',
       },
       {
-        "start": 607,
-        "end": 611,
-        "data": "5",
-        "details": "Extra distance (5)",
-        "type": "distance-extra"
+        'start': 607,
+        'end': 611,
+        'data': '5',
+        'details': 'Extra distance (5)',
+        'type': 'distance-extra',
       },
       {
-        "start": 611,
-        "end": 619,
-        "data": ",",
-        "details": "Symbol #44"
+        'start': 611,
+        'end': 619,
+        'data': ',',
+        'details': 'Symbol #44',
       },
       {
-        "start": 619,
-        "end": 626,
-        "data": "L:11",
-        "details": "Symbol #265 (length: 11)",
-        "type": "length"
+        'start': 619,
+        'end': 626,
+        'data': 'L:11',
+        'details': 'Symbol #265 (length: 11)',
+        'type': 'length',
       },
       {
-        "start": 626,
-        "end": 627,
-        "data": "1",
-        "details": "Extra length (1)",
-        "type": "length-extra"
+        'start': 626,
+        'end': 627,
+        'data': '1',
+        'details': 'Extra length (1)',
+        'type': 'length-extra',
       },
       {
-        "start": 627,
-        "end": 632,
-        "data": "D:97",
-        "details": "Distance #13 (97)",
-        "type": "distance"
+        'start': 627,
+        'end': 632,
+        'data': 'D:97',
+        'details': 'Distance #13 (97)',
+        'type': 'distance',
       },
       {
-        "start": 632,
-        "end": 637,
-        "data": "2",
-        "details": "Extra distance (2)",
-        "type": "distance-extra"
+        'start': 632,
+        'end': 637,
+        'data': '2',
+        'details': 'Extra distance (2)',
+        'type': 'distance-extra',
       },
       {
-        "start": 637,
-        "end": 644,
-        "details": "Symbol #256 (end of block)"
+        'start': 637,
+        'end': 644,
+        'details': 'Symbol #256 (end of block)',
       },
       {
-        "start": 644,
-        "end": 648,
-        "details": "Padding for byte alignment"
+        'start': 644,
+        'end': 648,
+        'details': 'Padding for byte alignment',
       },
       {
-        "start": 648,
-        "end": 680,
-        "details": "CRC32 checksum"
+        'start': 648,
+        'end': 680,
+        'details': 'CRC32 checksum',
       },
       {
-        "start": 680,
-        "end": 712,
-        "details": "Original size"
-      }
+        'start': 680,
+        'end': 712,
+        'details': 'Original size',
+      },
     ],
   },
   {
@@ -662,8 +662,7 @@ function inRange (index) {
 
 function formatText (text) {
   return (text ?? '')
-    .replaceAll(' ', '⎵')
-    .replaceAll('\n', '\\n');
+    .replaceAll(' ', '⎵');
 }
 
 export class GzipExplain extends LitElement {
@@ -672,7 +671,6 @@ export class GzipExplain extends LitElement {
     return {
       _path: { type: Array },
       _hoveredIndex: { type: Number },
-      _toggledSegments: { type: Object },
     };
   }
 
@@ -681,7 +679,6 @@ export class GzipExplain extends LitElement {
     this._bits = COMPRESSED_BITS.split('');
     this._path = [];
     this._hoveredIndex = null;
-    this._toggledSegments = new Set();
 
     this._onKeypress = this._onKeypress.bind(this);
   }
@@ -728,9 +725,7 @@ export class GzipExplain extends LitElement {
 
     if (this._path.length >= 1) {
       const currentSegment = this._path[this._path.length - 1];
-      const hoveredSegment = currentSegment.children
-        ?.filter((s) => s.type !== 'repeat')
-        ?.find(inRange(index));
+      const hoveredSegment = currentSegment.children?.find(inRange(index));
       if (hoveredSegment != null) {
         return hoveredSegment;
       }
@@ -738,9 +733,7 @@ export class GzipExplain extends LitElement {
 
     if (this._path.length >= 2) {
       const parentSegment = this._path[this._path.length - 2];
-      const hoveredSegment = parentSegment.children
-        ?.filter((s) => s.type !== 'repeat')
-        ?.find(inRange(index));
+      const hoveredSegment = parentSegment.children?.find(inRange(index));
       if (hoveredSegment != null) {
         return hoveredSegment;
       }
@@ -753,34 +746,11 @@ export class GzipExplain extends LitElement {
 
   }
 
-  _toggleSegment (segment) {
-    if (segment == null || segment.children != null) {
-      return;
-    }
-    if (segment.type === 'repeat-part') {
-      const currentSegment = this._getCurrentSegment();
-      if (currentSegment.children != null) {
-        const segmentIndex = currentSegment.children.indexOf(segment);
-        const repeatSegment = currentSegment.children.slice(segmentIndex + 1).find((s) => s.type === 'repeat');
-        return this._toggleSegment(repeatSegment);
-      }
-    }
-    if (this._toggledSegments.has(segment)) {
-      this._toggledSegments.delete(segment);
-    }
-    else {
-      this._toggledSegments.add(segment);
-    }
-    this.requestUpdate();
-  }
-
   _onClick (index) {
-    console.log('_onClick', index);
 
     if (this._path.length >= 1) {
       const currentSegment = this._path[this._path.length - 1];
       const clickedSegment = currentSegment.children?.find(inRange(index));
-      this._toggleSegment(clickedSegment);
       if (clickedSegment != null && clickedSegment.children != null) {
         this._path = [...this._path, clickedSegment];
         return;
@@ -790,7 +760,6 @@ export class GzipExplain extends LitElement {
     if (this._path.length >= 2) {
       const parentSegment = this._path[this._path.length - 2];
       const clickedSegment = parentSegment.children?.find(inRange(index));
-      this._toggleSegment(clickedSegment);
       if (clickedSegment != null && clickedSegment.children != null) {
         this._path[this._path.length - 1] = clickedSegment;
         this.requestUpdate();
@@ -799,9 +768,9 @@ export class GzipExplain extends LitElement {
     }
 
     const clickedSegment = COMPRESSED_DETAILS.find(inRange(index));
-    this._toggleSegment(clickedSegment);
     if (clickedSegment != null && clickedSegment.children != null) {
       this._path = [clickedSegment];
+      return;
     }
   }
 
@@ -831,83 +800,6 @@ export class GzipExplain extends LitElement {
     window.removeEventListener('keydown', this._onKeypress);
   }
 
-  updated () {
-    const MARGIN_V = 4; // 4
-    const MARGIN_H = 4; // 6
-    const parentBox = this.shadowRoot.querySelector('.bit-grid').getBoundingClientRect();
-    Array
-      .from(this.shadowRoot.querySelectorAll('.segment'))
-      .forEach(($segment) => {
-
-        const start = Number($segment.dataset.start);
-        const end = Number($segment.dataset.end);
-        const $start = this.shadowRoot.querySelector('.bit-grid').children[start];
-        const $end = this.shadowRoot.querySelector('.bit-grid').children[end - 1];
-        const startBox = $start.getBoundingClientRect();
-        const endBox = $end.getBoundingClientRect();
-
-        const side = $segment.dataset.side;
-        if (startBox.top === endBox.top) {
-          $segment.style.display = (side === 'b') ? 'none' : null;
-          $segment.classList.toggle('full', side === 'a');
-          let newTop = startBox.top - parentBox.top + MARGIN_V;
-          let newLeft = startBox.left - parentBox.left + MARGIN_H;
-          let newHeight = endBox.bottom - startBox.top - (MARGIN_V * 2);
-          let newWidth = endBox.right - startBox.left - (MARGIN_H * 2);
-          $segment.style.top = newTop + 'px';
-          $segment.style.left = newLeft + 'px';
-          $segment.style.width = newWidth + 'px';
-          $segment.style.height = newHeight + 'px';
-          const textLength = $segment.dataset.text.length;
-          const bitLength = end - start;
-          if (bitLength < textLength) {
-            $segment.style.fontSize = (0.9 * bitLength / textLength) + 'em';
-          }
-          $segment.innerHTML = `<span>${$segment.dataset.text}</span>`;
-        }
-        else if (side === 'a') {
-          const segmentChildren = Array.from(this.shadowRoot.querySelector('.bit-grid').children).slice(start, end);
-          const segmentChildrenBoxes = segmentChildren.map(($child) => $child.getBoundingClientRect());
-          const bStartIndex = segmentChildrenBoxes.findIndex((box) => box.top === endBox.top);
-          const aEndIndex = bStartIndex - 1;
-          const $aEnd = segmentChildren[aEndIndex];
-          const aEndBox = $aEnd.getBoundingClientRect();
-
-          let newTop = startBox.top - parentBox.top + MARGIN_V;
-          let newLeft = startBox.left - parentBox.left + MARGIN_H;
-          let newHeight = aEndBox.bottom - startBox.top - (MARGIN_V * 2);
-          let newWidth = aEndBox.right - startBox.left - MARGIN_H;
-          $segment.style.top = newTop + 'px';
-          $segment.style.left = newLeft + 'px';
-          $segment.style.width = newWidth + 'px';
-          $segment.style.height = newHeight + 'px';
-          const textLength = $segment.dataset.text.length;
-          const bitLength = aEndIndex;
-          $segment.innerHTML = `<span>${$segment.dataset.text.slice(0, bitLength + 1)}</span>`;
-        }
-        else if (side === 'b') {
-          const segmentChildren = Array.from(this.shadowRoot.querySelector('.bit-grid').children).slice(start, end);
-          const segmentChildrenBoxes = segmentChildren.map(($child) => $child.getBoundingClientRect());
-          const bStartIndex = segmentChildrenBoxes.findIndex((box) => box.top === endBox.top);
-          const $bStart = segmentChildren[bStartIndex];
-          const bStartBox = $bStart.getBoundingClientRect();
-
-          let newTop = bStartBox.top - parentBox.top + MARGIN_V;
-          let newLeft = bStartBox.left - parentBox.left;
-          let newHeight = endBox.bottom - bStartBox.top - (MARGIN_V * 2);
-          let newWidth = endBox.right - bStartBox.left - MARGIN_H;
-          $segment.style.top = newTop + 'px';
-          $segment.style.left = newLeft + 'px';
-          $segment.style.width = newWidth + 'px';
-          $segment.style.height = newHeight + 'px';
-          const textLength = $segment.dataset.text.length;
-          const bitLength = bStartIndex;
-          $segment.innerHTML = `<span>${$segment.dataset.text.slice(bitLength + 1)}</span>`;
-        }
-
-      });
-  }
-
   render () {
 
     const details = this._getFullDetails();
@@ -922,26 +814,21 @@ export class GzipExplain extends LitElement {
       ? Array.from({ length: hoveredSegment.end - hoveredSegment.start }).map((_, i) => i + hoveredSegment.start)
       : [];
 
-    const toggledIndexes = [];
-    Array.from(this._toggledSegments).forEach((segment) => {
-      for (let i = segment.start; i < segment.end; i += 1) {
-        if (!toggledIndexes.includes(i)) {
-          toggledIndexes.push(i);
-        }
-      }
+    const bits = this._bits.map((bit, i) => {
+      console.log({ bit, i });
+      return bit;
     });
 
     return html`
       <div class="details">${details}</div>
       <div class="bit-grid">
-        ${this._bits.map((bit, index) => {
+        ${bits.map((bit, index) => {
           const cssClasses = {
             bit: true,
             current: currentIndexes.includes(index),
             'current--first': currentIndexes[0] === index,
             'current--last': currentIndexes[currentIndexes.length - 1] === index,
             hovered: hoveredIndexes.includes(index),
-            toggled: toggledIndexes.includes(index),
           };
           return html`
             <span
@@ -955,39 +842,6 @@ export class GzipExplain extends LitElement {
             </span>
           `;
         })}
-        ${Array.from(this._toggledSegments).map((segment) => {
-          const text = formatText(segment?.data);
-          return html`
-            <div
-                class="segment"
-                data-side="a"
-                data-start=${segment.start}
-                data-end=${segment.end}
-                data-text=${text}
-                data-type=${segment.type}
-                @click=${() => this._toggleSegment(segment)}
-                @mouseenter=${(e) => this._onMouseEnter(segment.start)}
-                @mouseleave=${(e) => this._onMouseLeave(segment.start)}
-            ></div>
-            <div
-                class="segment"
-                data-side="b"
-                data-start=${segment.start}
-                data-end=${segment.end}
-                data-text=${text}
-                data-type=${segment.type}
-                @click=${() => this._toggleSegment(segment)}
-                @mouseenter=${(e) => this._onMouseEnter(segment.start)}
-                @mouseleave=${(e) => this._onMouseLeave(segment.start)}
-            ></div>
-          `;
-        })}
-      </div>
-      <div class="debug">
-        <div>this._hoveredIndex:${JSON.stringify(this._hoveredIndex)}</div>
-        <div>this._path:${JSON.stringify(this._path)}</div>
-        <div>currentSegment:${JSON.stringify(currentSegment?.details)}</div>
-        <div>hoveredSegment:${JSON.stringify(hoveredSegment?.details)}</div>
       </div>
     `;
   }
@@ -1019,74 +873,20 @@ export class GzipExplain extends LitElement {
 
         .bit {
           user-select: none;
-          /*border-width: 1px;*/
-          /*border-style: solid;*/
-          /*border-color: transparent;*/
         }
 
         .bit.current {
           background-color: #eee;
-          /*border-top-color: #000;*/
-          /*border-bottom-color: #000;*/
         }
 
         .bit.current--first {
-          /*border-left-color: #000;*/
         }
 
         .bit.current--last {
-          /*border-right-color: #000;*/
         }
 
         .bit.hovered {
           background-color: yellow;
-        }
-
-        .bit.toggled {
-          color: transparent;
-        }
-
-        .segment {
-          font-size: 0.85em;
-          position: absolute;
-          box-sizing: border-box;
-          z-index: 2;
-          --bdrs: 0.25rem;
-          display: flex;
-          justify-content: start;
-          align-items: center;
-          padding-left: 0.2em;
-          font-weight: bold;
-        }
-
-        /*.segment.literal,*/
-        .segment {
-          background-color: #235e42;
-          background-color: #777;
-          color: #fff;
-        }
-
-        .segment[data-type="repeat"] {
-          background-color: #ea3820;
-          color: #fff;
-        }
-
-        .segment[data-side="a"] {
-          border-radius: var(--bdrs) 0 0 var(--bdrs);
-        }
-
-        .segment[data-side="b"] {
-          border-radius: 0 var(--bdrs) var(--bdrs) 0;
-        }
-
-        .segment.full {
-          border-radius: var(--bdrs);
-        }
-
-        .debug {
-          display: none;
-          font-family: monospace;
-          font-size: 0.2em;
         }
       `,
     ];
