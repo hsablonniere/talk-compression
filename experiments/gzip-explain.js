@@ -2,7 +2,7 @@ import { css, html, LitElement } from 'lit';
 import { classMap } from 'lit/directives/class-map.js';
 
 // TODO: move to a property
-const COMPRESSED_BITS = '1111100011010001000100000000000000000000000000000000000000000000000000001100000011001111111100111100101000010100000100101011010010110100100010100001010010010100010100111111001110110100000100101011010001001010000101001011001111010010101000000101000000101000101010001110011111100111100000001001100010011101100110011001110010011100100101010101000010010110100111111001100110100011010111100101000001111111000101100101000010000100010011100000110010100101101000110000011010110001000010001010100101111101100100011001100110100011010100001001111110011110010100000000011011001001000000010101110001010000010010001101000110001110100101110100101110000010011011010100000111010000000000000001111101011010001010000011011100110001000000000000000000000000';
+const COMPRESSED_BITS = '1111100011010001000100000000000000000000000000000000000000000000000000001100000011001111111011111100101000010000000011101011000010110000100010100001000010010000010011111110111110110000000011101011000001001010000100001010111111001110101000000101000000100000101000001101111111011111100000001001100001111101011110010111110001111100011101010101000001110110011111110111100110000011010111100101000001111111000101100101000010000100010011100000110010100101100000110000011010110001000010001010100101111101011100010111100110000011000001001010011100000110110010010000000101011100010000000011100011000001100011101001011101001011100000100110110101000000000000001101011010101011110101011000100111010001000000000000000000000000';
 
 // TODO: move to a property
 const COMPRESSED_DETAILS = [
@@ -14,36 +14,43 @@ const COMPRESSED_DETAILS = [
       {
         'start': 0,
         'end': 8,
+        'bits': '00011111',
         'details': 'Identification byte #1',
       },
       {
         'start': 8,
         'end': 16,
+        'bits': '10001011',
         'details': 'Identification byte #2',
       },
       {
         'start': 16,
         'end': 24,
+        'bits': '00001000',
         'details': 'Compression method',
       },
       {
         'start': 24,
         'end': 32,
+        'bits': '00000000',
         'details': 'Flags',
       },
       {
         'start': 32,
         'end': 64,
+        'bits': '00000000000000000000000000000000',
         'details': 'Modification time',
       },
       {
         'start': 64,
         'end': 72,
+        'bits': '00000000',
         'details': 'Extra flags',
       },
       {
         'start': 72,
         'end': 80,
+        'bits': '00000011',
         'details': 'OS',
       },
     ],
@@ -54,580 +61,578 @@ const COMPRESSED_DETAILS = [
     details: 'Block #0',
     children: [
       {
-        'start': 80,
-        'end': 81,
-        'details': 'Is last: yes',
+        "start": 80,
+        "end": 81,
+        "details": "Is last: yes"
       },
       {
-        'start': 81,
-        'end': 83,
-        'details': 'Type: 1',
+        "start": 81,
+        "end": 83,
+        "details": "Type: 1"
       },
       {
-        'start': 83,
-        'end': 91,
-        'data': 'O',
-        'details': 'Symbol #79',
+        "start": 83,
+        "end": 91,
+        "data": "O",
+        "details": "Symbol #79"
       },
       {
-        'start': 91,
-        'end': 99,
-        'data': 'n',
-        'details': 'Symbol #110',
+        "start": 91,
+        "end": 99,
+        "data": "N",
+        "details": "Symbol #78"
       },
       {
-        'start': 99,
-        'end': 107,
-        'data': ' ',
-        'details': 'Symbol #32',
+        "start": 99,
+        "end": 107,
+        "data": " ",
+        "details": "Symbol #32"
       },
       {
-        'start': 107,
-        'end': 115,
-        'data': 'p',
-        'details': 'Symbol #112',
+        "start": 107,
+        "end": 115,
+        "data": "P",
+        "details": "Symbol #80"
       },
       {
-        'start': 115,
-        'end': 123,
-        'data': 'e',
-        'details': 'Symbol #101',
+        "start": 115,
+        "end": 123,
+        "data": "E",
+        "details": "Symbol #69"
       },
       {
-        'start': 123,
-        'end': 131,
-        'data': 'u',
-        'details': 'Symbol #117',
+        "start": 123,
+        "end": 131,
+        "data": "U",
+        "details": "Symbol #85"
       },
       {
-        'start': 131,
-        'end': 139,
-        'data': 't',
-        'details': 'Symbol #116',
+        "start": 131,
+        "end": 139,
+        "data": "T",
+        "details": "Symbol #84"
       },
       {
-        'start': 139,
-        'end': 147,
-        'data': ' ',
-        'details': 'Symbol #32',
+        "start": 139,
+        "end": 147,
+        "data": " ",
+        "details": "Symbol #32"
       },
       {
-        'start': 147,
-        'end': 155,
-        'data': 't',
-        'details': 'Symbol #116',
+        "start": 147,
+        "end": 155,
+        "data": "T",
+        "details": "Symbol #84"
       },
       {
-        'start': 155,
-        'end': 163,
-        'data': 'r',
-        'details': 'Symbol #114',
+        "start": 155,
+        "end": 163,
+        "data": "R",
+        "details": "Symbol #82"
       },
       {
-        'start': 163,
-        'end': 171,
-        'data': 'o',
-        'details': 'Symbol #111',
+        "start": 163,
+        "end": 171,
+        "data": "O",
+        "details": "Symbol #79"
       },
       {
-        'start': 171,
-        'end': 179,
-        'data': 'm',
-        'details': 'Symbol #109',
+        "start": 171,
+        "end": 179,
+        "data": "M",
+        "details": "Symbol #77"
       },
       {
-        'start': 179,
-        'end': 187,
-        'data': 'p',
-        'details': 'Symbol #112',
+        "start": 179,
+        "end": 187,
+        "data": "P",
+        "details": "Symbol #80"
       },
       {
-        'start': 187,
-        'end': 195,
-        'data': 'e',
-        'details': 'Symbol #101',
+        "start": 187,
+        "end": 195,
+        "data": "E",
+        "details": "Symbol #69"
       },
       {
-        'start': 195,
-        'end': 203,
-        'data': 'r',
-        'details': 'Symbol #114',
+        "start": 195,
+        "end": 203,
+        "data": "R",
+        "details": "Symbol #82"
       },
       {
-        'start': 203,
-        'end': 211,
-        'data': ' ',
-        'details': 'Symbol #32',
+        "start": 203,
+        "end": 211,
+        "data": " ",
+        "details": "Symbol #32"
       },
       {
-        'start': 211,
-        'end': 219,
-        'data': 'u',
-        'details': 'Symbol #117',
+        "start": 211,
+        "end": 219,
+        "data": "U",
+        "details": "Symbol #85"
       },
       {
-        'start': 219,
-        'end': 227,
-        'data': 'n',
-        'details': 'Symbol #110',
+        "start": 219,
+        "end": 227,
+        "data": "N",
+        "details": "Symbol #78"
       },
       {
-        'start': 227,
-        'end': 235,
-        'data': 'e',
-        'details': 'Symbol #101',
+        "start": 227,
+        "end": 235,
+        "data": "E",
+        "details": "Symbol #69"
       },
-      // {
-      //   'start': 235,
-      //   'end': 250,
-      //   'data': ' pe',
-      //   'details': 'Repeat <17,3>',
-      //   'type': 'repeat',
-      // },
       {
-        'start': 235,
-        'end': 242,
-        'details': 'Symbol #257 (length: 3)',
-        data: 'L:3',
+        "start": 235,
+        "end": 242,
+        "data": "L:3",
+        "details": "Symbol #257 (length: 3)",
+        "type": "length"
       },
       {
-        'start': 242,
-        'end': 247,
-        'details': 'Distance #8 (17)',
-        data: 'D:17',
+        "start": 242,
+        "end": 247,
+        "data": "D:17",
+        "details": "Distance #8 (17)",
+        "type": "distance"
       },
       {
-        'start': 247,
-        'end': 250,
-        'details': 'Extra distance (0)',
-        data: '0',
+        "start": 247,
+        "end": 250,
+        "data": "0",
+        "details": "Extra distance (0)",
+        "type": "distance-extra"
       },
       {
-        'start': 250,
-        'end': 258,
-        'data': 'r',
-        'details': 'Symbol #114',
+        "start": 250,
+        "end": 258,
+        "data": "R",
+        "details": "Symbol #82"
       },
       {
-        'start': 258,
-        'end': 266,
-        'data': 's',
-        'details': 'Symbol #115',
+        "start": 258,
+        "end": 266,
+        "data": "S",
+        "details": "Symbol #83"
       },
       {
-        'start': 266,
-        'end': 274,
-        'data': 'o',
-        'details': 'Symbol #111',
+        "start": 266,
+        "end": 274,
+        "data": "O",
+        "details": "Symbol #79"
       },
       {
-        'start': 274,
-        'end': 282,
-        'data': 'n',
-        'details': 'Symbol #110',
+        "start": 274,
+        "end": 282,
+        "data": "N",
+        "details": "Symbol #78"
       },
       {
-        'start': 282,
-        'end': 296,
-        'data': 'ne ',
-        'details': 'Repeat <9,3>',
-        'type': 'repeat',
+        "start": 282,
+        "end": 289,
+        "data": "L:3",
+        "details": "Symbol #257 (length: 3)",
+        "type": "length"
       },
       {
-        'start': 282,
-        'end': 289,
-        'details': 'Symbol #257 (length: 3)',
+        "start": 289,
+        "end": 294,
+        "data": "D:9",
+        "details": "Distance #6 (9)",
+        "type": "distance"
       },
       {
-        'start': 289,
-        'end': 294,
-        'details': 'Distance #6 (9)',
+        "start": 294,
+        "end": 296,
+        "data": "0",
+        "details": "Extra distance (0)",
+        "type": "distance-extra"
       },
       {
-        'start': 294,
-        'end': 296,
-        'details': 'Extra distance (0)',
+        "start": 296,
+        "end": 304,
+        "data": "M",
+        "details": "Symbol #77"
       },
       {
-        'start': 296,
-        'end': 304,
-        'data': 'm',
-        'details': 'Symbol #109',
+        "start": 304,
+        "end": 312,
+        "data": "I",
+        "details": "Symbol #73"
       },
       {
-        'start': 304,
-        'end': 312,
-        'data': 'i',
-        'details': 'Symbol #105',
+        "start": 312,
+        "end": 320,
+        "data": "L",
+        "details": "Symbol #76"
       },
       {
-        'start': 312,
-        'end': 320,
-        'data': 'l',
-        'details': 'Symbol #108',
+        "start": 320,
+        "end": 328,
+        "data": "L",
+        "details": "Symbol #76"
       },
       {
-        'start': 320,
-        'end': 328,
-        'data': 'l',
-        'details': 'Symbol #108',
+        "start": 328,
+        "end": 336,
+        "data": "E",
+        "details": "Symbol #69"
       },
       {
-        'start': 328,
-        'end': 336,
-        'data': 'e',
-        'details': 'Symbol #101',
+        "start": 336,
+        "end": 344,
+        "data": " ",
+        "details": "Symbol #32"
       },
       {
-        'start': 336,
-        'end': 344,
-        'data': ' ',
-        'details': 'Symbol #32',
+        "start": 344,
+        "end": 352,
+        "data": "F",
+        "details": "Symbol #70"
       },
       {
-        'start': 344,
-        'end': 352,
-        'data': 'f',
-        'details': 'Symbol #102',
+        "start": 352,
+        "end": 360,
+        "data": "O",
+        "details": "Symbol #79"
       },
       {
-        'start': 352,
-        'end': 360,
-        'data': 'o',
-        'details': 'Symbol #111',
+        "start": 360,
+        "end": 368,
+        "data": "I",
+        "details": "Symbol #73"
       },
       {
-        'start': 360,
-        'end': 368,
-        'data': 'i',
-        'details': 'Symbol #105',
+        "start": 368,
+        "end": 376,
+        "data": "S",
+        "details": "Symbol #83"
       },
       {
-        'start': 368,
-        'end': 376,
-        'data': 's',
-        'details': 'Symbol #115',
+        "start": 376,
+        "end": 384,
+        "data": ".",
+        "details": "Symbol #46"
       },
       {
-        'start': 376,
-        'end': 384,
-        'data': '.',
-        'details': 'Symbol #46',
+        "start": 384,
+        "end": 392,
+        "data": " ",
+        "details": "Symbol #32"
       },
       {
-        'start': 384,
-        'end': 392,
-        'data': ' ',
-        'details': 'Symbol #32',
+        "start": 392,
+        "end": 400,
+        "data": "O",
+        "details": "Symbol #79"
       },
       {
-        'start': 392,
-        'end': 400,
-        'data': 'O',
-        'details': 'Symbol #79',
+        "start": 400,
+        "end": 407,
+        "data": "L:15",
+        "details": "Symbol #267 (length: 15)",
+        "type": "length"
       },
       {
-        'start': 400,
-        'end': 417,
-        'data': 'n peut tromper ',
-        'details': 'Repeat <41,15>',
-        'type': 'repeat',
+        "start": 407,
+        "end": 408,
+        "data": "0",
+        "details": "Extra length (0)",
+        "type": "length-extra"
       },
       {
-        'start': 400,
-        'end': 407,
-        'details': 'Symbol #267 (length: 15)',
+        "start": 408,
+        "end": 413,
+        "data": "D:33",
+        "details": "Distance #10 (33)",
+        "type": "distance"
       },
       {
-        'start': 407,
-        'end': 408,
-        'details': 'Extra length (0)',
+        "start": 413,
+        "end": 417,
+        "data": "8",
+        "details": "Extra distance (8)",
+        "type": "distance-extra"
       },
       {
-        'start': 408,
-        'end': 413,
-        'details': 'Distance #10 (33)',
+        "start": 417,
+        "end": 424,
+        "data": "L:6",
+        "details": "Symbol #260 (length: 6)",
+        "type": "length"
       },
       {
-        'start': 413,
-        'end': 417,
-        'details': 'Extra distance (8)',
+        "start": 424,
+        "end": 429,
+        "data": "D:25",
+        "details": "Distance #9 (25)",
+        "type": "distance"
       },
       {
-        'start': 417,
-        'end': 432,
-        'data': 'mille ',
-        'details': 'Repeat <28,6>',
-        'type': 'repeat',
+        "start": 429,
+        "end": 432,
+        "data": "3",
+        "details": "Extra distance (3)",
+        "type": "distance-extra"
       },
       {
-        'start': 417,
-        'end': 424,
-        'details': 'Symbol #260 (length: 6)',
+        "start": 432,
+        "end": 439,
+        "data": "L:8",
+        "details": "Symbol #262 (length: 8)",
+        "type": "length"
       },
       {
-        'start': 424,
-        'end': 429,
-        'details': 'Distance #9 (25)',
+        "start": 439,
+        "end": 444,
+        "data": "D:33",
+        "details": "Distance #10 (33)",
+        "type": "distance"
       },
       {
-        'start': 429,
-        'end': 432,
-        'details': 'Extra distance (3)',
+        "start": 444,
+        "end": 448,
+        "data": "10",
+        "details": "Extra distance (10)",
+        "type": "distance-extra"
       },
       {
-        'start': 432,
-        'end': 448,
-        'data': 'personne',
-        'details': 'Repeat <43,8>',
-        'type': 'repeat',
+        "start": 448,
+        "end": 456,
+        "data": "S",
+        "details": "Symbol #83"
       },
       {
-        'start': 432,
-        'end': 439,
-        'details': 'Symbol #262 (length: 8)',
+        "start": 456,
+        "end": 463,
+        "data": "L:5",
+        "details": "Symbol #259 (length: 5)",
+        "type": "length"
       },
       {
-        'start': 439,
-        'end': 444,
-        'details': 'Distance #10 (33)',
+        "start": 463,
+        "end": 468,
+        "data": "D:49",
+        "details": "Distance #11 (49)",
+        "type": "distance"
       },
       {
-        'start': 444,
-        'end': 448,
-        'details': 'Extra distance (10)',
+        "start": 468,
+        "end": 472,
+        "data": "8",
+        "details": "Extra distance (8)",
+        "type": "distance-extra"
       },
       {
-        'start': 448,
-        'end': 456,
-        'data': 's',
-        'details': 'Symbol #115',
+        "start": 472,
+        "end": 479,
+        "data": "L:6",
+        "details": "Symbol #260 (length: 6)",
+        "type": "length"
       },
       {
-        'start': 456,
-        'end': 472,
-        'data': ' une ',
-        'details': 'Repeat <57,5>',
-        'type': 'repeat',
+        "start": 479,
+        "end": 484,
+        "data": "D:33",
+        "details": "Distance #10 (33)",
+        "type": "distance"
       },
       {
-        'start': 456,
-        'end': 463,
-        'details': 'Symbol #259 (length: 5)',
+        "start": 484,
+        "end": 488,
+        "data": "9",
+        "details": "Extra distance (9)",
+        "type": "distance-extra"
       },
       {
-        'start': 463,
-        'end': 468,
-        'details': 'Distance #11 (49)',
+        "start": 488,
+        "end": 496,
+        "data": "M",
+        "details": "Symbol #77"
       },
       {
-        'start': 468,
-        'end': 472,
-        'details': 'Extra distance (8)',
+        "start": 496,
+        "end": 504,
+        "data": "A",
+        "details": "Symbol #65"
       },
       {
-        'start': 472,
-        'end': 488,
-        'data': 'fois. ',
-        'details': 'Repeat <42,6>',
-        'type': 'repeat',
+        "start": 504,
+        "end": 512,
+        "data": "I",
+        "details": "Symbol #73"
       },
       {
-        'start': 472,
-        'end': 479,
-        'details': 'Symbol #260 (length: 6)',
+        "start": 512,
+        "end": 520,
+        "data": "S",
+        "details": "Symbol #83"
       },
       {
-        'start': 479,
-        'end': 484,
-        'details': 'Distance #10 (33)',
+        "start": 520,
+        "end": 527,
+        "data": "L:4",
+        "details": "Symbol #258 (length: 4)",
+        "type": "length"
       },
       {
-        'start': 484,
-        'end': 488,
-        'details': 'Extra distance (9)',
+        "start": 527,
+        "end": 532,
+        "data": "D:33",
+        "details": "Distance #10 (33)",
+        "type": "distance"
       },
       {
-        'start': 488,
-        'end': 496,
-        'data': 'M',
-        'details': 'Symbol #77',
+        "start": 532,
+        "end": 536,
+        "data": "14",
+        "details": "Extra distance (14)",
+        "type": "distance-extra"
       },
       {
-        'start': 496,
-        'end': 504,
-        'data': 'a',
-        'details': 'Symbol #97',
+        "start": 536,
+        "end": 543,
+        "data": "L:5",
+        "details": "Symbol #259 (length: 5)",
+        "type": "length"
       },
       {
-        'start': 504,
-        'end': 512,
-        'data': 'i',
-        'details': 'Symbol #105',
+        "start": 543,
+        "end": 548,
+        "data": "D:65",
+        "details": "Distance #12 (65)",
+        "type": "distance"
       },
       {
-        'start': 512,
-        'end': 520,
-        'data': 's',
-        'details': 'Symbol #115',
+        "start": 548,
+        "end": 553,
+        "data": "9",
+        "details": "Extra distance (9)",
+        "type": "distance-extra"
       },
       {
-        'start': 520,
-        'end': 528,
-        'data': ' ',
-        'details': 'Symbol #32',
+        "start": 553,
+        "end": 560,
+        "data": "L:3",
+        "details": "Symbol #257 (length: 3)",
+        "type": "length"
       },
       {
-        'start': 528,
-        'end': 536,
-        'data': 'o',
-        'details': 'Symbol #111',
+        "start": 560,
+        "end": 565,
+        "data": "D:49",
+        "details": "Distance #11 (49)",
+        "type": "distance"
       },
       {
-        'start': 536,
-        'end': 544,
-        'data': 'n',
-        'details': 'Symbol #110',
+        "start": 565,
+        "end": 569,
+        "data": "1",
+        "details": "Extra distance (1)",
+        "type": "distance-extra"
       },
       {
-        'start': 544,
-        'end': 552,
-        'data': ' ',
-        'details': 'Symbol #32',
+        "start": 569,
+        "end": 577,
+        "data": "P",
+        "details": "Symbol #80"
       },
       {
-        'start': 552,
-        'end': 569,
-        'data': 'ne pe',
-        'details': 'Repeat <74,5>',
-        'type': 'repeat',
+        "start": 577,
+        "end": 585,
+        "data": "A",
+        "details": "Symbol #65"
       },
       {
-        'start': 552,
-        'end': 559,
-        'details': 'Symbol #259 (length: 5)',
+        "start": 585,
+        "end": 593,
+        "data": "S",
+        "details": "Symbol #83"
       },
       {
-        'start': 559,
-        'end': 564,
-        'details': 'Distance #12 (65)',
+        "start": 593,
+        "end": 600,
+        "data": "L:23",
+        "details": "Symbol #270 (length: 23)",
+        "type": "length"
       },
       {
-        'start': 564,
-        'end': 569,
-        'details': 'Extra distance (9)',
+        "start": 600,
+        "end": 602,
+        "data": "1",
+        "details": "Extra length (1)",
+        "type": "length-extra"
       },
       {
-        'start': 569,
-        'end': 585,
-        'data': 'ut ',
-        'details': 'Repeat <50,3>',
-        'type': 'repeat',
+        "start": 602,
+        "end": 607,
+        "data": "D:49",
+        "details": "Distance #11 (49)",
+        "type": "distance"
       },
       {
-        'start': 569,
-        'end': 576,
-        'details': 'Symbol #257 (length: 3)',
+        "start": 607,
+        "end": 611,
+        "data": "5",
+        "details": "Extra distance (5)",
+        "type": "distance-extra"
       },
       {
-        'start': 576,
-        'end': 581,
-        'details': 'Distance #11 (49)',
+        "start": 611,
+        "end": 619,
+        "data": ",",
+        "details": "Symbol #44"
       },
       {
-        'start': 581,
-        'end': 585,
-        'details': 'Extra distance (1)',
+        "start": 619,
+        "end": 626,
+        "data": "L:11",
+        "details": "Symbol #265 (length: 11)",
+        "type": "length"
       },
       {
-        'start': 585,
-        'end': 593,
-        'data': 'p',
-        'details': 'Symbol #112',
+        "start": 626,
+        "end": 627,
+        "data": "1",
+        "details": "Extra length (1)",
+        "type": "length-extra"
       },
       {
-        'start': 593,
-        'end': 601,
-        'data': 'a',
-        'details': 'Symbol #97',
+        "start": 627,
+        "end": 632,
+        "data": "D:97",
+        "details": "Distance #13 (97)",
+        "type": "distance"
       },
       {
-        'start': 601,
-        'end': 609,
-        'data': 's',
-        'details': 'Symbol #115',
+        "start": 632,
+        "end": 637,
+        "data": "2",
+        "details": "Extra distance (2)",
+        "type": "distance-extra"
       },
       {
-        'start': 609,
-        'end': 627,
-        'data': ' tromper mille personnes',
-        'details': 'Repeat <54,24>',
-        'type': 'repeat',
+        "start": 637,
+        "end": 644,
+        "details": "Symbol #256 (end of block)"
       },
       {
-        'start': 609,
-        'end': 616,
-        'details': 'Symbol #270 (length: 23)',
+        "start": 644,
+        "end": 648,
+        "details": "Padding for byte alignment"
       },
       {
-        'start': 616,
-        'end': 618,
-        'details': 'Extra length (1)',
+        "start": 648,
+        "end": 680,
+        "details": "CRC32 checksum"
       },
       {
-        'start': 618,
-        'end': 623,
-        'details': 'Distance #11 (49)',
-      },
-      {
-        'start': 623,
-        'end': 627,
-        'details': 'Extra distance (5)',
-      },
-      {
-        'start': 627,
-        'end': 635,
-        'data': ',',
-        'details': 'Symbol #44',
-      },
-      {
-        'start': 635,
-        'end': 653,
-        'data': ' mille fois.',
-        'details': 'Repeat <99,12>',
-        'type': 'repeat',
-      },
-      {
-        'start': 635,
-        'end': 642,
-        'details': 'Symbol #265 (length: 11)',
-      },
-      {
-        'start': 642,
-        'end': 643,
-        'details': 'Extra length (1)',
-      },
-      {
-        'start': 643,
-        'end': 648,
-        'details': 'Distance #13 (97)',
-      },
-      {
-        'start': 648,
-        'end': 653,
-        'details': 'Extra distance (2)',
-      },
-      {
-        'start': 653,
-        'end': 661,
-        'data': '\n',
-        'details': 'Symbol #10',
-      },
-      {
-        'start': 661,
-        'end': 668,
-        'details': 'Symbol #256 (end of block)',
-      },
+        "start": 680,
+        "end": 712,
+        "details": "Original size"
+      }
     ],
   },
   {
@@ -688,7 +693,6 @@ export class GzipExplain extends LitElement {
     return [
       `[${segment.end - segment.start}]`,
       segment.details,
-      data,
     ].filter((a) => a != null).join(' ');
   }
 

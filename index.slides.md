@@ -1398,6 +1398,8 @@ ON PEUT TROMPER UNE PERSONNE MILLE FOIS. ON PEUT TROMPER MILLE PERSONNES UNE FOI
 
 ## lzd replacement=10
 
+## lzd replacement=11
+
 ## lzd finish
 
 ## blank white

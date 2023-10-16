@@ -53,8 +53,8 @@
   {
     "start": 91,
     "end": 99,
-    "data": "n",
-    "details": "Symbol #110"
+    "data": "N",
+    "details": "Symbol #78"
   },
   {
     "start": 99,
@@ -65,26 +65,26 @@
   {
     "start": 107,
     "end": 115,
-    "data": "p",
-    "details": "Symbol #112"
+    "data": "P",
+    "details": "Symbol #80"
   },
   {
     "start": 115,
     "end": 123,
-    "data": "e",
-    "details": "Symbol #101"
+    "data": "E",
+    "details": "Symbol #69"
   },
   {
     "start": 123,
     "end": 131,
-    "data": "u",
-    "details": "Symbol #117"
+    "data": "U",
+    "details": "Symbol #85"
   },
   {
     "start": 131,
     "end": 139,
-    "data": "t",
-    "details": "Symbol #116"
+    "data": "T",
+    "details": "Symbol #84"
   },
   {
     "start": 139,
@@ -95,44 +95,44 @@
   {
     "start": 147,
     "end": 155,
-    "data": "t",
-    "details": "Symbol #116"
+    "data": "T",
+    "details": "Symbol #84"
   },
   {
     "start": 155,
     "end": 163,
-    "data": "r",
-    "details": "Symbol #114"
+    "data": "R",
+    "details": "Symbol #82"
   },
   {
     "start": 163,
     "end": 171,
-    "data": "o",
-    "details": "Symbol #111"
+    "data": "O",
+    "details": "Symbol #79"
   },
   {
     "start": 171,
     "end": 179,
-    "data": "m",
-    "details": "Symbol #109"
+    "data": "M",
+    "details": "Symbol #77"
   },
   {
     "start": 179,
     "end": 187,
-    "data": "p",
-    "details": "Symbol #112"
+    "data": "P",
+    "details": "Symbol #80"
   },
   {
     "start": 187,
     "end": 195,
-    "data": "e",
-    "details": "Symbol #101"
+    "data": "E",
+    "details": "Symbol #69"
   },
   {
     "start": 195,
     "end": 203,
-    "data": "r",
-    "details": "Symbol #114"
+    "data": "R",
+    "details": "Symbol #82"
   },
   {
     "start": 203,
@@ -143,118 +143,116 @@
   {
     "start": 211,
     "end": 219,
-    "data": "u",
-    "details": "Symbol #117"
+    "data": "U",
+    "details": "Symbol #85"
   },
   {
     "start": 219,
     "end": 227,
-    "data": "n",
-    "details": "Symbol #110"
+    "data": "N",
+    "details": "Symbol #78"
   },
   {
     "start": 227,
     "end": 235,
-    "data": "e",
-    "details": "Symbol #101"
-  },
-  {
-    "start": 235,
-    "end": 250,
-    "data": " pe",
-    "details": "Repeat <17,3>",
-    "type": "repeat"
+    "data": "E",
+    "details": "Symbol #69"
   },
   {
     "start": 235,
     "end": 242,
-    "details": "Symbol #257 (length: 3)"
+    "data": "L:3",
+    "details": "Symbol #257 (length: 3)",
+    "type": "length"
   },
   {
     "start": 242,
     "end": 247,
-    "details": "Distance #8 (17)"
+    "data": "D:17",
+    "details": "Distance #8 (17)",
+    "type": "distance"
   },
   {
     "start": 247,
     "end": 250,
-    "details": "Extra distance (0)"
+    "data": "0",
+    "details": "Extra distance (0)",
+    "type": "distance-extra"
   },
   {
     "start": 250,
     "end": 258,
-    "data": "r",
-    "details": "Symbol #114"
+    "data": "R",
+    "details": "Symbol #82"
   },
   {
     "start": 258,
     "end": 266,
-    "data": "s",
-    "details": "Symbol #115"
+    "data": "S",
+    "details": "Symbol #83"
   },
   {
     "start": 266,
     "end": 274,
-    "data": "o",
-    "details": "Symbol #111"
+    "data": "O",
+    "details": "Symbol #79"
   },
   {
     "start": 274,
     "end": 282,
-    "data": "n",
-    "details": "Symbol #110"
-  },
-  {
-    "start": 282,
-    "end": 296,
-    "data": "ne ",
-    "details": "Repeat <9,3>",
-    "type": "repeat"
+    "data": "N",
+    "details": "Symbol #78"
   },
   {
     "start": 282,
     "end": 289,
-    "details": "Symbol #257 (length: 3)"
+    "data": "L:3",
+    "details": "Symbol #257 (length: 3)",
+    "type": "length"
   },
   {
     "start": 289,
     "end": 294,
-    "details": "Distance #6 (9)"
+    "data": "D:9",
+    "details": "Distance #6 (9)",
+    "type": "distance"
   },
   {
     "start": 294,
     "end": 296,
-    "details": "Extra distance (0)"
+    "data": "0",
+    "details": "Extra distance (0)",
+    "type": "distance-extra"
   },
   {
     "start": 296,
     "end": 304,
-    "data": "m",
-    "details": "Symbol #109"
+    "data": "M",
+    "details": "Symbol #77"
   },
   {
     "start": 304,
     "end": 312,
-    "data": "i",
-    "details": "Symbol #105"
+    "data": "I",
+    "details": "Symbol #73"
   },
   {
     "start": 312,
     "end": 320,
-    "data": "l",
-    "details": "Symbol #108"
+    "data": "L",
+    "details": "Symbol #76"
   },
   {
     "start": 320,
     "end": 328,
-    "data": "l",
-    "details": "Symbol #108"
+    "data": "L",
+    "details": "Symbol #76"
   },
   {
     "start": 328,
     "end": 336,
-    "data": "e",
-    "details": "Symbol #101"
+    "data": "E",
+    "details": "Symbol #69"
   },
   {
     "start": 336,
@@ -265,26 +263,26 @@
   {
     "start": 344,
     "end": 352,
-    "data": "f",
-    "details": "Symbol #102"
+    "data": "F",
+    "details": "Symbol #70"
   },
   {
     "start": 352,
     "end": 360,
-    "data": "o",
-    "details": "Symbol #111"
+    "data": "O",
+    "details": "Symbol #79"
   },
   {
     "start": 360,
     "end": 368,
-    "data": "i",
-    "details": "Symbol #105"
+    "data": "I",
+    "details": "Symbol #73"
   },
   {
     "start": 368,
     "end": 376,
-    "data": "s",
-    "details": "Symbol #115"
+    "data": "S",
+    "details": "Symbol #83"
   },
   {
     "start": 376,
@@ -306,124 +304,121 @@
   },
   {
     "start": 400,
-    "end": 417,
-    "data": "n peut tromper ",
-    "details": "Repeat <41,15>",
-    "type": "repeat"
-  },
-  {
-    "start": 400,
     "end": 407,
-    "details": "Symbol #267 (length: 15)"
+    "data": "L:15",
+    "details": "Symbol #267 (length: 15)",
+    "type": "length"
   },
   {
     "start": 407,
     "end": 408,
-    "details": "Extra length (0)"
+    "data": "0",
+    "details": "Extra length (0)",
+    "type": "length-extra"
   },
   {
     "start": 408,
     "end": 413,
-    "details": "Distance #10 (33)"
+    "data": "D:33",
+    "details": "Distance #10 (33)",
+    "type": "distance"
   },
   {
     "start": 413,
     "end": 417,
-    "details": "Extra distance (8)"
-  },
-  {
-    "start": 417,
-    "end": 432,
-    "data": "mille ",
-    "details": "Repeat <28,6>",
-    "type": "repeat"
+    "data": "8",
+    "details": "Extra distance (8)",
+    "type": "distance-extra"
   },
   {
     "start": 417,
     "end": 424,
-    "details": "Symbol #260 (length: 6)"
+    "data": "L:6",
+    "details": "Symbol #260 (length: 6)",
+    "type": "length"
   },
   {
     "start": 424,
     "end": 429,
-    "details": "Distance #9 (25)"
+    "data": "D:25",
+    "details": "Distance #9 (25)",
+    "type": "distance"
   },
   {
     "start": 429,
     "end": 432,
-    "details": "Extra distance (3)"
-  },
-  {
-    "start": 432,
-    "end": 448,
-    "data": "personne",
-    "details": "Repeat <43,8>",
-    "type": "repeat"
+    "data": "3",
+    "details": "Extra distance (3)",
+    "type": "distance-extra"
   },
   {
     "start": 432,
     "end": 439,
-    "details": "Symbol #262 (length: 8)"
+    "data": "L:8",
+    "details": "Symbol #262 (length: 8)",
+    "type": "length"
   },
   {
     "start": 439,
     "end": 444,
-    "details": "Distance #10 (33)"
+    "data": "D:33",
+    "details": "Distance #10 (33)",
+    "type": "distance"
   },
   {
     "start": 444,
     "end": 448,
-    "details": "Extra distance (10)"
+    "data": "10",
+    "details": "Extra distance (10)",
+    "type": "distance-extra"
   },
   {
     "start": 448,
     "end": 456,
-    "data": "s",
-    "details": "Symbol #115"
-  },
-  {
-    "start": 456,
-    "end": 472,
-    "data": " une ",
-    "details": "Repeat <57,5>",
-    "type": "repeat"
+    "data": "S",
+    "details": "Symbol #83"
   },
   {
     "start": 456,
     "end": 463,
-    "details": "Symbol #259 (length: 5)"
+    "data": "L:5",
+    "details": "Symbol #259 (length: 5)",
+    "type": "length"
   },
   {
     "start": 463,
     "end": 468,
-    "details": "Distance #11 (49)"
+    "data": "D:49",
+    "details": "Distance #11 (49)",
+    "type": "distance"
   },
   {
     "start": 468,
     "end": 472,
-    "details": "Extra distance (8)"
-  },
-  {
-    "start": 472,
-    "end": 488,
-    "data": "fois. ",
-    "details": "Repeat <42,6>",
-    "type": "repeat"
+    "data": "8",
+    "details": "Extra distance (8)",
+    "type": "distance-extra"
   },
   {
     "start": 472,
     "end": 479,
-    "details": "Symbol #260 (length: 6)"
+    "data": "L:6",
+    "details": "Symbol #260 (length: 6)",
+    "type": "length"
   },
   {
     "start": 479,
     "end": 484,
-    "details": "Distance #10 (33)"
+    "data": "D:33",
+    "details": "Distance #10 (33)",
+    "type": "distance"
   },
   {
     "start": 484,
     "end": 488,
-    "details": "Extra distance (9)"
+    "data": "9",
+    "details": "Extra distance (9)",
+    "type": "distance-extra"
   },
   {
     "start": 488,
@@ -434,176 +429,182 @@
   {
     "start": 496,
     "end": 504,
-    "data": "a",
-    "details": "Symbol #97"
+    "data": "A",
+    "details": "Symbol #65"
   },
   {
     "start": 504,
     "end": 512,
-    "data": "i",
-    "details": "Symbol #105"
+    "data": "I",
+    "details": "Symbol #73"
   },
   {
     "start": 512,
     "end": 520,
-    "data": "s",
-    "details": "Symbol #115"
+    "data": "S",
+    "details": "Symbol #83"
   },
   {
     "start": 520,
-    "end": 528,
-    "data": " ",
-    "details": "Symbol #32"
+    "end": 527,
+    "data": "L:4",
+    "details": "Symbol #258 (length: 4)",
+    "type": "length"
   },
   {
-    "start": 528,
+    "start": 527,
+    "end": 532,
+    "data": "D:33",
+    "details": "Distance #10 (33)",
+    "type": "distance"
+  },
+  {
+    "start": 532,
     "end": 536,
-    "data": "o",
-    "details": "Symbol #111"
+    "data": "14",
+    "details": "Extra distance (14)",
+    "type": "distance-extra"
   },
   {
     "start": 536,
-    "end": 544,
-    "data": "n",
-    "details": "Symbol #110"
+    "end": 543,
+    "data": "L:5",
+    "details": "Symbol #259 (length: 5)",
+    "type": "length"
   },
   {
-    "start": 544,
-    "end": 552,
-    "data": " ",
-    "details": "Symbol #32"
+    "start": 543,
+    "end": 548,
+    "data": "D:65",
+    "details": "Distance #12 (65)",
+    "type": "distance"
   },
   {
-    "start": 552,
+    "start": 548,
+    "end": 553,
+    "data": "9",
+    "details": "Extra distance (9)",
+    "type": "distance-extra"
+  },
+  {
+    "start": 553,
+    "end": 560,
+    "data": "L:3",
+    "details": "Symbol #257 (length: 3)",
+    "type": "length"
+  },
+  {
+    "start": 560,
+    "end": 565,
+    "data": "D:49",
+    "details": "Distance #11 (49)",
+    "type": "distance"
+  },
+  {
+    "start": 565,
     "end": 569,
-    "data": "ne pe",
-    "details": "Repeat <74,5>",
-    "type": "repeat"
-  },
-  {
-    "start": 552,
-    "end": 559,
-    "details": "Symbol #259 (length: 5)"
-  },
-  {
-    "start": 559,
-    "end": 564,
-    "details": "Distance #12 (65)"
-  },
-  {
-    "start": 564,
-    "end": 569,
-    "details": "Extra distance (9)"
+    "data": "1",
+    "details": "Extra distance (1)",
+    "type": "distance-extra"
   },
   {
     "start": 569,
+    "end": 577,
+    "data": "P",
+    "details": "Symbol #80"
+  },
+  {
+    "start": 577,
     "end": 585,
-    "data": "ut ",
-    "details": "Repeat <50,3>",
-    "type": "repeat"
-  },
-  {
-    "start": 569,
-    "end": 576,
-    "details": "Symbol #257 (length: 3)"
-  },
-  {
-    "start": 576,
-    "end": 581,
-    "details": "Distance #11 (49)"
-  },
-  {
-    "start": 581,
-    "end": 585,
-    "details": "Extra distance (1)"
+    "data": "A",
+    "details": "Symbol #65"
   },
   {
     "start": 585,
     "end": 593,
-    "data": "p",
-    "details": "Symbol #112"
+    "data": "S",
+    "details": "Symbol #83"
   },
   {
     "start": 593,
-    "end": 601,
-    "data": "a",
-    "details": "Symbol #97"
+    "end": 600,
+    "data": "L:23",
+    "details": "Symbol #270 (length: 23)",
+    "type": "length"
   },
   {
-    "start": 601,
-    "end": 609,
-    "data": "s",
-    "details": "Symbol #115"
+    "start": 600,
+    "end": 602,
+    "data": "1",
+    "details": "Extra length (1)",
+    "type": "length-extra"
   },
   {
-    "start": 609,
-    "end": 627,
-    "data": " tromper mille personnes",
-    "details": "Repeat <54,24>",
-    "type": "repeat"
+    "start": 602,
+    "end": 607,
+    "data": "D:49",
+    "details": "Distance #11 (49)",
+    "type": "distance"
   },
   {
-    "start": 609,
-    "end": 616,
-    "details": "Symbol #270 (length: 23)"
+    "start": 607,
+    "end": 611,
+    "data": "5",
+    "details": "Extra distance (5)",
+    "type": "distance-extra"
   },
   {
-    "start": 616,
-    "end": 618,
-    "details": "Extra length (1)"
-  },
-  {
-    "start": 618,
-    "end": 623,
-    "details": "Distance #11 (49)"
-  },
-  {
-    "start": 623,
-    "end": 627,
-    "details": "Extra distance (5)"
-  },
-  {
-    "start": 627,
-    "end": 635,
+    "start": 611,
+    "end": 619,
     "data": ",",
     "details": "Symbol #44"
   },
   {
-    "start": 635,
-    "end": 653,
-    "data": " mille fois.",
-    "details": "Repeat <99,12>",
-    "type": "repeat"
+    "start": 619,
+    "end": 626,
+    "data": "L:11",
+    "details": "Symbol #265 (length: 11)",
+    "type": "length"
   },
   {
-    "start": 635,
-    "end": 642,
-    "details": "Symbol #265 (length: 11)"
+    "start": 626,
+    "end": 627,
+    "data": "1",
+    "details": "Extra length (1)",
+    "type": "length-extra"
   },
   {
-    "start": 642,
-    "end": 643,
-    "details": "Extra length (1)"
+    "start": 627,
+    "end": 632,
+    "data": "D:97",
+    "details": "Distance #13 (97)",
+    "type": "distance"
   },
   {
-    "start": 643,
+    "start": 632,
+    "end": 637,
+    "data": "2",
+    "details": "Extra distance (2)",
+    "type": "distance-extra"
+  },
+  {
+    "start": 637,
+    "end": 644,
+    "details": "Symbol #256 (end of block)"
+  },
+  {
+    "start": 644,
     "end": 648,
-    "details": "Distance #13 (97)"
+    "details": "Padding for byte alignment"
   },
   {
     "start": 648,
-    "end": 653,
-    "details": "Extra distance (2)"
+    "end": 680,
+    "details": "CRC32 checksum"
   },
   {
-    "start": 653,
-    "end": 661,
-    "data": "\n",
-    "details": "Symbol #10"
-  },
-  {
-    "start": 661,
-    "end": 668,
-    "details": "Symbol #256 (end of block)"
+    "start": 680,
+    "end": 712,
+    "details": "Original size"
   }
 ]

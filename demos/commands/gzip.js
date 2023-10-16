@@ -144,13 +144,9 @@ function compressData (data) {
 
 function explain (start, size, number, { data, details, type }) {
   const end = start + size;
-  const bits = number.toString(2).padStart(size, '0');
-  const hex = number.toString(16);
   explanations.push({
     start,
     end,
-    // bits: bits,
-    // hex: hex,
     data,
     details,
     type,
@@ -248,14 +244,20 @@ function decompressData (data) {
     blockNumber += 1;
   }
 
+  const padding = (data.length - 8) * 8 - cursor;
+  explain(cursor, padding, 0, { details: `Padding for byte alignment` });
+
   const crc32 = crc32lib.buf(bytes);
   if (crc32 !== originalCrc32) {
     throw new Error(`Content checksum check failed, expected ${originalCrc32}, decoded ${crc32}`);
   }
+  explain((data.length - 8) * 8, 32, originalCrc32, { details: 'CRC32 checksum' });
 
+  // Original size is in last 4 bytes
   if (bytes.length !== originalSize) {
     throw new Error(`Content size check failed, expected ${originalSize}, decoded ${bytes.length}`);
   }
+  explain((data.length - 4) * 8, 32, originalSize, { details: 'Original size' });
 
   return bytes;
 }
@@ -295,6 +297,8 @@ function decompressBlockOne (deflateBitStream, initCursor) {
         end: bitLength,
         number: symbol,
         details: `Symbol #${symbol} (length: ${minLength})`,
+        data: `L:${minLength}`,
+        type: 'length',
       });
 
       let length = minLength;
@@ -307,6 +311,8 @@ function decompressBlockOne (deflateBitStream, initCursor) {
           end: lengthExtraBits,
           number: extraLength,
           details: `Extra length (${extraLength})`,
+          data: `${extraLength}`,
+          type: 'length-extra',
         });
       }
 
@@ -318,6 +324,8 @@ function decompressBlockOne (deflateBitStream, initCursor) {
         end: 5,
         number: distanceCode,
         details: `Distance #${distanceCode} (${minDistance})`,
+        data: `D:${minDistance}`,
+        type: 'distance',
       });
 
       let distance = minDistance;
@@ -330,6 +338,8 @@ function decompressBlockOne (deflateBitStream, initCursor) {
           end: distanceExtraBits,
           number: extraDistance,
           details: `Extra distance (${extraDistance})`,
+          data: `${extraDistance}`,
+          type: 'distance-extra',
         });
       }
 
@@ -343,14 +353,14 @@ function decompressBlockOne (deflateBitStream, initCursor) {
       const labelEnd = cursor;
 
       const [data] = deflateBitStream.toArrayLittleEndian(labelEnd - labelStart, labelStart, labelEnd);
-      explain(labelStart, labelEnd - labelStart, data, {
-        data: chars.join(''),
-        details: `Repeat <${distance},${length}>`,
-        type: 'repeat',
-      });
+      // explain(labelStart, labelEnd - labelStart, data, {
+      //   data: chars.join(''),
+      //   details: `Repeat (${length}:${distance})`,
+      //   type: 'repeat',
+      // });
 
-      repeatParts.forEach(({ start, end, number, data, details }) => {
-        explain(start, end, number, { data, details });
+      repeatParts.forEach(({ start, end, number, data, details, type }) => {
+        explain(start, end, number, { data, details, type });
       });
 
     }
