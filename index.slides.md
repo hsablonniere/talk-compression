@@ -396,6 +396,7 @@ ca53 48d3 2eae 4d45 5393  .SH...MES.
 ## section
 Ordres de  grandeur
 > @00:03:00@
+> #AC# Ok, maintenant qu'on sait de quoi on parle il serait important de comprendre l'impact de la compression et minification
 
 ## barchart logo=js
 math-example.*js* _228o_
@@ -403,6 +404,7 @@ brut : 228 brut
 minifié : 98 min
 compressé : 153 compressed
 minifié<br>& compressé : 89 gzip
+> #AC# Sur l'exemple d'Hubert, vous pouvez observer que la compression et la minification se complètent plutôt mais prenons un fichier un peu plus grand.
 
 ## barchart logo=js
 jquery.*js* _285,3ko_
@@ -410,6 +412,8 @@ brut : 285314 brut
 minifié : 87029 min
 compressé : 83915 compressed
 minifié<br>& compressé : 30190 gzip
+> #AC# Sur une version de JQuery par exemple, on voit que la compression, avec la minification permet d'obtenir un fichier drastiquement plus petit.
+> La minication faisant déjà bien le job, on gagne bien les 2/3 du poids.
 
 ## barchart logo=js percent
 jquery.*js* _285,3ko_
@@ -417,6 +421,7 @@ brut : 285314 brut
 minifié : 87029 min
 compressé : 83915 compressed
 minifié<br>& compressé : 30190 gzip
+> Les valeures brutes c'est cool, parlons en ordre de grandeur, JQuery en version minifié et compressé c'est 10% de la taille source.
 
 ## barchart logo=js percent
 lodash.*js* _544,1ko_
@@ -424,6 +429,7 @@ brut : 544098 brut
 minifié : 73650 min
 compressé : 97170 compressed
 minifié<br>& compressé : 25684 gzip
+> Lodash c'est 4%
 
 ## barchart logo=css percent
 bootstrap.*css* _205,5ko_
@@ -431,6 +437,7 @@ brut : 205484 brut
 minifié : 161487 min
 compressé : 26408 compressed
 minifié<br>& compressé : 23906 gzip
+> Même avec le CSS c'est tout aussi efficace, ici avec Bootstrap.
 
 ## barchart logo=html percent
 hibernate-user-guide.*html* _2,4Mo_
@@ -438,6 +445,7 @@ brut : 2421852 brut
 minifié : 2334777 min
 compressé : 372419 compressed
 minifié<br>& compressé : 366546 gzip
+> Ou bien même avec un document HTML, ici la doc complète d'Hibernate en une seule page, _oui ça existe_
 
 ## barchart logo=svg percent
 firefox-logo.*svg* _15,9ko_
@@ -445,6 +453,7 @@ brut : 15858 brut
 minifié : 12163 min
 compressé : 3726 compressed
 minifié<br>& compressé : 3169 gzip
+> Bien évidement avec des SVG ça marche aussi.
 
 ## barchart logo=json percent
 departements-region.*json* _9,6ko_
@@ -452,16 +461,18 @@ brut : 9576 brut
 minifié : 7152 min
 compressé : 1315 compressed
 minifié<br>& compressé : 1244 gzip
+> Le JSON c'est la même chose, mais ici la minifaction a relativement peut d'impact.
 
 ## tip
 1) La compression, ça va de pair avec la minification.
-<!--Règle foobar
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+> #AC# Si on veut résumer, la compression va de pair avec la minification
 
 ## blank
 
 ## text
 🎓 En théorie
+> #HS# Avoir des fichiers plus petits c'est cool mais vous allez nous dire qu'en 2023, ça change pas grand chose ?
+> #AC# Ok faisons quelques projections théoriques avec différentes débits.
 
 ## barchart logo=js unit="time" speed="50"
 jquery.js _285,3ko_ _*3G lente à 50ko/s*_
@@ -469,6 +480,8 @@ brut : 285314 brut
 minifié : 87029 min
 compressé : 83915 compressed
 minifié<br>& compressé : 30190 gzip
+> Et ce serait mentir, selon Web Page Test, un internet lent, une 3G à 50ko/s, qui nous rappelle nos meilleurs années AOL/Wanadoo
+> On passe d'un temps équivalent à un café Nespresso qui coulant dans sa tasse à moins d'une seconde.
 
 ## barchart logo=js unit="time" speed="1125"
 jquery.js _285,3ko_ _*4G à 1,1Mo/s*_
@@ -476,22 +489,38 @@ brut : 285314 brut
 minifié : 87029 min
 compressé : 83915 compressed
 minifié<br>& compressé : 30190 gzip
+> Ok avec de la 4G, c'est pour moi tout aussi impressionnant, un peu plus de 200ms de latence c'est perceptible par un utilisateur.
 
 ## media
 <img src="src/img/bundlephobia-jquery.png" screenshot-url="https://bundlephobia.com/package/jquery@3.7.1">
 
+> #HS# Parenthèse d'ailleurs, le site Bundlephobia vous permet d'estimer la taille d'un package npm en minifié / gzippé et le temps de latence.
+
 ## text
 ⏱️ En pratique
+> #AC# Et si on voyait ce que ça donnait en vrai ?
+> Prenons une page web au hasard...
 
 ## media
 <img src="src/img/wikipedia-scrabble.png" screenshot-url="https://en.wikipedia.org/wiki/Scrabble">
 
+> #HS# Genre la page Wikipedia française du Scrabble 
+
 ## media contain
 <img src="src/img/wpt-scrabble-waterfall.png">
+
+> #AC# Si tu veux Hubert....
+> Une page web, c'est une grande cascade de requêtes pour récupérer les ressources qui la composent.
+> Le chargement / parsing d'une ressource déclenchant parfois le téléchargement d'une autre.
+
 
 ## wpt title="en.wikipedia.org/wiki/Scrabble _*3G slow à 50ko/s*_"
 <video src="src/videos/wpt-scrabble-3gslow.mp4" controls></video>
 <!-- https://www.webpagetest.org/video/view.php?tests=231012_BiDcBM_BC9-l:sans%20compression-e:17.1,231012_AiDc6X_BGC-l:avec%20compression-e:7.4&bg=ffffff&text=000000 -->
+
+> Voyons donc ensemble une comparaison du chargement de cette page en 3G avec et sans comrpession.
+> C'est long, c'est très long...
+> 17 secondes en comparaison de 7 secondes
 
 ## blank white
 
@@ -499,20 +528,35 @@ minifié<br>& compressé : 30190 gzip
 <video src="src/videos/wpt-scrabble-4g.mp4" controls></video>
 <!-- https://www.webpagetest.org/video/view.php?tests=231012_BiDcVA_BH1-l:sans%20compression-e:2.4,231012_BiDcF8_BHG-l:avec%20compression-e:2.1&bg=ffffff&text=000000 -->
 
+> En 4g c'est moins impressionant mais en pourcentage ça reste très cool.
+
+
 ## blank white
 
 ## wpt title="en.wikipedia.org/wiki/Scrabble _*sans limite*_"
 <video src="src/videos/wpt-scrabble-nolimit.mp4" controls></video>
 <!-- https://www.webpagetest.org/video/view.php?tests=231012_BiDcKV_BJ8-l:sans%20compression-e:1.2,231012_BiDcAV_BJA-l:avec%20compression-e:1.2&bg=ffffff&text=000000&slow=1 -->
 
+> Bien évidemment, avec un réseau illimité on ne voit quasi pas la différence.
+
 ## tip
 2) La compression, c'est nécessaire (même en 2023).
+> #AC# Et oui même en 2023, la compression c'est donc nécessaire.
+> Vous pensez que j'enfonce des portes ouvertes ? 
+> Non mais Antoine, tu abuses, on le sait qu'il faut activer la compression dans le web.
+> Ah bon ?
 
 ## media
 <img src="src/img/almanac-2022-home.png" screenshot-url="https://almanac.httparchive.org/en/2022/">
 
+> Vous connaissez l'almanac du web ? 
+> Une ressource hyper intéressante de l'usage du web grâce aux données du web public.
+
 ## media
 <img src="src/img/almanac-http-2021-compression.png" screenshot-url="https://almanac.httparchive.org/en/2021/compression">
+
+> En 2021, ils ont même sortis une étude dédiée à la compression.
+> Et spoiler, il n'y a pas que des bonnes nouvelles.
 
 ## barchart unit="%" max="100"
 *%* de fichiers servis *sans* compression _Almanac 2021_
@@ -538,6 +582,8 @@ CSS : 14.2 brut
 // SVG : 36.0 brut
 // HTML : 56.0 brut
 
+> Non mais sérieux, autant de fichiers servis non compressés, c'est pas possible
+
 ## barchart unit="%" max="100"
 *%* de fichiers servis *sans* compression _Almanac 2021_
 JS : 12.7 brut
@@ -562,6 +608,7 @@ JSON : 31.8 brut
 SVG : 36.0 brut
 HTML : 56.0 brut
 <!-- à retravailler -->
+> #HS# Et ça, ce n'est que sur l'internet public accessible à tous, vous pensez qu'avec les sites privés c'est mieux ? 
 
 ## blank black
 
