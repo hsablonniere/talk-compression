@@ -298,7 +298,7 @@ function decompressBlockOne (deflateBitStream, initCursor) {
         number: symbol,
         details: `Symbol #${symbol} (length: ${minLength})`,
         data: `L:${minLength}`,
-        type: 'length',
+        type: 'repeat-part',
       });
 
       let length = minLength;
@@ -312,7 +312,7 @@ function decompressBlockOne (deflateBitStream, initCursor) {
           number: extraLength,
           details: `Extra length (${extraLength})`,
           data: `${extraLength}`,
-          type: 'length-extra',
+          type: 'repeat-part',
         });
       }
 
@@ -325,7 +325,7 @@ function decompressBlockOne (deflateBitStream, initCursor) {
         number: distanceCode,
         details: `Distance #${distanceCode} (${minDistance})`,
         data: `D:${minDistance}`,
-        type: 'distance',
+        type: 'repeat-part',
       });
 
       let distance = minDistance;
@@ -339,7 +339,7 @@ function decompressBlockOne (deflateBitStream, initCursor) {
           number: extraDistance,
           details: `Extra distance (${extraDistance})`,
           data: `${extraDistance}`,
-          type: 'distance-extra',
+          type: 'repeat-part',
         });
       }
 
@@ -353,11 +353,11 @@ function decompressBlockOne (deflateBitStream, initCursor) {
       const labelEnd = cursor;
 
       const [data] = deflateBitStream.toArrayLittleEndian(labelEnd - labelStart, labelStart, labelEnd);
-      // explain(labelStart, labelEnd - labelStart, data, {
-      //   data: chars.join(''),
-      //   details: `Repeat (${length}:${distance})`,
-      //   type: 'repeat',
-      // });
+      explain(labelStart, labelEnd - labelStart, data, {
+        data: chars.join(''),
+        details: `Repeat (${length}:${distance})`,
+        type: 'repeat',
+      });
 
       repeatParts.forEach(({ start, end, number, data, details, type }) => {
         explain(start, end, number, { data, details, type });

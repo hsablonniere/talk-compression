@@ -27,7 +27,7 @@ La compression web
 > je suis développeur Web chez Scaleway et mon acolyte joueur de Scrabble :
 > #HS# j'm'appelle Hubert Sablonnière et je suis développeur Web chez Clever Cloud.
 
-## blank black fade-to
+## blank black
 
 ## section
 Lexique
@@ -379,7 +379,7 @@ ca53 48d3 2eae 4d45 5393  .SH...MES.
 000d c88f 1162 0000 00    .....b...
 ```
 
-## blank black fade-to
+## blank black
 
 ## section
 Ordres de  grandeur
@@ -541,7 +541,7 @@ JSON : 31.8 brut
 SVG : 36.0 brut
 // HTML : 56.0 brut
 
-## barchart unit="%" max="100"
+## barchart unit="%" max="100" fade-from
 *%* de fichiers servis *sans* compression _Almanac 2021_
 JS : 12.7 brut
 CSS : 14.2 brut
@@ -760,20 +760,18 @@ Décompression : 20
 Parsing HTML : 20
 Affichage : 20
 
-## tip
+## tip fade-from
 4) La compression, ça n'interrompt pas le flux.
 
-## blank
-
 <!--
-## todo fade-from
+## todo
 on parle des valises et tshirt en boule ou pliés
 (demander à Geoffroy comment mettre en place une démo)
 > streamer, c'est bien, mais sur le réseau, il y a des paquets et "une valise à moitié vide, pas besoin de plier les
 > tshirts"
 -->
 
-## blank black fade-to
+## blank black
 > transition
 > on vient de comprendre que compresser c'est indispensable
 > ça l'est toujours dans un monde de fibre, de 5G, de CPU M2
@@ -785,7 +783,7 @@ on parle des valises et tshirt en boule ou pliés
 ## section
 Retour  aux sources
 
-## timeline year=2023 fade-from
+## timeline year=2023
 Aujourd'hui, 2023
 > #AC# Mais tout ça, ça ne date pas d'hier.
 > Il va falloir sortir la DeLorean mon cher Hubert
@@ -832,7 +830,7 @@ Code de Huffman, 1951, David A. Huffman, <img src="src/img/huffman.png" />
 > 40 ans séparent PKZIP du codage d'Huffman et plus de 30 ans séparent GZIP de 2023.
 > #HS# Oui allez Antoine, on est content mais il faut qu'on avance et qu'on leur explique comment ça marche
 
-## blank black fade-to
+## blank black
 
 ## section
 Code de  Huffman
@@ -1311,7 +1309,7 @@ COMPRESSION
 ## media todo contain white fade-from
 <img src="src/img/tile-lettre-compte-moins.svg">
 
-## blank black fade-to
+## blank black
 
 ## section
 LZ77
@@ -1410,12 +1408,12 @@ Na, na, na, na, na, na, na, na, na, na, na, na, hey, Jude.
 
 ## lzd step=0
 
-## lzd finish
+## lzd finish fade-from
 > A: On a clairement moins de tuiles en bas qu'en haut non ? 
 > H: Pourtant si on reçoit le texte du bas on peut facilement regénérer le texte du haut.
 > Même si on le reçoit progressivement.
 
-## blank black fade-to
+## blank black
 
 ## section
 ET  CONCRETEMENT ?
@@ -1446,7 +1444,7 @@ ET  CONCRETEMENT ?
 ## media white
 <img src="src/img/lz-family-08.svg">
 
-## media white fade-from
+## media white
 <img src="src/img/lz-family-09.svg">
 
 ## media fade-into
@@ -1476,36 +1474,65 @@ Jean-loup Gailly and Mark Adler
 ## todo
 exemple binaire de gzip en mode décompression
 
-## code
+## gzip mode="bits" todo
+
+## gzip mode="symbols" todo
+
+## gzip mode="text" todo
+
+## code todo title="RFC 1951: *DEFLATE*"
 ```text
-00110000   0  110010000 144  0000000 256  11000000 280
-........ ...  ......... ...  ....... ...  ........ ...
-10111111 143  111111111 255  0010111 279  11000111 287
+Lit Value    Bits        Codes
+---------    ----        -----
+  0 - 143     8          00110000 through
+                         10111111
+144 - 255     9          110010000 through
+                         111111111
+256 - 279     7          0000000 through
+                         0010111
+280 - 287     8          11000000 through
+                         11000111
 ```
 
-## code
+## code todo title="RFC 1951: *DEFLATE*"
 ```text
-0000000   256
-.......   ...
-0010111   279
-             
-00110000    0
-........  ...
-10111111  143
-             
-11000000  280
-........  ...
-11000111  287
-             
-110010000 144
- ........ ...
-111111111 255
+     Extra                Extra                Extra
+Code  Bits Lengths   Code  Bits Lengths   Code  Bits Lengths
+---- ----- -------   ---- ----- -------   ---- ----- -------
+ 257     0      3     267     1   15,16    277     4  67- 82
+ 258     0      4     268     1   17,18    278     4  83- 98
+ 259     0      5     269     2   19-22    279     4  99-114
+ 260     0      6     270     2   23-26    280     4 115-130
+ 261     0      7     271     2   27-30    281     5 131-162
+ 262     0      8     272     2   31-34    282     5 163-194
+ 263     0      9     273     3   35-42    283     5 195-226
+ 264     0     10     274     3   43-50    284     5 227-257
+ 265     1  11,12     275     3   51-58    285     0     258
+ 266     1  13,14     276     3   59-66
+```
+
+
+## code todo title="RFC 1951: *DEFLATE*"
+```text
+     Extra                  Extra                  Extra
+Code  Bits Distances   Code  Bits Distances   Code  Bits   Distances
+---- ----- ---------   ---- ----- ---------   ---- ----- -----------
+   0     0         1     10     4   33-  48     20     9   1025-1536
+   1     0         2     11     4   49-  64     21     9   1537-2048
+   2     0         3     12     5   65-  96     22    10   2049-3072
+   3     0         4     13     5   97- 128     23    10   3073-4096
+   4     1      5, 6     14     6  129- 192     24    11   4097-6144
+   5     1      7, 8     15     6  193- 256     25    11   6145-8192
+   6     2      9-12     16     7  257- 384     26    12  8193-12288
+   7     2     13-16     17     7  385- 512     27    12 12289-16384
+   8     3     17-24     18     8  513- 768     28    13 16385-24576
+   9     3     25-32     19     8  769-1024     29    13 24577-32768
 ```
 
 ## media fade-from
 <img src="src/img/youtube-bill-bird-deflate.png" screenshot-url="https://www.youtube.com/watch?v=SJPvNi4HrWQ">
 
-## blank black fade-to
+## blank black
 
 ## section
 A la recherche  du pouilleme
@@ -1833,14 +1860,14 @@ gzip *9* : 1745586 gzip
 brotli *11* : 1430160 brotli
 -->
 
-## barchart percent
+## barchart percent fade-from
 sql.*wasm* _613,4ko_
 brut : 613426 brut
 gzip *9* : 302566 gzip
 brotli *11* : 262591 brotli
 <!-- https://github.com/sql-js/sql.js -->
 
-## blank black fade-to
+## blank black
 
 ## section
 Au dela du  pouilleme
@@ -1853,7 +1880,7 @@ Au dela du  pouilleme
 <img src="src/img/github-wicg-compression-dictionary-transport.png" screenshot-url="https://github.com/WICG/compression-dictionary-transport">
 > dictionnaire brouillon WICG
 
-## blank black fade-to
+## blank black
 
 ## section
 Recap
@@ -1869,7 +1896,7 @@ Recap
 8) Le statique se compresse une seule fois au build.
 9) Ça n'a pas d'effet sur les fichiers déjà compressés.
 
-## huffman score=auto fade-from todo
+## huffman score=auto todo
 OXYDIEZ
 
 ## poster

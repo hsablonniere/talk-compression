@@ -186,24 +186,31 @@ const COMPRESSED_DETAILS = [
       },
       {
         'start': 235,
+        'end': 250,
+        'data': ' PE',
+        'details': 'Repeat (3:17)',
+        'type': 'repeat',
+      },
+      {
+        'start': 235,
         'end': 242,
         'data': 'L:3',
         'details': 'Symbol #257 (length: 3)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 242,
         'end': 247,
         'data': 'D:17',
         'details': 'Distance #8 (17)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 247,
         'end': 250,
         'data': '0',
         'details': 'Extra distance (0)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
       },
       {
         'start': 250,
@@ -231,24 +238,31 @@ const COMPRESSED_DETAILS = [
       },
       {
         'start': 282,
+        'end': 296,
+        'data': 'NE ',
+        'details': 'Repeat (3:9)',
+        'type': 'repeat',
+      },
+      {
+        'start': 282,
         'end': 289,
         'data': 'L:3',
         'details': 'Symbol #257 (length: 3)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 289,
         'end': 294,
         'data': 'D:9',
         'details': 'Distance #6 (9)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 294,
         'end': 296,
         'data': '0',
         'details': 'Extra distance (0)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
       },
       {
         'start': 296,
@@ -330,73 +344,94 @@ const COMPRESSED_DETAILS = [
       },
       {
         'start': 400,
+        'end': 417,
+        'data': 'N PEUT TROMPER ',
+        'details': 'Repeat (15:41)',
+        'type': 'repeat',
+      },
+      {
+        'start': 400,
         'end': 407,
         'data': 'L:15',
         'details': 'Symbol #267 (length: 15)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 407,
         'end': 408,
         'data': '0',
         'details': 'Extra length (0)',
-        'type': 'length-extra',
+        'type': 'repeat-part',
       },
       {
         'start': 408,
         'end': 413,
         'data': 'D:33',
         'details': 'Distance #10 (33)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 413,
         'end': 417,
         'data': '8',
         'details': 'Extra distance (8)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
+      },
+      {
+        'start': 417,
+        'end': 432,
+        'data': 'MILLE ',
+        'details': 'Repeat (6:28)',
+        'type': 'repeat',
       },
       {
         'start': 417,
         'end': 424,
         'data': 'L:6',
         'details': 'Symbol #260 (length: 6)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 424,
         'end': 429,
         'data': 'D:25',
         'details': 'Distance #9 (25)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 429,
         'end': 432,
         'data': '3',
         'details': 'Extra distance (3)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
+      },
+      {
+        'start': 432,
+        'end': 448,
+        'data': 'PERSONNE',
+        'details': 'Repeat (8:43)',
+        'type': 'repeat',
       },
       {
         'start': 432,
         'end': 439,
         'data': 'L:8',
         'details': 'Symbol #262 (length: 8)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 439,
         'end': 444,
         'data': 'D:33',
         'details': 'Distance #10 (33)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 444,
         'end': 448,
         'data': '10',
         'details': 'Extra distance (10)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
       },
       {
         'start': 448,
@@ -406,45 +441,59 @@ const COMPRESSED_DETAILS = [
       },
       {
         'start': 456,
+        'end': 472,
+        'data': ' UNE ',
+        'details': 'Repeat (5:57)',
+        'type': 'repeat',
+      },
+      {
+        'start': 456,
         'end': 463,
         'data': 'L:5',
         'details': 'Symbol #259 (length: 5)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 463,
         'end': 468,
         'data': 'D:49',
         'details': 'Distance #11 (49)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 468,
         'end': 472,
         'data': '8',
         'details': 'Extra distance (8)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
+      },
+      {
+        'start': 472,
+        'end': 488,
+        'data': 'FOIS. ',
+        'details': 'Repeat (6:42)',
+        'type': 'repeat',
       },
       {
         'start': 472,
         'end': 479,
         'data': 'L:6',
         'details': 'Symbol #260 (length: 6)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 479,
         'end': 484,
         'data': 'D:33',
         'details': 'Distance #10 (33)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 484,
         'end': 488,
         'data': '9',
         'details': 'Extra distance (9)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
       },
       {
         'start': 488,
@@ -472,66 +521,87 @@ const COMPRESSED_DETAILS = [
       },
       {
         'start': 520,
+        'end': 536,
+        'data': ' ON ',
+        'details': 'Repeat (4:47)',
+        'type': 'repeat',
+      },
+      {
+        'start': 520,
         'end': 527,
         'data': 'L:4',
         'details': 'Symbol #258 (length: 4)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 527,
         'end': 532,
         'data': 'D:33',
         'details': 'Distance #10 (33)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 532,
         'end': 536,
         'data': '14',
         'details': 'Extra distance (14)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
+      },
+      {
+        'start': 536,
+        'end': 553,
+        'data': 'NE PE',
+        'details': 'Repeat (5:74)',
+        'type': 'repeat',
       },
       {
         'start': 536,
         'end': 543,
         'data': 'L:5',
         'details': 'Symbol #259 (length: 5)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 543,
         'end': 548,
         'data': 'D:65',
         'details': 'Distance #12 (65)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 548,
         'end': 553,
         'data': '9',
         'details': 'Extra distance (9)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
+      },
+      {
+        'start': 553,
+        'end': 569,
+        'data': 'UT ',
+        'details': 'Repeat (3:50)',
+        'type': 'repeat',
       },
       {
         'start': 553,
         'end': 560,
         'data': 'L:3',
         'details': 'Symbol #257 (length: 3)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 560,
         'end': 565,
         'data': 'D:49',
         'details': 'Distance #11 (49)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 565,
         'end': 569,
         'data': '1',
         'details': 'Extra distance (1)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
       },
       {
         'start': 569,
@@ -553,31 +623,38 @@ const COMPRESSED_DETAILS = [
       },
       {
         'start': 593,
+        'end': 611,
+        'data': ' TROMPER MILLE PERSONNES',
+        'details': 'Repeat (24:54)',
+        'type': 'repeat',
+      },
+      {
+        'start': 593,
         'end': 600,
         'data': 'L:23',
         'details': 'Symbol #270 (length: 23)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 600,
         'end': 602,
         'data': '1',
         'details': 'Extra length (1)',
-        'type': 'length-extra',
+        'type': 'repeat-part',
       },
       {
         'start': 602,
         'end': 607,
         'data': 'D:49',
         'details': 'Distance #11 (49)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 607,
         'end': 611,
         'data': '5',
         'details': 'Extra distance (5)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
       },
       {
         'start': 611,
@@ -587,31 +664,38 @@ const COMPRESSED_DETAILS = [
       },
       {
         'start': 619,
+        'end': 637,
+        'data': ' MILLE FOIS.',
+        'details': 'Repeat (12:99)',
+        'type': 'repeat',
+      },
+      {
+        'start': 619,
         'end': 626,
         'data': 'L:11',
         'details': 'Symbol #265 (length: 11)',
-        'type': 'length',
+        'type': 'repeat-part',
       },
       {
         'start': 626,
         'end': 627,
         'data': '1',
         'details': 'Extra length (1)',
-        'type': 'length-extra',
+        'type': 'repeat-part',
       },
       {
         'start': 627,
         'end': 632,
         'data': 'D:97',
         'details': 'Distance #13 (97)',
-        'type': 'distance',
+        'type': 'repeat-part',
       },
       {
         'start': 632,
         'end': 637,
         'data': '2',
         'details': 'Extra distance (2)',
-        'type': 'distance-extra',
+        'type': 'repeat-part',
       },
       {
         'start': 637,
@@ -669,6 +753,7 @@ export class GzipExplain extends LitElement {
 
   static get properties () {
     return {
+      mode: { type: String },
       _path: { type: Array },
       _hoveredIndex: { type: Number },
     };
@@ -676,6 +761,7 @@ export class GzipExplain extends LitElement {
 
   constructor () {
     super();
+    this.mode = 'bits';
     this._bits = COMPRESSED_BITS.split('');
     this._path = [];
     this._hoveredIndex = null;
@@ -815,30 +901,60 @@ export class GzipExplain extends LitElement {
       : [];
 
     const bits = this._bits.map((bit, i) => {
-      console.log({ bit, i });
-      return bit;
+      const segment = COMPRESSED_DETAILS[1].children
+        .filter((s) => {
+          if (this.mode === 'symbols') {
+            return s.type !== 'repeat';
+          }
+          if (this.mode === 'text') {
+            return s.type !== 'repeat-part';
+          }
+          return false;
+        })
+        .find(inRange(i));
+      if (segment?.data != null) {
+        const bitLength = segment.end - segment.start;
+        const text = (segment.data.length > bitLength)
+          ? formatText(segment.data).substring(0, bitLength - 1) + '…'
+          : formatText(segment.data).padEnd(bitLength, ' ');
+        return {
+          // bit,
+          bit: text[i - segment.start],
+          first: i === segment.start,
+          middle: segment.start < i && i < segment.end - 1,
+          last: i === segment.end - 1,
+          type: segment.type,
+        };
+      }
+      return { bit };
     });
 
     return html`
       <div class="details">${details}</div>
       <div class="bit-grid">
-        ${bits.map((bit, index) => {
+        ${bits.map(({ bit, first, middle, last, type }, index) => {
           const cssClasses = {
             bit: true,
             current: currentIndexes.includes(index),
+            'segment--first': first,
+            'segment--middle': middle,
+            'segment--last': last,
             'current--first': currentIndexes[0] === index,
             'current--last': currentIndexes[currentIndexes.length - 1] === index,
             hovered: hoveredIndexes.includes(index),
+            // toggled: inRange(index)(segment),
           };
           return html`
             <span
                 data-index=${index}
                 class="${classMap(cssClasses)}"
+                data-type="${type}"
                 @click=${(e) => this._onClick(index)}
                 @mouseenter=${(e) => this._onMouseEnter(index)}
                 @mouseleave=${(e) => this._onMouseLeave(index)}
             >
-              ${bit}
+              <span class="bg"></span>
+              <span class="text">${bit}</span>
             </span>
           `;
         })}
@@ -852,14 +968,15 @@ export class GzipExplain extends LitElement {
       css`
         :host {
           display: grid;
-          grid-template-rows: 5rem auto;
-          gap: 2em;
+          grid-template-rows: 2em auto;
+          gap: 1em;
+          font-weight: bold;
         }
 
         .details {
           font-family: "Yanone Kaffeesatz", sans-serif;
           font-weight: bold;
-          font-size: 0.8em;
+          font-size: 1.5em;
           justify-self: start;
           align-self: end;
         }
@@ -872,21 +989,73 @@ export class GzipExplain extends LitElement {
         }
 
         .bit {
-          user-select: none;
+          --h: 1.2em;
+          --margin: 0.05em;
+          --bdrs: 0.15em;
+          --bgc: transparent;
+          height: var(--h);
+          line-height: var(--h);
+          text-align: center;
+          width: 0.75em;
+          box-sizing: border-box;
+          position: relative;
+        }
+
+        .bit .text {
+          position: relative;
+          white-space: pre;
+        }
+
+        .bit .bg {
+          background-color: var(--bgc);
+          bottom: var(--margin);
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: var(--margin);
         }
 
         .bit.current {
           background-color: #eee;
         }
 
-        .bit.current--first {
+        .bit.segment--first .bg {
+          border-bottom-left-radius: var(--bdrs);
+          border-top-left-radius: var(--bdrs);
+          bottom: var(--margin);
+          display: block;
+          left: var(--margin);
         }
 
-        .bit.current--last {
+        .bit.segment--middle .bg {
+          display: block;
+        }
+
+        .bit.segment--last .bg {
+          border-bottom-right-radius: var(--bdrs);
+          border-top-right-radius: var(--bdrs);
+          display: block;
+          right: var(--margin);
+        }
+
+        .bit {
+          --bgc: blue;
+          color: #fff;
+        }
+
+        .bit[data-type="repeat"],
+        .bit[data-type="repeat-part"] {
+          --bgc: red;
         }
 
         .bit.hovered {
-          background-color: yellow;
+          --bgc: yellow;
+          color: #000;
+          /*background-color: yellow;*/
+        }
+
+        .bit.toggled {
+          /*background-color: red;*/
         }
       `,
     ];
