@@ -1982,12 +1982,11 @@ Liens :
 * RFC brotli : https://www.rfc-editor.org/rfc/rfc7932
 * RFC zstd : https://www.rfc-editor.org/rfc/rfc8878.html
 * Brouillon WICG "Compression Dictionary Transport" : https://github.com/WICG/compression-dictionary-transport
+* Générateurs de mots croisés : https://www.educol.net/crosswordgenerator.php
 
-<!--
 Images :
 
-* alice-butenko-zstWUZFj77w-unsplash.jpg
--->
+* Image du mur d'azulejos par Alice Butenko : https://unsplash.com/fr/photos/zstWUZFj77w
 
 Polices :
 
@@ -1997,3 +1996,8 @@ Polices :
 * Interstate : https://fonts.adobe.com/fonts/interstate
 * Sufler : https://www.dafontfree.io/sufler-font/
 * OperatorMono : https://www.typography.com/blog/introducing-operator
+
+Remerciements:
+
+* Ma grand mère Berthe : pour ses partie de Scrabble
+* Hubert : pour ces nombreux échanges hyper cools pour préparer ce talk
