@@ -1901,10 +1901,39 @@ OXYDIEZ
 Merci beaucoup !
 
 ## credits
-Section 1 :
 
-* text : https://example.com
+Références :
 
-Section 2 :
+* Dépôt de la présentation : https://github.com/hsablonniere/talk-compression/tree/devfest-nantes-2023
 
-* text 2 : https://example.com
+Liens :
+
+* Bundlephobia : https://bundlephobia.com
+* Almanac de l'HTTP Archive : https://almanac.httparchive.org
+* Can I use (gzip) : https://caniuse.com/sr_content-encoding-gzip
+* Can I use (brotli) : https://caniuse.com/brotli
+* Why the LZ algorithms are so dominant (Scott McAnlis) : https://www.youtube.com/watch?v=Jqc418tQDkg
+* RFC zlib : https://www.rfc-editor.org/rfc/rfc1950
+* RFC gzip : https://www.rfc-editor.org/rfc/rfc1951
+* RFC deflate : https://www.rfc-editor.org/rfc/rfc1952
+* Data Compression (Bill Bird) - 11 DEFLATE (gzip) : https://www.youtube.com/watch?v=SJPvNi4HrWQ
+* Fork zlib de Cloudflare : https://github.com/cloudflare/zlib
+* Projet brotli : https://github.com/google/zopfli
+* RFC brotli : https://www.rfc-editor.org/rfc/rfc7932
+* RFC zstd : https://www.rfc-editor.org/rfc/rfc8878.html
+* Brouillon WICG "Compression Dictionary Transport" : https://github.com/WICG/compression-dictionary-transport
+
+<!--
+Images :
+
+* alice-butenko-zstWUZFj77w-unsplash.jpg
+-->
+
+Polices :
+
+* Yanone Kaffeesatz : https://fonts.google.com/specimen/Yanone+Kaffeesatz
+* Just Another Hand : https://fonts.google.com/specimen/Just+Another+Hand
+* Boogaloo : https://fonts.google.com/specimen/Boogaloo
+* Interstate : https://fonts.adobe.com/fonts/interstate
+* Sufler : https://www.dafontfree.io/sufler-font/
+* OperatorMono : https://www.typography.com/blog/introducing-operator
