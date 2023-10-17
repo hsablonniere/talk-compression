@@ -18,6 +18,7 @@
 
 ## Hubert
 
+* animation sur le mot du tout début
 * huffman
   * ligne arbre
   * afficher les 0 et 1

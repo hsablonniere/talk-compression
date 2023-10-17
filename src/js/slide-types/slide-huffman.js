@@ -9,7 +9,7 @@ function getTree (node) {
   if (node.letter != null) {
     const { id, count, letter, score, bits } = node;
     const htmlContent = html`
-      <scrabble-tile data-id=${id} .count=${count} .letter=${letter} .score=${score} .bits=${bits} style="transform: translate3d(0, 0, 0)"></scrabble-tile>
+      <scrabble-tile data-id=${id} .count=${count} .letter=${letter} .score=${score} .bits=${bits} style="transform: translate3d(0, 0, 0) scale(var(--scale))"></scrabble-tile>
     `;
     return { count: 1, htmlContent };
   }
@@ -331,6 +331,14 @@ defineSlideType('slide-huffman', {
 
     scrabble-tile {
       font-size: 1.85rem;
+    }
+
+    scrabble-tile:hover {
+      --scale: 1.1;
+    }
+
+    scrabble-tile:active {
+      --scale: 1;
     }
 
     .tree {

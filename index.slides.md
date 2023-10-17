@@ -11,7 +11,7 @@ date: 19 octobre 2023
 ## blank
 > @00:00:00@
 
-## huffman score=auto fade-from todo
+## huffman score=auto fade-from
 DEIOXYZ
 <!-- animation shuffle -->
 > #HS# (en train de chercher un mot)
@@ -1894,7 +1894,7 @@ Recap
 8) Le statique se compresse une seule fois au build.
 9) Ça n'a pas d'effet sur les fichiers déjà compressés.
 
-## huffman score=auto todo
+## huffman score=auto
 OXYDIEZ
 
 ## poster
