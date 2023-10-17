@@ -702,9 +702,7 @@ et les sizes dans les devtools
 <img src="src/img/caniuse-gzip.png" screenshot-url="https://caniuse.com/sr_content-encoding-gzip">
 
 ## blank
-
-## todo
-c'est petit mais est-ce que ça bloque ?
+> c'est petit mais est-ce que ça bloque ?
 
 ## gantt title="" todo
 Réception : 0
@@ -1306,7 +1304,7 @@ COMPRESSION
 COMPRESSION
 <!-- il manque l'affichage du gain de compression -->
 
-## media todo contain white fade-from
+## media contain white fade-from
 <img src="src/img/tile-lettre-compte-moins.svg">
 
 ## blank black
@@ -1315,7 +1313,7 @@ COMPRESSION
 LZ77
 
 ## text
-Et 25 ans plus tard...
+🗓️ Et *25 ans* plus tard...
 
 ## text small
 _*"*On peut tromper une personne mille fois._<br>
@@ -1326,7 +1324,7 @@ _Mais on ne peut pas tromper mille personnes, mille fois.*"*_
 > H: On se répète un peu là non ? 
 > En observant cette phrase on peut surement se dire que se limiter à optimiser caractère par caractère est limitant.
 
-## media todo contain white
+## media contain white
 <img src="src/img/tile-mot-compte-moins.svg">
 
 ## text small
@@ -1733,7 +1731,7 @@ brotli *11* : 26960 brotli
 ## tip
 7) La compression, ça marche mieux avec brotli.
 
-## barchart small unit="ms" todo max="142.2"
+## barchart small unit="ms" max="142.2"
 Temps de compression *brotli* _jquery.min.js_
 1 : 1.3 brotli
 2 : 1.8 brotli
@@ -1747,11 +1745,11 @@ Temps de compression *brotli* _jquery.min.js_
 10 : 37.3 brotli
 11 : 97.2 brotli
 
-## barchart unit="ms" todo
+## barchart unit="ms"
 Temps de compression *zopfli* _jquery.min.js_
 zopfli : 142.2 zopfli
 
-## barchart small unit="ms" todo max="142.2"
+## barchart small unit="ms" max="142.2"
 Temps de compression *gzip* _jquery.min.js_
 1 : 1.8 gzip
 2 : 1.9 gzip
@@ -1763,7 +1761,7 @@ Temps de compression *gzip* _jquery.min.js_
 8 : 3.7 gzip
 9 : 3.7 gzip
 
-## barchart unit="ms" todo
+## barchart unit="ms"
 Temps de compression _jquery.min.js_
 gzip *9* : 3.7 gzip
 zopfli : 142.2 zopfli
@@ -1771,14 +1769,14 @@ brotli *11* : 97.2 brotli
 
 ## blank white
 
-## barchart unit="ms" todo max="142.2"
+## barchart unit="ms" max="142.2"
 Temps de *dé*compression _jquery.min.js_
 gzip *9* : 1.1 gzip
 zopfli : 1.1 zopfli
 brotli *11* : 1.1 brotli
 
 <!--
-## barchart small unit="" todo
+## barchart small unit=""
 Temps de décompression gzip _jquery.min.js_
 gz*1* : 1.0
 gz*2* : 1.1
@@ -1791,7 +1789,7 @@ gz*8* : 1.1
 gz*9* : 1.1
 zopfli : 1.1
 
-## barchart small unit="" todo
+## barchart small unit=""
 Temps de décompression brotli _jquery.min.js_
 br*1* : 1.0
 br*2* : 1.0
