@@ -11,30 +11,42 @@ date: 19 octobre 2023
 ## blank
 > @00:00:00@
 
-## huffman score=auto fade-from
+## huffman score=auto
 DEIOXYZ
 <!-- animation shuffle -->
 > #HS# (en train de chercher un mot)
 > #AC# Tu fais quoi Hubert ?
-> #HS# Bah je cherche un mot avec ce tirage de fou.
-> #AC# Euh mais on est pas là pour ça,
-
-## blank black
+> #HS# Bah je cherche un mot avec ce tirage, là, mais je galère.
+> #AC# C'est super hein, mais on est pas là pour ça.
 
 ## poster fade-from
 La compression web
-> #AC# Bonjour à toutes et à tous, j'm'appelle Antoine Caron, 
-> je suis développeur Web chez Scaleway et mon acolyte joueur de Scrabble :
-> #HS# j'm'appelle Hubert Sablonnière et je suis développeur Web chez Clever Cloud.
+> #AC# Bonjour à *toutes et à tous*, j'm'appelle Antoine Caron,
+> j'suis développeur Web chez Scaleway et je suis accompagné d'Hubert Sablonnière, développeur Web chez Clever Cloud.
+> #HS# _(signe de la main)_ Bonjour ! Je suis joueur de Scrabble aussi.
+> #AC# _(un peu saoulé)_ Oui oui, on a compris.
+> Aujourd'hui, on aimerait vous parler de compression,
+> et vu que c'est un sujet assez vaste, on a choisi de se concentrer sur un contexte qu'on aime particulièrement :
+> *le Web* !
+> #HS# En fait, il y a un truc qui nous fascine tous les deux...
+> À l'instant où on vous parle, y'a des *millions* de serveurs dans le monde qui sont en train de compresser des réponses HTTP, et  y'a des *milliards* de navigateurs qui sont en train de les décompresser.
+> Du coup, on a regardé comment ça marche et on aimerait vous partager ça...
 
 ## blank black
+> ...en ajoutant au passage quelques rappels et bonnes pratiques.
 
 ## section
 Lexique
+> @00:01:00@
+> #HS# On va commencer tout de suite par des petites clarifications lexicales.
+> Quand on parle de compression, le monde se divise en deux catégories :
 
 ## text
 🤔 *Avec* ou *Sans* perte de données ?
-> nous on va parler principalement sans perte
+> la compression avec perte de données,
+> et la compression sans perte de données.
+> En général, on associe souvent la compression avec perte de données a des formats d'image ou d'audio/vidéo : JPEG, MP3 ou MPEG.
+> 
 
 ## text
 🗑️ Minification
@@ -383,6 +395,7 @@ ca53 48d3 2eae 4d45 5393  .SH...MES.
 
 ## section
 Ordres de  grandeur
+> @00:03:00@
 
 ## barchart logo=js
 math-example.*js* _228o_
