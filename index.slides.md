@@ -309,7 +309,7 @@ export function add(f,s){return f+s}export function factorial(n){return n===0?1:
 ## text
 🤐 Compression *(sans perte)*
 > sans perte de données.
-> Mais on, en général, on ne précise...
+> Mais bon, en général, on ne précise...
 
 ## text
 🤐 Compression
@@ -552,12 +552,12 @@ brut : 285314 brut
 minifié : 87029 min
 compressé : 83915 compressed
 minifié<br>& compressé : 30190 gzip
-> Ok avec de la 4G, c'est pour moi tout aussi impressionnant, un peu plus de 200ms de latence c'est perceptible par un utilisateur.
+> Ok avec de la 4G, c'est pour moi tout aussi impressionnant, un peu plus de 200ms de différence c'est perceptible par un utilisateur.
 
 ## media
 <img src="src/img/bundlephobia-jquery.png" screenshot-url="https://bundlephobia.com/package/jquery@3.7.1">
 
-> #HS# Parenthèse d'ailleurs, le site Bundlephobia vous permet d'estimer la taille d'un package npm en minifié / gzippé et le temps de latence.
+> #HS# Parenthèse d'ailleurs, le site Bundlephobia vous permet d'estimer la taille d'un package npm en minifié / gzippé et le temps de téléchargement.
 
 ## text
 ⏱️ En pratique
@@ -567,7 +567,7 @@ minifié<br>& compressé : 30190 gzip
 ## media
 <img src="src/img/wikipedia-scrabble.png" screenshot-url="https://en.wikipedia.org/wiki/Scrabble">
 
-> #HS# Genre la page Wikipedia française du Scrabble 
+> #HS# Genre la page Wikipedia du Scrabble 
 
 ## media contain
 <img src="src/img/wpt-scrabble-waterfall.png">
