@@ -45,13 +45,17 @@ Lexique
 🤔 *Avec* ou *Sans* perte de données ?
 > la compression avec perte de données,
 > et la compression sans perte de données.
-> En général, on associe souvent la compression avec perte de données a des formats d'image ou d'audio/vidéo : JPEG, MP3 ou MPEG.
-> 
+> En général, on associe la compression avec perte de données a des formats d'image ou d'audio/vidéo : JPEG, MP3 ou MPEG.
+> Mais en fait, sur le Web, on retrouve également de la compression avec perte de données,
+> sur du JavaScript, du CSS ou encore du HTML.
+> Et dans ces cas là, on parle de...
 
 ## text
 🗑️ Minification
+> "minification".
 
 ## blank
+> On va prendre un exemple JavaScript,
 
 ## code title="math-example.js"
 ```js simple-js-example
@@ -67,6 +71,7 @@ export function factorial (number) {
 
 }
 ```
+> avec un fichier qui expose des fonctions de maths.
 
 ## code title="math-example.js"
 ```js simple-js-example
@@ -82,6 +87,7 @@ export function factorial (number) {
 
 }
 ```
+> Une addition, tout ce qu'il y a de plus basique,
 
 ## code title="math-example.js"
 ```js simple-js-example
@@ -97,6 +103,7 @@ export function factorial (number) {
   return number * factorial(number - 1);
 }
 ```
+> et une petite factorielle des familles,
 
 ## code title="math-example.js"
 ```js simple-js-example
@@ -112,6 +119,7 @@ export function factorial (number) {
   return number * factorial(number - 1);
 }
 ```
+> avec de la récursivité s'il vous plait ;-)
 
 ## code title="math-example.js"
 ```js simple-js-example size
@@ -127,6 +135,9 @@ export function factorial (number) {
   return number * factorial(number - 1);
 }
 ```
+> Pour l'instant, le fichier fait 228 octets.
+> Le minifieur JavaScript que vous utilisez, il connait la syntaxe.
+> Il va analyser le code et il va se dire :
 
 ## code title="math-example.js"
 ```text simple-js-example size highlight
@@ -152,6 +163,7 @@ export function factorial (number) {
                                        _
 }
 ```
+> OK, là y a des point-virgules et des accolades qui servent à rien.
 
 ## code title="math-example.*min*.js"
 ```js simple-js-example size
@@ -167,6 +179,7 @@ export function factorial (number) {
   return number * factorial(number - 1)
 }
 ```
+> Bim, 203 octets !
 
 ## code title="math-example.*min*.js"
 ```text simple-js-example size highlight
@@ -192,6 +205,8 @@ export function factorial (number) {
   ______
 }
 ```
+> Là le "if return ci ou return ça",
+> j'peux faire un ternaire, c'est plus court.
 
 ## code title="math-example.*min*.js"
 ```js simple-js-example size
@@ -207,6 +222,7 @@ export function factorial (number) {
 
 }
 ```
+> Bim, 197 octets !
 
 ## code title="math-example.*min*.js"
 ```text simple-js-example size highlight
@@ -232,6 +248,8 @@ export function factorial (number) {
 
 }
 ```
+> Les variables super longues là, pas besoin de ça en prod,
+> ça fonctionnera pareil en plus court.
 
 ## code title="math-example.*min*.js"
 ```js simple-js-example size
@@ -247,6 +265,7 @@ export function factorial (n) {
 
 }
 ```
+> Bim 135 octets !
 
 ## code title="math-example.*min*.js"
 ```text simple-js-example size highlight
@@ -272,14 +291,31 @@ ____ _ _ _           _ _
 
 }
 ```
+> Et bien évidemment, il va supprimer tous les espaces et sauts de lignes inutiles,
 
 ## code title="math-example.*min*.js"
 ```js simple-js-example size
 export function add(f,s){return f+s}export function factorial(n){return n===0?1:n*factorial(n-1)}
 ```
+> pour arriver à un résultat le plus petit possible sans changer le fonctionnement du code.
+> Et ça, c'est qu'un exemple assez simple des transformations qu'un minifieur moderne est capable de faire.
+> Une fois qu'on a atteint les limites de ce qu'on peut faire avec la minification, on va appliquer de la...
 
 ## text
 🤐 Compression
+> compression.
+> Sous-entendu, de la compression...
+
+## text
+🤐 Compression *(sans perte)*
+> sans perte de données.
+> Mais on, en général, on ne précise...
+
+## text
+🤐 Compression
+> ...pas et tout le monde comprend qu'on parle de techniques et d'algos sans perte.
+> Le compresseur, il connait pas la syntaxe du fichier,
+> il va travailler directement...
 
 ## code title="math-example.min.js"
 ```text bin-js-example size=98
@@ -294,6 +330,8 @@ export function add(f,s){return f+s}export function factorial(n){return n===0?1:
 6e2a 6661 6374 6f72 6961
 6c28 6e2d 3129 7d0a
 ```
+> sur les octets.
+> Bon nous quand on voit ça, on sait que c'est le...
 
 ## code title="math-example.min.js"
 ```text bin-js-example size=98
@@ -308,6 +346,8 @@ export function add(f,s){return f+s}export function factorial(n){return n===0?1:
 6e2a 6661 6374 6f72 6961  n*factoria
 6c28 6e2d 3129 7d0a       l(n-1)}.
 ```
+> ...fichier JavaScript de tout à l'heure,
+> on voit bien...
 
 ## code title="math-example.min.js"
 ```text bin-js-example highlight size=98
@@ -331,6 +371,7 @@ ____                      __
 
 6c28 6e2d 3129 7d0a       l(n-1)}.
 ```
+> les exports,
 
 ## code title="math-example.min.js"
 ```text bin-js-example highlight size=98
@@ -354,6 +395,7 @@ __                        _
 
 6c28 6e2d 3129 7d0a       l(n-1)}.
 ```
+> les fonctions,
 
 ## code title="math-example.min.js"
 ```text bin-js-example highlight size=98
@@ -377,6 +419,25 @@ __                        _
 
 6c28 6e2d 3129 7d0a       l(n-1)}.
 ```
+> et les returns.
+> le minifieur lui,
+
+## code title="math-example.min.js"
+```text bin-js-example size=98
+6578 706f 7274 2066 756e
+6374 696f 6e20 6164 6428
+662c 7329 7b72 6574 7572
+6e20 662b 737d 6578 706f
+7274 2066 756e 6374 696f
+6e20 6661 6374 6f72 6961
+6c28 6e29 7b72 6574 7572
+6e20 6e3d 3d3d 303f 313a
+6e2a 6661 6374 6f72 6961
+6c28 6e2d 3129 7d0a
+```
+> il s'en fout,
+> il voit 98 octets,
+> il applique ses algos et il essaie de produire un résultat...
 
 ## code title="math-example.min.js.*gz*" fade-from
 ```text bin-js-example size=89
@@ -390,12 +451,14 @@ ca53 48d3 2eae 4d45 5393  .SH...MES.
 95a7 8524 ab6b a859 cb05  ...$.k.Y..
 000d c88f 1162 0000 00    .....b...
 ```
+> plus petit,
+> le tout, en étant capable de retrouver l'original à la décompression.
 
 ## blank black
 
 ## section
 Ordres de  grandeur
-> @00:03:00@
+> @00:03:30@
 > #AC# Ok, maintenant qu'on sait de quoi on parle il serait important de comprendre l'impact de la compression et minification
 
 ## barchart logo=js
