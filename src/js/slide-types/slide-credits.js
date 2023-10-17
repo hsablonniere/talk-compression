@@ -69,7 +69,7 @@ defineSlideType('slide-credits', {
     }
 
     :host([data-position="current"]) .wrapper {
-      animation: 80s linear scroll;
+      animation: 130s linear scroll;
     }
 
     .group-title {

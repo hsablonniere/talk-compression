@@ -810,7 +810,7 @@ content-encoding: br
 > le navigateur et le serveur travaillent ensemble pour gérer ça tout seul
 > ça marche aussi automatiquement quand on fait un `fetch`
 
-## todo
+## demo
 demo firefox
 juste pour montrer les en-tête
 et les sizes dans les devtools
@@ -827,53 +827,44 @@ et les sizes dans les devtools
 ## blank
 > c'est petit mais est-ce que ça bloque ?
 
-## gantt title="" todo
+## gantt title=""
 Réception : 0
-Parsing HTML : 100
-Affichage : 100
-
-## gantt title="" todo
-Réception : 0
-Décompression : 100
 Parsing HTML : 100
 Affichage : 100
 > slides diagram de gantt DL/DECOMPRESSION/PARSE/AFFICHAGE
 > pas cheveauché
 > On pourrait penser que la compression introduit une phase ça bloque
 
-## todo demo
-demo sherlock HTML streaming sans compression
-> BIEN EXPLIQUER
+## demo
+> demo sherlock HTML streaming sans compression
+> demo sherlock HTML streaming sans compression ralenti
 
-## todo demo
-demo sherlock HTML streaming sans compression ralenti
-
-## gantt title="" todo
+## gantt title=""
 Réception : 0
 Parsing HTML : 100
 Affichage : 100
 
-## gantt title="" todo
+## gantt title=""
 Réception : 0
 Parsing HTML : 33
 Affichage : 33
 
-## todo demo
-demo sherlock HTML streaming avec compression ralenti
+## demo
+> demo sherlock HTML streaming avec compression ralenti
 
-## gantt title="" todo
+## gantt title=""
 Réception : 0
 Décompression : 100
 Parsing HTML : 100
 Affichage : 20
 
-## gantt title="" todo
+## gantt title=""
 Réception : 0
 Décompression : 20
 Parsing HTML : 20
 Affichage : 20
 
-## gantt title="" todo
+## gantt title=""
 Compression : 0
 Envoi : 20
 Réception : 20
@@ -1565,7 +1556,7 @@ ET  CONCRETEMENT ?
 ## media white
 <img src="src/img/lz-family-08.svg">
 
-## media white
+## media white fade-from
 <img src="src/img/lz-family-09.svg">
 
 ## media fade-into
@@ -2060,7 +2051,8 @@ Polices :
 * Sufler : https://www.dafontfree.io/sufler-font/
 * OperatorMono : https://www.typography.com/blog/introducing-operator
 
-Remerciements:
+Remerciements :
 
-* Ma grand mère Berthe : pour ses partie de Scrabble
+* Ma grand mère Berthe : pour ses parties de Scrabble
 * Hubert : pour ces nombreux échanges hyper cools pour préparer ce talk
+* Antoine : pour m'avoir expliqué que mon idée d'algo de compression CSS, c'était nul à coté de LZ
