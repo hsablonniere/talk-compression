@@ -278,6 +278,7 @@ defineSlideType('slide-lzd', {
       justify-content: center;
       align-content: center;
       font-size: 1rem;
+      cursor: url('/src/img/pointer.svg') 24 15, auto;
     }
 
     .step {

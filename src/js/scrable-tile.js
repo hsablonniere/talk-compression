@@ -137,7 +137,6 @@ export class ScrabbleTile extends LitElement {
         .tile {
           border-radius: 0.2em;
           box-sizing: border-box;
-          cursor: pointer;
           display: flex;
           height: var(--tile-size);
           position: relative;
@@ -216,7 +215,6 @@ export class ScrabbleTile extends LitElement {
         .tile-large {
           align-items: center;
           box-sizing: border-box;
-          cursor: pointer;
           display: flex;
           height: var(--tile-size);
           justify-content: center;

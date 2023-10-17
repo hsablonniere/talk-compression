@@ -304,6 +304,7 @@ defineSlideType('slide-huffman', {
       gap: 1rem;
       justify-content: center;
       align-items: center;
+      cursor: url('/src/img/pointer.svg') 24 15, auto;
     }
 
     .step-list {
