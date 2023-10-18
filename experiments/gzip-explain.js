@@ -62,6 +62,7 @@ const COMPRESSED_DETAILS = [
         'start': 81,
         'end': 83,
         'details': 'Type : 1',
+        'data': '1',
       },
       {
         'start': 83,
@@ -694,11 +695,13 @@ const COMPRESSED_DETAILS = [
         'start': 637,
         'end': 644,
         'details': 'Symbole n°256 (fin de bloc)',
+        'data': '\\FIN',
       },
       {
         'start': 644,
         'end': 648,
         'details': 'Padding pour l\'alignement en octets',
+        'data': '',
       },
       {
         'start': 648,

@@ -162,6 +162,9 @@ defineSlideType('slide-huffman', {
 
     const letters = lines[0].split('');
 
+    const lettersUnique = Array.from(new Set(letters));
+    console.log({lettersUnique})
+
     // The complete sequence
     const tiles = letters.map((letter, i) => {
       const rawScore = getValue(attrs.score, i);
@@ -170,7 +173,7 @@ defineSlideType('slide-huffman', {
         : rawScore;
       const rawBits = getValue(attrs.bits, i);
       const bits = (rawBits === 'inc')
-        ? i.toString(2).padStart(score, '0')
+        ? lettersUnique.findIndex((l) => l === letter).toString(2).padStart(score, '0')
         : rawBits;
       return { letter, score, bits, id: `letter-${letter}` };
     });
@@ -356,12 +359,12 @@ defineSlideType('slide-huffman', {
     }
 
     .tree-bar {
-      border: 1px solid #000;
+      border: 3px solid #000;
       border-bottom: none;
       position: absolute;
-      left: 25%;
-      right: 25%;
-      height: 4em;
+      left: 21%;
+      right: 21%;
+      height: 3.55em;
       /* use var from tree gap and count size */
       top: 1.115rem;
     }

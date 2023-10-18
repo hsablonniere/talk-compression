@@ -661,12 +661,16 @@ HTML : 56.0 brut
 > #HS# Et ça, ce n'est que sur l'internet public accessible à tous, vous pensez qu'avec les sites privés c'est mieux ? 
 
 ## blank black
+> #HS# Maintenant qu'on est toutes et tous convaincus qu'il faut compresser et pourquoi,
+> on va essayer de regarder un peu ce qu'il se passe...
 
 ## section
 Dans les  tuyaux
 > @00:09:30@
+> ...dans les tuyaux avec le protocole HTTP.
 
 ## blank
+> Imaginez un navigateur qui veut récupérer une page Web.
 
 ## code
 ```http type="request"
@@ -681,6 +685,7 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
  
 ```
+> Il va dire au serveur "Hey, donne-moi le fichier index HTML !".
 
 ## code
 ```http type="request"
@@ -695,6 +700,8 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
  
 ```
+> Le serveur va alors répondre : "tiens le voilà, 200 OK tout va bien".
+> Dans la requête HTTP, le navigateur va pouvoir préciser quels formats de compression il supporte avec...
 
 ## code
 ```http type="request"
@@ -709,6 +716,7 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
  
 ```
+> ...l'en-tête "accept-encoding".
 
 ## code
 ```http type="request"
@@ -723,6 +731,7 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
  
 ```
+> Par exemple, il peut dir : "Je comprends le gzip...
 
 ## code
 ```http type="request"
@@ -737,6 +746,7 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
  
 ```
+> ...le deflate...
 
 ## code
 ```http type="request"
@@ -751,6 +761,8 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
  
 ```
+> ...et le brotli.
+> De son côté, le serveur va regarder quels formats il supporte parmi ceux là, et il va répondre avec...
 
 ## code
 ```http type="request"
@@ -765,6 +777,9 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
 content-encoding: 
 ```
+> un en-tête "content-encoding".
+> Avec ça il vient préciser le format qu'il a utilisé pour la réponse qu'il vient d'envoyer.
+> Par exemple :
 
 ## code
 ```http type="request"
@@ -779,6 +794,7 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
 content-encoding: gzip
 ```
+> gzip, ou même...
 
 ## code
 ```http type="request"
@@ -793,86 +809,101 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
 content-encoding: br
 ```
-
-> c'est un peu magique
-> le navigateur et le serveur travaillent ensemble pour gérer ça tout seul
-> ça marche aussi automatiquement quand on fait un `fetch`
+> ...brotli s'il le supporte.
 
 ## demo
-demo firefox
-juste pour montrer les en-tête
-et les sizes dans les devtools
-> montrer transfer size
-> resource size (entre parenthèses)
-> post-compression dans l'en-tête content-length
+> Ouvrir les devtools
+> Charger la page du Scrabble
+> Montrer les en-tête de requête
+> Montrer les en-tête de réponse
+> Montrer la colonne "transfert"
+> Montrer le content-length "transfert"
+> Montrer la colonne "taille"
+> Mentionner que "transfert" inclue les en-têtes
 
 ## tip
 3) La compression, c'est natif au <br> fonctionnement du Web.
+> La compression, c'est natif au fonctionnement du Web,
+> et la puissance du truc, c'est qu'un vieux navigateur peut discuter avec un serveur moderne ou inversement et tout le monde se comprend.
+> Bon après, meme un vieux navigateur, il sait faire du gzip.
+> À tel point que...
 
 ## media
 <img src="src/img/caniuse-gzip.png" screenshot-url="https://caniuse.com/sr_content-encoding-gzip">
+> Can I Use essaie meme pas d'afficher les versions.
 
 ## blank
-> c'est petit mais est-ce que ça bloque ?
+> On continue notre exploration de ce qu'il se passe dans les tuyaux.
+> Avant, quand je me mettais à la place d'un navigateur,
+> $AC$ Ah ouais tu fais ça toi ?
+> Ouais, j'me dit :
 
-## gantt title=""
+## gantt title="🤔"
 Réception : 0
 Parsing HTML : 100
 Affichage : 100
-> slides diagram de gantt DL/DECOMPRESSION/PARSE/AFFICHAGE
-> pas cheveauché
-> On pourrait penser que la compression introduit une phase ça bloque
+> il télécharge une page,
+> puis il parse l'HTML,
+> puis il commence à l'afficher.
+> On va regarder si c'est vraiment le cas avec une démo.
 
 ## demo
-> demo sherlock HTML streaming sans compression
-> demo sherlock HTML streaming sans compression ralenti
+> *Charger la page sans compression*
+> Expliquer la page "Sherlock" tout ça...
+> On a beau avoir une page très longue, on a pas trop le temps de voir ce qu'il se passe,
+> du coup, on va ralentir artificiellement le serveur.
+> *Charger la page sans compression (ralentie)*
+> Montrer l'onglet network avec les 4 mega qui se remplissent
+> Aller dans le DOM et montrer que la page se construit alors qu'on a pas encore tout reçu.
+> Je trouve ça assez dingue parceque ça veut dire, que le navigateur,
 
-## gantt title=""
+## gantt title="🤔"
 Réception : 0
 Parsing HTML : 100
 Affichage : 100
+> il fonctionne pas par étapes sucessives bloquantes,
 
-## gantt title=""
+## gantt title="😀"
 Réception : 0
 Parsing HTML : 33
 Affichage : 33
+> il fonctionne en temps réel et il est capable de parser et d'afficher le début d'une page HTML avant meme d'avoir reçu la fin du fichier
+> $AC$ Ce fonctionnement, il est pas accidentel, ça fait partie de la spec HTML de savoir faire ça.
 
 ## demo
-> demo sherlock HTML streaming avec compression ralenti
+> Qu'est ce qu'il se passe si on rajoute de la compression ?
+> *Charger la page avec compression (ralentie)*
+> Faire le constate que la décompression ne gene pas la gestion du flux.
 
-## gantt title=""
+## gantt title="🤔"
 Réception : 0
 Décompression : 100
 Parsing HTML : 100
 Affichage : 20
+> Ça veut dire que la décompréssion n'est pas bloquante.
 
-## gantt title=""
+## gantt title="😃"
 Réception : 0
 Décompression : 20
 Parsing HTML : 20
 Affichage : 20
+> Elle fait partie de cette pipeline et le navigateur est capable de décomprésser, parser et afficher avant meme d'avoir terminé de récupérer le fichier.
 
-## gantt title=""
+## gantt title="🤩"
 Compression : 0
 Envoi : 20
 Réception : 20
 Décompression : 20
 Parsing HTML : 20
 Affichage : 20
+> C'est pareil pour la compression coté serveur.
 
 ## tip fade-from
 4) La compression, ça n'interrompt pas le flux.
-
-<!--
-## todo
-on parle des valises et tshirt en boule ou pliés
-(demander à Geoffroy comment mettre en place une démo)
-> streamer, c'est bien, mais sur le réseau, il y a des paquets et "une valise à moitié vide, pas besoin de plier les
-> tshirts"
--->
+> La compression (et la décompression), ça n'interrompt pas le flux, ça ne perturbe pas le fonctionnement temps réel du Web.
 
 ## blank black
-> transition
+> TODO Transition
 > on vient de comprendre que compresser c'est indispensable
 > ça l'est toujours dans un monde de fibre, de 5G, de CPU M2
 > ça a encore un impact sur nos utilisateurs et sur l'environnement
@@ -922,9 +953,9 @@ LZ77, 1977, Abraham Lempel and Jacob Ziv, <img src="src/img/lempel-ziv.png" />
 > _LZ77 mais qu'est-ce que ça peut pouvoir dire ? ça reste encore un mystère_
 
 ## timeline year=1950 animated
-Code de Huffman, 1951, David A. Huffman, <img src="src/img/huffman.png" />
+Code de Huffman, 1952, David A. Huffman, <img src="src/img/huffman.png" />
 > #HS# Oui mais PKZIP et GZIP n'ont pas été piocher que dans les travaux des années 70
-> Ils ont été reprendre de travaux publiés en 1951 par Mr Huffman.
+> Ils ont été reprendre de travaux publiés en 1952 par Mr Huffman.
 > Le codage de huffman, on est là bien avant les problématiques de l'interweb
 > $AC$ Donc, ce qu'on est en train de dire, c'est que la recherche fondamentale
 > ça peut avoir des impacts considérables sur l'évolution de la technologie des années après?
@@ -936,27 +967,14 @@ Code de Huffman, 1951, David A. Huffman, <img src="src/img/huffman.png" />
 ## section
 Code de  Huffman
 > @00:16:00@
-> le but de huffman c'est d'encoder les caractères en fonction de la fréquence
-> c'est comme le scrabble !
-> à l'époque ce n'est qu'un papier du MIT
-> storytelling de exam vs paper
-> classe de Claude Shannon
-> le plus ouf c'est qu'il trouve l'algo pour la meilleure solution
-> et qu'il le prouve mathématiquement
-> ex: HUBERT ET ANTOINE (ou autre)
-> on montre la l'algo avec la construction d'un arbre
-> résultat : tableau de correspondance
-> HUBERT ET ANTOINE
-> 17*8 = 136
-> HUBERT ET ANTOINE
-> 54434443444334433 = 63
+> #HS# Alors, c'est l'heure d'expliquer le code de Huffman et son algorithme.
 
 ## blank
-> #HS# Prenons un mot au hasard !
+> #HS# Pour ça, on va prendre un mot...
 
 ## text
 sablonnière
-> _Hubert affiche le mot "sablonnière" à l'écran._
+> ...au hasard.
 > $AC$ Hubert ?
 
 ## huffman score=auto
@@ -969,18 +987,12 @@ SABLONNIERE
 
 ## huffman
 COMPRESSION
-> #HS# Prenons un mot au hasard !
-> Quand on stocke le mot "COMPRESSION" dans un fichier texte, on obtient un fichier de 9 octets, un octet par caractère.
+> #HS# On va prendre le mot "COMPRESSION".
+> Quand on stocke ce mot dans un fichier texte, on obtient un fichier de 11 octets, un octet par caractère.
 
 ## huffman score=8
 COMPRESSION
 > Chaque octet contient les 8 bits nécessaires pour représenter le code ASCII en binaire.
-
-<!--
-## media terminal
-<img src="src/img/terminal-ascii.png">
-table ASCII ou alors avec la commande `ascii`
--->
 
 ## code
 ```text highlight
@@ -995,15 +1007,7 @@ Usage: ascii [-adxohv] [-t] [char-alias...]
    -h = This help screen -v = version information
 ```
 > Si vous êtes nul en code ASCII comme moi,
-> vous pouvez utiliser la commande `ascii -b` sous Linux pour avoir la table de correspondance.
-
-<!--
-## media terminal
-<img src="src/img/terminal-ascii-b.png">
-
-## media terminal
-<img src="src/img/terminal-ascii-b-annotate.png">
--->
+> vous pouvez utiliser la commande `ascii` sous Linux.
 
 ## code
 ```text style="font-size: 0.95rem" highlight="hide-mark"
@@ -1042,6 +1046,7 @@ $ ascii -b
 0001111 SI     0011111 US     0101111 /    0111111 ?    1001111 O    1011111 _    1101111 o    1111111 DEL
                                                         _________ 
 ```
+> Vous faites *ascii -b* pour avoir la table de correspondance.
 
 ## code
 ```text style="font-size: 0.95rem" highlight
@@ -1080,6 +1085,7 @@ $ ascii -b
 0001111 SI     0011111 US     0101111 /    0111111 ?    1001111 O    1011111 _    1101111 o    1111111 DEL
                                                         _________ 
 ```
+> Ici, c'est les caractères du mot "COMPRESSION" qui nous intéressent.
 
 ## huffman score=8 bits=auto
 COMPRESSION
@@ -1090,16 +1096,20 @@ COMPRESSION
 COMPRESSION
 > ...directement proportionnel au nombre de caractères,
 > et lui, il veut limiter ce nombre de bits.
-> Pour ça, il va se baser sur la fréquence (entropie ?).
+> À la rigueur, nous on voit ça, on se dit, mais attends,
+> j'ai que 9 caractères différents dans mon mot,
+> j'ai pas besoin de 8 bits pour les coder,
+
+## huffman step=0 score=4 total-score bits=inc
+COMPRESSION
+> 4 ça suffirait.
+> Huffman, il va beaucoup plus loin.
+> Il se dit :
 > En codant les caractères qui apparaissent le plus souvent avec peu de bits,
 > et en codant les caractères qui apparaissent le moins souvent avec beaucoup de bits,
-> en moyenne, on devrait réduire le nombre de bits total et gagner de la place.
+> en moyenne, on devrait réduire le nombre de total de bits et gagner de la place.
 > $AC$ J'crois qu'on les a perdus.
-> #HS# Mais non, en fait,
-
-## huffman step=0 score=4 total-score
-COMPRESSION
-> TODO intégrer les notes
+> #HS# Mais non, en fait, c'est comme au...
 
 ## barchart narrow unit=""
 Score des lettres au Scrabble (français)
@@ -1129,6 +1139,7 @@ Score des lettres au Scrabble (français)
 // X : 10
 // Y : 10
 // Z : 10
+> Scrabble !
 
 ## barchart narrow unit=""
 Score des lettres au Scrabble (français)
@@ -1158,6 +1169,7 @@ U : 1
 // X : 10
 // Y : 10
 // Z : 10
+> Les lettres les plus fréquentes ont un petit score.
 
 ## barchart narrow unit=""
 Score des lettres au Scrabble (français)
@@ -1187,6 +1199,7 @@ U : 1
 // X : 10
 // Y : 10
 // Z : 10
+> et moins les lettres...
 
 ## barchart narrow unit=""
 Score des lettres au Scrabble (français)
@@ -1216,6 +1229,7 @@ U : 1
 // X : 10
 // Y : 10
 // Z : 10
+> ...sont fréquentes...
 
 ## barchart narrow unit=""
 Score des lettres au Scrabble (français)
@@ -1245,6 +1259,7 @@ V : 4
 // X : 10
 // Y : 10
 // Z : 10
+> ...et plus...
 
 ## barchart narrow unit=""
 Score des lettres au Scrabble (français)
@@ -1274,6 +1289,7 @@ V : 4
 // X : 10
 // Y : 10
 // Z : 10
+> ...leur score est ...
 
 ## barchart narrow unit=""
 Score des lettres au Scrabble (français)
@@ -1303,6 +1319,7 @@ W : 10
 X : 10
 Y : 10
 Z : 10
+> ...est élevé.
 
 ## huffman score=auto
 COMPRESSION
@@ -1311,102 +1328,95 @@ COMPRESSION
 ## huffman total-score score=auto
 COMPRESSION
 > on obtiendrait un nombre total de bits plus petit.
-> En gros, l'idée de Huffman c'est ça.
+> En gros, l'idée de Huffman c'est ça !
 > $AC$ Oui, sauf qu'avec un seul bit, t'as 0 et 1,
 > tu vas pas pouvoir coder "R", "A", "I" et "E".
-<!-- pourquoi pas mettre des séquences de bits en dessous de chaque lettre et mettre des ? en dessous de I et E -->
 > Et en plus, là t'as utilisé une fréquence de lettres qui est plus ou moins basée sur des moyennes de la langue
 > française alors que t'as qu'un tout petit mot.
 
 ## media contain black
 <img src="src/img/huffman2_upscayl_crop.jpg">
-> $AC$ Huffman c'est un génie, le mec a 26 ans, anecdote exam vs papier, il invente un système pour trouver le meilleur
-> codage binaire pour un ensemble de caractère et il prouve mathématiquement que c'est le meilleure codage binaire d'une
-> série de caractère
-> "et ça il le fait pour échapper à un partiel"
-> "et en plus, il est dans la classe de Claude Shannon"
-<!-- lunettes thug life sur son visage au moment ou tu dis, il choisi l'exam -->
-<!-- parler de log de 2 au lieu de 8 -->
+> $AC$ Huffman c'est un génie, le mec a 26 ans, il est étudiant au MIT, dans la meme classe que Claude Shannon,
+> et quand son prof lui dit "soit tu passes un partiel, soit t'écrit un papier de recherche",
+> le mec il choisit le papier de recherche.
+> Il invente un algo pour trouver le meilleur codage binaire pour un ensemble de caractères.
+> En plus, il prouve mathématiquement que c'est la meilleure solution possible.
+> 70 ans plus tard, son algo est partout, il a plié le game.
 
 ## media contain black thug-life="0.1,-0.05,14,5"
 <img src="src/img/huffman2_upscayl_crop.jpg">
+> #HS# J'avoue, c'est trop le boss.
 
 ## huffman animation
 COMPRESSION
-> Pour la première étape de l'algo du codage de Huffman,
+> #HS# Alors comme on le disait plus tot,
+> l'algo de Huffman se base sur la fréquence des caractères.
 
 ## huffman step=1 animation
 COMPRESSION
-<!--
-<br> (huffman tree 1/16)
-<br> lettre en dessous par ordre de fréquence avec le nombre d'occurence en haut de chaque lettre
--->
-> on va compter la fréquence de chaque caractère dans la séquence qu'on essaye de coder
+> Dans notre mot, on a 2 S et 2 O.
+> Ensuite on va répéter plusieurs fois la meme chose.
 
-## huffman todo step=2 animation
+## huffman step=2 animation
+COMPRESSION
+> On va trier par fréquence et ensuite on va prendre les deux les moins fréquents sur la droite,
+> on va additionner les fréquences et les regrouper en construisant un arbre binaire.
+> "je trie"
+> "je regroupe dans un arbre en additionnant les fréquences"
+
+## huffman step=3 animation
 COMPRESSION
 
-## huffman todo step=3 animation
+## huffman step=4 animation
 COMPRESSION
 
-## huffman todo step=4 animation
+## huffman step=5 animation
 COMPRESSION
 
-## huffman todo step=5 animation
+## huffman step=6 animation
 COMPRESSION
 
-## huffman todo step=6 animation
+## huffman step=7 animation
 COMPRESSION
 
-## huffman todo step=7 animation
+## huffman step=8 animation
 COMPRESSION
 
-## huffman todo step=8 animation
+## huffman step=9 animation
 COMPRESSION
 
-## huffman todo step=9 animation
+## huffman step=10 animation
 COMPRESSION
 
-## huffman todo step=10 animation
+## huffman step=11 animation
 COMPRESSION
 
-## huffman todo step=11 animation
+## huffman step=12 animation
 COMPRESSION
 
-## huffman todo step=12 animation
+## huffman step=13 animation
 COMPRESSION
 
-## huffman todo step=13 animation
+## huffman step=14 animation
 COMPRESSION
 
-## huffman todo step=14 animation
+## huffman step=15 animation
 COMPRESSION
 
-## huffman todo step=15 animation
+## huffman step=16 animation
 COMPRESSION
 
-## huffman todo step=16 animation
+## huffman step=17 animation
 COMPRESSION
 
-## huffman todo step=17 animation
+## huffman step=18 score-sheet
 COMPRESSION
-
-## huffman todo step=18 score-sheet
-COMPRESSION
-> on indique que il n'y a pas de conflit "on sait quand s'arrêter"
-<!-- est-ce qu'on montre la logique de décompression pour expliquer qu'on sait voir les caractères et les lire ? -->
 
 ## huffman step=19
 COMPRESSION
-> <br> mode scrabble
-> <br> score base  / score de huffman
-> <br> avec score total
-> ça marche pour n'importe quel suite de caractères
-> c'est l'algo le plus optimisé
 
-## huffman todo step=19 total-score
+## huffman step=19 total-score
 COMPRESSION
-<!-- il manque l'affichage du gain de compression -->
 
 ## media contain white fade-from
 <img src="src/img/tile-lettre-compte-moins.svg">
@@ -1596,11 +1606,7 @@ ET  CONCRETEMENT ?
 ## media
 <img src="src/img/rfc-1952-gzip.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1952">
 
-## media contain white
-<img src="src/img/deflate-zip-gz-07.svg">
-
-## media
-<img src="src/img/rfc-1950-zlib.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1950">
+## blank white
 
 ## code
 ```http type="request"
@@ -1615,6 +1621,12 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
 content-encoding: deflate
 ```
+
+## media contain white
+<img src="src/img/deflate-zip-gz-07.svg">
+
+## media
+<img src="src/img/rfc-1950-zlib.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1950">
 
 ## code
 ```http type="request"
@@ -1706,7 +1718,9 @@ Code  Bits Distances   Code  Bits Distances   Code  Bits   Distances
 > Dévoiler la distance D:17
 > Dévoiler les bits supplémentaires
 
-## gzip mode="text"
+## gzip mode="text" bit-index=252
+
+## gzip mode="text" bit-index=648
 > Afficher le résultat final
 > montrer des exemples de gains
 
@@ -1790,7 +1804,7 @@ brotli *11* : 27450 brotli
 😯 13 504 *"mots"*
 
 ## text
-🗺️ Anglais, Espagnol, Chinois,
+🗺️ *Anglais*, Espagnol, Chinois,
 <br> Hindi, Russe, Arabe
 
 ## text
@@ -2071,6 +2085,7 @@ Recap
 
 ## huffman score=auto
 OXYDIEZ
+35 points + 50 points pour le Scrabble
 
 ## tip recap
 1) Ça va de pair avec la minification.
