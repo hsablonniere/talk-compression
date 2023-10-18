@@ -28,6 +28,9 @@ La compression web
 > Aujourd'hui, on aimerait vous parler de compression,
 > et vu que c'est un sujet assez vaste, on a choisi de se concentrer sur un contexte qu'on aime particulièrement :
 > *le Web* !
+
+## poster fade-from
+La compression web
 > #HS# En fait, il y a un truc qui nous fascine tous les deux...
 > À l'instant où on vous parle, y'a des *millions* de serveurs dans le monde qui sont en train de compresser des réponses HTTP, et  y'a des *milliards* de navigateurs qui sont en train de les décompresser.
 > Du coup, on a regardé comment ça marche et on aimerait vous partager ça...
@@ -661,7 +664,7 @@ HTML : 56.0 brut
 
 ## section
 Dans les  tuyaux
-> @00:07:30@
+> @00:09:30@
 
 ## blank
 
@@ -879,7 +882,7 @@ on parle des valises et tshirt en boule ou pliés
 
 ## section
 Retour  aux sources
-> @00:13:00@
+> @00:15:00@
 
 ## timeline year=2023
 Aujourd'hui, 2023
@@ -932,7 +935,7 @@ Code de Huffman, 1951, David A. Huffman, <img src="src/img/huffman.png" />
 
 ## section
 Code de  Huffman
-> @00:14:00@
+> @00:16:00@
 > le but de huffman c'est d'encoder les caractères en fonction de la fréquence
 > c'est comme le scrabble !
 > à l'époque ce n'est qu'un papier du MIT
@@ -1412,7 +1415,7 @@ COMPRESSION
 
 ## section
 LZ77
-> @00:22:00@
+> @00:22:30@
 
 ## text
 🗓️ Et *25 ans* plus tard...
@@ -1512,7 +1515,7 @@ Na, na, na, na, na, na, na, na, na, na, na, na, hey, Jude.
 
 ## section
 ET  CONCRETEMENT ?
-> @00:32:00@
+> @00:29:30@
 
 ## blank white
 
@@ -1702,7 +1705,7 @@ Code  Bits Distances   Code  Bits Distances   Code  Bits   Distances
 
 ## section
 A la recherche  du pouilleme
-> @00:42:00@
+> @00:39:30@
 > pourquoi ? 1% c'est beaucoup de moula
 > cloudflare qui a un fork de zlib
 
@@ -2038,7 +2041,7 @@ brotli *11* : 262591 brotli
 
 ## section
 Au dela du  pouilleme
-> @00:47:00@
+> @00:47:30@
 
 ## media
 <img src="src/img/rfc-8878-zstd.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc8878.html">
@@ -2052,7 +2055,7 @@ Au dela du  pouilleme
 
 ## section
 Recap
-> @00:48:00@
+> @00:48:30@
 
 ## huffman score=auto
 OXYDIEZ
