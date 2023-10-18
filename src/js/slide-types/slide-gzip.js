@@ -6,7 +6,7 @@ defineSlideType('slide-gzip', {
   render ({ content, attrs }) {
 
     return html`
-      <gzip-explain .mode=${attrs.mode}></gzip-explain>
+      <gzip-explain .mode=${attrs.mode} .bitIndex=${attrs.bitIndex}></gzip-explain>
     `;
   },
   // language=CSS
@@ -20,8 +20,8 @@ defineSlideType('slide-gzip', {
     }
     
     gzip-explain {
-      font-size: 1.4rem;
-      width: 72ch;
+      font-size: 1.35rem;
+      width: 76ch;
     }
   `,
 });

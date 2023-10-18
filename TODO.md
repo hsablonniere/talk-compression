@@ -26,5 +26,6 @@
   * prendre les mêmes étiquettes
   * passer en majuscules
   * enlever le saut de ligne
-* affiner la démo Firefox devtools
 * affiner la démo Sherlock stream
+  * font-size sur l'index
+* setup.md

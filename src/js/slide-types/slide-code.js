@@ -92,6 +92,13 @@ defineSlideType('slide-code', {
       color: #0082ff;
     }
 
+    .title em {
+      margin-left: 1rem;
+      font-style: normal;
+      color: #666;
+      font-size: 2rem;
+    }
+
     .underline {
       text-decoration: underline;
     }

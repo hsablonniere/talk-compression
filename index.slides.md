@@ -15,16 +15,16 @@ date: 19 octobre 2023
 DEIOXYZ
 <!-- animation shuffle -->
 > #HS# (en train de chercher un mot)
-> #AC# Tu fais quoi Hubert ?
+> $AC$ Tu fais quoi Hubert ?
 > #HS# Bah je cherche un mot avec ce tirage, là, mais je galère.
-> #AC# C'est super hein, mais on est pas là pour ça.
+> $AC$ C'est super hein, mais on est pas là pour ça.
 
 ## poster fade-from
 La compression web
-> #AC# Bonjour à *toutes et à tous*, j'm'appelle Antoine Caron,
+> $AC$ Bonjour à *toutes et à tous*, j'm'appelle Antoine Caron,
 > j'suis développeur Web chez Scaleway et je suis accompagné d'Hubert Sablonnière, développeur Web chez Clever Cloud.
 > #HS# _(signe de la main)_ Bonjour ! Je suis joueur de Scrabble aussi.
-> #AC# _(un peu saoulé)_ Oui oui, on a compris.
+> $AC$ _(un peu saoulé)_ Oui oui, on a compris.
 > Aujourd'hui, on aimerait vous parler de compression,
 > et vu que c'est un sujet assez vaste, on a choisi de se concentrer sur un contexte qu'on aime particulièrement :
 > *le Web* !
@@ -459,7 +459,7 @@ ca53 48d3 2eae 4d45 5393  .SH...MES.
 ## section
 Ordres de  grandeur
 > @00:03:30@
-> #AC# Ok, maintenant qu'on sait de quoi on parle il serait important de comprendre l'impact de la compression et minification
+> $AC$ Ok, maintenant qu'on sait de quoi on parle il serait important de comprendre l'impact de la compression et minification
 
 ## barchart logo=js
 math-example.*js* _228o_
@@ -467,7 +467,7 @@ brut : 228 brut
 minifié : 98 min
 compressé : 153 compressed
 minifié<br>& compressé : 89 gzip
-> #AC# Sur l'exemple d'Hubert, vous pouvez observer que la compression et la minification se complètent plutôt mais prenons un fichier un peu plus grand.
+> $AC$ Sur l'exemple d'Hubert, vous pouvez observer que la compression et la minification se complètent plutôt mais prenons un fichier un peu plus grand.
 
 ## barchart logo=js
 jquery.*js* _285,3ko_
@@ -475,7 +475,7 @@ brut : 285314 brut
 minifié : 87029 min
 compressé : 83915 compressed
 minifié<br>& compressé : 30190 gzip
-> #AC# Sur une version de JQuery par exemple, on voit que la compression, avec la minification permet d'obtenir un fichier drastiquement plus petit.
+> $AC$ Sur une version de JQuery par exemple, on voit que la compression, avec la minification permet d'obtenir un fichier drastiquement plus petit.
 > La minication faisant déjà bien le job, on gagne bien les 2/3 du poids.
 
 ## barchart logo=js percent
@@ -485,14 +485,6 @@ minifié : 87029 min
 compressé : 83915 compressed
 minifié<br>& compressé : 30190 gzip
 > Les valeures brutes c'est cool, parlons en ordre de grandeur, JQuery en version minifié et compressé c'est 10% de la taille source.
-
-## barchart logo=js percent
-lodash.*js* _544,1ko_
-brut : 544098 brut
-minifié : 73650 min
-compressé : 97170 compressed
-minifié<br>& compressé : 25684 gzip
-> Lodash c'est 4%
 
 ## barchart logo=css percent
 bootstrap.*css* _205,5ko_
@@ -510,14 +502,6 @@ compressé : 372419 compressed
 minifié<br>& compressé : 366546 gzip
 > Ou bien même avec un document HTML, ici la doc complète d'Hibernate en une seule page, _oui ça existe_
 
-## barchart logo=svg percent
-firefox-logo.*svg* _15,9ko_
-brut : 15858 brut
-minifié : 12163 min
-compressé : 3726 compressed
-minifié<br>& compressé : 3169 gzip
-> Bien évidement avec des SVG ça marche aussi.
-
 ## barchart logo=json percent
 departements-region.*json* _9,6ko_
 brut : 9576 brut
@@ -528,14 +512,14 @@ minifié<br>& compressé : 1244 gzip
 
 ## tip
 1) La compression, ça va de pair avec la minification.
-> #AC# Si on veut résumer, la compression va de pair avec la minification
+> $AC$ Si on veut résumer, la compression va de pair avec la minification
 
 ## blank
 
 ## text
 🎓 En théorie
 > #HS# Avoir des fichiers plus petits c'est cool mais vous allez nous dire qu'en 2023, ça change pas grand chose ?
-> #AC# Ok faisons quelques projections théoriques avec différentes débits.
+> $AC$ Ok faisons quelques projections théoriques avec différentes débits.
 
 ## barchart logo=js unit="time" speed="50"
 jquery.js _285,3ko_ _*3G lente à 50ko/s*_
@@ -561,7 +545,7 @@ minifié<br>& compressé : 30190 gzip
 
 ## text
 ⏱️ En pratique
-> #AC# Et si on voyait ce que ça donnait en vrai ?
+> $AC$ Et si on voyait ce que ça donnait en vrai ?
 > Prenons une page web au hasard...
 
 ## media
@@ -572,7 +556,7 @@ minifié<br>& compressé : 30190 gzip
 ## media contain
 <img src="src/img/wpt-scrabble-waterfall.png">
 
-> #AC# Si tu veux Hubert....
+> $AC$ Si tu veux Hubert....
 > Une page web, c'est une grande cascade de requêtes pour récupérer les ressources qui la composent.
 > Le chargement / parsing d'une ressource déclenchant parfois le téléchargement d'une autre.
 
@@ -604,7 +588,7 @@ minifié<br>& compressé : 30190 gzip
 
 ## tip
 2) La compression, c'est nécessaire (même en 2023).
-> #AC# Et oui même en 2023, la compression c'est donc nécessaire.
+> $AC$ Et oui même en 2023, la compression c'est donc nécessaire.
 > Vous pensez que j'enfonce des portes ouvertes ? 
 > Non mais Antoine, tu abuses, on le sait qu'il faut activer la compression dans le web.
 > Ah bon ?
@@ -899,7 +883,7 @@ Retour  aux sources
 
 ## timeline year=2023
 Aujourd'hui, 2023
-> #AC# Mais tout ça, ça ne date pas d'hier.
+> $AC$ Mais tout ça, ça ne date pas d'hier.
 > Il va falloir sortir la DeLorean mon cher Hubert
 > Quand on parle de Gzip, on parle pas d'un truc qui date d'hier.
 
@@ -909,7 +893,7 @@ Bien avant bootstrap
 
 ## timeline year=2000 animated
 Bien avant les années 2000
-> #AC# On est bien avant le web des années 2000 avec les compteurs de visiteurs
+> $AC$ On est bien avant le web des années 2000 avec les compteurs de visiteurs
 > Les design métaliques qui me manquent un peu
 
 ## timeline year=1980 animated
@@ -918,7 +902,7 @@ GZIP, 1992, Jean-Loup Gailly / Mark Adler, <img src="src/img/adler-gailly.png" /
 > #HS# Il faut remonter à 1992 pour retrouver la RFC de GZIP par Jean-Loup Gailly et Mark Adler
 > RFC 1952
 > Tu faisais quoi en 1992 toi Antoine ?
-> #AC# 😅
+> $AC$ 😅
 > Ils posent les bases d'un modèle de compression basés et inspirés de traveaux de PKZIP par Phil Katz quelques années
 > avant.
 > On parle du Web 56k de l'époque, économiser autant de bits, c'était une révolution.
@@ -927,7 +911,7 @@ GZIP, 1992, Jean-Loup Gailly / Mark Adler, <img src="src/img/adler-gailly.png" /
 
 ## timeline year=1970 animated
 LZ77, 1977, Abraham Lempel and Jacob Ziv, <img src="src/img/lempel-ziv.png" />
-> #AC# Oulà oui on parle de travaux fait 20 ans avant.
+> $AC$ Oulà oui on parle de travaux fait 20 ans avant.
 > Tu faisais quoi en 1977 toi Hubert ?
 > #HS# 😅
 > Travaux de deux scientifiques Abraham Lempel and Jacob Ziv qui proposent en 1977 un algortithme de compression de
@@ -939,7 +923,7 @@ Code de Huffman, 1951, David A. Huffman, <img src="src/img/huffman.png" />
 > #HS# Oui mais PKZIP et GZIP n'ont pas été piocher que dans les travaux des années 70
 > Ils ont été reprendre de travaux publiés en 1951 par Mr Huffman.
 > Le codage de huffman, on est là bien avant les problématiques de l'interweb
-> #AC# Donc, ce qu'on est en train de dire, c'est que la recherche fondamentale
+> $AC$ Donc, ce qu'on est en train de dire, c'est que la recherche fondamentale
 > ça peut avoir des impacts considérables sur l'évolution de la technologie des années après?
 > 40 ans séparent PKZIP du codage d'Huffman et plus de 30 ans séparent GZIP de 2023.
 > #HS# Oui allez Antoine, on est content mais il faut qu'on avance et qu'on leur explique comment ça marche
@@ -970,12 +954,12 @@ Code de  Huffman
 ## text
 sablonnière
 > _Hubert affiche le mot "sablonnière" à l'écran._
-> #AC# Hubert ?
+> $AC$ Hubert ?
 
 ## huffman score=auto
 SABLONNIERE
 > #HS# Non, mais c'est un vrai mot, on peut le jouer au Scrabble.
-> #AC# Hubert !
+> $AC$ Hubert !
 
 ## blank
 > #HS# Bon, d'accord, de toute façon, j'ai jamais réussi à le placer.
@@ -1107,10 +1091,10 @@ COMPRESSION
 > En codant les caractères qui apparaissent le plus souvent avec peu de bits,
 > et en codant les caractères qui apparaissent le moins souvent avec beaucoup de bits,
 > en moyenne, on devrait réduire le nombre de bits total et gagner de la place.
-> #AC# J'crois qu'on les a perdus.
+> $AC$ J'crois qu'on les a perdus.
 > #HS# Mais non, en fait,
 
-## huffman step=0 score=4 total-score bits=inc
+## huffman step=0 score=4 total-score
 COMPRESSION
 > TODO intégrer les notes
 
@@ -1325,7 +1309,7 @@ COMPRESSION
 COMPRESSION
 > on obtiendrait un nombre total de bits plus petit.
 > En gros, l'idée de Huffman c'est ça.
-> #AC# Oui, sauf qu'avec un seul bit, t'as 0 et 1,
+> $AC$ Oui, sauf qu'avec un seul bit, t'as 0 et 1,
 > tu vas pas pouvoir coder "R", "A", "I" et "E".
 <!-- pourquoi pas mettre des séquences de bits en dessous de chaque lettre et mettre des ? en dessous de I et E -->
 > Et en plus, là t'as utilisé une fréquence de lettres qui est plus ou moins basée sur des moyennes de la langue
@@ -1333,7 +1317,7 @@ COMPRESSION
 
 ## media contain black
 <img src="src/img/huffman2_upscayl_crop.jpg">
-> #AC# Huffman c'est un génie, le mec a 26 ans, anecdote exam vs papier, il invente un système pour trouver le meilleur
+> $AC$ Huffman c'est un génie, le mec a 26 ans, anecdote exam vs papier, il invente un système pour trouver le meilleur
 > codage binaire pour un ensemble de caractère et il prouve mathématiquement que c'est le meilleure codage binaire d'une
 > série de caractère
 > "et ça il le fait pour échapper à un partiel"
@@ -1445,14 +1429,9 @@ _Mais on ne peut pas tromper mille personnes, mille fois.*"*_
 ## media contain white
 <img src="src/img/tile-mot-compte-moins.svg">
 
-## text small
-_*"*On peut tromper une personne mille fois._<br>
-_On peut tromper mille personnes une fois._<br>
-_Mais on ne peut pas tromper mille personnes, mille fois.*"*_
-> A: On va chasser les motifs répétitifs.
-
 ## media
 <img src="/src/img/alice-butenko-zstWUZFj77w-unsplash.jpg">
+> A: On va chasser les motifs répétitifs.
 
 > A: L'idée de Mr Lempel et Mr Ziv c'est de trouver un moyen de réduire le nombre de bit nécessaire pour représenter un motif qui se répète.
 > Et si on remplaçait des parties du messages par des étiquettes/des pointeurs vers une autre partie du message.
@@ -1636,13 +1615,18 @@ HTTP/1.1 200 OK
 content-encoding: gzip
 ```
 
-## gzip mode="bits" todo
+## blank
 
-## gzip mode="symbols" todo
+## gzip mode="symbols-h"
+> Expliquer les headers
+> Expliquer les footers
+> Expliquer le block deflate
+> Rappeler qu'il y a d'abord eu un LZ77 pour créer des étiquettes
+> Puis :
+> - un codage de Huffman pour savoir comment coder les symboles et les longueurs
+> - et un codage de Huffman pour les distances
 
-## gzip mode="text" todo
-
-## code todo title="RFC 1951: *DEFLATE*"
+## code title="Codes de *Huffman* type 1 _RFC 1951 : DEFLATE_"
 ```text
 Lit Value    Bits        Codes
 ---------    ----        -----
@@ -1656,7 +1640,17 @@ Lit Value    Bits        Codes
                          11000111
 ```
 
-## code todo title="RFC 1951: *DEFLATE*"
+## gzip mode="symbols-h"
+> Montrer le "end of block"
+> Dévoiler le O, le N, l'espace, le P...
+> Aller, jusqu'à la première longueur
+
+## gzip mode="symbols-h" bit-index=235
+> Montrer le "end of block"
+> Dévoiler le O, le N, l'espace, le P...
+> Aller, jusqu'à la première longueur
+
+## code title="*Longueurs* type 1 _RFC 1951 : DEFLATE_"
 ```text
      Extra                Extra                Extra
 Code  Bits Lengths   Code  Bits Lengths   Code  Bits Lengths
@@ -1673,8 +1667,10 @@ Code  Bits Lengths   Code  Bits Lengths   Code  Bits Lengths
  266     1  13,14     276     3   59-66
 ```
 
+## gzip mode="symbols-h" bit-index=242
+> Dévoiler la longueur L:3
 
-## code todo title="RFC 1951: *DEFLATE*"
+## code title="*Distances* type 1 _RFC 1951 : DEFLATE_"
 ```text
      Extra                  Extra                  Extra
 Code  Bits Distances   Code  Bits Distances   Code  Bits   Distances
@@ -1690,6 +1686,14 @@ Code  Bits Distances   Code  Bits Distances   Code  Bits   Distances
    8     3     17-24     18     8  513- 768     28    13 16385-24576
    9     3     25-32     19     8  769-1024     29    13 24577-32768
 ```
+
+## gzip mode="symbols-h" bit-index=249
+> Dévoiler la distance D:17
+> Dévoiler les bits supplémentaires
+
+## gzip mode="text"
+> Afficher le résultat final
+> montrer des exemples de gains
 
 ## media fade-from
 <img src="src/img/youtube-bill-bird-deflate.png" screenshot-url="https://www.youtube.com/watch?v=SJPvNi4HrWQ">
@@ -1825,6 +1829,7 @@ perpendicular to the  style type="text/css  type="submit" name="  families resid
 developing countries  computer programming  economic development  determination of the
 ```
 
+<!--
 ## barchart tiny unit="raw"
 Nombre de "mots" de N "lettres" dans le dictionnaire brotli
 4 : 1024 brotli
@@ -1848,6 +1853,7 @@ Nombre de "mots" de N "lettres" dans le dictionnaire brotli
 22 : 64 brotli
 23 : 32 brotli
 24 : 32 brotli
+-->
 
 ## text
 ✂️ *×* 121 *transformations*
@@ -1913,6 +1919,7 @@ Temps de compression *brotli* _jquery.min.js_
 Temps de compression *zopfli* _jquery.min.js_
 zopfli : 142.2 zopfli
 
+<!--
 ## barchart small unit="ms" max="142.2"
 Temps de compression *gzip* _jquery.min.js_
 1 : 1.8 gzip
@@ -1924,6 +1931,7 @@ Temps de compression *gzip* _jquery.min.js_
 7 : 3.6 gzip
 8 : 3.7 gzip
 9 : 3.7 gzip
+-->
 
 ## barchart unit="ms"
 Temps de compression _jquery.min.js_
@@ -1979,11 +1987,8 @@ br*11* : 1.1
 > quel sort on réserve au gens qui compresse du JPEG ?
 > explications
 
-## barchart
-cats.*jpeg* _591,8ko_
-brut : 591794 brut
-gzip *9* : 584070 gzip
-brotli *11* : 579413 brotli
+## media
+<img src="src/benchmarks/hubert-cats-small.jpg">
 
 ## barchart percent
 cats.*jpeg* _591,8ko_
@@ -2049,6 +2054,9 @@ Au dela du  pouilleme
 Recap
 > @00:48:00@
 
+## huffman score=auto
+OXYDIEZ
+
 ## tip recap
 1) Ça va de pair avec la minification.
 2) C'est nécessaire (même en 2023).
@@ -2059,9 +2067,6 @@ Recap
 7) Ça marche mieux avec brotli.
 8) Le statique se compresse une seule fois au build.
 9) Ça n'a pas d'effet sur les fichiers déjà compressés.
-
-## huffman score=auto
-OXYDIEZ
 
 ## poster
 Merci beaucoup !
