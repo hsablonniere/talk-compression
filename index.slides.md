@@ -420,7 +420,7 @@ __                        _
 6c28 6e2d 3129 7d0a       l(n-1)}.
 ```
 > et les returns.
-> le minifieur lui,
+> le compresseur lui,
 
 ## code title="math-example.min.js"
 ```text bin-js-example size=98
@@ -677,6 +677,7 @@ HTML : 56.0 brut
 
 ## section
 Dans les  tuyaux
+> @00:07:30@
 
 ## blank
 
@@ -894,6 +895,7 @@ on parle des valises et tshirt en boule ou pliés
 
 ## section
 Retour  aux sources
+> @00:13:00@
 
 ## timeline year=2023
 Aujourd'hui, 2023
@@ -946,6 +948,7 @@ Code de Huffman, 1951, David A. Huffman, <img src="src/img/huffman.png" />
 
 ## section
 Code de  Huffman
+> @00:14:00@
 > le but de huffman c'est d'encoder les caractères en fonction de la fréquence
 > c'est comme le scrabble !
 > à l'époque ce n'est qu'un papier du MIT
@@ -1425,6 +1428,7 @@ COMPRESSION
 
 ## section
 LZ77
+> @00:22:00@
 
 ## text
 🗓️ Et *25 ans* plus tard...
@@ -1529,6 +1533,7 @@ Na, na, na, na, na, na, na, na, na, na, na, na, hey, Jude.
 
 ## section
 ET  CONCRETEMENT ?
+> @00:32:00@
 
 ## blank white
 
@@ -1648,7 +1653,7 @@ Code  Bits Distances   Code  Bits Distances   Code  Bits   Distances
 
 ## section
 A la recherche  du pouilleme
-> à la recherche du pouillème
+> @00:42:00@
 > pourquoi ? 1% c'est beaucoup de moula
 > cloudflare qui a un fork de zlib
 
@@ -1983,6 +1988,7 @@ brotli *11* : 262591 brotli
 
 ## section
 Au dela du  pouilleme
+> @00:47:00@
 
 ## media
 <img src="src/img/rfc-8878-zstd.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc8878.html">
@@ -1996,6 +2002,7 @@ Au dela du  pouilleme
 
 ## section
 Recap
+> @00:48:00@
 
 ## tip recap
 1) Ça va de pair avec la minification.
@@ -2013,6 +2020,7 @@ OXYDIEZ
 
 ## poster
 Merci beaucoup !
+> @00:50:00@
 
 ## credits
 
