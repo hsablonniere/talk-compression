@@ -1570,26 +1570,71 @@ ET  CONCRETEMENT ?
 > Et beaucoup de variantes de cet algorithme ont fait outils que vous connaissez probablement tous.
 > A: Ah oui tiens, même _Winrar_, vous aviez payé votre license vous ?
 
-## todo
-deflate / pkzip v2
-Phil Katz
-(v1 1986 / v2 ?) (30 ans)
-> dans les années 90, tout le monde a essayé d'optimisé pour que ça marche bien pour du texte
+## media contain
+<img src="src/img/phil-katz-bigger.jpg">
+> Phil Katz 1990
 
-## todo
-gzip
-Jean-loup Gailly and Mark Adler
-1992 (30 ans)
+## media contain white
+<img src="src/img/deflate-zip-gz-01.svg">
+
+## media contain white
+<img src="src/img/deflate-zip-gz-02.svg">
+
+## media contain white
+<img src="src/img/deflate-zip-gz-03.svg">
+
+## media
+<img src="src/img/rfc-1951-deflate.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1951">
+
+## media contain white
+<img src="src/img/deflate-zip-gz-04.svg">
+
+## media contain white
+<img src="src/img/deflate-zip-gz-05.svg">
+
+## media contain
+<img src="src/img/adler-gailly-bigger.jpg">
+> Jean-loup Gailly and Mark Adler 1992
+
+## media contain white
+<img src="src/img/deflate-zip-gz-06.svg">
+
+## media
+<img src="src/img/rfc-1952-gzip.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1952">
+
+## media contain white
+<img src="src/img/deflate-zip-gz-07.svg">
 
 ## media
 <img src="src/img/rfc-1950-zlib.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1950">
 
-## media
-<img src="src/img/rfc-1951-deflate.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1951">
-<img src="src/img/rfc-1952-gzip.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1952">
+## code
+```http type="request"
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="request" hide-height
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="response"
+HTTP/1.1 200 OK
+content-encoding: deflate
+```
 
-## todo
-exemple binaire de gzip en mode décompression
+## code
+```http type="request"
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="request" hide-height
+GET /index.html HTTP/1.1
+accept-encoding: gzip, deflate, br
+```
+```http type="response"
+HTTP/1.1 200 OK
+content-encoding: gzip
+```
 
 ## gzip mode="bits" todo
 
