@@ -515,10 +515,10 @@ minifié<br>& compressé : 1244 gzip
 > $AC$ Si on veut résumer, la compression va de pair avec la minification
 
 ## blank
+> #HS# Réduire la taille, c'est bien mais faut se poser la question de l'impact sur les utilisateurs.
 
 ## text
 🎓 En théorie
-> #HS# Avoir des fichiers plus petits c'est cool mais vous allez nous dire qu'en 2023, ça change pas grand chose ?
 > $AC$ Ok faisons quelques projections théoriques avec différentes débits.
 
 ## barchart logo=js unit="time" speed="50"
@@ -590,7 +590,8 @@ minifié<br>& compressé : 30190 gzip
 2) La compression, c'est nécessaire (même en 2023).
 > $AC$ Et oui même en 2023, la compression c'est donc nécessaire.
 > Vous pensez que j'enfonce des portes ouvertes ? 
-> Non mais Antoine, tu abuses, on le sait qu'il faut activer la compression dans le web.
+> #HS# Non mais Antoine, on enfonce des portes ouvertes,
+> tout le monde sait qu'il faut compresser.
 > Ah bon ?
 
 ## media
@@ -900,20 +901,10 @@ Affichage : 20
 > La compression (et la décompression), ça n'interrompt pas le flux, ça ne perturbe pas le fonctionnement temps réel du Web.
 
 ## blank black
-> TODO Transition
-> on vient de comprendre que compresser c'est indispensable
-> ça l'est toujours dans un monde de fibre, de 5G, de CPU M2
-> ça a encore un impact sur nos utilisateurs et sur l'environnement
-> mais ça date pas d'hier
-> ça fait combien de temps qu'on se pose cette question ?
-> 56K
 
 ## section
 Retour  aux sources
 > @00:15:00@
-
-## timeline year=2023
-Aujourd'hui, 2023
 > $AC$ Mais tout ça, ça ne date pas d'hier.
 > Il va falloir sortir la DeLorean mon cher Hubert
 > Quand on parle de Gzip, on parle pas d'un truc qui date d'hier.
@@ -930,9 +921,9 @@ Bien avant les années 2000
 ## timeline year=1980 animated
 PKZIP, 1986, Phil Katz, <img src="src/img/katz.png" />
 GZIP, 1992, Jean-Loup Gailly / Mark Adler, <img src="src/img/adler-gailly.png" />
-> #HS# Il faut remonter à 1992 pour retrouver la RFC de GZIP par Jean-Loup Gailly et Mark Adler
+> $AC$ Il faut remonter à 1992 pour retrouver la RFC de GZIP par Jean-Loup Gailly et Mark Adler
 > RFC 1952
-> Tu faisais quoi en 1992 toi Antoine ?
+> #HS# Tu faisais quoi en 1992 toi Antoine ?
 > $AC$ 😅
 > Ils posent les bases d'un modèle de compression basés et inspirés de traveaux de PKZIP par Phil Katz quelques années
 > avant.
@@ -951,13 +942,13 @@ LZ77, 1977, Abraham Lempel and Jacob Ziv, <img src="src/img/lempel-ziv.png" />
 
 ## timeline year=1950 animated
 Code de Huffman, 1952, David A. Huffman, <img src="src/img/huffman.png" />
-> #HS# Oui mais PKZIP et GZIP n'ont pas été piocher que dans les travaux des années 70
+> $AC$ Oui mais PKZIP et GZIP n'ont pas été piocher que dans les travaux des années 70
 > Ils ont été reprendre de travaux publiés en 1952 par Mr Huffman.
+> #HS# 52, c'est l'année de l'explosion du Scrabble
 > Le codage de huffman, on est là bien avant les problématiques de l'interweb
-> $AC$ Donc, ce qu'on est en train de dire, c'est que la recherche fondamentale
+> $AC$ Donc, ce qu'on est en train de vous dire là, c'est que la recherche fondamentale
 > ça peut avoir des impacts considérables sur l'évolution de la technologie des années après?
 > 40 ans séparent PKZIP du codage d'Huffman et plus de 30 ans séparent GZIP de 2023.
-> #HS# Oui allez Antoine, on est content mais il faut qu'on avance et qu'on leur explique comment ça marche
 
 ## blank black
 
@@ -1438,19 +1429,9 @@ _Mais on ne peut pas tromper mille personnes, mille fois.*"*_
 
 ## media contain white
 <img src="src/img/tile-mot-compte-moins.svg">
-
-<<<<<<< Updated upstream
-=======
 > #HS#: Et si on jouait à mot compte moins ?
 > $AC$: Oui si tu veux
 
-## text small
-_*"*On peut tromper une personne mille fois._<br>
-_On peut tromper mille personnes une fois._<br>
-_Mais on ne peut pas tromper mille personnes, mille fois.*"*_
-> $AC$: On va chasser les motifs répétitifs.
-
->>>>>>> Stashed changes
 ## media
 <img src="/src/img/alice-butenko-zstWUZFj77w-unsplash.jpg">
 > A: On va chasser les motifs répétitifs.
@@ -1796,6 +1777,7 @@ brotli *11* : 27450 brotli
 
 ## text
 📖 *Dictionnaire* brotli
+> #HS#
 
 ## text
 😯 13 504 *"mots"*
