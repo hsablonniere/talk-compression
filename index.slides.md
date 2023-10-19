@@ -1424,30 +1424,39 @@ LZ77
 _*"*On peut tromper une personne mille fois._<br>
 _On peut tromper mille personnes une fois._<br>
 _Mais on ne peut pas tromper mille personnes, mille fois.*"*_
-> A: Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
+> ?AC?: Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
 > Personellement ça m'est impossible.
-> H: On se répète un peu là non ? 
-> En observant cette phrase on peut surement se dire que se limiter à optimiser caractère par caractère est limitant.
+> #HS#: On se répète un peu là non ? 
+> En observant cette phrase on peut surement se dire que se limiter à optimiser caractère par caractère est pas le plus intéressant.
 
 ## media contain white
 <img src="src/img/tile-mot-compte-moins.svg">
 
+<<<<<<< Updated upstream
+=======
+> #HS#: Et si on jouait à mot compte moins ?
+> ?AC?: Oui si tu veux
+
+## text small
+_*"*On peut tromper une personne mille fois._<br>
+_On peut tromper mille personnes une fois._<br>
+_Mais on ne peut pas tromper mille personnes, mille fois.*"*_
+> ?AC?: On va chasser les motifs répétitifs.
+
+>>>>>>> Stashed changes
 ## media
 <img src="/src/img/alice-butenko-zstWUZFj77w-unsplash.jpg">
 > A: On va chasser les motifs répétitifs.
 
-> A: L'idée de Mr Lempel et Mr Ziv c'est de trouver un moyen de réduire le nombre de bit nécessaire pour représenter un motif qui se répète.
+> ?AC?: L'idée de Mr Lempel et Mr Ziv c'est de trouver un moyen de réduire le nombre de bit nécessaire pour représenter un motif qui se répète.
 > Et si on remplaçait des parties du messages par des étiquettes/des pointeurs vers une autre partie du message.
-> H: Je ne sais pas si vous l'aviez remarqué mais il y a quelques motifs de répétitions dans la phrase _"On peut tromper..."_"
-> A: Je vais vous montrer sur un exemple simple
+> #HS#: Je ne sais pas si vous l'aviez remarqué mais il y a quelques motifs de répétitions dans la phrase _"On peut tromper..."_"
+> ?AC?: Je vais vous montrer sur un exemple simple
 
 ## lzd init style="font-size: 1.5rem"
 mille-feuille
 -[--]----(--)
-> A: On va lire char par char le texte qu'on souhaite compresser.
-> A: Dès qu'on trouve un motif qui se répète par rapport à ce qu'on a déjà vu, on le remplacer par une "etiquette"
-> L'étiquette possède une info de la distance, ici 4 et de la longueur 4.
-> On va essayer sur notre citation de la cité de la peur.
+> ?AC?: On va lire char par char le texte qu'on souhaite compresser.
 
 ## lzd step=0 style="font-size: 1.5rem"
 
@@ -1499,16 +1508,19 @@ ON PEUT TROMPER UNE PERSONNE MILLE FOIS. ON PEUT TROMPER MILLE PERSONNES UNE FOI
 ## lzd finish
 
 ## blank white
+> #HS#: Mais le système d'étiquettage est bien plus puissant que ça
+> ?AC?: En effet, Hubert, prenons l'exemple de la fin de Hey Jude des Beatles.
 
 ## lzd init
 Na, na, na, na, na, na, na, na, na, na, na, na, hey, Jude.
 [---(--------------------------------------]---)----------
+> ?AC?: C'est beau la poésie anglaise, bon, passons.
 
 ## lzd step=0
 
 ## lzd finish fade-from
-> A: On a clairement moins de tuiles en bas qu'en haut non ? 
-> H: Pourtant si on reçoit le texte du bas on peut facilement regénérer le texte du haut.
+> ?AC?: On a clairement moins de tuiles en bas qu'en haut non ? 
+> #HS#: Pourtant si on reçoit le texte du bas on peut facilement regénérer le texte du haut.
 > Même si on le reçoit progressivement.
 
 ## blank black
