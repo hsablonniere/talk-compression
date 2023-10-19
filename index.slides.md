@@ -28,9 +28,6 @@ La compression web
 > Aujourd'hui, on aimerait vous parler de compression,
 > et vu que c'est un sujet assez vaste, on a choisi de se concentrer sur un contexte qu'on aime particulièrement :
 > *le Web* !
-
-## poster fade-from
-La compression web
 > #HS# En fait, il y a un truc qui nous fascine tous les deux...
 > À l'instant où on vous parle, y'a des *millions* de serveurs dans le monde qui sont en train de compresser des réponses HTTP, et  y'a des *milliards* de navigateurs qui sont en train de les décompresser.
 > Du coup, on a regardé comment ça marche et on aimerait vous partager ça...
@@ -1434,7 +1431,7 @@ LZ77
 _*"*On peut tromper une personne mille fois._<br>
 _On peut tromper mille personnes une fois._<br>
 _Mais on ne peut pas tromper mille personnes, mille fois.*"*_
-> ?AC?: Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
+> $AC$: Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
 > Personellement ça m'est impossible.
 > #HS#: On se répète un peu là non ? 
 > En observant cette phrase on peut surement se dire que se limiter à optimiser caractère par caractère est pas le plus intéressant.
@@ -1445,28 +1442,28 @@ _Mais on ne peut pas tromper mille personnes, mille fois.*"*_
 <<<<<<< Updated upstream
 =======
 > #HS#: Et si on jouait à mot compte moins ?
-> ?AC?: Oui si tu veux
+> $AC$: Oui si tu veux
 
 ## text small
 _*"*On peut tromper une personne mille fois._<br>
 _On peut tromper mille personnes une fois._<br>
 _Mais on ne peut pas tromper mille personnes, mille fois.*"*_
-> ?AC?: On va chasser les motifs répétitifs.
+> $AC$: On va chasser les motifs répétitifs.
 
 >>>>>>> Stashed changes
 ## media
 <img src="/src/img/alice-butenko-zstWUZFj77w-unsplash.jpg">
 > A: On va chasser les motifs répétitifs.
 
-> ?AC?: L'idée de Mr Lempel et Mr Ziv c'est de trouver un moyen de réduire le nombre de bit nécessaire pour représenter un motif qui se répète.
+> $AC$: L'idée de Mr Lempel et Mr Ziv c'est de trouver un moyen de réduire le nombre de bit nécessaire pour représenter un motif qui se répète.
 > Et si on remplaçait des parties du messages par des étiquettes/des pointeurs vers une autre partie du message.
 > #HS#: Je ne sais pas si vous l'aviez remarqué mais il y a quelques motifs de répétitions dans la phrase _"On peut tromper..."_"
-> ?AC?: Je vais vous montrer sur un exemple simple
+> $AC$: Je vais vous montrer sur un exemple simple
 
 ## lzd init style="font-size: 1.5rem"
 mille-feuille
 -[--]----(--)
-> ?AC?: On va lire char par char le texte qu'on souhaite compresser.
+> $AC$: On va lire char par char le texte qu'on souhaite compresser.
 
 ## lzd step=0 style="font-size: 1.5rem"
 
@@ -1519,17 +1516,17 @@ ON PEUT TROMPER UNE PERSONNE MILLE FOIS. ON PEUT TROMPER MILLE PERSONNES UNE FOI
 
 ## blank white
 > #HS#: Mais le système d'étiquettage est bien plus puissant que ça
-> ?AC?: En effet, Hubert, prenons l'exemple de la fin de Hey Jude des Beatles.
+> $AC$: En effet, Hubert, prenons l'exemple de la fin de Hey Jude des Beatles.
 
 ## lzd init
 Na, na, na, na, na, na, na, na, na, na, na, na, hey, Jude.
 [---(--------------------------------------]---)----------
-> ?AC?: C'est beau la poésie anglaise, bon, passons.
+> $AC$: C'est beau la poésie anglaise, bon, passons.
 
 ## lzd step=0
 
 ## lzd finish fade-from
-> ?AC?: On a clairement moins de tuiles en bas qu'en haut non ? 
+> $AC$: On a clairement moins de tuiles en bas qu'en haut non ? 
 > #HS#: Pourtant si on reçoit le texte du bas on peut facilement regénérer le texte du haut.
 > Même si on le reçoit progressivement.
 
@@ -2082,10 +2079,13 @@ Au dela du  pouilleme
 ## section
 Recap
 > @00:48:30@
+> $AC$ Aujourd'hui a essayé de faire de le tour de ce qui nous parait essentiel pour comprendre la compression dans le monde du Web.
+> Bon, Hubert a aussi inséré discrètement quelques références au Scrabble.
 
 ## huffman score=auto
 OXYDIEZ
-35 points + 50 points pour le Scrabble
+> #HS# Ouais d'ailleurs j'ai trouvé mon mot.
+> 35 points + 50 points de bonus
 
 ## tip recap
 1) Ça va de pair avec la minification.
@@ -2097,6 +2097,12 @@ OXYDIEZ
 7) Ça marche mieux avec brotli.
 8) Le statique se compresse une seule fois au build.
 9) Ça n'a pas d'effet sur les fichiers déjà compressés.
+> $AC$ Pour être certain que vous reteniez les 9 rappels/principes importants de la présentation
+> on vous a préparé un petit jeu derrière ce QR code pour gagner des crédits chez Scaleway et Clever Cloud.
+> $AC$ 1, 2
+> #HS# 3, 4, 5
+> $AC$ 6, 7, 8
+> #HS# 9
 
 ## poster
 Merci beaucoup !
@@ -2114,7 +2120,7 @@ Liens :
 * Almanac de l'HTTP Archive : https://almanac.httparchive.org
 * Can I use (gzip) : https://caniuse.com/sr_content-encoding-gzip
 * Can I use (brotli) : https://caniuse.com/brotli
-* Why the LZ algorithms are so dominant (Scott McAnlis) : https://www.youtube.com/watch?v=Jqc418tQDkg
+* Why the LZ algorithms are so dominant (Colt McAnlis) : https://www.youtube.com/watch?v=Jqc418tQDkg
 * RFC zlib : https://www.rfc-editor.org/rfc/rfc1950
 * RFC gzip : https://www.rfc-editor.org/rfc/rfc1951
 * RFC deflate : https://www.rfc-editor.org/rfc/rfc1952
