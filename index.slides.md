@@ -2056,6 +2056,14 @@ Au dela du  pouilleme
 <img src="src/img/github-wicg-compression-dictionary-transport.png" screenshot-url="https://github.com/WICG/compression-dictionary-transport">
 > dictionnaire brouillon WICG
 
+## demo
+Demo glitch
+> https://chromium.googlesource.com/chromium/src/+/main/docs/experiments/compression-dictionary-transport.md
+> https://compression-dictionary-transport-threejs-demo.glitch.me/demo.html?r=151
+> https://compression-dictionary-transport-shop-demo.glitch.me/
+> https://github.com/WICG/compression-dictionary-transport/blob/main/README.md
+> https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/
+
 ## blank black
 
 ## section
