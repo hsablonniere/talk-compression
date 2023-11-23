@@ -2,8 +2,8 @@
 author:
 author-twitter:
 author-company:
-event: DevFest Nantes
-date: 19 octobre 2023
+event: Tech talk Clever Cloud
+date: 24 novembre 2023
 ---
 
 # La compression Web : comment (re)prendre le contrôle ?
