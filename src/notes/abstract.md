@@ -53,14 +53,15 @@ Saviez-vous que toute la journée, nos serveurs compressent nos réponses HTTP e
 C'est comme si on passait notre temps à plier des T-shirts et à les déplier.
 Cette compression est partout sur le Web, et pourtant ses subtilités nous échappent souvent.
 On compresse des formats qui n'en ont pas besoin, on compresse à la volée des fichiers statiques, on n'adopte pas les nouveaux algorithmes...
+Parfois, on oublie carrément d'activer la compression.
 Bref, on remplit les tuyaux d'internet plus que nécessaire, comme si on remplissait notre valise de chaussettes en boule.
 
 Mais rassurez-vous, il y a de l'espoir !
 Dans cette session, nous allons (re)découvrir la compression pour le Web.
-Nous vous présenterons les principaux algorithmes de compression comme gzip et brotli, ainsi que les techniques sous-jacentes.
-Nous aborderons également la négociation de contenu entre les serveurs et les navigateurs.
+Nous vous présenterons les principaux algorithmes et techniques qui se cachent sous les formats gzip et brotli.
+Nous aborderons également la négociation de contenu entre serveurs et navigateurs.
 
-Enfin, nous partagerons avec vous des bonnes pratiques à adopter pour éviter les mauvaises surprises : des exemples concrets, des mesures et quelques astuces pour améliorer les performances de votre site web.
+Ça sera l'occasion de rappeler les termes, d'évoquer des ordres de grandeur, de faire des démos et aussi de partager quelques astuces pour améliorer les performances de votre site web.
 Car, oui, optimiser la compression de vos données, c'est un peu comme optimiser votre valise avant de partir en vacances : vous gagnez de la place, vous êtes plus efficace, et vous évitez de criser sur cette satanée fermeture éclair qui ne veut pas se fermer !
 
 ### EN
