@@ -78,17 +78,18 @@ Car, oui, optimiser la compression de vos données, c'est un peu comme optimiser
 
 ### FR
 
-Il s'agit d'une proposition toute neuve qui n'a jamais été présentée.
-C'est un sujet qu'on creuse tous les deux à notre manière depuis plusieurs mois et qui nous intéresse beaucoup.
-Nous voulons faire une présentation avec des slides interactifs, des démos et des exemples concrets.
+Nous avons donné cette présentation au DevFest Nantes et nous avons eu de bons retours.
+Depuis nous l'avons donné en interne chez Clever Cloud en ajoutant une démo sur la nouvelle spec de dictionnaires partagés.
+Il s'agit donc d'un "back to basics" mais avec un peu de nouveauté dedans.
+C'est un sujet qui nous passionne et que nous avons creusé tous les deux à notre manière depuis plus d'un an.
+Notre présentation inclue des petites démos et des slides interactifs pour expliquer les algos.
 
 Une personne qui a suivi la présentation repart avec :
 
-* une connaissance des algos, des variantes etc...
-* une compréhension de TCP/IP/HTTP (lié à l'usage de la compression)
-* une vision claire de la nécessité de la compression dans le Web
-* des bonnes pratiques
-* des alertes sur les mauvaises pratiques
+* une vision claire de la nécessité de la compression dans le Web avec des ordres de grandeur
+* une connaissance des algos à la base de gzip et brotli (code de Huffman et LZ77)
+* une compréhension de la négociation de contenu HTTP entre serveurs et navigateurs
+* quelques conseils de réglages à appliquer sur un serveur (niveaux, formats...)
 
 Cette présentation s'adresse donc à des devs frontend, backend, novice pour de la découverte ou expert pour certains rappels.
 
