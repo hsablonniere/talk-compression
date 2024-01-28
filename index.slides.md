@@ -664,7 +664,7 @@ HTML : 56.0 brut
 
 ## section
 Dans les  tuyaux
-> @00:09:30@
+> @00:09:00@
 > ...dans les tuyaux avec le protocole HTTP.
 
 ## blank
@@ -904,7 +904,7 @@ Affichage : 20
 
 ## section
 Retour  aux sources
-> @00:15:00@
+> @00:14:30@
 > $AC$ Mais tout ça, ça ne date pas d'hier.
 > Il va falloir sortir la DeLorean mon cher Hubert
 > Quand on parle de Gzip, on parle pas d'un truc qui date d'hier.
@@ -954,7 +954,7 @@ Code de Huffman, 1952, David A. Huffman, <img src="src/img/huffman.png" />
 
 ## section
 Code de  Huffman
-> @00:16:00@
+> @00:15:30@
 > #HS# Alors, c'est l'heure d'expliquer le code de Huffman et son algorithme.
 
 ## blank
@@ -1413,7 +1413,7 @@ COMPRESSION
 
 ## section
 LZ77
-> @00:22:30@
+> @00:21:30@
 
 ## text
 🗓️ Et *25 ans* plus tard...
@@ -1515,7 +1515,7 @@ Na, na, na, na, na, na, na, na, na, na, na, na, hey, Jude.
 
 ## section
 ET  CONCRETEMENT ?
-> @00:29:30@
+> @00:27:30@
 
 ## blank white
 
@@ -1709,7 +1709,7 @@ Code  Bits Distances   Code  Bits Distances   Code  Bits   Distances
 
 ## section
 A la recherche  du pouilleme
-> @00:39:30@
+> @00:34:30@
 > pourquoi ? 1% c'est beaucoup de moula
 > cloudflare qui a un fork de zlib
 
@@ -2046,7 +2046,7 @@ brotli *11* : 262591 brotli
 
 ## section
 Au dela du  pouilleme
-> @00:47:30@
+> @00:41:00@
 
 ## media
 <img src="src/img/rfc-8878-zstd.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc8878.html">
@@ -2068,7 +2068,7 @@ Demo glitch
 
 ## section
 Recap
-> @00:48:30@
+> @00:43:30@
 > $AC$ Aujourd'hui a essayé de faire de le tour de ce qui nous parait essentiel pour comprendre la compression dans le monde du Web.
 > Bon, Hubert a aussi inséré discrètement quelques références au Scrabble.
 
@@ -2096,7 +2096,7 @@ OXYDIEZ
 
 ## poster
 Merci beaucoup !
-> @00:50:00@
+> @00:45:00@
 
 ## credits
 
