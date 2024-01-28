@@ -2,8 +2,8 @@
 author:
 author-twitter:
 author-company:
-event: Tech talk Clever Cloud
-date: 24 novembre 2023
+event: Snowcamp 2024
+date: 1 février 2024
 ---
 
 # La compression Web : comment (re)prendre le contrôle ?
