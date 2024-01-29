@@ -587,8 +587,8 @@ minifié<br>& compressé : 30190 gzip
 > Bien évidemment, avec un réseau illimité on ne voit quasi pas la différence.
 
 ## tip
-2) La compression, c'est nécessaire (même en 2023).
-> $AC$ Et oui même en 2023, la compression c'est donc nécessaire.
+2) La compression, c'est nécessaire (même en 2024).
+> $AC$ Et oui même en 2024, la compression c'est donc nécessaire.
 > Vous pensez que j'enfonce des portes ouvertes ? 
 > #HS# Non mais Antoine, on enfonce des portes ouvertes,
 > tout le monde sait qu'il faut compresser.
@@ -948,7 +948,7 @@ Code de Huffman, 1952, David A. Huffman, <img src="src/img/huffman.png" />
 > Le codage de huffman, on est là bien avant les problématiques de l'interweb
 > $AC$ Donc, ce qu'on est en train de vous dire là, c'est que la recherche fondamentale
 > ça peut avoir des impacts considérables sur l'évolution de la technologie des années après?
-> 40 ans séparent PKZIP du codage d'Huffman et plus de 30 ans séparent GZIP de 2023.
+> 40 ans séparent PKZIP du codage d'Huffman et plus de 30 ans séparent GZIP de 2024.
 
 ## blank black
 
@@ -2079,7 +2079,7 @@ OXYDIEZ
 
 ## tip recap
 1) Ça va de pair avec la minification.
-2) C'est nécessaire (même en 2023).
+2) C'est nécessaire (même en 2024).
 3) C'est natif au fonctionnement du Web.
 4) Ça n'interrompt pas le flux.
 5) C'est _lettre compte moins_.
@@ -2102,7 +2102,7 @@ Merci beaucoup !
 
 Références :
 
-* Dépôt de la présentation : https://github.com/hsablonniere/talk-compression/tree/devfest-nantes-2023
+* Dépôt de la présentation : https://github.com/hsablonniere/talk-compression/tree/snowcamp-2024
 
 Liens :
 
