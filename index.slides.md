@@ -1428,21 +1428,20 @@ _Mais on ne peut pas tromper mille personnes, mille fois.*"*_
 > $AC$: Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
 > Personellement ça m'est impossible.
 > #HS#: On se répète un peu là non ? 
-> En observant cette phrase on peut surement se dire que se limiter à optimiser caractère par caractère est pas le plus intéressant.
+> $AC$: En observant cette phrase on peut surement se dire que se limiter à optimiser caractère par caractère est pas le plus intéressant.
 
 ## media contain white
 <img src="src/img/tile-mot-compte-moins.svg">
-> #HS#: Et si on jouait à mot compte moins ?
-> $AC$: Oui si tu veux
+> $AC$: Et si on jouait à mot compte moins ?
+> #HS#: Coooool !
 
 ## media
 <img src="/src/img/alice-butenko-zstWUZFj77w-unsplash.jpg">
-> A: On va chasser les motifs répétitifs.
+> $AC$: On va chasser les motifs répétitifs.
 
 > $AC$: L'idée de Mr Lempel et Mr Ziv c'est de trouver un moyen de réduire le nombre de bit nécessaire pour représenter un motif qui se répète.
 > Et si on remplaçait des parties du messages par des étiquettes/des pointeurs vers une autre partie du message.
-> #HS#: Je ne sais pas si vous l'aviez remarqué mais il y a quelques motifs de répétitions dans la phrase _"On peut tromper..."_"
-> $AC$: Je vais vous montrer sur un exemple simple
+> Je vais vous montrer sur un exemple simple
 
 ## lzd init style="font-size: 1.5rem"
 mille-feuille
@@ -1663,8 +1662,12 @@ content-encoding: gzip
 ```
 
 ## blank
+> #HS#: Tu crois qu'ils sont prets ?
+> $AC$: J'sais pas...
+> #HS#: Est-ce que vous etes prets ?
 
 ## gzip mode="symbols-h"
+> #HS#: Est-ce que vous etes toujours prets ?
 > Expliquer les headers
 > Expliquer les footers
 > Expliquer le block deflate
@@ -1739,6 +1742,7 @@ Code  Bits Distances   Code  Bits Distances   Code  Bits   Distances
 > Dévoiler les bits supplémentaires
 
 ## gzip mode="text" bit-index=252
+> $AC$: explication des 3 caractères en 15 bits
 
 ## gzip mode="text" bit-index=648
 > Afficher le résultat final
@@ -2101,16 +2105,144 @@ Au dela du  pouilleme
 ## code title="Dictionnaire partagé *dynamique*"
 ```http type="request"
 GET /js/jquery-3.7.0.js HTTP/1.1
+ 
+```
+```http type="response" hide-height
+HTTP/1.1 200 OK
+use-as-dictionary: match="/js/jquery-*.js"
+```
+```http type="response" hide
+HTTP/1.1 200 OK
+use-as-dictionary: match="/js/jquery-*.js"
+```
+
+## code title="Dictionnaire partagé *dynamique*"
+```http type="request"
+GET /js/jquery-3.7.0.js HTTP/1.1
+accept-encoding: gzip, br
+```
+```http type="response" hide-height
+HTTP/1.1 200 OK
+use-as-dictionary: match="/js/jquery-*.js"
+```
+```http type="response" hide
+HTTP/1.1 200 OK
+use-as-dictionary: match="/js/jquery-*.js"
+```
+
+## code title="Dictionnaire partagé *dynamique*"
+```http type="request"
+GET /js/jquery-3.7.0.js HTTP/1.1
 accept-encoding: gzip, br, sbr
+```
+```http type="response" hide-height
+HTTP/1.1 200 OK
+use-as-dictionary: match="/js/jquery-*.js"
+```
+```http type="response" hide
+HTTP/1.1 200 OK
+use-as-dictionary: match="/js/jquery-*.js"
+```
+
+## code title="Dictionnaire partagé *dynamique*"
+```http type="request"
+GET /js/jquery-3.7.0.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+```
+```http type="response" hide-height
+HTTP/1.1 200 OK
+use-as-dictionary: match="/js/jquery-*.js"
+```
+```http type="response"
+HTTP/1.1 200 OK
+ 
+```
+
+## code title="Dictionnaire partagé *dynamique*"
+```http type="request"
+GET /js/jquery-3.7.0.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+```
+```http type="response" hide-height
+HTTP/1.1 200 OK
+use-as-dictionary: match="/js/jquery-*.js"
+```
+```http type="response"
+HTTP/1.1 200 OK
+use-as-dictionary: 
+```
+
+## code title="Dictionnaire partagé *dynamique*"
+```http type="request"
+GET /js/jquery-3.7.0.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+```
+```http type="response" hide-height
+HTTP/1.1 200 OK
+use-as-dictionary: match="/js/jquery-*.js"
 ```
 ```http type="response"
 HTTP/1.1 200 OK
 use-as-dictionary: match="/js/jquery-*.js"
 ```
-<!--vary: accept-encoding, sec-available-dictionary-->
+
+## blank
 
 ## code title="Dictionnaire partagé *dynamique*"
 ```http type="request"
+GET /js/jquery-3.7.1.js HTTP/1.1
+ 
+ 
+```
+```http type="request" hide-height
+GET /js/jquery-3.7.1.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="response" hide
+HTTP/1.1 200 OK
+content-encoding: sbr
+```
+
+## code title="Dictionnaire partagé *dynamique*"
+```http type="request"
+GET /js/jquery-3.7.1.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+ 
+```
+```http type="request" hide-height
+GET /js/jquery-3.7.1.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="response" hide
+HTTP/1.1 200 OK
+content-encoding: sbr
+```
+
+## code title="Dictionnaire partagé *dynamique*"
+```http type="request"
+GET /js/jquery-3.7.1.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="request" hide-height
+GET /js/jquery-3.7.1.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="response" hide
+HTTP/1.1 200 OK
+content-encoding: sbr
+```
+
+## code title="Dictionnaire partagé *dynamique*"
+```http type="request"
+GET /js/jquery-3.7.1.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="request" hide-height
 GET /js/jquery-3.7.1.js HTTP/1.1
 accept-encoding: gzip, br, sbr
 sec-available-dictionary: [SHA-256 HASH]
@@ -2121,10 +2253,10 @@ content-encoding: sbr
 ```
 
 ## barchart
-jquery-3.7.1.*js* _285,3ko_
+jquery.*js* _285,3ko_
 min : 87029 min
-brotli *11* : 27450 brotli
-brotli *11*<br>+ dict. partagé<br>v3.7.0 : 1000 gzip
+brotli : 27450 brotli
+shared brotli : 8776 brotli
 <!--gzip *9* : 30129 gzip
 zopfli : 29227 zopfli-->
 
@@ -2140,9 +2272,36 @@ zopfli : 29227 zopfli-->
 ```http type="request"
 GET /dictionaries/product_v1.dat HTTP/1.1
 ```
+```http type="response" hide
+HTTP/1.1 200 OK
+use-as-dictionary: match="/product/*"
+```
+
+## code title="Dictionnaire partagé *statique*"
+```http type="request"
+GET /dictionaries/product_v1.dat HTTP/1.1
+```
 ```http type="response"
 HTTP/1.1 200 OK
 use-as-dictionary: match="/product/*"
+```
+
+## blank
+
+## code title="Dictionnaire partagé *statique*"
+```http type="request"
+GET /product/42 HTTP/1.1
+ 
+ 
+```
+```http type="request" hide-height
+GET /product/42 HTTP/1.1
+accept-encoding: gzip, br, sbr 
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="response" hide
+HTTP/1.1 200 OK
+content-encoding: sbr
 ```
 
 ## code title="Dictionnaire partagé *statique*"
@@ -2151,13 +2310,31 @@ GET /product/42 HTTP/1.1
 accept-encoding: gzip, br, sbr 
 sec-available-dictionary: [SHA-256 HASH]
 ```
-```http type="response"
+```http type="request" hide-height
+GET /product/42 HTTP/1.1
+accept-encoding: gzip, br, sbr 
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="response" hide
 HTTP/1.1 200 OK
 content-encoding: sbr
 ```
 
-## todo
-histogramme sans shared vs avec shared
+## code title="Dictionnaire partagé *statique*"
+```http type="request"
+GET /product/42 HTTP/1.1
+accept-encoding: gzip, br, sbr 
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="request" hide-height
+GET /product/42 HTTP/1.1
+accept-encoding: gzip, br, sbr 
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="response"
+HTTP/1.1 200 OK
+content-encoding: sbr
+```
 
 ## blank black
 
@@ -2183,7 +2360,6 @@ HACKIEZ
 8) Le statique se compresse une seule fois au build.
 9) Ça n'a pas d'effet sur les fichiers déjà compressés.
 > $AC$ Pour être certain que vous reteniez les 9 rappels/principes importants de la présentation
-> on vous a préparé un petit jeu derrière ce QR code pour gagner des crédits chez Scaleway et Clever Cloud.
 > $AC$ 1, 2
 > #HS# 3, 4, 5
 > $AC$ 6, 7, 8
