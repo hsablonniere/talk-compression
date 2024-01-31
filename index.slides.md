@@ -590,7 +590,6 @@ minifié<br>& compressé : 30190 gzip
 ## tip
 2) La compression, c'est nécessaire (même en 2024).
 > $AC$ Et oui même en 2024, la compression c'est donc nécessaire.
-> Vous pensez que j'enfonce des portes ouvertes ? 
 > #HS# Non mais Antoine, on enfonce des portes ouvertes,
 > tout le monde sait qu'il faut compresser.
 > Enfin... j'espère...
@@ -598,7 +597,7 @@ minifié<br>& compressé : 30190 gzip
 ## media
 <img src="src/img/almanac-2022-home.png" screenshot-url="https://almanac.httparchive.org/en/2022/">
 
-> Vous connaissez l'almanac du web ? 
+> $AC$ Vous connaissez l'almanac du web ? 
 > Une ressource hyper intéressante de l'usage du web grâce aux données du web public.
 
 ## media
@@ -1425,28 +1424,28 @@ LZ77
 _*"*On peut tromper une personne mille fois._<br>
 _On peut tromper mille personnes une fois._<br>
 _Mais on ne peut pas tromper mille personnes, mille fois.*"*_
-> $AC$: Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
+> $AC$ Je mets n'importe qui au défi ici de dire cette cette citation des nuls de mémoire et sans se tromper.
 > Personellement ça m'est impossible.
-> #HS#: On se répète un peu là non ? 
-> $AC$: En observant cette phrase on peut surement se dire que se limiter à optimiser caractère par caractère est pas le plus intéressant.
+> #HS# On se répète un peu là non ? 
+> $AC$ En observant cette phrase on peut surement se dire que se limiter à optimiser caractère par caractère est pas le plus intéressant.
 
 ## media contain white
 <img src="src/img/tile-mot-compte-moins.svg">
-> $AC$: Et si on jouait à mot compte moins ?
-> #HS#: Coooool !
+> $AC$ Et si on jouait à mot compte moins ?
+> #HS# Coooool !
 
 ## media
 <img src="/src/img/alice-butenko-zstWUZFj77w-unsplash.jpg">
-> $AC$: On va chasser les motifs répétitifs.
+> $AC$ On va chasser les motifs répétitifs.
 
-> $AC$: L'idée de Mr Lempel et Mr Ziv c'est de trouver un moyen de réduire le nombre de bit nécessaire pour représenter un motif qui se répète.
+> $AC$ L'idée de Mr Lempel et Mr Ziv c'est de trouver un moyen de réduire le nombre de bit nécessaire pour représenter un motif qui se répète.
 > Et si on remplaçait des parties du messages par des étiquettes/des pointeurs vers une autre partie du message.
 > Je vais vous montrer sur un exemple simple
 
 ## lzd init style="font-size: 1.5rem"
 mille-feuille
 -[--]----(--)
-> $AC$: On va lire char par char le texte qu'on souhaite compresser.
+> $AC$ On va lire char par char le texte qu'on souhaite compresser.
 
 ## lzd step=0 style="font-size: 1.5rem"
 
@@ -1498,19 +1497,19 @@ ON PEUT TROMPER UNE PERSONNE MILLE FOIS. ON PEUT TROMPER MILLE PERSONNES UNE FOI
 ## lzd finish
 
 ## blank white
-> #HS#: Mais le système d'étiquettage est bien plus puissant que ça
-> $AC$: En effet, Hubert, prenons l'exemple de la fin de Hey Jude des Beatles.
+> #HS# Mais le système d'étiquettage est bien plus puissant que ça
+> $AC$ En effet, Hubert, prenons l'exemple de la fin de Hey Jude des Beatles.
 
 ## lzd init
 Na, na, na, na, na, na, na, na, na, na, na, na, hey, Jude.
 [---(--------------------------------------]---)----------
-> $AC$: C'est beau la poésie anglaise, bon, passons.
+> $AC$ C'est beau la poésie anglaise, bon, passons.
 
 ## lzd step=0
 
 ## lzd finish fade-from
-> $AC$: On a clairement moins de tuiles en bas qu'en haut non ? 
-> #HS#: Pourtant si on reçoit le texte du bas on peut facilement regénérer le texte du haut.
+> $AC$ On a clairement moins de tuiles en bas qu'en haut non ? 
+> #HS# Pourtant si on reçoit le texte du bas on peut facilement regénérer le texte du haut.
 > Même si on le reçoit progressivement.
 
 ## blank black
@@ -1521,12 +1520,11 @@ ET  CONCRETEMENT ?
 > Concrètement, comment ça fonctionne quand on va essayer de combiner les deux ?
 
 ## blank white
-> Alors, en fait, Lempel et Ziv, quand ils créent...
+> Alors, en fait, un an après avoir créé...
 
 ## media white
 <img src="src/img/lz-family-01.svg">
-> ...LZ77,
-l'année d'après, ils créent un autre algorithme,
+> ...LZ77, Lempel et Ziv créent un autre algorithme,
 
 ## media white
 <img src="src/img/lz-family-02.svg">
@@ -1537,15 +1535,15 @@ l'année d'après, ils créent un autre algorithme,
 
 ## media white
 <img src="src/img/lz-family-03.svg">
-> ...2 familles d'algos
+> ...2 familles d'algos,
 
 ## media white
 <img src="src/img/lz-family-04.svg">
-> qui s'inspirent les uns les autres
+> créés par d'autres gens,
 
 ## media white
 <img src="src/img/lz-family-05.svg">
-> et qui sont créés par d'autres gens.
+> et qui s'inspirent les uns les autres.
 
 ## media white
 <img src="src/img/lz-family-06.svg">
@@ -1602,7 +1600,7 @@ l'année d'après, ils créent un autre algorithme,
 
 ## media contain white
 <img src="src/img/deflate-zip-gz-04.svg">
-> un header et un footer,
+> des headers et des footers,
 > et avec ça, il créé...
 
 ## media contain white
@@ -1617,13 +1615,14 @@ l'année d'après, ils créent un autre algorithme,
 
 ## media contain white
 <img src="src/img/deflate-zip-gz-06.svg">
-> mais avec un header/footer différents,
+> mais avec des headers/footers différents,
 > et ils créent l'outil gzip et le format de fichier qui va avec le .gz.
 
 ## media
 <img src="src/img/rfc-1952-gzip.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1952">
 > On retrouve ça dans une autre RFC qui va juste expliquer ce qu'il y a dans le header et le footer.
 
+<!--
 ## blank white
 > Dans nos recherches, on est tombé
 
@@ -1660,14 +1659,15 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
 content-encoding: gzip
 ```
+-->
 
 ## blank
-> #HS#: Tu crois qu'ils sont prets ?
-> $AC$: J'sais pas...
-> #HS#: Est-ce que vous etes prets ?
+> #HS# Tu crois qu'ils sont prets ?
+> $AC$ J'sais pas...
+> #HS# Est-ce que vous etes prets ?
 
 ## gzip mode="symbols-h"
-> #HS#: Est-ce que vous etes toujours prets ?
+> #HS# Est-ce que vous etes toujours prets ?
 > Expliquer les headers
 > Expliquer les footers
 > Expliquer le block deflate
@@ -1689,6 +1689,9 @@ Lit Value    Bits        Codes
 280 - 287     8          11000000 through
                          11000111
 ```
+
+## media
+<img src="src/img/ikea-man.jpg">
 
 ## gzip mode="symbols-h"
 > Montrer le "end of block"
@@ -1742,7 +1745,7 @@ Code  Bits Distances   Code  Bits Distances   Code  Bits   Distances
 > Dévoiler les bits supplémentaires
 
 ## gzip mode="text" bit-index=252
-> $AC$: explication des 3 caractères en 15 bits
+> $AC$ explication des 3 caractères en 15 bits
 
 ## gzip mode="text" bit-index=648
 > Afficher le résultat final
@@ -2094,9 +2097,11 @@ brotli *11* : 262591 brotli
 Au dela du  pouilleme
 > @00:41:00@
 
+<!--
 ## media
 <img src="src/img/rfc-8878-zstd.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc8878.html">
 > zstd
+-->
 
 ## media fade-from
 <img src="src/img/github-wicg-compression-dictionary-transport.png" screenshot-url="https://github.com/WICG/compression-dictionary-transport">
@@ -2105,7 +2110,6 @@ Au dela du  pouilleme
 ## code title="Dictionnaire partagé *dynamique*"
 ```http type="request"
 GET /js/jquery-3.7.0.js HTTP/1.1
- 
 ```
 ```http type="response" hide-height
 HTTP/1.1 200 OK
@@ -2119,35 +2123,6 @@ use-as-dictionary: match="/js/jquery-*.js"
 ## code title="Dictionnaire partagé *dynamique*"
 ```http type="request"
 GET /js/jquery-3.7.0.js HTTP/1.1
-accept-encoding: gzip, br
-```
-```http type="response" hide-height
-HTTP/1.1 200 OK
-use-as-dictionary: match="/js/jquery-*.js"
-```
-```http type="response" hide
-HTTP/1.1 200 OK
-use-as-dictionary: match="/js/jquery-*.js"
-```
-
-## code title="Dictionnaire partagé *dynamique*"
-```http type="request"
-GET /js/jquery-3.7.0.js HTTP/1.1
-accept-encoding: gzip, br, sbr
-```
-```http type="response" hide-height
-HTTP/1.1 200 OK
-use-as-dictionary: match="/js/jquery-*.js"
-```
-```http type="response" hide
-HTTP/1.1 200 OK
-use-as-dictionary: match="/js/jquery-*.js"
-```
-
-## code title="Dictionnaire partagé *dynamique*"
-```http type="request"
-GET /js/jquery-3.7.0.js HTTP/1.1
-accept-encoding: gzip, br, sbr
 ```
 ```http type="response" hide-height
 HTTP/1.1 200 OK
@@ -2161,7 +2136,6 @@ HTTP/1.1 200 OK
 ## code title="Dictionnaire partagé *dynamique*"
 ```http type="request"
 GET /js/jquery-3.7.0.js HTTP/1.1
-accept-encoding: gzip, br, sbr
 ```
 ```http type="response" hide-height
 HTTP/1.1 200 OK
@@ -2175,7 +2149,6 @@ use-as-dictionary:
 ## code title="Dictionnaire partagé *dynamique*"
 ```http type="request"
 GET /js/jquery-3.7.0.js HTTP/1.1
-accept-encoding: gzip, br, sbr
 ```
 ```http type="response" hide-height
 HTTP/1.1 200 OK
@@ -2192,6 +2165,22 @@ use-as-dictionary: match="/js/jquery-*.js"
 ```http type="request"
 GET /js/jquery-3.7.1.js HTTP/1.1
  
+ 
+```
+```http type="request" hide-height
+GET /js/jquery-3.7.1.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="response" hide
+HTTP/1.1 200 OK
+content-encoding: sbr
+```
+
+## code title="Dictionnaire partagé *dynamique*"
+```http type="request"
+GET /js/jquery-3.7.1.js HTTP/1.1
+accept-encoding: gzip, br
  
 ```
 ```http type="request" hide-height
@@ -2347,6 +2336,7 @@ Recap
 ## huffman score=auto
 HACKIEZ
 > #HS# Ouais d'ailleurs j'ai trouvé mon mot.
+> Hacker à l'imparfait ou subjonctif présent !
 > 30 points + 50 points de bonus
 
 ## tip recap
@@ -2382,16 +2372,15 @@ Liens :
 * Can I use (gzip) : https://caniuse.com/sr_content-encoding-gzip
 * Can I use (brotli) : https://caniuse.com/brotli
 * Why the LZ algorithms are so dominant (Colt McAnlis) : https://www.youtube.com/watch?v=Jqc418tQDkg
-* RFC zlib : https://www.rfc-editor.org/rfc/rfc1950
+<!--* RFC zlib : https://www.rfc-editor.org/rfc/rfc1950-->
 * RFC gzip : https://www.rfc-editor.org/rfc/rfc1951
 * RFC deflate : https://www.rfc-editor.org/rfc/rfc1952
 * Data Compression (Bill Bird) - 11 DEFLATE (gzip) : https://www.youtube.com/watch?v=SJPvNi4HrWQ
 * Fork zlib de Cloudflare : https://github.com/cloudflare/zlib
 * Projet brotli : https://github.com/google/zopfli
 * RFC brotli : https://www.rfc-editor.org/rfc/rfc7932
-* RFC zstd : https://www.rfc-editor.org/rfc/rfc8878.html
+<!--* RFC zstd : https://www.rfc-editor.org/rfc/rfc8878.html-->
 * Brouillon WICG "Compression Dictionary Transport" : https://github.com/WICG/compression-dictionary-transport
-* Générateurs de mots croisés : https://www.educol.net/crosswordgenerator.php
 
 Images :
 
