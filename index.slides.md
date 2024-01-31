@@ -12,7 +12,7 @@ date: 1 février 2024
 > @00:00:00@
 
 ## huffman score=auto
-DEIOXYZ
+ZKECAIH
 <!-- animation shuffle -->
 > #HS# (en train de chercher un mot)
 > $AC$ Tu fais quoi Hubert ?
@@ -29,7 +29,8 @@ La compression web
 > et vu que c'est un sujet assez vaste, on a choisi de se concentrer sur un contexte qu'on aime particulièrement :
 > *le Web* !
 > #HS# En fait, il y a un truc qui nous fascine tous les deux...
-> À l'instant où on vous parle, y'a des *millions* de serveurs dans le monde qui sont en train de compresser des réponses HTTP, et  y'a des *milliards* de navigateurs qui sont en train de les décompresser.
+> À l'instant où on vous parle, y'a des *millions* de serveurs dans le monde qui sont en train de compresser des réponses HTTP,
+> et  y'a des *milliards* de navigateurs qui sont en train de les décompresser.
 > Du coup, on a regardé comment ça marche et on aimerait vous partager ça...
 
 ## blank black
@@ -163,7 +164,7 @@ export function factorial (number) {
                                        _
 }
 ```
-> OK, là y a des point-virgules et des accolades qui servent à rien.
+> OK, là y a des point-virgules, des accolades et des commentaires qui servent à rien.
 
 ## code title="math-example.*min*.js"
 ```js simple-js-example size
@@ -205,7 +206,7 @@ export function factorial (number) {
   ______
 }
 ```
-> Là le "if return ci ou return ça",
+> Là le "if return ci sinon return ça",
 > j'peux faire un ternaire, c'est plus court.
 
 ## code title="math-example.*min*.js"
@@ -314,7 +315,7 @@ export function add(f,s){return f+s}export function factorial(n){return n===0?1:
 ## text
 🤐 Compression
 > ...pas et tout le monde comprend qu'on parle de techniques et d'algos sans perte.
-> Le compresseur, il connait pas la syntaxe du fichier,
+> Le compresseur, il connait *pas* la syntaxe du fichier,
 > il va travailler directement...
 
 ## code title="math-example.min.js"
@@ -592,7 +593,7 @@ minifié<br>& compressé : 30190 gzip
 > Vous pensez que j'enfonce des portes ouvertes ? 
 > #HS# Non mais Antoine, on enfonce des portes ouvertes,
 > tout le monde sait qu'il faut compresser.
-> Ah bon ?
+> Enfin... j'espère...
 
 ## media
 <img src="src/img/almanac-2022-home.png" screenshot-url="https://almanac.httparchive.org/en/2022/">
@@ -656,7 +657,8 @@ JSON : 31.8 brut
 SVG : 36.0 brut
 HTML : 56.0 brut
 <!-- à retravailler -->
-> #HS# Et ça, ce n'est que sur l'internet public accessible à tous, vous pensez qu'avec les sites privés c'est mieux ? 
+> #HS# Et ça, ce n'est que sur l'internet public accessible à tous,
+> je pense que sur les intranets et autres applis de gestion sur lesquelles on bosse, c'est pire. 
 
 ## blank black
 > #HS# Maintenant qu'on est toutes et tous convaincus qu'il faut compresser et pourquoi,
@@ -698,7 +700,8 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
  
 ```
-> Le serveur va alors répondre : "tiens le voilà, 200 OK tout va bien".
+> Le serveur va alors répondre :
+> "tiens le voilà, 200 OK tout va bien".
 > Dans la requête HTTP, le navigateur va pouvoir préciser quels formats de compression il supporte avec...
 
 ## code
@@ -729,7 +732,7 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
  
 ```
-> Par exemple, il peut dir : "Je comprends le gzip...
+> Par exemple, il peut dire : "Je comprends le gzip...
 
 ## code
 ```http type="request"
@@ -775,8 +778,8 @@ accept-encoding: gzip, deflate, br
 HTTP/1.1 200 OK
 content-encoding: 
 ```
-> un en-tête "content-encoding".
-> Avec ça il vient préciser le format qu'il a utilisé pour la réponse qu'il vient d'envoyer.
+> l'en-tête "content-encoding".
+> Avec ça, il vient préciser le format qu'il a utilisé pour la réponse qu'il vient d'envoyer.
 > Par exemple :
 
 ## code
@@ -823,18 +826,18 @@ content-encoding: br
 3) La compression, c'est natif au <br> fonctionnement du Web.
 > La compression, c'est natif au fonctionnement du Web,
 > et la puissance du truc, c'est qu'un vieux navigateur peut discuter avec un serveur moderne ou inversement et tout le monde se comprend.
-> Bon après, meme un vieux navigateur, il sait faire du gzip.
+> Bon après, même un vieux navigateur, il sait faire du gzip.
 > À tel point que...
 
 ## media
 <img src="src/img/caniuse-gzip.png" screenshot-url="https://caniuse.com/sr_content-encoding-gzip">
-> Can I Use essaie meme pas d'afficher les versions.
+> Can I Use essaie même pas d'afficher les versions supportées.
 
 ## blank
 > On continue notre exploration de ce qu'il se passe dans les tuyaux.
 > Avant, quand je me mettais à la place d'un navigateur,
 > $AC$ Ah ouais tu fais ça toi ?
-> Ouais, j'me dit :
+> Ouais, j'me dis :
 
 ## gantt title="🤔"
 Réception : 0
@@ -865,7 +868,7 @@ Affichage : 100
 Réception : 0
 Parsing HTML : 33
 Affichage : 33
-> il fonctionne en temps réel et il est capable de parser et d'afficher le début d'une page HTML avant meme d'avoir reçu la fin du fichier
+> il fonctionne en temps réel et il est capable de parser et d'afficher le début d'une page HTML avant même d'avoir reçu la fin du fichier
 > $AC$ Ce fonctionnement, il est pas accidentel, ça fait partie de la spec HTML de savoir faire ça.
 
 ## demo
@@ -885,7 +888,7 @@ Réception : 0
 Décompression : 20
 Parsing HTML : 20
 Affichage : 20
-> Elle fait partie de cette pipeline et le navigateur est capable de décomprésser, parser et afficher avant meme d'avoir terminé de récupérer le fichier.
+> Elle fait partie de cette pipeline et le navigateur est capable de décomprésser, parser et afficher la page avant même d'avoir terminé de récupérer le fichier.
 
 ## gantt title="🤩"
 Compression : 0
@@ -911,7 +914,7 @@ Retour  aux sources
 
 ## timeline year=2010 animated
 Bien avant bootstrap
-> #HS# On est bien avant Bootstrap, bien avant react
+> $AC$ On est bien avant Bootstrap, bien avant react
 
 ## timeline year=2000 animated
 Bien avant les années 2000
@@ -923,7 +926,7 @@ PKZIP, 1986, Phil Katz, <img src="src/img/katz.png" />
 GZIP, 1992, Jean-Loup Gailly / Mark Adler, <img src="src/img/adler-gailly.png" />
 > $AC$ Il faut remonter à 1992 pour retrouver la RFC de GZIP par Jean-Loup Gailly et Mark Adler
 > RFC 1952
-> #HS# Tu faisais quoi en 1992 toi Antoine ?
+> #HS# Tu faisais quoi en 1992 Antoine ?
 > $AC$ 😅
 > Ils posent les bases d'un modèle de compression basés et inspirés de traveaux de PKZIP par Phil Katz quelques années
 > avant.
@@ -934,9 +937,9 @@ GZIP, 1992, Jean-Loup Gailly / Mark Adler, <img src="src/img/adler-gailly.png" /
 ## timeline year=1970 animated
 LZ77, 1977, Abraham Lempel and Jacob Ziv, <img src="src/img/lempel-ziv.png" />
 > $AC$ Oulà oui on parle de travaux fait 20 ans avant.
-> Tu faisais quoi en 1977 toi Hubert ?
+> Tu faisais quoi en 1977 Hubert ?
 > #HS# 😅
-> Travaux de deux scientifiques Abraham Lempel and Jacob Ziv qui proposent en 1977 un algortithme de compression de
+> $AC$ Travaux de deux scientifiques Abraham Lempel and Jacob Ziv qui proposent en 1977 un algortithme de compression de
 > texte nommé LZ77
 > _LZ77 mais qu'est-ce que ça peut pouvoir dire ? ça reste encore un mystère_
 
@@ -945,8 +948,8 @@ Code de Huffman, 1952, David A. Huffman, <img src="src/img/huffman.png" />
 > $AC$ Oui mais PKZIP et GZIP n'ont pas été piocher que dans les travaux des années 70
 > Ils ont été reprendre de travaux publiés en 1952 par Mr Huffman.
 > #HS# 52, c'est l'année de l'explosion du Scrabble
-> Le codage de huffman, on est là bien avant les problématiques de l'interweb
-> $AC$ Donc, ce qu'on est en train de vous dire là, c'est que la recherche fondamentale
+> $AC$ Le codage de huffman, on est là bien avant les problématiques de l'interweb
+> Donc, ce qu'on est en train de vous dire là, c'est que la recherche fondamentale
 > ça peut avoir des impacts considérables sur l'évolution de la technologie des années après?
 > 40 ans séparent PKZIP du codage d'Huffman et plus de 30 ans séparent GZIP de 2024.
 
@@ -1077,7 +1080,7 @@ $ ascii -b
 
 ## huffman score=8 bits=auto
 COMPRESSION
-> En 1952, Huffman, constate que cette représentation binaire est linéaire.
+> En 1952, Huffman constate que cette représentation binaire est linéaire.
 > Le nombre total de bits est...
 
 ## huffman score=8 bits=auto total-score
@@ -1324,7 +1327,7 @@ COMPRESSION
 
 ## media contain black
 <img src="src/img/huffman2_upscayl_crop.jpg">
-> $AC$ Huffman c'est un génie, le mec a 26 ans, il est étudiant au MIT, dans la meme classe que Claude Shannon,
+> $AC$ Huffman c'est un génie, le mec a 26 ans, il est étudiant au MIT, dans la même classe que Claude Shannon,
 > et quand son prof lui dit "soit tu passes un partiel, soit t'écrit un papier de recherche",
 > le mec il choisit le papier de recherche.
 > Il invente un algo pour trouver le meilleur codage binaire pour un ensemble de caractères.
@@ -1337,13 +1340,13 @@ COMPRESSION
 
 ## huffman animation
 COMPRESSION
-> #HS# Alors comme on le disait plus tot,
+> #HS# Alors comme on le disait plus tôôt,
 > l'algo de Huffman se base sur la fréquence des caractères.
 
 ## huffman step=1 animation
 COMPRESSION
 > Dans notre mot, on a 2 S et 2 O.
-> Ensuite on va répéter plusieurs fois la meme chose.
+> Ensuite on va répéter plusieurs fois la même chose.
 
 ## huffman step=2 animation
 COMPRESSION
@@ -1516,75 +1519,114 @@ Na, na, na, na, na, na, na, na, na, na, na, na, hey, Jude.
 ## section
 ET  CONCRETEMENT ?
 > @00:27:30@
+> Concrètement, comment ça fonctionne quand on va essayer de combiner les deux ?
 
 ## blank white
+> Alors, en fait, Lempel et Ziv, quand ils créent...
 
 ## media white
 <img src="src/img/lz-family-01.svg">
+> ...LZ77,
+l'année d'après, ils créent un autre algorithme,
 
 ## media white
 <img src="src/img/lz-family-02.svg">
+> LZ78 !
+> Et ces 2 algos qui fonctionnent un peu différemment,
+> mais qui font la même chose,
+> vont donner naissance à...
 
 ## media white
 <img src="src/img/lz-family-03.svg">
+> ...2 familles d'algos
 
 ## media white
 <img src="src/img/lz-family-04.svg">
+> qui s'inspirent les uns les autres
 
 ## media white
 <img src="src/img/lz-family-05.svg">
+> et qui sont créés par d'autres gens.
 
 ## media white
 <img src="src/img/lz-family-06.svg">
+> LZW, on le retrouve dans ce format d'image bien connu composé des lettres G I F. 
 
 ## media white
 <img src="src/img/lz-family-07.svg">
+> #HS# LZSS, on le retrouve dans WinRar.
+> $AC$ Il y en a qui ont payé leur license WinRar ?
 
 ## media white
 <img src="src/img/lz-family-08.svg">
+> LZMA, on le retrouve dans 7zip.
 
 ## media white fade-from
 <img src="src/img/lz-family-09.svg">
+> Mais aujourd'hui, c'qui nous intéresse particulièrement,
+> c'est DEFLATE.
+> Par ce que DEFLATE, c'est qu'il y a dans WinZIP, gzip, dans les fichiers PNG, etc.
 
 ## media fade-into
 <img src="src/img/youtube-compressor-head-lz-family.png" screenshot-url="https://www.youtube.com/watch?v=Jqc418tQDkg">
-> H: Vous avez des super contenus sur internet qui vous expliquent celà.
-> Et beaucoup de variantes de cet algorithme ont fait outils que vous connaissez probablement tous.
-> A: Ah oui tiens, même _Winrar_, vous aviez payé votre license vous ?
+> Si vous étes intéréssés par cette saga des familles de compression,
+> Colt McAnlis chez Google, il a fait une super vidéo sur le sujet.
+> On vous la recommande.
 
 ## media contain
 <img src="src/img/phil-katz-bigger.jpg">
-> Phil Katz 1990
+> Phil Katz, en 1990,
+> il se dit OK, je prends du texte,
 
 ## media contain white
 <img src="src/img/deflate-zip-gz-01.svg">
+> je le compresse avec LZ77,
+> du coup, j'ai des symboles et des étiquettes pour les répétitions,
+> je vais regarder la fréquence des symboles et des étiquettes,
 
 ## media contain white
 <img src="src/img/deflate-zip-gz-02.svg">
+> et je vais appliquer un code de Huffman là dessus.
+> FUSION !
+> et avec ça, il choisi la manière dont il va coder ça en binaire,
 
 ## media contain white
 <img src="src/img/deflate-zip-gz-03.svg">
+> et il appelle ça l'algoritme et le format de donnée DEFLATE.
 
 ## media
 <img src="src/img/rfc-1951-deflate.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1951">
+> Quelques années après ça a été mis dans une RFC.
+> Qui est passionnante, faut l'avouer.
+> Autour de ce bloc de bits DEFLATE,
+> il rajoute...
 
 ## media contain white
 <img src="src/img/deflate-zip-gz-04.svg">
+> un header et un footer,
+> et avec ça, il créé...
 
 ## media contain white
 <img src="src/img/deflate-zip-gz-05.svg">
+> ...le format de fichier .zip !
+> Merci Phil Katz.
 
 ## media contain
 <img src="src/img/adler-gailly-bigger.jpg">
-> Jean-loup Gailly and Mark Adler 1992
+> Quelques années après,
+> on a Jean-loup Gailly et Mark Adler qui reprennent la même manière de coder les bits de DEFLATE,
 
 ## media contain white
 <img src="src/img/deflate-zip-gz-06.svg">
+> mais avec un header/footer différents,
+> et ils créent l'outil gzip et le format de fichier qui va avec le .gz.
 
 ## media
 <img src="src/img/rfc-1952-gzip.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc1952">
+> On retrouve ça dans une autre RFC qui va juste expliquer ce qu'il y a dans le header et le footer.
 
 ## blank white
+> Dans nos recherches, on est tombé
 
 ## code
 ```http type="request"
@@ -1734,7 +1776,7 @@ min : 87029 min
 > zopfli
 > complexité de la recherche de motifs
 > meilleure taux mais moins bonne perf
-> MEME FORMAT OMG !!
+> même FORMAT OMG !!
 
 ## barchart
 Niveaux de compression _jquery.min.js_
@@ -2056,13 +2098,66 @@ Au dela du  pouilleme
 <img src="src/img/github-wicg-compression-dictionary-transport.png" screenshot-url="https://github.com/WICG/compression-dictionary-transport">
 > dictionnaire brouillon WICG
 
-## demo
-Demo glitch
-> https://chromium.googlesource.com/chromium/src/+/main/docs/experiments/compression-dictionary-transport.md
-> https://compression-dictionary-transport-threejs-demo.glitch.me/demo.html?r=151
-> https://compression-dictionary-transport-shop-demo.glitch.me/
-> https://github.com/WICG/compression-dictionary-transport/blob/main/README.md
-> https://datatracker.ietf.org/doc/draft-ietf-httpbis-compression-dictionary/
+## code title="Dictionnaire partagé *dynamique*"
+```http type="request"
+GET /js/jquery-3.7.0.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+```
+```http type="response"
+HTTP/1.1 200 OK
+use-as-dictionary: match="/js/jquery-*.js"
+```
+<!--vary: accept-encoding, sec-available-dictionary-->
+
+## code title="Dictionnaire partagé *dynamique*"
+```http type="request"
+GET /js/jquery-3.7.1.js HTTP/1.1
+accept-encoding: gzip, br, sbr
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="response"
+HTTP/1.1 200 OK
+content-encoding: sbr
+```
+
+## barchart
+jquery-3.7.1.*js* _285,3ko_
+min : 87029 min
+brotli *11* : 27450 brotli
+brotli *11*<br>+ dict. partagé<br>v3.7.0 : 1000 gzip
+<!--gzip *9* : 30129 gzip
+zopfli : 29227 zopfli-->
+
+## code title="Dictionnaire partagé *statique*"
+```html
+<head>
+  <!-- ··· -->
+  <link rel=dictionary href="/dictionaries/product_v1.dat">
+</head>
+```
+
+## code title="Dictionnaire partagé *statique*"
+```http type="request"
+GET /dictionaries/product_v1.dat HTTP/1.1
+```
+```http type="response"
+HTTP/1.1 200 OK
+use-as-dictionary: match="/product/*"
+```
+
+## code title="Dictionnaire partagé *statique*"
+```http type="request"
+GET /product/42 HTTP/1.1
+accept-encoding: gzip, br, sbr 
+sec-available-dictionary: [SHA-256 HASH]
+```
+```http type="response"
+HTTP/1.1 200 OK
+content-encoding: sbr
+```
+
+## todo
+histogramme sans shared vs avec shared
 
 ## blank black
 
@@ -2073,9 +2168,9 @@ Recap
 > Bon, Hubert a aussi inséré discrètement quelques références au Scrabble.
 
 ## huffman score=auto
-OXYDIEZ
+HACKIEZ
 > #HS# Ouais d'ailleurs j'ai trouvé mon mot.
-> 35 points + 50 points de bonus
+> 30 points + 50 points de bonus
 
 ## tip recap
 1) Ça va de pair avec la minification.
