@@ -2,8 +2,8 @@
 author:
 author-twitter:
 author-company:
-event: Snowcamp 2024
-date: 1 février 2024
+event: Devoxx 2024
+date: 19 avril 2024
 ---
 
 # La compression Web : comment (re)prendre le contrôle ?
@@ -2363,7 +2363,7 @@ Merci beaucoup !
 
 Références :
 
-* Dépôt de la présentation : https://github.com/hsablonniere/talk-compression/tree/snowcamp-2024
+* Dépôt de la présentation : https://github.com/hsablonniere/talk-compression/tree/devoxx-2024
 
 Liens :
 
