@@ -4,7 +4,7 @@ import { defineSlideType } from './base.js';
 import '../scrable-tile.js';
 import { LETTERS } from '../scrable-tile.js';
 
-function getTree (node) {
+function getTree (node, options) {
 
   if (node.letter != null) {
     const { id, count, letter, score, bits } = node;
@@ -14,16 +14,24 @@ function getTree (node) {
     return { count: 1, htmlContent };
   }
 
-  const left = getTree(node.left);
-  const right = getTree(node.right);
+  const left = getTree(node.left, options);
+  const right = getTree(node.right, options);
   const count = node.count;
+
+  const onClick = (e) => {
+    const element = e.target;
+    if (options.attrs.scoreSheet != null) {
+      element.classList.toggle('with-bit')
+    }
+  }
 
   const htmlContent = html`
     <div class="tree" data-id="${node.id}" style="transform: translate3d(0, 0, 0)">
       <div class="tree-head">
         <scrabble-tile count=${count}></scrabble-tile>
       </div>
-      <div class="tree-bar"></div>
+      <div class="tree-bar-left" @click=${onClick}></div>
+      <div class="tree-bar-right" @click=${onClick}></div>
       <div class="tree-left">${left.htmlContent}</div>
       <div class="tree-right">${right.htmlContent}</div>
     </div>
@@ -138,7 +146,7 @@ defineSlideType('slide-huffman', {
 
     function addTreesAsStep (trees, tree = false) {
 
-      const htmlContent = trees.map((tree) => getTree(tree).htmlContent);
+      const htmlContent = trees.map((tree) => getTree(tree, { attrs }).htmlContent);
 
       const newStep = steps.length;
       const id = (newStep === stepToDisplay)
@@ -163,7 +171,6 @@ defineSlideType('slide-huffman', {
     const letters = lines[0].split('');
 
     const lettersUnique = Array.from(new Set(letters));
-    console.log({lettersUnique})
 
     // The complete sequence
     const tiles = letters.map((letter, i) => {
@@ -359,15 +366,69 @@ defineSlideType('slide-huffman', {
     }
 
     .tree-bar {
-      border: 3px solid #000;
-      border-bottom: none;
       position: absolute;
-      left: 21%;
-      right: 21%;
       height: 3.55em;
       /* use var from tree gap and count size */
       top: 1.115rem;
     }
+    
+    .tree-bar-left {
+        position: relative;
+        grid-area: 1 / 1;
+    }
+    
+    .tree-bar-left::before {
+        position: absolute;
+        content: '';
+        height: 3.55rem;
+        top: 1.115rem;
+        right: -0.75em;
+        left: 50%;
+        bottom: 0;
+        border: 3px solid #000;
+        border-bottom: none;
+        border-right: none;
+    }
+    
+    .with-bit {
+        color: #0082ff;
+        font-family: "Just Another Hand";
+        font-size: 2.25rem;
+        line-height: 1;
+    }
+    
+    .tree-bar-left.with-bit::after {
+        position: absolute;
+        top: -0.25em;
+        left: calc(50% - 0.5em);
+        content: '0';
+    }
+
+    .tree-bar-right {
+        position: relative;
+        grid-area: 1 / 2;
+    }
+
+    .tree-bar-right::before {
+        position: absolute;
+        content: '';
+        height: 3.55rem;
+        top: 1.115rem;
+        right: 50%;
+        left: -0.75em;
+        bottom: 0;
+        border: 3px solid #000;
+        border-bottom: 0;
+        border-left: 0;
+    }
+
+    .tree-bar-right.with-bit::after {
+        position: absolute;
+        top: -0.25em;
+        right: calc(50% - 0.5em);
+        content: '1';
+    }
+    
 
     .total-bits {
       color: #0082ff;
