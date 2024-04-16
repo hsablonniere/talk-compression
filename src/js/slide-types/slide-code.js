@@ -185,6 +185,11 @@ defineSlideType('slide-code', {
       height: 23rem;
     }
 
+    pre[small] {
+      font-size: 0.65em;
+      margin: 0;
+    }
+
     pre[size] {
       position: relative;
     }
