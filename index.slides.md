@@ -672,7 +672,7 @@ Dans les  tuyaux
 > Imaginez un navigateur qui veut récupérer une page Web.
 
 ## code
-```http type="request"
+```http type="request" animated
 GET /index.html HTTP/1.1
  
 ```
@@ -695,7 +695,7 @@ GET /index.html HTTP/1.1
 GET /index.html HTTP/1.1
 accept-encoding: gzip, deflate, br
 ```
-```http type="response"
+```http type="response" animated
 HTTP/1.1 200 OK
  
 ```
@@ -1397,6 +1397,9 @@ COMPRESSION
 COMPRESSION
 
 ## huffman step=17 animation
+COMPRESSION
+
+## huffman step=18 animation
 COMPRESSION
 
 ## huffman step=18 score-sheet
@@ -2217,7 +2220,7 @@ Au dela du  pouilleme
 > #HS# dictionnaire brouillon WICG
 
 ## code title="Dictionnaire partagé *dynamique*"
-```http type="request"
+```http type="request" animated
 GET /js/jquery-3.7.0.js HTTP/1.1
 ```
 ```http type="response" hide-height
@@ -2237,7 +2240,7 @@ GET /js/jquery-3.7.0.js HTTP/1.1
 HTTP/1.1 200 OK
 use-as-dictionary: match="/js/jquery-*.js"
 ```
-```http type="response"
+```http type="response" animated
 HTTP/1.1 200 OK
  
 ```
@@ -2271,7 +2274,7 @@ use-as-dictionary: match="/js/jquery-*.js"
 ## blank
 
 ## code title="Dictionnaire partagé *dynamique*"
-```http type="request"
+```http type="request" animated
 GET /js/jquery-3.7.1.js HTTP/1.1
  
  
@@ -2345,7 +2348,7 @@ GET /js/jquery-3.7.1.js HTTP/1.1
 accept-encoding: gzip, br, sbr
 sec-available-dictionary: [SHA-256 HASH]
 ```
-```http type="response"
+```http type="response" animated
 HTTP/1.1 200 OK
 content-encoding: sbr
 ```
@@ -2367,7 +2370,7 @@ zopfli : 29227 zopfli-->
 ```
 
 ## code title="Dictionnaire partagé *statique*"
-```http type="request"
+```http type="request" animated
 GET /dictionaries/product_v1.dat HTTP/1.1
 ```
 ```http type="response" hide
@@ -2379,7 +2382,7 @@ use-as-dictionary: match="/product/*"
 ```http type="request"
 GET /dictionaries/product_v1.dat HTTP/1.1
 ```
-```http type="response"
+```http type="response" animated
 HTTP/1.1 200 OK
 use-as-dictionary: match="/product/*"
 ```
@@ -2387,7 +2390,7 @@ use-as-dictionary: match="/product/*"
 ## blank
 
 ## code title="Dictionnaire partagé *statique*"
-```http type="request"
+```http type="request" animated
 GET /product/42 HTTP/1.1
  
  
@@ -2429,7 +2432,7 @@ GET /product/42 HTTP/1.1
 accept-encoding: gzip, br, sbr 
 sec-available-dictionary: [SHA-256 HASH]
 ```
-```http type="response"
+```http type="response" animated
 HTTP/1.1 200 OK
 content-encoding: sbr
 ```

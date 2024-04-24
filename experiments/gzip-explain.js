@@ -1068,7 +1068,8 @@ export class GzipExplain extends LitElement {
         .bit.segment--middle,
         .bit.segment--last {
           --bgc: #777;
-          color: #fff;
+          --bgc: rgb(0, 130, 255) !important;
+          color: #fff !important;
         }
 
         .bit.segment--first .bg {
@@ -1097,8 +1098,8 @@ export class GzipExplain extends LitElement {
 
         .bit[data-type="repeat"],
         .bit[data-type="repeat-part"] {
-          --bgc: red;
-          color: #fff;
+          --bgc: red !important;
+          color: #fff !important;
         }
 
         .bit.hovered {

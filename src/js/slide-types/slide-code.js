@@ -141,9 +141,39 @@ defineSlideType('slide-code', {
       border-radius: 0.25rem;
     }
 
+    @keyframes slide-left {
+      0% {
+        opacity: 0;
+        transform: translateX(-20%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slide-right {
+      0% {
+        opacity: 0;
+        transform: translateX(20%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    :host([data-position="current"]) pre[type="request"][animated] {
+      animation: 150ms ease-in-out slide-left;
+    }
+
     pre[type="request"]::before {
       content: 'Requête HTTP ➡️';
       left: 1rem;
+    }
+
+    :host([data-position="current"]) pre[type="response"][animated] {
+      animation: 150ms ease-in-out slide-right;
     }
 
     pre[type="response"]::before {
