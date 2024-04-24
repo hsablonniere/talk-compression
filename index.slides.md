@@ -2215,6 +2215,14 @@ Au dela du  pouilleme
 <img src="src/img/rfc-8878-zstd.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc8878.html">
 > $AC$ zstd
 
+## barchart percent
+Niveaux de compression _jquery.min.js_
+min : 87029 min
+gzip *9* : 30129 gzip
+zopfli : 29227 zopfli
+brotli *11* : 27450 brotli
+zstd *19* : 28898 zstd
+
 ## media fade-from
 <img src="src/img/github-wicg-compression-dictionary-transport.png" screenshot-url="https://github.com/WICG/compression-dictionary-transport">
 > #HS# dictionnaire brouillon WICG

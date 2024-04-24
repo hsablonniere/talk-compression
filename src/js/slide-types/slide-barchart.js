@@ -247,6 +247,10 @@ defineSlideType('slide-barchart', {
       background-color: #34a853;
     }
 
+    .bar-value[data-color="zstd"] {
+      background-color: rebeccapurple;
+    }
+
     .legend {
       border-top: 0.15rem solid #000;
       box-sizing: border-box;
