@@ -1662,6 +1662,7 @@ content-encoding: gzip
 -->
 
 ## blank
+> @00:30:00@
 > #HS# Tu crois qu'ils sont prets ?
 > $AC$ J'sais pas...
 > #HS# Est-ce que vous etes prets ?
@@ -1847,6 +1848,9 @@ Code  Bits Distances   Code  Bits Distances   Code  Bits   Distances
 
 ## media fade-from
 <img src="src/img/youtube-bill-bird-deflate.png" screenshot-url="https://www.youtube.com/watch?v=SJPvNi4HrWQ">
+> $AC$ bill bird...
+> 20 * 2h
+> Victoria au Canada
 
 ## blank black
 
@@ -1917,10 +1921,14 @@ zopfli : 29227 zopfli
 brotli *11* : 27450 brotli
 
 ## blank white
+> $AC$ LZ77 + huffman *MAIS* techniques de triche
 
 ## text
 📖 *Dictionnaire* brotli
-> #HS#
+> #HS# expliquer dictionnaire
+> trouver des répétitions qui ne sont pas dans le message
+> mais qui sont dans un dictionnaire statique
+> dispo dans le compresseur et le décomprésseur
 
 ## text
 😯 13 504 *"mots"*
@@ -2051,6 +2059,7 @@ brotli *11* : 26960 brotli
 
 ## tip
 7) La compression, ça marche mieux avec brotli.
+> #HS# par contre, ces techniques de triche, elles ont un coût
 
 ## barchart small unit="ms" max="142.2"
 Temps de compression *brotli* _jquery.min.js_
@@ -2065,6 +2074,7 @@ Temps de compression *brotli* _jquery.min.js_
 9 : 8.8 brotli
 10 : 37.3 brotli
 11 : 97.2 brotli
+> $AC$ le temps de compression sur les niveaux hauts, il est longû
 
 ## barchart unit="ms"
 Temps de compression *zopfli* _jquery.min.js_
@@ -2097,6 +2107,7 @@ Temps de *dé*compression _jquery.min.js_
 gzip *9* : 1.1 gzip
 zopfli : 1.1 zopfli
 brotli *11* : 1.1 brotli
+> temps relativement négligeable
 
 <!--
 ## barchart small unit=""
@@ -2146,6 +2157,7 @@ cats.*jpeg* _591,8ko_
 brut : 591794 brut
 gzip *9* : 584070 gzip
 brotli *11* : 579413 brotli
+> #HS# mais bon, personne de fait ça, non ?
 
 ## barchart unit="%" max="100"
 *%* de fichiers servis *avec* compression _Almanac 2020_
@@ -2153,6 +2165,7 @@ JPEG : 3.27 brut
 GIF : 3.42 brut
 PNG : 3.70 brut
 <!-- https://almanac.httparchive.org/en/2020/compression -->
+> $AC$ almanac
 
 ## tip
 9) La compression, ça n'a pas d'effet sur <br>les fichiers déjà compressés.
@@ -2169,6 +2182,7 @@ image/bmp
 image/x-icon
 ```
 <!--application/tar-->
+> $AC$ mais il y a des formats binaires compressibles
 
 <!--
 ## barchart percent
@@ -2177,6 +2191,7 @@ brut : 5062638 brut
 gzip *9* : 1745586 gzip
 brotli *11* : 1430160 brotli
 -->
+> $AC$ wasm a fait le choix de découpler le format de la décompression
 
 ## barchart percent fade-from
 sql.*wasm* _613,4ko_
@@ -2190,14 +2205,16 @@ brotli *11* : 262591 brotli
 ## section
 Au dela du  pouilleme
 > @00:41:00@
+> $AC$ la compression c'est encore un sujet chaud qui bouge
+> au delà du pouillème
 
 ## media
 <img src="src/img/rfc-8878-zstd.png" screenshot-url="https://www.rfc-editor.org/rfc/rfc8878.html">
-> zstd
+> $AC$ zstd
 
 ## media fade-from
 <img src="src/img/github-wicg-compression-dictionary-transport.png" screenshot-url="https://github.com/WICG/compression-dictionary-transport">
-> dictionnaire brouillon WICG
+> #HS# dictionnaire brouillon WICG
 
 ## code title="Dictionnaire partagé *dynamique*"
 ```http type="request"
@@ -2345,7 +2362,7 @@ zopfli : 29227 zopfli-->
 ```html
 <head>
   <!-- ··· -->
-  <link rel=dictionary href="/dictionaries/product_v1.dat">
+  <link rel="dictionary" href="/dictionaries/product_v1.dat">
 </head>
 ```
 
