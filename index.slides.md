@@ -2483,7 +2483,7 @@ Merci beaucoup !
 
 Références :
 
-* Dépôt de la présentation : https://github.com/hsablonniere/talk-compression/tree/devoxx-2024
+* Dépôt de la présentation : https://github.com/hsablonniere/talk-compression/tree/mixit-2024
 
 Liens :
 
