@@ -2178,11 +2178,11 @@ PNG : 3.70 brut
 
 ## code title="Formats binaires *compressibles* :"
 ```text
-application/wasm
 font/otf
 font/ttf
 image/bmp
 image/x-icon
+application/wasm
 ```
 <!--application/tar-->
 > $AC$ mais il y a des formats binaires compressibles

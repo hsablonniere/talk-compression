@@ -1067,7 +1067,7 @@ export class GzipExplain extends LitElement {
         .bit.segment--first,
         .bit.segment--middle,
         .bit.segment--last {
-          --bgc: #777;
+          --bgc: #777 !important;
           color: #fff !important;
         }
 
