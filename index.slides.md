@@ -2,8 +2,8 @@
 author:
 author-twitter:
 author-company:
-event: MiXiT
-date: 26 avril 2024
+event: Ch'ti JUG
+date: 29 mai 2024
 ---
 
 # La compression Web : comment (re)prendre le contrôle ?
