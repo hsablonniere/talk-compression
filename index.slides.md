@@ -2,8 +2,8 @@
 author:
 author-twitter:
 author-company:
-event: Ch'ti JUG
-date: 29 mai 2024
+event: DevFest Lille
+date: 7 juin 2024
 ---
 
 # La compression Web : comment (re)prendre le contrôle ?
