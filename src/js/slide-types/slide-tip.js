@@ -20,6 +20,7 @@ defineSlideType('slide-tip', {
     return html`
       <img class="scrabble-board" src="/src/img/scrabble-empty.svg" alt="">
       <div class="background">
+        <img class="qrcode" src="/src/img/qr-code.png" alt="">
         ${tips.map((tip) => html`
           <div class="tip-text">${tip}</div>
         `)}
