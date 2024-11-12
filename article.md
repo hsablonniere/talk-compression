@@ -4,11 +4,10 @@ authors:
     title: Engineering manager Frontend
     avatar: https://pbs.twimg.com/profile_images/1633242263860965376/iw95gEVA_400x400.jpg
     bio: développeur frontend passionné qui essaie de faire du code de qualité tout en s'amusant. Il a une expertise solide en développement Web, React et frontend, et a travaillé chez M6web/Bedrock Streaming depuis 2017 en tant que Lead Frontend Developer. Il a enseigné également à Polytech Lyon. Très impliqué dans les communauté open source mais également les communautés locales, Antoine a repris avec quelques amis les rênes du Meetup LyonJS depuis 2020.
-  # @TODO:Hubert Je te laisse remplir ta bio
   - name: Hubert Sablionnière
     title: Engineering manager Backend
-    avatar:
-    bio:
+    avatar: https://lh3.googleusercontent.com/-zULkNj_mgrE/AAAAAAAAAAI/AAAAAAAAmiM/s1x33T4pEBo/photo.jpg
+    bio: Hubert est passionné par le Web. Il est toujours à la recherche de nouvelles idées et autres bidouilles pour améliorer l'expérience des utilisateurs et des développeurs.
 ---
 
 # La compression web
@@ -90,32 +89,81 @@ Sur l'exemple précédent, en appliquant la minification on est passé à 98 oct
 Belle économie, non ?
 
 Nous vous l'accordons, cet exemple n'est pas très représentatif, voyons donc sur des exemples plus représentatifs.
+Regardons avec l'exemple de Jquery, un fichier de 285.3 Ko non minifié et non compressé.
 
-<!-- @TODO: Hubert
-J'aurai bien inséré les SVG des charts directement dans le dom en ajoutant les bons attribut html pour la description
-Tu en penses quoi ?
-Sinon on peut exporter le svg avec un alt ou fig/figcaption
--->
+![Diagramme en barres représentant les différentes tailles de fichier pour jQuery.js en fonction de son traitement : brut (285,3 ko), minifié (87 ko), compressé (83,9 ko), et à la fois minifié et compressé (30,2 ko).](./articleAssets/jquery.png)
 
-<!-- Insérer barchat JQUERY-->
-<!-- Insérer barchat DOC Hibernate-->
+On constate que sur un fichier plus conséquent, la minification et la compression apportent des gains bien plus importants.
+Ici on gagne preque 90% du poids total du fichier. 
+La minification à elle seule permet de gagner 69% du poids total du fichier en effet dans le fichier de base de Jquery il y a beaucoup de commentaires.
 
-Sur ces graphiques, on comprends que la minification apporte de bons résultats.
+Ces logiques ne s'appliquement bien heureusement pas qu'au Javascript.
+Regardons avec un fichier html conséquent, la doc complète d'Hibernate en un seul fichier.
+_Oui ça existe !_
+
+![Diagramme en barres représentant les pourcentages de taille de fichier pour hibernate-user-guide.html (2,4 Mo) selon son traitement : brut (100 %), minifié (96,4 %), compressé (15,4 %), et à la fois minifié et compressé (15,1 %)](./articleAssets/hibernate.png)
+
+Dans ce cas là, on peut observer que la minification apporte peu, en effet, il y a peu à minifier dans un fichier HTML.
+
+Sur les graphiques précédent, on comprends que la minification apporte de bons résultats.
 Cela dépend quand même du format du fichier, sur un fichier HTML il y a souvent peut de code inutile à supprimer.
 Cependant ce qu'il faut retenir et noter c'est que **la compression apporte toujours des meilleurs résulats quand elle est précédée d'une étape de minification**.
 
 ## Quels impact pour les utilisateurs·rices ?
 
-- Exemple de la page du Scrabble de wiki
-- Un site c'est un ensemble de requetes en cascades
-- Montrer les webpage test dans différentes conditions
-- expliquer qu'en 2024 il faut encore compresser
-- montrer l'almanac du web
-- graph des résulats de 2022
+Ok la compression et la minification permettent de réduire la taille des fichiers, mais quel impact cela a-t-il pour les utilisateurs·rices ?
+Est-ce que ça a un impact sur la vitesse de chargement des pages ?
+
+Prenons par hasard une page web, [la page wikipedia du Scrabble](https://fr.wikipedia.org/wiki/Scrabble).
+Une page web, c'est un ensemble de requêtes en cascade.
+Le chargement et l'analyse de la page déclence en cascade le chargement et l'analyse d'autre ressources, etc.
+
+![Diagramme en cascade illustrant le chargement des ressources pour une page Wikipedia, avec des barres de couleur indiquant les temps de chargement pour chaque étape : DNS, connexion, SSL, HTML, JavaScript, CSS, image, et autres. Chaque ressource est listée par ordre de chargement avec des temps d'attente en millisecondes.](./articleAssets/cascade.png)
+
+Comparons donc en 3g, en 4g et sans limitation de réseau le temps de chargement de la page wikipedia du Scrabble.
+
+<video src="./src/videos/wpt-scrabble-3gslow.mp4" controls="" aria-describeby="3g-description"></video>
+
+<p if="3g-description">
+En 3g, le temps de chargement de la page est de 17,2 secondes sans compression et 7,4 secondes avec.
+C'est énorme !
+</p>
+
+<video src="./src/videos/wpt-scrabble-4g.mp4" controls="" aria-describeby="4g-description"></video>
+
+<p if="4g-description">
+En 4g, le temps de chargement de la page est de 2,4 secondes sans compression et 2,1 secondes avec.
+Moins impressionnant mais toujours relativement conséquent.
+</p>
+
+<video src="./src/videos/wpt-scrabble-nolimit.mp4" controls="" aria-describeby="no-limit-description"></video>
+
+<p if="no-limit-description">
+Sans limitation le temps de chargement complet est équivalent, autour d' 1,2 seconde.
+Cependant, le contenu de la page apparait plus rapidement avec la compression.
+</p>
+
+Vous allez nous dire, oui mais en 2024 tout le monde sait qu'il faut compresser ses fichiers.
+Alors !
+
+Vous connaissez [l'almanach du web](https://almanac.httparchive.org/fr/) ? 
+C'est une étude qui permet de voir l'évolution des pratiques sur le web.
+
+Regardons [les résultats de l'étude de 2022 sur la compression](https://almanac.httparchive.org/en/2022/page-weight#compression).
+
+![Diagramme en barres représentant les pourcentages de fichiers servis sur le web sans compression par type de fichier: 12,7% pour le JS, 14,2% pour le CSS, 31,8% pour le JSON, 36% pour les svg et 56% pour l'HTML](./articleAssets/almanac.png)
+
+Clairement ça nous a fait très peur.
+Et la, on parle du web public accessible à tous, pas des intranets ou des applications internes.
+
+Bon, on peut se rassurer, [l'étude de 2024 vient de sortir](https://almanac.httparchive.org/en/2024/markup#compression) et les chiffres sont meilleurs.
+Seulement 11% des fichiers HTML ne sont pas compressés alors qu'en 2022 c'était 56%.
+
+Retenez donc que **la compression est encore nécessaire en 2024**.
 
 ## Dans les tuyaux
 
-<!-- @TODO: Hubert Si t'as des idées de comment structurer/résumer cette partie -->
+Ok, maintenant qu'on sait qu'il faut compresser, comment ça marche dans le navigateur ?
 
 ## Un peu d'histoire
 
