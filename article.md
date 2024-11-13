@@ -17,7 +17,7 @@ Des millions de clients s'affèrent à décompresser leurs contenu alors que des
 Et ça, pour nous Hubert et Antoine, ça nous facine, alors on a passé beaucoup de temps à étudier ce sujet afin de vous en partager l'essentiel ici.
 On risque de glisser quelques discrètes références au jeu du Scrabble.
 
-## Le lexique
+## Un peu de lexique
 
 Avant de creuser un peu le sujet il est imporant de bien comprendre les termes utilisés.
 Quand on parle de compression, le monde se divise en deux catégories :
@@ -109,7 +109,7 @@ Sur les graphiques précédent, on comprends que la minification apporte de bons
 Cela dépend quand même du format du fichier, sur un fichier HTML il y a souvent peut de code inutile à supprimer.
 Cependant ce qu'il faut retenir et noter c'est que **la compression apporte toujours des meilleurs résulats quand elle est précédée d'une étape de minification**.
 
-## Quels impact pour les utilisateurs·rices ?
+## Quels impacts pour les utilisateurs·rices ?
 
 Ok la compression et la minification permettent de réduire la taille des fichiers, mais quel impact cela a-t-il pour les utilisateurs·rices ?
 Est-ce que ça a un impact sur la vitesse de chargement des pages ?
@@ -167,11 +167,26 @@ Ok, maintenant qu'on sait qu'il faut compresser, comment ça marche dans le navi
 
 ## Un peu d'histoire
 
-## Huffman
+Bon tout cela n'est pas nouveau, la compression web avec gzip on la retrouve définie dans une RFC de 1992.
+Jean-Loup Gailly et Mark Adler posent les bases de la compression tel qu'on la connait depuis plus de 30 ans maintenant.
+Pour se faire ils se sont basés de travaux de Phil Katz sur PKZIP qui lui défini dans une RFC dédié le format de fichier zip tel que vous le connaissez certainement.
 
-## LZ77
+<!-- TODO insérer photo de Phil Katz -->
 
-## Et concretement ?
+Mais Phil Katz n'a pas construit la format zip à partir de rien, il a repris des travaux bien plus anciens.
+Reprenant les travaux d'Abraham Lempel et de Jacob Ziv datant de 1977, il réutilise l'algorithme LZ77 comme base.
+Enfin pour encoder de manière optimisée, Phil Katz a également pu se baser sur les travaux de David Huffman datant de 1952 avec son codage de Huffman.
+
+La compression dans le web est un bel exemple de cascade de découvertes et des impacts de la recherche fondamentale dans notre société.
+Plus de 30 ans nous séparent maintenant de la publication de gzip, et plus de 40 ans séparent cette publication des travaux initiaux de David Huffman.
+
+Le web sans la compression serait terriblement différent si ces travaux n'avaient pas été menés, on pourrait même imaginer que la révolution qu'il a apporté aurait été limitée.
+
+## Comprenons le codage de Huffman
+
+## LZ77 c'est quoi ?
+
+## Et concrètement ?
 
 ## À la recherche du pouillème
 
