@@ -164,6 +164,42 @@ Retenez donc que **la compression est encore nécessaire en 2024**.
 ## Dans les tuyaux
 
 Ok, maintenant qu'on sait qu'il faut compresser, comment ça marche dans le navigateur ?
+Alors déjà retenez que la compression n'est en effet pas obligatoire.
+C'est le navigateur qui envoi une entête `Accept-Encoding` dans la requête HTTP pour indiquer au serveur qu'il est capable de décompresser le contenu.
+
+![schéma montrant une requete GET http vers le fichier index.html qui passe l'entête accept-encoding: gzip, deflate, br et la réponse associée car un code 200 OK avec l'entete content-encoding gzip](./articleAssets/accept-encoding.png)
+
+Grâce à cet entête, le serveur va pouvoir choisir de compresser ou non le contenu tout en retournant l'entête `Content-Encoding` pour indiquer au navigateur le type de compression utilisé.
+Un server ne peut donc pas choisir de retourner compresser un contenu dans un format que le navigateur ne sait pas décompresser.
+
+Le site web caniuse.com qui permet de voir la compatibilité des technologies web dans les navigateurs a un affichage très spécifique pour le support de gzip.
+En effet, le [support de gzip est tellement répandu](https://caniuse.com/sr_content-encoding-gzip) qu'il est considéré comme acquis.
+
+C'est cool non ? C'est pas tout !
+
+Au départ on pensait naïvement que la compression et la décompression étaient une étape bloquante entre le serveur et le navigateur.
+Même si cette étape était bloquante, on gagnait du temps car le fichier était plus petit.
+Si on schématise, ce qu'on imaginait, on pensait que le serveur compressait tout le contenu puis l'envoyait au navigateur qui décompressait tout le contenu et l'affichait.
+
+![decompression bloquante](./articleAssets/decompression-bloquante.png)
+
+Ce n'est pas comme ça que le web fonctionne, nos navigateurs peuvent afficher du DOM qu'il reçoit progressivement.
+Sans compression, un server qui envoie une page web de plusieurs Mo par exemple va le faire progressivement mais le rendu va se faire progressivement.
+
+Pour le prouver, on a donc fait un site web qui contient l'intégralité des oeuvres de Sherlock Holmes (toutes les nouvelles et les romans).
+_Oui la page est lourde, mais justement le but c'est de mieux se rendre compte du chargement progressif._
+_Et puis bon, on vient peut-être de créer la meilleure façon de lire Sherlock Holmes en ligne._
+On a même activé la compression pour voir ce que ça donne.
+
+<video src="./articleAssets/flux.mp4"></video>
+
+Dans cette vidéo, on voit bien que le contenu est affiché progressivement, même si le fichier toujours en cours de téléchargement.
+Et cela, même si le serveur compresse le contenu à la volée, on observe que le DOM se construit de manière progressive.
+Dans cette situation on pourrait même imaginer que le serveur n'a pas encore compressé les derniers octets du fichier html que le navigateur a déjà décompressé et affiché une partie de la page web.
+
+![compression et decompression non bloquante](./articleAssets/flux.png)
+
+Retenez donc que **la compression et la décompression n'interrompent pas le flux**.
 
 ## Un peu d'histoire
 
@@ -171,7 +207,7 @@ Bon tout cela n'est pas nouveau, la compression web avec gzip on la retrouve dé
 Jean-Loup Gailly et Mark Adler posent les bases de la compression tel qu'on la connait depuis plus de 30 ans maintenant.
 Pour se faire ils se sont basés de travaux de Phil Katz sur PKZIP qui lui défini dans une RFC dédié le format de fichier zip tel que vous le connaissez certainement.
 
-<!-- TODO insérer photo de Phil Katz -->
+![Phil Katz tenant une disquette assis à son bureau devant une énorme pile de disquettes](./src/img/phil-katz-big.jpg)
 
 Mais Phil Katz n'a pas construit la format zip à partir de rien, il a repris des travaux bien plus anciens.
 Reprenant les travaux d'Abraham Lempel et de Jacob Ziv datant de 1977, il réutilise l'algorithme LZ77 comme base.
