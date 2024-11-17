@@ -220,6 +220,25 @@ Le web sans la compression serait terriblement différent si ces travaux n'avaie
 
 ## Comprenons le codage de Huffman
 
+Après cette délicieuse tranche d'histoire, on va essayer de comprendre un peu mieux le codage de Huffman.
+David Huffman en 1952 il se dit _"En codant les caractères qui apparaissent le plus souvent avec peu de bits, et en codant les caractères qui apparaissent le moins souvent avec beaucoup de bits, en moyenne, on devrait réduire le nombre de total de bits et gagner de la place._"
+
+Vous n'avez rien compris ? C'est normal, c'est un peu comme le Scrabble.
+Vous connaissez ce jeu où on tire des tuiles avec des lettres et où il faut former des mots ?
+Les lettres les plus courantes ont un faible nombre de points, alors que les lettres les moins courantes ont un nombre de points plus élevé.
+C'est un peu la même logique.
+
+Si on est capable de générer un code binaire pour chaque caractère. 
+Les caractères les plus fréquents auront un code binaire court, et les caractères les moins fréquents auront un code binaire long.
+Et dans les faits ça marche terriblement bien.
+
+Ce qu'il faut savoir, c'est que David Huffman a 26 ans quand il publie cela.
+Alors qu'il étudie au MIT, dans la même classe que Claude Shannon, alors que son professeur lui donne un choix de publier un article ou de passer un examen, David choisi de faire un article scientifique.
+Il publie alors le codage de Huffman et l'algorithme qui permet de le déterminer.
+Il prouve également mathématiquement que son codage est le plus optimal possible.
+
+Si on reprend l'image du Scrabble, appliquer le codage de Huffman sur un mot, c'est comme avoir une case _lettre compte moins_.
+
 ## LZ77 c'est quoi ?
 
 ## Et concrètement ?
