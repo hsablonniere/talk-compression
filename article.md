@@ -239,11 +239,85 @@ Il prouve également mathématiquement que son codage est le plus optimal possib
 
 Si on reprend l'image du Scrabble, appliquer le codage de Huffman sur un mot, c'est comme avoir une case _lettre compte moins_.
 
+![fausse tuile de Scrabble avec "Lettres compte moins](./src/img/tile-lettre-compte-moins.svg)
+
 ## LZ77 c'est quoi ?
+
+Bon en 1977, alors que Carlos sortait son célèbre _Big Bisou_, Abraham Lempel et Jacob Ziv publient un article sur un algorithme de compression sans perte.
+Ils se disent qu'au vu de la teneur des messages qu'on échange numériquement à l'époque, on peut surement faire mieux que simplement appliquer un codage de Huffman.
+
+Prenons cette exemple de texte :
+
+> *"*On peut tromper une personne mille fois._<br>
+On peut tromper mille personnes une fois._<br>
+Mais on ne peut pas tromper mille personnes, mille fois.*"*
+
+Clairement dans ce message on se répète beaucoup, et on ne répète pas juste des lettres, on répète des motifs complexes.
+L'idée de Lempel et Ziv c'est de dire, si on a déjà vu un motif, on peut le remplacer par une référence à ce motif.
+
+![fausse tuile de scrabble avec "Mot compte moins"](./src/img/tile-mot-compte-moins.svg)
+
+En inventant un systeme d'encodage efficace pour ces références, on peut réduire la taille du message.
+Il faut également trouver un moyen simple et efficace de trouver ces motifs dans le message.
+
+
+
 
 ## Et concrètement ?
 
+Alors en fait, un an après avoir créé l'algorithme Lempel et Ziv créent... l'algorithme LZ78.
+En fait il existe une vraie famille d'algorithme LZ, LZ77, LZ78, LZSS, LZW, etc.
+
+![Arbre représentant les familles de d'algorithme de compression basés sur LZ77 et LZ78](./src/img/lz-family-09.svg)
+
+Vous allez retrouver une alternative LZW dans les formats de fichiers GIF et TIFF.
+LZSS dans Winrar, LZMA dans 7zip.
+D'ailleurs vous avez peut-être déjà [entendu parler de LZMA cette année](https://linuxfr.org/users/ytterbium/journaux/xz-liblzma-compromis).
+Si ces sujets vous intéressent, nous vous conseillons [la vidéo de Colt McAnlis](https://www.youtube.com/watch?v=Jqc418tQDkg) à ce sujet.
+
+Bon pour revenir en revenir à gzip, revenons donc à Phil Katz.
+En 1990, il se dit: "Si à mon fichier, j'applique l'algorithme LZ77 pour obtenir des étiquettes et des symboles, puis le codage de Huffman, je vais obtenir un fichier plus petit."
+Il décide d'appeler cela Deflate, et référence ça dans la [RFC 1951](https://www.rfc-editor.org/rfc/rfc1951.txt).
+En rajoutant des entêtes et des pieds de page, il obtient le format de fichier zip.
+
+Quelques années plus tard, Jean-Loup Gailly et Mark Adler se disent: "Et si on appliquait ça au web ?"
+Ils créent alors la zlib et formalise une nouvelle RFC qui se base également sur Deflate mais avec des entêtes et des pieds de page différents de ce qu'à proposé Phil Katz.
+On retrouve cela en détail dans la [RFC 1952](https://www.rfc-editor.org/rfc/rfc1952.txt).
+
+
 ## À la recherche du pouillème
+
+Définissons ensemble ce qu'est un pouillème.
+C'est déjà scientifiquement une unité de mesure qui veut dire "à peu près pas beaucoup".
+Au vu du nombre d'échanges sur le web, si on arrive à gagner un pouillème supplémentaire grâce à la compression, il y a clairement d'économies à faire.
+
+Donc clairement, les gros consommateurs de bande passante, les géants du web, cherchent à gagner des pouillèmes.
+En fait état par exemple cloudflare qui a son propre [fork de la zlib](https://github.com/cloudflare/zlib).
+
+Déjà, quand gzip est apparu, il y avait déjà la possibilité de choisir entre plusieurs niveaux de compression.
+De 1 à 9, ces niveaux permettent d'avoir une compression plus ou moins forte du fichier.
+En jouant sur quelques paramètres, et contre quelques millisecondes de calculs supplémentaires, gzip va alors trouver des motifs plus complexes et donc plus efficaces.
+
+Graph 9 niveaux de gzip
+
+Dans les années 2010, Google se dit: "Et si on faisait mieux que gzip tout en gardant le format de fichier gzip ?"
+Ils créent alors [Zopfli](https://github.com/google/zopfli) qui est clairement une implémentation de gzip qui brutforce la recherche de motifs dans l'algo LZ.
+On gagne quelques pouillèmes, mais on beaucoup de temps de calcul.
+
+Quelques années plus tard, certains même ingénieurs de chez Google se disent plusieurs choses:
+- le format de fichier gzip est un peu vieux et on pourrait faire mieux pour gagner déjà quelques octets.
+- dans le web, on connait à peu pres la structure des fichiers qu'on manipule. On sait par exemple qu'un fichier html va avoir une balise `html` et qu'une feuille de style CSS va certainement avoir des attributs comme `margin`.
+
+Ils créent alors Brotli et le spécifie dans la [RFC 7932](https://www.rfc-editor.org/rfc/rfc7932).
+
+Donc oui Brotli triche, il possède à la compression et à la décompression un énorme dictionnaire dans lequel il peut référencer des étiquettes avec LZ77.
+13 504 mots sont dans ce [dictionnaire](https://gist.github.com/klauspost/2900d5ba6f9b65d69c8e) auquel il peut appliquer 121 transformations (comme lowercase, uppercase, etc), ce qui nous donne 1 633 984 *possibilités*.
+C'est énorme !
+Et en 2024, Brotli est supporté par tous les [navigateurs modernes](https://caniuse.com/brotli).
+
+Comparons maintenant l'efficacité de ces trois algorithmes sur un fichier js comme `jquery.min.js` avec les différents niveaux.
+
+
 
 ## Au dela du poullième
 
