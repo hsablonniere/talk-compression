@@ -15,7 +15,7 @@ authors:
 Alors que vous lisez ces lignes des millions de requêtes HTTP sont échangées sur le web.
 Des millions de clients s'affèrent à décompresser leurs contenu alors que des millions de serveurs ont de leur coté compressés.
 Et ça, pour nous Hubert et Antoine, ça nous facine, alors on a passé beaucoup de temps à étudier ce sujet afin de vous en partager l'essentiel ici.
-On risque de glisser quelques discrètes références au jeu du Scrabble.
+Nous risquons de glisser quelques discrètes références au jeu du Scrabble.
 
 ## Un peu de lexique
 
@@ -260,9 +260,6 @@ L'idée de Lempel et Ziv c'est de dire, si on a déjà vu un motif, on peut le r
 En inventant un systeme d'encodage efficace pour ces références, on peut réduire la taille du message.
 Il faut également trouver un moyen simple et efficace de trouver ces motifs dans le message.
 
-
-
-
 ## Et concrètement ?
 
 Alors en fait, un an après avoir créé l'algorithme Lempel et Ziv créent... l'algorithme LZ78.
@@ -317,7 +314,32 @@ Et en 2024, Brotli est supporté par tous les [navigateurs modernes](https://can
 
 Comparons maintenant l'efficacité de ces trois algorithmes sur un fichier js comme `jquery.min.js` avec les différents niveaux.
 
+Retenez donc que **la compression dans le web ça marche mieux avec brotli**.
 
+Maintenant comparons les performances et le temps nécessaire à la compression et la décompression pour chaque niveau.
+
+[L'almanac du web vous propose donc une recommendation claire](https://almanac.httparchive.org/en/2021/compression#fig-10) pour choisir le niveau de compression à utiliser.
+Les fichiers statiques doivent être compressés une seule fois au build avec les meilleurs niveaux de Brotli et Gzip ou Zopfli.
+Les fichiers dynamiques doivent être compressés à la volée avec un niveau de compression plus faible pour ne pas ralentir le serveur.
+Il est donc recommandé d'appliquer dans cette situation un niveau de 5 avec Brotli et de 6 avec Gzip.
+
+![photo en noir et blanc des deux chats d'Hubert Kiwi et Litchie dormant l'un contre l'autre](./src/benchmarks/hubert-cats.jpg)
+
+Bon, pourquoi nous avons décidé de mettre cette photo des chats d'Hubert ?
+Cette image est un JPEG, un format d'image qui utilise la compression avec perte de données.
+Voici les résultats de la compression de cette image avec Brotli, Gzip et Zopfli.
+
+Clairement ce n'est pas efficace, la compression avec perte de données a déjà fait le travail, il n'y a rien à enlever.
+Vous pourriez nous reprochez de dire une évidence, mais l'[Almanach du web nous rappelle](https://almanac.httparchive.org/en/2020/compression) que 3,27% des JPEG sont servis compressés avec gzip dans le web.
+
+Cependant, tous les fichiers binaires ne sont pas compressés par défaut.
+Il faudrait donc appliquer la compression sans perte pour les servir.
+Les formats `font/otf`, `font/ttf`, `image/bmp`, `image/x-icon` et `application/wasm` sont des exemples de fichiers binaires qui ne sont pas compressés par défaut.
+
+On peut également citer le format WASM qui est souvent oublié dans la configuration des fichiers compressés.
+Pourtant, les binaires wasm sont souvent très lourds et peuvent bénéficier de la compression.
+
+<!-- graph sur le sql.wasm-->
 
 ## Au dela du poullième
 
